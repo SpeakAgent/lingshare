@@ -1,0 +1,3 @@
+function ScoreController ($scope) {
+	// body...
+}

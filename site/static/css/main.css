@@ -1,0 +1,42 @@
+img.large-card {
+		width: 600px;
+		margin: 2em;
+		border: 4px darkblue solid;
+		border-radius: 10px;
+	}
+
+  div.card-container {
+    width: 200px;
+    height: 130px;
+  }
+
+	div.small-card {
+		width: 200px;
+		height: 130px;
+		border: 4px darkblue solid;
+		margin: 2em;
+		border-radius: 10px;
+   		text-align: center;
+	}
+
+  div.card-container {
+    width: 200px;
+    height: 130px;
+    margin: 2em;
+  }
+
+  div.card-container div img {
+    width: 200px;
+    height: 130px;
+    border: 4px darkblue solid;
+    border-radius: 10px;
+  }
+
+  div.card-alerts {
+    background-color: orange;
+    width: 48px;
+    height: 48px;
+    float: left;
+    border-radius: 24px;
+    padding: 12px 8px;
+  }
