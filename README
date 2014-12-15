@@ -1,0 +1,9 @@
+LingShare
+=========
+
+This is the repository for the LingShare app. Note that this repo requires the Lexemes/LexDB app to be installed and running in order to work! It has no database of its own. Instead, it talks directly to the LexDB API.
+
+Dependencies
+------------
+
+This app is built on AngularJS, version 1.2.0. 
