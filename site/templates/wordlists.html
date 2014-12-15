@@ -1,0 +1,19 @@
+<div class="container" role="main" ng-controller="WordListsController">
+<div ng-if="!id">
+<h1>All word lists</h1>
+<div ng-repeat="list in wordlists"><a href = "/#/words/{{list.pk}}">{{ list.title }}</a></div>
+</div>
+
+<div ng-if="id">
+<h1>{{ list.title }}</h1>
+<ul>
+	<li ng-repeat="word in list.words">
+		<a href = "/#/words/word/{{ word.base_word.pk }}">
+			{{word.base_word.root_word}}
+		</a> - 
+		<a href = "/#/words/word/{{ word.trans_word.pk }}">
+			{{word.trans_word.root_word}}
+		</a>
+	</li>
+</ul>
+</div>
