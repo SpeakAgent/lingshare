@@ -1,8 +1,20 @@
-mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http', 
+mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
+  '$interval',  
 
-  function ($scope, $timeout, $http) {
+  function ($scope, $timeout, $http, $interval) {
 
   $scope.used_words = []
+
+  $scope.seconds = 0
+
+  
+
+  $scope.stopTimer = function () {
+    if ($scope.done) {
+      $interval.cancel($scope.stop);
+      $scope.stop = undefined;
+    }
+  };
 
   var url = "http://127.0.0.1:8000/wordlists/json/1/"
   $http.get(url)
@@ -14,6 +26,15 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
         wrong: [],
         right: []
       }
+      $scope.done = false;
+      $scope.seconds = 0;
+      $scope.stop = $interval(function () {
+      if (!$scope.done) {
+       $scope.seconds++;
+      } else {
+        $scope.stopTimer();
+      }
+    }, 1000);
     });
 
   $scope.alerts = [];
