@@ -37,6 +37,11 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
           slug: card.base_word.root_word + '-word'});
       };
       return $scope.shuffle(cards);
+  	 	// Get six random words from list
+
+  	 	// For each word, one is pic, one is word
+
+  	 	// Shuffle em.
   	 };
 
   	 $scope.setUpBoard = function () {
@@ -63,6 +68,15 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 $scope.removeCards = function (card1, card2) {
   	 	$scope.hideCards.push(card1);
       $scope.hideCards.push(card2);
+  	 	// Do we have two word cards?
+
+  	 	// Do we have two picture cards?
+
+  	 	// Do the two cards match?
+  	 };
+
+  	 $scope.removeCards = function (card1, card2) {
+  	 	// Remove the cards from the board.
   	 };
 
   	 $scope.addAction = function (action) {
@@ -107,6 +121,9 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
 	  	   	$scope.playGame();
           $scope.showCards = []
           $scope.hideCards = []
+	  	   	$scope.createCards();
+	  	   	$scope.setUpBoard();
+	  	   	$scope.playGame();
   	 });
 
   }]);
