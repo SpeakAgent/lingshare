@@ -63,3 +63,7 @@ img.large-card {
       height: 190px;
       width: 190px;
     }
+
+    div.card div {
+      font-size: 3em;
+    }
