@@ -3,16 +3,38 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
 
   function ($scope, $timeout, $http, $interval) {
 
+    $scope.shuffle = function(array) {
+    var m = array.length,
+      t, i;
+
+    // While there remain elements to shuffle…
+    while (m) {
+
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+
+      // And swap it with the current element.
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+
+    return array;
+  }
+
   	 $scope.playGame = function () {
   	 	// while gameWon == false...
   	 };
 
   	 $scope.createCards = function () {
-  	 	// Get six random words from list
-
-  	 	// For each word, one is pic, one is word
-
-  	 	// Shuffle em.
+      cards = []
+      words = $scope.shuffle($scope.wordlist.words).slice(0,6);
+      for (var i = words.length - 1; i >= 0; i--) {
+        card = words[i];
+        cards.push({word: card, type: 'symbol'});
+        cards.push({word: card, type: 'word'});
+      };
+      return $scope.shuffle(cards);
   	 };
 
   	 $scope.setUpBoard = function () {
@@ -61,7 +83,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 	.success(function (data) {
 	  	   	$scope.wordlist = data;
 	  	   	$scope.gameWon = false;
-	  	   	$scope.createCards();
+	  	   	$scope.cards = $scope.createCards();
 	  	   	$scope.setUpBoard();
 	  	   	$scope.playGame();
   	 });
