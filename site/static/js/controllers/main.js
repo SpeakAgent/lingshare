@@ -39,4 +39,8 @@ mainApp.config(function($routeProvider) {
 mainApp.controller('mainController', function($scope) {
 	$scope.title = "Hello, world!"
 });
+<<<<<<< HEAD
 	
+=======
+	
+>>>>>>> ffe61c9... Controllers and routing for memory game

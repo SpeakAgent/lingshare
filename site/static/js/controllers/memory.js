@@ -42,6 +42,10 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 	// For each word, one is pic, one is word
 
   	 	// Shuffle em.
+        cards.push({word: card, type: 'symbol'});
+        cards.push({word: card, type: 'word'});
+      };
+      return $scope.shuffle(cards);
   	 };
 
   	 $scope.setUpBoard = function () {
