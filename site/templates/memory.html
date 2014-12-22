@@ -1,0 +1,14 @@
+
+<div class="container">
+	<div class="row">
+		<div class="card"
+			 ng-repeat="card in cards">
+			<img src = "http://127.0.0.1:8000{{card.word.base_word.symbol[0].image}}"
+			 	  ng-if = "card.type == 'symbol'">
+			<span ng-if = "card.type == 'word'">
+				{{ card.word.base_word.root_word }}
+			</span>
+		</div>
+	</div>
+</div>
+
