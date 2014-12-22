@@ -26,8 +26,13 @@ mainApp.config(function($routeProvider) {
 		templateUrl: 'templates/flashcard_game.html',
 		controller: 'FlashCardController'
 	})
+	.when('/games/memory/', {
+		templateUrl: 'templates/memory.html',
+		controller: 'MemoryController'
+	})
 });
 
 mainApp.controller('mainController', function($scope) {
 	$scope.title = "Hello, world!"
-})
+});
+	
