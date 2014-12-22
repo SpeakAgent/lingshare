@@ -30,8 +30,13 @@ mainApp.config(function($routeProvider) {
 		templateUrl: 'templates/login.html',
 		controller: 'LoginController'
 	})
+	.when('/games/memory/', {
+		templateUrl: 'templates/memory.html',
+		controller: 'MemoryController'
+	})
 });
 
 mainApp.controller('mainController', function($scope) {
 	$scope.title = "Hello, world!"
-})
+});
+	
