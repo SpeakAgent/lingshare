@@ -1,4 +1,4 @@
-var mainApp = angular.module('mainApp', ['ngRoute']);
+var mainApp = angular.module('mainApp', ['ngRoute', 'angular-jwt']);
 
 mainApp.config(function($routeProvider) {
 	$routeProvider
@@ -25,6 +25,10 @@ mainApp.config(function($routeProvider) {
 	.when('/games/flashcards/', {
 		templateUrl: 'templates/flashcard_game.html',
 		controller: 'FlashCardController'
+	})
+	.when('/login/', {
+		templateUrl: 'templates/login.html',
+		controller: 'LoginController'
 	})
 });
 
