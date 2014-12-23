@@ -31,8 +31,10 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
       words = $scope.shuffle($scope.wordlist.words).slice(0,6);
       for (var i = words.length - 1; i >= 0; i--) {
         card = words[i];
-        cards.push({word: card, type: 'symbol'});
-        cards.push({word: card, type: 'word'});
+        cards.push({word: card, type: 'symbol', 
+          slug: card.base_word.root_word + '-symbol'});
+        cards.push({word: card, type: 'word',
+          slug: card.base_word.root_word + '-word'});
       };
       return $scope.shuffle(cards);
   	 };
@@ -42,15 +44,25 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 };
 
   	 $scope.checkCards = function (card1, card2) {
-  	 	// Do we have two word cards?
+      console.log(card1, card2);
+      cardarr1 = card1.split('-');
+      cardarr2 = card2.split('-');
+      
+      if (cardarr1[0] == cardarr2[0]) {
+        console.log("They match!")
+        $scope.removeCards(card1, card2)
+      } else {
+        console.log("Nope.")
+      }
+      $timeout(function () {
+        $scope.showCards = [];
+      }, 2000);
 
-  	 	// Do we have two picture cards?
-
-  	 	// Do the two cards match?
   	 };
 
   	 $scope.removeCards = function (card1, card2) {
-  	 	// Remove the cards from the board.
+  	 	$scope.hideCards.push(card1);
+      $scope.hideCards.push(card2);
   	 };
 
   	 $scope.addAction = function (action) {
@@ -78,6 +90,13 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 	// the backend.
   	 };
 
+     $scope.flipCard = function (card) {
+       $scope.showCards.push(card.slug);
+       if ($scope.showCards.length == 2) {
+        $scope.checkCards($scope.showCards[0], $scope.showCards[1]);
+       }
+     };
+
   	var url = "http://127.0.0.1:8000/wordlists/json/1/";
   	$http.get(url)
   	 	.success(function (data) {
@@ -86,6 +105,8 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
 	  	   	$scope.cards = $scope.createCards();
 	  	   	$scope.setUpBoard();
 	  	   	$scope.playGame();
+          $scope.showCards = []
+          $scope.hideCards = []
   	 });
 
   }]);

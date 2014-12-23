@@ -50,11 +50,16 @@ img.large-card {
       margin: 1em;
     }
 
+   div.nocard {
+      border: 5px solid grey;
+      height: 200px;
+      width: 200px;
+      border-radius: 10px;
+      float: left;
+      margin: 1em;
+    }
+
     div.card img {
       height: 190px;
       width: 190px;
-    }
-
-    div.card div {
-      font-size: 3em;
     }
