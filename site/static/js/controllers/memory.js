@@ -35,6 +35,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
           slug: card.base_word.root_word + '-symbol'});
         cards.push({word: card, type: 'word',
           slug: card.base_word.root_word + '-word'});
+<<<<<<< HEAD
       };
       return $scope.shuffle(cards);
   	 	// Get six random words from list
@@ -44,6 +45,8 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 	// Shuffle em.
         cards.push({word: card, type: 'symbol'});
         cards.push({word: card, type: 'word'});
+=======
+>>>>>>> be93d78... Not quite working, but need to switch back to auth
       };
       return $scope.shuffle(cards);
   	 };
@@ -73,14 +76,11 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 	$scope.hideCards.push(card1);
       $scope.hideCards.push(card2);
   	 	// Do we have two word cards?
-
-  	 	// Do we have two picture cards?
-
-  	 	// Do the two cards match?
   	 };
 
   	 $scope.removeCards = function (card1, card2) {
-  	 	// Remove the cards from the board.
+  	 	$scope.hideCards.push(card1);
+      $scope.hideCards.push(card2);
   	 };
 
   	 $scope.addAction = function (action) {
@@ -126,8 +126,6 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
           $scope.showCards = []
           $scope.hideCards = []
 	  	   	$scope.createCards();
-	  	   	$scope.setUpBoard();
-	  	   	$scope.playGame();
   	 });
 
   }]);
