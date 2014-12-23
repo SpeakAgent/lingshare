@@ -35,7 +35,6 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
           slug: card.base_word.root_word + '-symbol'});
         cards.push({word: card, type: 'word',
           slug: card.base_word.root_word + '-word'});
-<<<<<<< HEAD
       };
       return $scope.shuffle(cards);
   	 	// Get six random words from list
@@ -45,8 +44,6 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 	// Shuffle em.
         cards.push({word: card, type: 'symbol'});
         cards.push({word: card, type: 'word'});
-=======
->>>>>>> be93d78... Not quite working, but need to switch back to auth
       };
       return $scope.shuffle(cards);
   	 };

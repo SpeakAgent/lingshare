@@ -40,7 +40,11 @@ mainApp.controller('mainController', function($scope) {
 	$scope.title = "Hello, world!"
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 =======
 	
 >>>>>>> ffe61c9... Controllers and routing for memory game
+=======
+	
+>>>>>>> a6d8567ce7de5ba8f91c436845d2505cfabee45d
