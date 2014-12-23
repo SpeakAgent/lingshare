@@ -37,15 +37,6 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
           slug: card.base_word.root_word + '-word'});
       };
       return $scope.shuffle(cards);
-  	 	// Get six random words from list
-
-  	 	// For each word, one is pic, one is word
-
-  	 	// Shuffle em.
-        cards.push({word: card, type: 'symbol'});
-        cards.push({word: card, type: 'word'});
-      };
-      return $scope.shuffle(cards);
   	 };
 
   	 $scope.setUpBoard = function () {
