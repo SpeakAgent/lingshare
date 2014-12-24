@@ -1,4 +1,4 @@
-mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHelper){
+mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHelper, User){
   // Form data for the login modal
   $scope.loginData = {};
   $scope.authToken = localStorage.getItem('authToken');
@@ -10,8 +10,12 @@ mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHel
   $scope.doLogout = function(data, status, headers, config) {
     $rootScope.authToken = null;
     $scope.authToken = null;
+    $scope.username= null;
     localStorage.removeItem('authToken');
     localStorage.removeItem('username');
+
+    $scope.User = User;
+    $scope.User.username = null;
 
     var clearKeys = [
       'authToken',
@@ -19,7 +23,6 @@ mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHel
       'userProfile',
       'location.favorites',
     ];
-
   };
 
   // Perform the login action when the user submits the login form
@@ -58,6 +61,15 @@ mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHel
         $http.defaults.headers.common.Authorization = 'Token ' + $rootScope.authToken;
         $scope.username = localStorage.getItem('username');
         $scope.authToken = localStorage.getItem('authToken');
+        $scope.User = User;
+        $scope.User.username = $scope.username;
     });
   };
 })
+
+mainApp.factory('User', function () {
+
+  return {
+    username: ''
+    }
+  });

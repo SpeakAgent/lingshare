@@ -2,7 +2,6 @@ var mainApp = angular.module('mainApp', ['ngRoute', 'angular-jwt']);
 
 mainApp.config(function($routeProvider) {
 	$routeProvider
-
 	.when('/', {
 		templateUrl: 'templates/main.html',
 		controller: 'mainController'

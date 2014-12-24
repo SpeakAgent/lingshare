@@ -11,14 +11,25 @@
 <script type="text/javascript" src="/static/js/controllers/wordlists.js"></script>
 <script type="text/javascript" src="/static/js/controllers/words.js"></script>
 <script type="text/javascript" src="/static/js/controllers/auth.js"></script>
+<script type="text/javascript" src="/static/js/controllers/memory.js"></script>
+<script type="text/javascript" src="/static/js/controllers/nav.js"></script>
+
 </head>
 <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" ng-controller="NavController">
 	<ul class="nav navbar-nav">
 		<li><a href="/#/">Home</a></li>
 		<li><a href="/#/games/">Games</a></li>
 		<li><a href="/#/words/">Words</a></li>
+		<li><a href="/#/login/">
+			<span ng-if="User.username">
+			 {{ username }}</span>
+			 <span ng-if="!User.username">
+			 	Log in
+			 </span>
+			 </a>
+		</li>
 	</ul>
 
 </nav>
