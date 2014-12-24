@@ -40,3 +40,26 @@ img.large-card {
     border-radius: 24px;
     padding: 12px 8px;
   }
+
+  div.card {
+      border: 5px solid darkblue;
+      height: 200px;
+      width: 200px;
+      border-radius: 10px;
+      float: left;
+      margin: 1em;
+    }
+
+   div.nocard {
+      border: 5px solid grey;
+      height: 200px;
+      width: 200px;
+      border-radius: 10px;
+      float: left;
+      margin: 1em;
+    }
+
+    div.card img {
+      height: 190px;
+      width: 190px;
+    }
