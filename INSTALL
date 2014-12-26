@@ -1,10 +1,10 @@
 Install Instructions
 ====================
 
-NOTE: At the moment, all libraries that are being used are linked off of a CDN. 
+NOTE: At the moment, all libraries that are being used are linked off of a CDN.
 This will change soon, but until then, a bower install isn't necessary.
 
-What is required is the lexemes/LexDB application. In order for this site to 
+What is required is the lexemes/LexDB application. In order for this site to
 work, that applicaiton must be installed and running.
 
 Instructions
@@ -17,12 +17,14 @@ $ git clone https://github.com/SpeakAgent/lingshare
 $ cd site
 ----
 
-In order for AngularJS to work properly, we'll need a webserver. 
+In order for AngularJS to work properly, we'll need a webserver.
 
 ----
 $ python -m SimpleHTTPServer 5000
 ----
 
-Once that's running, you should be able to access the site at 127.0.0.1:5000. 
-Note that sometimes, the firewall will pop up a warning, asking if you want to 
+Once that's running, you should be able to access the site at 127.0.0.1:5000.
+Note that sometimes, the firewall will pop up a warning, asking if you want to
 allow connections on that port. Just click "Allow".
+
+
