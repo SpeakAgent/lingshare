@@ -8212,7 +8212,13 @@ body {
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 16, ../scss/styles.scss */
+/* line 13, ../scss/styles.scss */
+h1 {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+
+/* line 19, ../scss/styles.scss */
 img.large-card {
   width: 600px;
   margin: 2em;
@@ -8220,13 +8226,13 @@ img.large-card {
   border-radius: 10px;
 }
 
-/* line 23, ../scss/styles.scss */
+/* line 26, ../scss/styles.scss */
 div.card-container {
   width: 200px;
   height: 130px;
 }
 
-/* line 28, ../scss/styles.scss */
+/* line 31, ../scss/styles.scss */
 div.small-card {
   width: 200px;
   height: 130px;
@@ -8236,14 +8242,14 @@ div.small-card {
   text-align: center;
 }
 
-/* line 37, ../scss/styles.scss */
+/* line 40, ../scss/styles.scss */
 div.card-container {
   width: 200px;
   height: 130px;
   margin: 2em;
 }
 
-/* line 43, ../scss/styles.scss */
+/* line 46, ../scss/styles.scss */
 div.card-container div img {
   width: 200px;
   height: 130px;
@@ -8251,7 +8257,7 @@ div.card-container div img {
   border-radius: 10px;
 }
 
-/* line 50, ../scss/styles.scss */
+/* line 53, ../scss/styles.scss */
 div.card-alerts {
   background-color: orange;
   width: 48px;
