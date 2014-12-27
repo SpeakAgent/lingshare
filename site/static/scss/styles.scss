@@ -2,19 +2,80 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:900,900italic|Noto+Sans:400,700,400italic,700italic&subset=latin-ext);
 
 @import "bootstrap-compass";
+@import "compass/css3/transition";
 @import "bootstrap";
 @import "bootstrap-variables";
 
 
+/*  0.0 Shell
+    ====================
+*/
+
+/* Additional Variables */
+
+$border-width-default: 3px;
+$transition-speed: 0.1s;
+
+
 body {
     font-family: $font-family-sans-serif;
+    margin-top: 20px;
 }
 
 h1 {
     font-family: $font-family-emphasis;
     font-weight: 900;
 }
-//* Flash Cards
+
+a {
+    color: $brand-secondary;
+    border-bottom: $border-width-default solid $accent-primary;
+    text-decoration: none;
+    @include transition(color, $transition-speed);
+    @include transition(border-bottom-color, $transition-speed);
+    &:hover {
+        color: $brand-primary;
+        text-decoration: none;
+        border-bottom-color: lighten($accent-primary, 25%);
+    }
+
+}
+
+/*  0.1 Global Navigation
+    ====================
+*/
+
+.navbar-global {
+    border: 0;
+    color: $brand-secondary;
+    margin: 0 20px;
+    @include box-shadow(rgba($shadow-primary, 0.1) 1px 3px 7px);
+    .navbar-nav {
+        > li > a {
+            border-bottom: 0;
+            color: $brand-secondary;
+            font-weight: 700;
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+    .navbar-primary {
+        float: left;
+    }
+    .navbar-user {
+        float: right;
+    }
+}
+
+
+/*  1.0 Dashboard
+    ====================
+*/
+
+/*  2.0 Flash Cards
+    ====================
+*/
 
 img.large-card {
         width: 600px;
@@ -58,3 +119,7 @@ img.large-card {
     border-radius: 24px;
     padding: 12px 8px;
   }
+
+/*  3.0 Memory
+    ====================
+*/

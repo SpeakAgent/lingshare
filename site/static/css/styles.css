@@ -8207,18 +8207,78 @@ button.close {
     display: none !important;
   }
 }
-/* line 9, ../scss/styles.scss */
+/*  0.0 Shell
+    ====================
+*/
+/* Additional Variables */
+/* line 20, ../scss/styles.scss */
 body {
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 20px;
 }
 
-/* line 13, ../scss/styles.scss */
+/* line 25, ../scss/styles.scss */
 h1 {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
 }
 
-/* line 19, ../scss/styles.scss */
+/* line 30, ../scss/styles.scss */
+a {
+  color: #009597;
+  border-bottom: 3px solid #f8d338;
+  text-decoration: none;
+  -webkit-transition: color, 0.1s;
+  -o-transition: color, 0.1s;
+  transition: color, 0.1s;
+  -webkit-transition: border-bottom-color, 0.1s;
+  -o-transition: border-bottom-color, 0.1s;
+  transition: border-bottom-color, 0.1s;
+}
+/* line 36, ../scss/styles.scss */
+a:hover {
+  color: #6ecacb;
+  text-decoration: none;
+  border-bottom-color: #fceeb3;
+}
+
+/*  0.1 Global Navigation
+    ====================
+*/
+/* line 48, ../scss/styles.scss */
+.navbar-global {
+  border: 0;
+  color: #009597;
+  margin: 0 20px;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 1px 3px 7px;
+  box-shadow: rgba(34, 9, 9, 0.1) 1px 3px 7px;
+}
+/* line 54, ../scss/styles.scss */
+.navbar-global .navbar-nav > li > a {
+  border-bottom: 0;
+  color: #009597;
+  font-weight: 700;
+}
+/* line 58, ../scss/styles.scss */
+.navbar-global .navbar-nav > li > a:hover {
+  color: #6ecacb;
+}
+/* line 63, ../scss/styles.scss */
+.navbar-global .navbar-primary {
+  float: left;
+}
+/* line 66, ../scss/styles.scss */
+.navbar-global .navbar-user {
+  float: right;
+}
+
+/*  1.0 Dashboard
+    ====================
+*/
+/*  2.0 Flash Cards
+    ====================
+*/
+/* line 80, ../scss/styles.scss */
 img.large-card {
   width: 600px;
   margin: 2em;
@@ -8226,13 +8286,13 @@ img.large-card {
   border-radius: 10px;
 }
 
-/* line 26, ../scss/styles.scss */
+/* line 87, ../scss/styles.scss */
 div.card-container {
   width: 200px;
   height: 130px;
 }
 
-/* line 31, ../scss/styles.scss */
+/* line 92, ../scss/styles.scss */
 div.small-card {
   width: 200px;
   height: 130px;
@@ -8242,14 +8302,14 @@ div.small-card {
   text-align: center;
 }
 
-/* line 40, ../scss/styles.scss */
+/* line 101, ../scss/styles.scss */
 div.card-container {
   width: 200px;
   height: 130px;
   margin: 2em;
 }
 
-/* line 46, ../scss/styles.scss */
+/* line 107, ../scss/styles.scss */
 div.card-container div img {
   width: 200px;
   height: 130px;
@@ -8257,7 +8317,7 @@ div.card-container div img {
   border-radius: 10px;
 }
 
-/* line 53, ../scss/styles.scss */
+/* line 114, ../scss/styles.scss */
 div.card-alerts {
   background-color: orange;
   width: 48px;
@@ -8266,3 +8326,7 @@ div.card-alerts {
   border-radius: 24px;
   padding: 12px 8px;
 }
+
+/*  3.0 Memory
+    ====================
+*/
