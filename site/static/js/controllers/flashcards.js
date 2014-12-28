@@ -1,5 +1,5 @@
 mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
-  '$interval',  
+  '$interval',
 
   function ($scope, $timeout, $http, $interval) {
 
@@ -7,7 +7,7 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
 
   $scope.seconds = 0
 
-  
+
 
   $scope.stopTimer = function () {
     if ($scope.done) {

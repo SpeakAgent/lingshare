@@ -1,40 +1,39 @@
 
-  <div class="container" role="main" ng-controller="FlashCardController">
-  <h1>{{ wordlist.title }}</h1>
-  <p>{{ wordlist.description }}</p>
-  <p>{{ seconds }} seconds...</p>
-  <div class = "cards"
-       ng-show="!done">
-    <div class="col-md-8">
-    <img src="http://127.0.0.1:8000{{ card.base_word.symbol[0].image }}" class="large-card">
-    </div>
-    <div class="col-md-4">
-      <div class="card-container"
-           ng-repeat="item in possible_cards"
-           ng-click="checkCard(item)">
-           <div class="card-alerts animate-show"
-                ng-show="alerts[item.base_word.root_word] != null">
-          {{ alerts[item.base_word.root_word] }}
-        </div>
-      	<div class="small-card text-center"
-             ng-show="show_symbol != item.base_word.root_word">
-          {{ item.base_word.root_word }}
-        </div>
-        <div ng-show="show_symbol == item.base_word.root_word">
-          <img 
-            src="http://127.0.0.1:8000{{ item.base_word.symbol[0].image }}">
+  <div class="container flash-cards" role="main" ng-controller="FlashCardController">
+    <div class = "cards" ng-show="!done">
+      <div class="col-md-8 main-card">
+        <img src="http://127.0.0.1:8000{{ card.base_word.symbol[0].image }}" class="large-card">
+      </div>
+      <div class="col-md-4 choice-cards">
+        <div class="card-container"
+             ng-repeat="item in possible_cards"
+             ng-click="checkCard(item)">
+             <div class="card-alerts animate-show"
+                  ng-show="alerts[item.base_word.root_word] != null">
+            {{ alerts[item.base_word.root_word] }}
+          </div>
+        	<div class="small-card text-center"
+               ng-show="show_symbol != item.base_word.root_word">
+            {{ item.base_word.root_word }}
+          </div>
+          <div ng-show="show_symbol == item.base_word.root_word">
+            <img
+              src="http://127.0.0.1:8000{{ item.base_word.symbol[0].image }}">
+          </div>
         </div>
       </div>
     </div>
+    <div class="timer">
+      <p>{{ seconds }} seconds...</p>
+    </div>
+    <div class = "done"
+         ng-show = "done">
+         <p>Done!</p>
+         <p>You clicked correctly {{ actions.right.length }} times.</p>
+         <p>You clicked incorrectly {{ actions.wrong.length }} times.</p>
+         <p>It took you {{ seconds }} seconds!</p>
+    </div>
   </div>
-  <div class = "done"
-       ng-show = "done">
-       <p>Done!</p>
-       <p>You clicked correctly {{ actions.right.length }} times.</p>
-       <p>You clicked incorrectly {{ actions.wrong.length }} times.</p>
-       <p>It took you {{ seconds }} seconds!</p>
-  </div>
-  
-  
 
-  
+
+

@@ -16,16 +16,18 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-global" ng-controller="NavController">
-	<ul class="nav navbar-nav navbar-primary">
+<nav class="navbar navbar-global" ng-controller="NavController">
+	<ul class="nav navbar-default navbar-nav navbar-primary">
+		<li id="el-logo"><a href="/#/"><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" title="Speak Agent" /></a></li>
 		<li><a href="/#/">Home</a></li>
 		<li><a href="/#/games/">Games</a></li>
 		<li><a href="/#/words/">Words</a></li>
 	</ul>
-	<ul class="nav navbar-nav navbar-user">
-		<li><a href="/#/">User Icon</a></li>
-		<li><a href="/#/games/">Score Stuff</a></li>
-		<li><a href="/#/login/">
+	<ul class="nav navbar-default navbar-nav navbar-user">
+		<li class="user-icon"><a href="/#/">User Icon</a></li>
+		<li class="user-score"><span class="score-label">Your Score</span>
+			<span class="score-value">999,999</span></li>
+		<li class="user-login"><a href="/#/login/">
 			<span ng-if="User.username">
 			 Log Out
 			 </span>

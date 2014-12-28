@@ -49,22 +49,50 @@ a {
     border: 0;
     color: $brand-secondary;
     margin: 0 20px;
-    @include box-shadow(rgba($shadow-primary, 0.1) 1px 3px 7px);
     .navbar-nav {
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 3px 7px);
         > li > a {
             border-bottom: 0;
             color: $brand-secondary;
             font-weight: 700;
             &:hover {
                 color: $brand-primary;
+                background-color: transparent;
+            }
+            &:focus {
+                color: $brand-secondary;
+                background-color: transparent;
             }
         }
     }
     .navbar-primary {
         float: left;
+        #el-logo {
+            img {
+                width: 40px;
+            }
+            a {
+                padding: 6px;
+            }
+        }
     }
     .navbar-user {
         float: right;
+        .user-score {
+            padding-top: 6px;
+            span {
+                display: block;
+                &.score-label {
+                    font-size: 0.8em;
+                    text-transform: uppercase;
+                    margin-bottom: -5px;
+                }
+                &.score-value {
+                    font-family: $font-family-emphasis;
+                    font-size: 1.5em;
+                }
+            }
+        }
     }
 }
 
@@ -77,48 +105,57 @@ a {
     ====================
 */
 
-img.large-card {
-        width: 600px;
-        margin: 2em;
-        border: 4px darkblue solid;
-        border-radius: 10px;
-    }
+$flash-cards-border-color-default: #6095AA;
 
-  div.card-container {
-    width: 200px;
-    height: 130px;
-  }
 
-    div.small-card {
+.flash-cards {
+    border: $border-width-default $flash-cards-border-color-default solid;
+    border-radius: 9px;
+    margin-top: 30px;
+    img.large-card {
+            width: 600px;
+            margin: 2em;
+            border: $border-width-default darkblue solid;
+            border-radius: 10px;
+        }
+
+      div.card-container {
         width: 200px;
         height: 130px;
-        border: 4px darkblue solid;
+      }
+
+        div.small-card {
+            width: 200px;
+            height: 130px;
+            border: $border-width-default darkblue solid;
+            margin: 2em;
+            border-radius: 10px;
+            text-align: center;
+        img {
+            width: 200px;
+            height: 130px;
+            border: $border-width-default darkblue solid;
+            border-radius: 130px;
+          }
+        }
+
+      div.card-container {
+        width: 200px;
+        height: 130px;
         margin: 2em;
-        border-radius: 10px;
-        text-align: center;
-    }
 
-  div.card-container {
-    width: 200px;
-    height: 130px;
-    margin: 2em;
-  }
 
-  div.card-container div img {
-    width: 200px;
-    height: 130px;
-    border: 4px darkblue solid;
-    border-radius: 10px;
-  }
+      }
 
-  div.card-alerts {
-    background-color: orange;
-    width: 48px;
-    height: 48px;
-    float: left;
-    border-radius: 24px;
-    padding: 12px 8px;
-  }
+      div.card-alerts {
+        background-color: orange;
+        width: 48px;
+        height: 48px;
+        float: left;
+        border-radius: 24px;
+        padding: 12px 8px;
+      }
+}
 
 /*  3.0 Memory
     ====================

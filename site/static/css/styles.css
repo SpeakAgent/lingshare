@@ -8250,8 +8250,11 @@ a:hover {
   border: 0;
   color: #009597;
   margin: 0 20px;
-  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 1px 3px 7px;
-  box-shadow: rgba(34, 9, 9, 0.1) 1px 3px 7px;
+}
+/* line 52, ../scss/styles.scss */
+.navbar-global .navbar-nav {
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 3px 7px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 3px 7px;
 }
 /* line 54, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a {
@@ -8262,14 +8265,47 @@ a:hover {
 /* line 58, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a:hover {
   color: #6ecacb;
+  background-color: transparent;
 }
-/* line 63, ../scss/styles.scss */
+/* line 62, ../scss/styles.scss */
+.navbar-global .navbar-nav > li > a:focus {
+  color: #009597;
+  background-color: transparent;
+}
+/* line 68, ../scss/styles.scss */
 .navbar-global .navbar-primary {
   float: left;
 }
-/* line 66, ../scss/styles.scss */
+/* line 71, ../scss/styles.scss */
+.navbar-global .navbar-primary #el-logo img {
+  width: 40px;
+}
+/* line 74, ../scss/styles.scss */
+.navbar-global .navbar-primary #el-logo a {
+  padding: 6px;
+}
+/* line 79, ../scss/styles.scss */
 .navbar-global .navbar-user {
   float: right;
+}
+/* line 81, ../scss/styles.scss */
+.navbar-global .navbar-user .user-score {
+  padding-top: 6px;
+}
+/* line 83, ../scss/styles.scss */
+.navbar-global .navbar-user .user-score span {
+  display: block;
+}
+/* line 85, ../scss/styles.scss */
+.navbar-global .navbar-user .user-score span.score-label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-bottom: -5px;
+}
+/* line 90, ../scss/styles.scss */
+.navbar-global .navbar-user .user-score span.score-value {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
 }
 
 /*  1.0 Dashboard
@@ -8278,47 +8314,48 @@ a:hover {
 /*  2.0 Flash Cards
     ====================
 */
-/* line 80, ../scss/styles.scss */
-img.large-card {
+/* line 111, ../scss/styles.scss */
+.flash-cards {
+  border: 3px #6095aa solid;
+  border-radius: 9px;
+  margin-top: 30px;
+}
+/* line 115, ../scss/styles.scss */
+.flash-cards img.large-card {
   width: 600px;
   margin: 2em;
-  border: 4px darkblue solid;
+  border: 3px darkblue solid;
   border-radius: 10px;
 }
-
-/* line 87, ../scss/styles.scss */
-div.card-container {
+/* line 122, ../scss/styles.scss */
+.flash-cards div.card-container {
   width: 200px;
   height: 130px;
 }
-
-/* line 92, ../scss/styles.scss */
-div.small-card {
+/* line 127, ../scss/styles.scss */
+.flash-cards div.small-card {
   width: 200px;
   height: 130px;
-  border: 4px darkblue solid;
+  border: 3px darkblue solid;
   margin: 2em;
   border-radius: 10px;
   text-align: center;
 }
-
-/* line 101, ../scss/styles.scss */
-div.card-container {
+/* line 134, ../scss/styles.scss */
+.flash-cards div.small-card img {
+  width: 200px;
+  height: 130px;
+  border: 3px darkblue solid;
+  border-radius: 130px;
+}
+/* line 142, ../scss/styles.scss */
+.flash-cards div.card-container {
   width: 200px;
   height: 130px;
   margin: 2em;
 }
-
-/* line 107, ../scss/styles.scss */
-div.card-container div img {
-  width: 200px;
-  height: 130px;
-  border: 4px darkblue solid;
-  border-radius: 10px;
-}
-
-/* line 114, ../scss/styles.scss */
-div.card-alerts {
+/* line 150, ../scss/styles.scss */
+.flash-cards div.card-alerts {
   background-color: orange;
   width: 48px;
   height: 48px;
