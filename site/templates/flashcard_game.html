@@ -17,11 +17,15 @@
             {{ item.base_word.root_word }}
           </div>
           <div ng-show="show_symbol == item.base_word.root_word">
-            <img
-              src="http://127.0.0.1:8000{{ item.base_word.symbol[0].image }}">
+            <div class="small-card">
+              <img src="http://127.0.0.1:8000{{ item.base_word.symbol[0].image }}" />
+            </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="timer clearfix">
+      <p>{{ seconds }} seconds...</p>
     </div>
     <div class = "done"
          ng-show = "done">

@@ -11035,15 +11035,14 @@ a:hover {
   width: 200px;
   height: 130px;
   border: 3px #6095aa solid;
-  border-radius: 130px;
 }
-/* line 145, ../scss/styles.scss */
+/* line 144, ../scss/styles.scss */
 .flash-cards div.card-container {
   width: 200px;
   height: 130px;
   margin: 2em;
 }
-/* line 153, ../scss/styles.scss */
+/* line 152, ../scss/styles.scss */
 .flash-cards div.card-alerts {
   background-color: orange;
   width: 48px;
@@ -11051,6 +11050,8 @@ a:hover {
   float: left;
   border-radius: 24px;
   padding: 12px 8px;
+  position: absolute;
+  z-index: 2;
 }
 
 /*  3.0 Memory

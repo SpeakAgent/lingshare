@@ -134,12 +134,11 @@ $flash-cards-border-color-default: #6095AA;
             border-radius: 10px;
             text-align: center;
             cursor: pointer;
-        img {
-            width: 200px;
-            height: 130px;
-            border: $border-width-default $flash-cards-border-color-default solid;
-            border-radius: 130px;
-          }
+            img {
+                width: 200px;
+                height: 130px;
+                border: $border-width-default $flash-cards-border-color-default solid;
+              }
         }
 
       div.card-container {
@@ -157,6 +156,8 @@ $flash-cards-border-color-default: #6095AA;
         float: left;
         border-radius: 24px;
         padding: 12px 8px;
+        position: absolute;
+        z-index: 2;
       }
 
 }
