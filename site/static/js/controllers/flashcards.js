@@ -1,12 +1,13 @@
 mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
-  '$interval',
+  '$interval', '$rootScope',
 
-  function ($scope, $timeout, $http, $interval) {
+  function ($scope, $timeout, $http, $interval, $rootScope) {
 
   $scope.used_words = []
 
   $scope.seconds = 0
 
+  $rootScope.body_classes = "games flashcards"
 
 
   $scope.stopTimer = function () {
