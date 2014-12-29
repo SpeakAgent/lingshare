@@ -1,6 +1,25 @@
 	<div class="row">
 		<div
 			 ng-repeat="n in [0, 1, 2, 3]">
+			 <div ng-click="flipCard(cards[n])">
+				 <div ng-show = "showCards.indexOf(cards[n].word.base_word.root_word+'-'+card[n].type)>-1"
+				      class="card">
+					<img src = "http://127.0.0.1:8000{{cards[n].word.base_word.symbol[0].image}}"
+				 	  ng-if = "cards[n].type == 'symbol'">
+					<span ng-if = "cards[n].type == 'word'">
+					{{ card[n].word.base_word.root_word }}
+					</span>
+				</div>
+				<div ng-show = "showCards.indexOf(card[n].word.base_word.root_word+'-'+cards[n].type)==-1"
+				     class="card">
+					<img src = "http://i.istockimg.com/file_thumbview_approve/23865084/3/stock-illustration-23865084-simple-vintage-pattern.jpg">
+			 	</div>
+		</div>
+		</div>
+	</div>
+	<div class="row">
+		<div
+			 ng-repeat="n in [4, 5, 6, 7]">
 			 <div ng-click="flipCard(card[n])">
 				 <div ng-show = "showCards.indexOf(card[n].word.base_word.root_word+'-'+card[n].type)>-1"
 				      class="card">
@@ -19,20 +38,21 @@
 	</div>
 	<div class="row">
 		<div
-			ng-repeat="n in [4, 5, 6, 7]"
-			ng-click="flipCard(card)">
-			<div class="card">
-			{{ cards[n].word.base_word.root_word }} - {{ cards[n].type }}
-			</div>
+			 ng-repeat="n in [8, 9, 10, 11]">
+			 <div ng-click="flipCard(card[n])">
+				 <div ng-show = "showCards.indexOf(card[n].word.base_word.root_word+'-'+card[n].type)>-1"
+				      class="card">
+					<img src = "http://127.0.0.1:8000{{card[n].word.base_word.symbol[0].image}}"
+				 	  ng-if = "card[n].type == 'symbol'">
+					<span ng-if = "card[n].type == 'word'">
+					{{ card[n].word.base_word.root_word }}
+					</span>
+				</div>
+				<div ng-show = "showCards.indexOf(card[n].word.base_word.root_word+'-'+card[n].type)==-1"
+				     class="card">
+					<img src = "http://i.istockimg.com/file_thumbview_approve/23865084/3/stock-illustration-23865084-simple-vintage-pattern.jpg">
+			 	</div>
 		</div>
-	</div>
-	<div class="row">
-		<div
-			ng-repeat="n in [8, 9, 10, 11]"
-			ng-click="flipCard(card)">
-			<div class="card">
-			{{ cards[n].word.base_word.root_word }} - {{ cards[n].type }}
-			</div>
-	</div>
+		</div>
 </div>
 
