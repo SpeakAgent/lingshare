@@ -1,6 +1,8 @@
 mainApp.controller('WordsController', ['$scope', '$http', '$routeParams', 
+  '$rootScope',
 
-function ($scope, $http, $routeParams) {
+function ($scope, $http, $routeParams, $rootScope) {
+    $rootScope.body_classes = "wordlist lexeme"
     if ($routeParams.id) 
       { $scope.id = $routeParams.id}
     if (!$scope.id) {

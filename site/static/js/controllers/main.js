@@ -20,6 +20,7 @@ mainApp.config(function($routeProvider) {
 	})
 	.when('/games/', {
 		templateUrl: 'templates/games.html',
+		controller: 'GamesController'
 	})
 	.when('/games/flashcards/', {
 		templateUrl: 'templates/flashcard_game.html',
@@ -31,6 +32,11 @@ mainApp.config(function($routeProvider) {
 	})
 });
 
-mainApp.controller('mainController', function($scope) {
-	$scope.title = "Hello, world!"
+mainApp.controller('mainController', function($scope, $rootScope) {
+	$scope.title = "Hello, world!";
+	$rootScope.body_classes = "main"
+});
+
+mainApp.controller('GamesController', function($scope, $rootScope) {
+	$rootScope.body_classes = "games"
 })
