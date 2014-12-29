@@ -5,6 +5,8 @@
 @import "compass/css3/transition";
 @import "bootstrap";
 @import "bootstrap-variables";
+@import "font-awesome-compass";
+@import "font-awesome";
 
 
 /*  0.0 Shell
@@ -115,7 +117,7 @@ $flash-cards-border-color-default: #6095AA;
     img.large-card {
             width: 600px;
             margin: 2em;
-            border: $border-width-default darkblue solid;
+            border: $border-width-default $flash-cards-border-color-default solid;
             border-radius: 10px;
         }
 
@@ -127,14 +129,15 @@ $flash-cards-border-color-default: #6095AA;
         div.small-card {
             width: 200px;
             height: 130px;
-            border: $border-width-default darkblue solid;
+            border: $border-width-default $flash-cards-border-color-default solid;
             margin: 2em;
             border-radius: 10px;
             text-align: center;
+            cursor: pointer;
         img {
             width: 200px;
             height: 130px;
-            border: $border-width-default darkblue solid;
+            border: $border-width-default $flash-cards-border-color-default solid;
             border-radius: 130px;
           }
         }
@@ -155,8 +158,13 @@ $flash-cards-border-color-default: #6095AA;
         border-radius: 24px;
         padding: 12px 8px;
       }
+
 }
 
 /*  3.0 Memory
+    ====================
+*/
+
+/*  4.0 Wordlists
     ====================
 */
