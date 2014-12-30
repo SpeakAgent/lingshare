@@ -61,14 +61,12 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 };
 
   	 $scope.removeCards = function (card1, card2) {
-  	 	$scope.hideCards.push(card1);
-      $scope.hideCards.push(card2);
+      $timeout(function () {
+        $scope.hideCards.push(card1);
+        $scope.hideCards.push(card2);
+      }, 1000)
+  	 	
   	 	// Do we have two word cards?
-  	 };
-
-  	 $scope.removeCards = function (card1, card2) {
-  	 	$scope.hideCards.push(card1);
-      $scope.hideCards.push(card2);
   	 };
 
   	 $scope.addAction = function (action) {
