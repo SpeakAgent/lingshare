@@ -107,7 +107,7 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
       $scope.show_symbol = item.base_word.root_word;
       // Win or no?
       if (item.base_word.root_word == $scope.card.base_word.root_word) {
-        $scope.alerts[item.base_word.root_word] = "That's right!";
+        $scope.alerts[item.base_word.root_word] = "+5";
         $timeout(function() {
           $scope.alerts[item.base_word.root_word] = null;
           $scope.show_symbol = null;
@@ -118,7 +118,7 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
           $scope.newScreen();
         }, 1500);
       } else {
-        $scope.alerts[item.base_word.root_word] = "Nope";
+        $scope.alerts[item.base_word.root_word] = "Try Again!";
         $timeout(function() {
           $scope.alerts[item.base_word.root_word] = null;
           $scope.show_symbol = null;

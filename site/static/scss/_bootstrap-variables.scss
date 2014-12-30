@@ -23,6 +23,7 @@
 $brand-primary: #6ECACB;
 $brand-secondary: #009597;
 $accent-primary: #F8D338;
+$accent-dark: #CF9204;
 $shadow-primary: #220909;
 
 // $brand-success:         #5cb85c
@@ -357,7 +358,7 @@ $font-family-emphasis: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sa
 // $navbar-collapse-max-height:       340px
 
 // $navbar-default-color:             #777
-// $navbar-default-bg:                #f8f8f8
+$navbar-default-bg:                #fff;
 // $navbar-default-border:            darken($navbar-default-bg, 6.5%)
 
 // Navbar links
@@ -409,7 +410,7 @@ $navbar-default-link-color: $brand-secondary;
 //##
 
 //=== Shared nav styles
-// $nav-link-padding:                          10px 15px
+$nav-link-padding:                          4px 10px 4px 0;
 // $nav-link-hover-bg:                         $gray-lighter
 
 // $nav-disabled-link-color:                   $gray-light

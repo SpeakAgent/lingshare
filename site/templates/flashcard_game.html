@@ -1,24 +1,27 @@
 
   <div class="container flash-cards" role="main" ng-controller="FlashCardController">
-    <div class = "cards" ng-show="!done">
-      <div class="col-md-8 main-card">
-        <img src="http://127.0.0.1:8000{{ card.base_word.symbol[0].image }}" class="large-card">
+    <div class="cards clearfix" ng-show="!done">
+      <div class="col-md-9 first">
+        <div class="main-card">
+          <img src="http://127.0.0.1:8000{{ card.base_word.symbol[0].image }}" class="large-card">
+        </div>
       </div>
-      <div class="col-md-4 choice-cards">
-        <div class="card-container"
+      <div class="col-md-3 options-container">
+        <h3 class="options-label"><span>Pick One</span></h3>
+        <div class="option-container"
              ng-repeat="item in possible_cards"
              ng-click="checkCard(item)">
-             <div class="card-alerts animate-show"
+            <div class="option">
+             <div class="game-alerts animate-show"
                   ng-show="alerts[item.base_word.root_word] != null">
             {{ alerts[item.base_word.root_word] }}
-          </div>
-        	<div class="small-card text-center"
-               ng-show="show_symbol != item.base_word.root_word">
-            {{ item.base_word.root_word }}
-          </div>
-          <div ng-show="show_symbol == item.base_word.root_word">
-            <div class="small-card">
-              <img src="http://127.0.0.1:8000{{ item.base_word.symbol[0].image }}" />
+            </div>
+            <div class="lexeme"
+                   ng-show="show_symbol != item.base_word.root_word">
+                {{ item.base_word.root_word }}
+            </div>
+            <div class="symbol" ng-show="show_symbol == item.base_word.root_word">
+                <img src="http://127.0.0.1:8000{{ item.base_word.symbol[0].image }}" />
             </div>
           </div>
         </div>
