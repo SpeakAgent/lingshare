@@ -53,10 +53,10 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
         $scope.removeCards(card1, card2)
       } else {
         console.log("Nope.")
-      }
-      $timeout(function () {
+        $timeout(function () {
         $scope.showCards = [];
-      }, 2000);
+      }, 1000);
+      }
 
   	 };
 
@@ -64,6 +64,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
       $timeout(function () {
         $scope.hideCards.push(card1);
         $scope.hideCards.push(card2);
+        $scope.showCards = []
       }, 1000)
   	 	
   	 	// Do we have two word cards?
@@ -95,7 +96,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 };
 
      $scope.flipCard = function (card) {
-      console.log(card)
+      console.log(card, $scope.showCards)
 
       if ($scope.showCards.indexOf(card.slug) == -1 && 
         $scope.showCards.length < 2) {
