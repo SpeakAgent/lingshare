@@ -40,31 +40,38 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 };
 
   	 $scope.setUpBoard = function () {
-  	 	// body...
+  	 	// body... 
   	 };
 
   	 $scope.checkCards = function (card1, card2) {
-     console.log(card1, card2);
       cardarr1 = card1.split('-');
       cardarr2 = card2.split('-');
       
       if (cardarr1[0] == cardarr2[0]) {
-        console.log("They match!")
+        $scope.status = "They match!";
+        $scope.correct++;
         $scope.removeCards(card1, card2)
       } else {
-        console.log("Nope.")
+        $scope.status = "Those don't match...";
+        $scope.wrong++;
         $timeout(function () {
         $scope.showCards = [];
+        $scope.status = "";
       }, 1000);
       }
-
+      if ($scope.hideCards.length == $scope.cards.length - 2) {
+        $timeout(function () {
+        $scope.done = true;
+      }, 1000)
+      }
   	 };
 
   	 $scope.removeCards = function (card1, card2) {
       $timeout(function () {
         $scope.hideCards.push(card1);
         $scope.hideCards.push(card2);
-        $scope.showCards = []
+        $scope.showCards = [];
+        $scope.status = "";
       }, 1000)
   	 	
   	 	// Do we have two word cards?
@@ -96,7 +103,6 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 };
 
      $scope.flipCard = function (card) {
-      console.log(card, $scope.showCards)
 
       if ($scope.showCards.indexOf(card.slug) == -1 && 
         $scope.showCards.length < 2) {
@@ -117,7 +123,12 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
 	  	   	$scope.playGame();
           $scope.showCards = []
           $scope.hideCards = []
+          $scope.correct = 0;
+          $scope.wrong = 0;
 	  	   	$scope.createCards();
+          $scope.done = false;
+          $scope.seconds = 0;
+          $scope.startTimer();
   	 });
 
   }]);
