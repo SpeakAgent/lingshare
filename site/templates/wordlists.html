@@ -68,7 +68,13 @@
 	<div class="card col-md-12"
 		ng-repeat="word in list.words">
 		<span ng-if="word.base_word.audio_file"
-			class="col-md-1">Listen</span>
+			class="col-md-1">
+			<audio controls>
+  				<source src="{{ audio_url(word.base_word.audio_file) }}" 
+  					type="audio/mpeg">
+  				Your browser does not support the audio tag.
+			</audio>
+		</span>
 		<span ng-if="!word.base_word.audio_file">No audio</span>
 		<img src = "http://127.0.0.1:8000{{ word.base_word.symbol[0].image }}">
 		<span>{{ word.base_word.root_word }}</span>

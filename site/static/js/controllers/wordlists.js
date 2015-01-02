@@ -1,7 +1,7 @@
 mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
-  '$rootScope', 
+  '$rootScope', '$sce',
 
-  function ($scope, $http, $routeParams, $rootScope) {
+  function ($scope, $http, $routeParams, $rootScope, $sce) {
     $rootScope.body_classes = "wordslist"
     if ($routeParams.id) 
       { $scope.id = $routeParams.id;
@@ -21,6 +21,9 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
         $scope.list = data;
         }
       );
+    }
+    $scope.audio_url = function(path) {
+        return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
     }
   }
 

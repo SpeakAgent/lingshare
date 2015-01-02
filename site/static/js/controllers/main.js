@@ -1,6 +1,6 @@
 var mainApp = angular.module('mainApp', ['ngRoute', 'angular-jwt']);
 
-mainApp.config(function($routeProvider) {
+mainApp.config(function($routeProvider, $sceDelegateProvider) {
 	$routeProvider
 	.when('/', {
 		templateUrl: 'templates/main.html',
@@ -33,7 +33,13 @@ mainApp.config(function($routeProvider) {
 	.when('/games/memory/', {
 		templateUrl: 'templates/memory.html',
 		controller: 'MemoryController'
-	})
+	});
+
+	$sceDelegateProvider.resourceUrlWhitelist([
+   // Allow same origin resource loads.
+   'self',
+   // Allow loading from our assets domain.  Notice the difference between * and **.
+   'http://127.0.0.1:8000/**']);
 });
 
 mainApp.controller('mainController', function($scope, $rootScope) {
