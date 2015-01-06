@@ -22,6 +22,10 @@ mainApp.config(function($routeProvider, $sceDelegateProvider) {
 		templateUrl: 'templates/wordlists.html',
 		controller: 'WordListsController'
 	})
+	.when('/words/:id/:wordID/', {
+		templateUrl: 'templates/wordlists.html',
+		controller: 'WordListsController'
+	})
 	.when('/games/', {
 		templateUrl: 'templates/games.html',
 		controller: 'GamesController'

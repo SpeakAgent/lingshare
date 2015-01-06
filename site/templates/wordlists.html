@@ -30,6 +30,13 @@
 		margin: 1em;
 	}
 
+		img.small {
+		width: 300px;
+	}
+	div.audio {
+		height: 100px;
+	}
+
 </style>
 
 <div class="container" role="main" ng-controller="WordListsController">
@@ -39,6 +46,8 @@
 </div>
 
 <div ng-if="id">
+
+<div ng-show="!wordID">
 
 <div class="row">
 	<div class="col-md-2"><button class="btn btn-block">Back to ????</button></div>
@@ -53,31 +62,91 @@
 	</div>
 </div>
 
-
-<div class="row grid"
-	ng-show="display=='grid'">
-	<div class="card col-md-2"
-		ng-repeat="word in list.words">
-		<img src = "http://127.0.0.1:8000{{ word.base_word.photos[0].image }}">
-		<span>{{ word.base_word.root_word }}</span>
+	<div class="row grid"
+		ng-show="display=='grid'">
+		<div class="card col-md-2"
+			ng-repeat="word in list.words">
+			<img src = "http://127.0.0.1:8000{{ word.base_word.photos[0].image }}">
+			<span>{{ word.base_word.root_word }}</span>
+		</div>
 	</div>
+
+	<div class="row list"
+		ng-show="display=='list'">
+		<div class="card col-md-12"
+			ng-repeat="word in list.words">
+			<span ng-if="list.words[wordID].base_word.audio_file"
+				class="col-md-1">
+				<audio controls>
+	  				<source src="{{ audio_url(word.base_word.audio_file) }}" 
+	  					type="audio/mpeg">
+	  				Your browser does not support the audio tag.
+				</audio>
+			</span>
+			<span ng-if="!word.base_word.audio_file">No audio</span>
+			<img src = "http://127.0.0.1:8000{{ word.base_word.photos[0].image }}">
+			<span><a href = "/#/wordpair/{{ word.pk }}/">{{ word.base_word.root_word }}</a></span>
+		</div>
+	</div>
+	<button>
+		<a href = "/#/words/{{ id }}/0/">Review word list</a>
+	</button>
 </div>
 
-<div class="row list"
-	ng-show="display=='list'">
-	<div class="card col-md-12"
-		ng-repeat="word in list.words">
-		<span ng-if="word.base_word.audio_file"
+<div ng-show="wordID"
+	class="container">
+	<h1>{{ list.words[wordID].base_word.root_word }}</h1>
+
+	<div>
+		<img src="http://127.0.0.1:8000{{photo.image}}"
+			ng-repeat="photo in list.words[wordID].base_word.photos"
+			class="img-rounded small">
+	</div>
+
+	<div>
+		<dl>
+			<dt>{{ list.words[wordID].base_word.root_word }}</dt>
+				<dd ng-if="list.words[wordID].base_word.gender.title != 'NA'">({{ list.words[wordID].base_word.word_class.title }}, {{ list.words[wordID].base_word.gender }})
+				</dd>
+
+				<dd ng-if="list.words[wordID].base_word.gender.title == 'NA'">({{ list.words[wordID].base_word.word_class.title }})
+				</dd>
+			<dt>{{ list.words[wordID].trans_word.root_word }}</dt>
+		</dl>
+	</div>
+
+	<div class="audio">
+		<p ng-if="list.words[wordID].base_word.audio_file"
 			class="col-md-1">
 			<audio controls>
-  				<source src="{{ audio_url(word.base_word.audio_file) }}" 
-  					type="audio/mpeg">
-  				Your browser does not support the audio tag.
+					<source src="{{ audio_url(list.words[wordID].base_word.audio_file) }}" 
+						type="audio/mpeg">
+					Your browser does not support the audio tag.
 			</audio>
-		</span>
-		<span ng-if="!word.base_word.audio_file">No audio</span>
-		<img src = "http://127.0.0.1:8000{{ word.base_word.photos[0].image }}">
-		<span><a href = "/#/wordpair/{{ word.pk }}/">{{ word.base_word.root_word }}</a></span>
+		</p>
+		<p ng-if="!list.words[wordID].base_word.audio_file">No audio</p>
+	</div>
+
+	<div>
+		<p>In a sentence:</p>
+		<dl>
+			<dt ng-repeat-start="sentence in list.words[wordID].base_word.example_sentences">
+				{{ sentence.text }}
+			</dt>
+			<dd ng-repeat-end>{{ sentence.translations[0].text }}</dd>
+		</dl>
+	</div>
+	<div>
+	<button ng-if="wordID > 0">
+		<a href="/#/words/{{ id }}/{{ getPrev(wordID) }}">
+			{{ list.words[getPrev(wordID)].base_word.root_word }}
+		</a>
+	</button>
+	<button ng-if="wordID < list.words.length - 1">
+		<a href="/#/words/{{ id }}/{{ getNext(wordID) }}">
+			{{ list.words[getNext(wordID)].base_word.root_word }}
+		</a>
+	</button>
 	</div>
 </div>
 </div>
