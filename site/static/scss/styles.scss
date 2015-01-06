@@ -1,3 +1,9 @@
+/*
+    Title: Styles for Speak Agent App
+    Version: 0.1
+    Description: Styles of Speak Agent Web Application.
+    ====================
+*/
 
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:900,900italic|Noto+Sans:400,700,400italic,700italic&subset=latin-ext);
 
@@ -17,8 +23,6 @@
 
 $border-width-default: 3px;
 $transition-speed: 0.1s;
-
-
 
 
 body {
@@ -285,3 +289,20 @@ body.games.flashcards {
 /*  4.0 Wordlists
     ====================
 */
+
+
+/*  ZZZ. Remove Phone-sized Responsive Functionality
+
+    For the pilot we are focusing on tablet and desktop experiences. For that reason, we are disabling the phone-sized levels of responsive design.
+
+    ====================
+*/
+
+body,
+.container,
+nav {
+    min-width: 768px !important;
+}
+.navbar-nav > li {
+    float: left !important;
+}

@@ -1,3 +1,9 @@
+/*
+    Title: Styles for Speak Agent App
+    Version: 0.1
+    Description: Styles of Speak Agent Web Application.
+    ====================
+*/
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:900,900italic|Noto+Sans:400,700,400italic,700italic&subset=latin-ext);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /* line 9, ../scss/bootstrap/_normalize.scss */
@@ -10899,20 +10905,20 @@ button.close {
     ====================
 */
 /* Additional Variables */
-/* line 24, ../scss/styles.scss */
+/* line 28, ../scss/styles.scss */
 body {
   background-color: #6ecacb;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-top: 20px;
 }
 
-/* line 30, ../scss/styles.scss */
+/* line 34, ../scss/styles.scss */
 h1 {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
 }
 
-/* line 35, ../scss/styles.scss */
+/* line 39, ../scss/styles.scss */
 a {
   color: #009597;
   border-bottom: 3px solid #f8d338;
@@ -10924,7 +10930,7 @@ a {
   -o-transition: border-bottom-color, 0.1s;
   transition: border-bottom-color, 0.1s;
 }
-/* line 41, ../scss/styles.scss */
+/* line 45, ../scss/styles.scss */
 a:hover {
   color: #6ecacb;
   text-decoration: none;
@@ -10932,7 +10938,7 @@ a:hover {
 }
 
 /* */
-/* line 51, ../scss/styles.scss */
+/* line 55, ../scss/styles.scss */
 .first {
   margin-left: 0;
   padding-left: 0;
@@ -10941,82 +10947,82 @@ a:hover {
 /*  0.1 Global Navigation
     ====================
 */
-/* line 60, ../scss/styles.scss */
+/* line 64, ../scss/styles.scss */
 .navbar-global {
   color: #009597;
   margin: 0 20px;
 }
-/* line 63, ../scss/styles.scss */
+/* line 67, ../scss/styles.scss */
 .navbar-global .navbar-nav {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   background-color: white;
   border-radius: 9px;
 }
-/* line 67, ../scss/styles.scss */
+/* line 71, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a {
   border-bottom: 0;
   color: #009597;
   font-weight: 700;
   padding: 4px 10px 4px 0;
 }
-/* line 72, ../scss/styles.scss */
+/* line 76, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a:hover {
   color: #6ecacb;
   background-color: transparent;
 }
-/* line 76, ../scss/styles.scss */
+/* line 80, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a:focus {
   color: #009597;
   background-color: transparent;
 }
-/* line 82, ../scss/styles.scss */
+/* line 86, ../scss/styles.scss */
 .navbar-global .navbar-primary {
   float: left;
 }
-/* line 85, ../scss/styles.scss */
+/* line 89, ../scss/styles.scss */
 .navbar-global .navbar-primary #el-logo img {
   height: auto;
   width: 46px;
 }
-/* line 89, ../scss/styles.scss */
+/* line 93, ../scss/styles.scss */
 .navbar-global .navbar-primary #el-logo a {
   padding: 6px 10px 6px 6px;
 }
-/* line 93, ../scss/styles.scss */
+/* line 97, ../scss/styles.scss */
 .navbar-global .navbar-primary span, .navbar-global .navbar-primary i {
   display: block;
 }
-/* line 96, ../scss/styles.scss */
+/* line 100, ../scss/styles.scss */
 .navbar-global .navbar-primary i {
   font-size: 200%;
   text-align: center;
 }
-/* line 100, ../scss/styles.scss */
+/* line 104, ../scss/styles.scss */
 .navbar-global .navbar-primary span {
   color: #cf9204;
   font-weight: 400;
   font-size: 80%;
 }
-/* line 106, ../scss/styles.scss */
+/* line 110, ../scss/styles.scss */
 .navbar-global .navbar-user {
   float: right;
 }
-/* line 108, ../scss/styles.scss */
+/* line 112, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score {
   padding-top: 6px;
 }
-/* line 110, ../scss/styles.scss */
+/* line 114, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score span {
   display: block;
 }
-/* line 112, ../scss/styles.scss */
+/* line 116, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score span.score-label {
   font-size: 0.8em;
   text-transform: uppercase;
   margin-bottom: -5px;
 }
-/* line 117, ../scss/styles.scss */
+/* line 121, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score span.score-value {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
@@ -11028,12 +11034,12 @@ a:hover {
 /*  2.0 Flash Cards
     ====================
 */
-/* line 137, ../scss/styles.scss */
+/* line 141, ../scss/styles.scss */
 body.games.flashcards {
   background: #c3edec url("/static/images/flashcards/bground.gif") repeat-x;
   background-position: 0% 80%;
 }
-/* line 140, ../scss/styles.scss */
+/* line 144, ../scss/styles.scss */
 body.games.flashcards .flash-cards {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZmVmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NkZjBlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -11051,7 +11057,7 @@ body.games.flashcards .flash-cards {
   /* Left Column - Contains Round's selected Card */
   /* Right Column - Contains Options for Flash Cards */
 }
-/* line 149, ../scss/styles.scss */
+/* line 153, ../scss/styles.scss */
 body.games.flashcards .flash-cards .main-card {
   background: url("/static/images/flashcards/el-screw.svg") no-repeat 2% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 2% 98%, url("/static/images/flashcards/el-screw-crooked.svg") no-repeat 98% 98%;
   border: 3px #6095aa solid;
@@ -11060,7 +11066,7 @@ body.games.flashcards .flash-cards .main-card {
   text-align: center;
   position: relative;
 }
-/* line 160, ../scss/styles.scss */
+/* line 164, ../scss/styles.scss */
 body.games.flashcards .flash-cards .main-card .main-card-img {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11071,7 +11077,7 @@ body.games.flashcards .flash-cards .main-card .main-card-img {
   margin: 2em auto;
   position: relative;
 }
-/* line 169, ../scss/styles.scss */
+/* line 173, ../scss/styles.scss */
 body.games.flashcards .flash-cards .main-card .main-card-img img.large-card {
   border-radius: 10px;
   overflow: hidden;
@@ -11079,13 +11085,13 @@ body.games.flashcards .flash-cards .main-card .main-card-img img.large-card {
   width: 70%;
   vertical-align: middle;
 }
-/* line 177, ../scss/styles.scss */
+/* line 181, ../scss/styles.scss */
 body.games.flashcards .flash-cards .main-card .main-card-lexeme {
   top: -50px;
   position: relative;
   z-index: 5;
 }
-/* line 181, ../scss/styles.scss */
+/* line 185, ../scss/styles.scss */
 body.games.flashcards .flash-cards .main-card .main-card-lexeme span {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11096,14 +11102,14 @@ body.games.flashcards .flash-cards .main-card .main-card-lexeme span {
   padding: 4px 9px;
   z-index: 1;
 }
-/* line 195, ../scss/styles.scss */
+/* line 199, ../scss/styles.scss */
 body.games.flashcards .flash-cards .options-container {
   border: 3px #6095aa solid;
   border-radius: 9px;
   padding: 0;
   height: 460px;
 }
-/* line 200, ../scss/styles.scss */
+/* line 204, ../scss/styles.scss */
 body.games.flashcards .flash-cards .options-container h3 {
   color: #6095aa;
   font-size: 1em;
@@ -11115,7 +11121,7 @@ body.games.flashcards .flash-cards .options-container h3 {
   text-transform: uppercase;
   top: -14px;
 }
-/* line 210, ../scss/styles.scss */
+/* line 214, ../scss/styles.scss */
 body.games.flashcards .flash-cards .options-container h3 span {
   background-color: #EFFEFD;
   border: 3px #6095aa solid;
@@ -11123,18 +11129,18 @@ body.games.flashcards .flash-cards .options-container h3 span {
   display: inline-block;
   padding: 4px 9px;
 }
-/* line 218, ../scss/styles.scss */
+/* line 222, ../scss/styles.scss */
 body.games.flashcards .flash-cards .options-container .option-container {
   border-bottom: 3px #6095aa solid;
   padding: 0 15px;
   margin-bottom: 15px;
 }
-/* line 222, ../scss/styles.scss */
+/* line 226, ../scss/styles.scss */
 body.games.flashcards .flash-cards .options-container .option-container:last-child {
   border-bottom: 0;
   margin-bottom: 0;
 }
-/* line 227, ../scss/styles.scss */
+/* line 231, ../scss/styles.scss */
 body.games.flashcards .flash-cards .options-container .option {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11150,7 +11156,7 @@ body.games.flashcards .flash-cards .options-container .option {
   display: table;
   position: relative;
 }
-/* line 240, ../scss/styles.scss */
+/* line 244, ../scss/styles.scss */
 body.games.flashcards .flash-cards .options-container .option .lexeme {
   color: #009597;
   font-size: 20px;
@@ -11158,22 +11164,22 @@ body.games.flashcards .flash-cards .options-container .option .lexeme {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 247, ../scss/styles.scss */
+/* line 251, ../scss/styles.scss */
 body.games.flashcards .flash-cards .options-container .option img {
   width: 70%;
   height: 100px;
   vertical-align: middle;
 }
-/* line 253, ../scss/styles.scss */
+/* line 257, ../scss/styles.scss */
 body.games.flashcards .flash-cards .options-container .option:hover .lexeme {
   color: #6ecacb;
 }
-/* line 257, ../scss/styles.scss */
+/* line 261, ../scss/styles.scss */
 body.games.flashcards .flash-cards .options-container .option:focus, body.games.flashcards .flash-cards .options-container .option:active {
   top: 4px;
   box-shadow: none;
 }
-/* line 263, ../scss/styles.scss */
+/* line 267, ../scss/styles.scss */
 body.games.flashcards .flash-cards .game-alerts {
   background-color: orange;
   width: 48px;
@@ -11184,7 +11190,7 @@ body.games.flashcards .flash-cards .game-alerts {
   z-index: 10;
   top: -10px;
 }
-/* line 273, ../scss/styles.scss */
+/* line 277, ../scss/styles.scss */
 body.games.flashcards .flash-cards .timer {
   padding: 8px 0 0;
   text-align: center;
@@ -11196,3 +11202,20 @@ body.games.flashcards .flash-cards .timer {
 /*  4.0 Wordlists
     ====================
 */
+/*  ZZZ. Remove Phone-sized Responsive Functionality
+
+    For the pilot we are focusing on tablet and desktop experiences. For that reason, we are disabling the phone-sized levels of responsive design.
+
+    ====================
+*/
+/* line 301, ../scss/styles.scss */
+body,
+.container,
+nav {
+  min-width: 768px !important;
+}
+
+/* line 306, ../scss/styles.scss */
+.navbar-nav > li {
+  float: left !important;
+}
