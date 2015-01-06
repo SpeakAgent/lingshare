@@ -77,7 +77,7 @@
 		</span>
 		<span ng-if="!word.base_word.audio_file">No audio</span>
 		<img src = "http://127.0.0.1:8000{{ word.base_word.symbol[0].image }}">
-		<span>{{ word.base_word.root_word }}</span>
+		<span><a href = "/#/wordpair/{{ word.pk }}/">{{ word.base_word.root_word }}</a></span>
 	</div>
 </div>
 </div>
