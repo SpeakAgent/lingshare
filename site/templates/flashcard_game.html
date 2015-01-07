@@ -1,45 +1,51 @@
 
-  <div class="container flash-cards" role="main" ng-controller="FlashCardController">
-    <div class="cards clearfix">
-      <div class="col-md-9 first">
-        <div class="main-card" ng-show="!done">
-          <div class="main-card-img"><img src="http://127.0.0.1:8000{{ card.base_word.symbol[0].image }}" class="large-card"></div>
-          <div class="main-card-lexeme"><span>{{card.trans_word.root_word}}</span></div>
+  <div class="game-container" role="main" ng-controller="FlashCardController">
+    <div class="flash-cards" ng-show="!done">
+      <div class="cards clearfix">
+        <div class="col-md-9 first">
+          <div class="main-card">
+            <div class="main-card-img"><img src="http://127.0.0.1:8000{{ card.base_word.symbol[0].image }}" class="large-card"></div>
+            <div class="main-card-lexeme"><span>{{card.trans_word.root_word}}</span></div>
+          </div>
         </div>
-      </div>
-      <div class="col-md-3 options-container">
-        <h3 class="options-label"><span>Pick One</span></h3>
-        <div class="option-container"
-             ng-repeat="item in possible_cards"
-             ng-click="checkCard(item)"
-             ng-class="{true: item==selectedCard && isCorrect=='true', false: item==selectedCard && isCorrect=='false'}">
-            <div class="option">
-              <div class="lexeme"
-                     ng-show="show_symbol != item.base_word.root_word">
-                  {{ item.base_word.root_word }}
+        <div class="col-md-3 options-container">
+          <h3 class="options-label"><span>Pick One</span></h3>
+          <div class="option-container"
+               ng-repeat="item in possible_cards"
+               ng-click="checkCard(item)"
+               ng-class="{true: item==selectedCard && isCorrect=='true', false: item==selectedCard && isCorrect=='false'}">
+              <div class="option">
+                <div class="lexeme"
+                       ng-show="show_symbol != item.base_word.root_word">
+                    {{ item.base_word.root_word }}
+                </div>
+                <div class="symbol" ng-show="show_symbol == item.base_word.root_word">
+                    <img src="http://127.0.0.1:8000{{ item.base_word.symbol[0].image }}" />
+                </div>
               </div>
-              <div class="symbol" ng-show="show_symbol == item.base_word.root_word">
-                  <img src="http://127.0.0.1:8000{{ item.base_word.symbol[0].image }}" />
+              <div class="game-alerts"
+            ng-show="alerts[item.base_word.root_word] != null && item.base_word.root_word == card.base_word.root_word"
+            >
+                <div class="alert" ng-class="{true:item.base_word.root_word == card.base_word.root_word,false:item.base_word.root_word != card.base_word.root_word}">
+                  {{ alerts[item.base_word.root_word] }}
+                </div>
               </div>
-            </div>
-            <div class="game-alerts"
-          ng-show="alerts[item.base_word.root_word] != null && item.base_word.root_word == card.base_word.root_word"
-          >
-              <div class="alert" ng-class="{true:item.base_word.root_word == card.base_word.root_word,false:item.base_word.root_word != card.base_word.root_word}">
-                {{ alerts[item.base_word.root_word] }}
-              </div>
-            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class = "done"
-         ng-show = "done">
-         <p>Great Job!</p>
-         <p>You clicked correctly {{ actions.right.length }} times.</p>
-         <p>You clicked incorrectly {{ actions.wrong.length }} times.</p>
-         <p>It took you {{ seconds }} seconds!</p>
+    <div class = "game-complete" ng-show = "done">
+        <div class="frame">
+          <h3>Great Job!</h3>
+          <div class="game-results">
+            <p>You clicked correctly {{ actions.right.length }} times.</p>
+            <p>You clicked incorrectly {{ actions.wrong.length }} times.</p>
+            <p>It took you {{ seconds }} seconds!</p>
+          </div>
+          <div class="user-options">
+          </div>
+        </div>
     </div>
-
 
   </div>
 

@@ -130,7 +130,9 @@ a {
 /* 0.2 Global Activity Elements
     ====================
 */
-
+.game-container {
+    margin-top: 30px;
+}
 .game-alerts {
     background-color: $alert-positive-bground;
     @include box-shadow(rgba($shadow-primary,0.2) 0 0 4px 2px);
@@ -182,12 +184,13 @@ $flash-cards-border-color-default: #6095AA;
 body.games.flashcards {
     background: #C3EDEC  url('/static/images/flashcards/bground.gif') repeat-x;
     background-position: 0% 80%;
+    /* Main Game Interface */
     .flash-cards {
         @include background-image(linear-gradient(#EFFEFD, #CDF0EF));
         @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 0px);
         border: $border-width-default $flash-cards-border-color-default solid;
         border-radius: 9px;
-        margin-top: 30px;
+        margin: 0 auto;
         max-width: 830px;
         padding: 30px;
         position: relative;
@@ -199,6 +202,10 @@ body.games.flashcards {
             top: 12px;
             left: -50px;
         }
+        &.ng-hide-remove {
+            animation: 0.5s bounceOut ease;
+        }
+
             /* Left Column - Contains Round's selected Card */
             .main-card {
                 background:
@@ -374,6 +381,31 @@ body.games.flashcards {
           }
 
     }
+    .game-complete {
+        @include background-image(linear-gradient(#EFFEFD, #CDF0EF));
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 0px);
+        border: $border-width-default $flash-cards-border-color-default solid;
+        border-radius: 9px;
+        margin: 0 auto;
+        max-width: 830px;
+        padding: 30px;
+        position: relative;
+        .frame {
+            background:
+                url('/static/images/flashcards/el-screw.svg') no-repeat 2% 2%,
+                url('/static/images/flashcards/el-screw.svg') no-repeat 98% 2%,
+                url('/static/images/flashcards/el-screw.svg') no-repeat 2% 98%,
+                url('/static/images/flashcards/el-screw.svg') no-repeat 98% 98%;
+            border: $border-width-default $flash-cards-border-color-default solid;
+            border-radius: 9px;
+            height: 460px;
+            text-align: center;
+            position: relative;
+        }
+        &.ng-hide-remove {
+            animation: 0.5s bounceOut ease;
+        }
+    }
 }
 
 /*  3.0 Memory
@@ -393,7 +425,7 @@ body.games.flashcards {
 */
 
 body,
-.container,
+.game-container,
 nav {
     min-width: 768px !important;
 }
