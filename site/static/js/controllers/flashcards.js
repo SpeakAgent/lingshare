@@ -17,6 +17,18 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
     }
   };
 
+  $scope.rightAnswerChanges = function(){
+
+    console.log('Right Answer');
+
+  };
+
+  $scope.wrongAnswerChanges = function(){
+
+    console.log('Wrong Answer');
+
+  };
+
   var url = "http://127.0.0.1:8000/wordlists/json/1/"
   $http.get(url)
     .success(function(data) {
@@ -99,16 +111,21 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
     $scope.done = true;
   }
 
+  $scope.selectedCard = 0;
+  $scope.isCorrect = "neutral";
 
   $scope.checkCard = function(item) {
     // Flip it
     if ($scope.show_symbol == null) {
       // Only do something if we don't have a card flipped
       $scope.show_symbol = item.base_word.root_word;
+      $scope.selectedCard = item;
       // Win or no?
       if (item.base_word.root_word == $scope.card.base_word.root_word) {
         $scope.alerts[item.base_word.root_word] = "+5";
+        $scope.isCorrect = 'true';
         $timeout(function() {
+          $scope.isCorrect = '';
           $scope.alerts[item.base_word.root_word] = null;
           $scope.show_symbol = null;
           $scope.actions.right.push({
@@ -116,18 +133,26 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
             clicked: item.base_word.root_word
           });
           $scope.newScreen();
-        }, 1500);
+        }, 1000);
       } else {
         $scope.alerts[item.base_word.root_word] = "Try Again!";
+        $scope.isCorrect = 'false';
         $timeout(function() {
+          $scope.isCorrect = '';
           $scope.alerts[item.base_word.root_word] = null;
           $scope.show_symbol = null;
           $scope.actions.wrong.push({
             word: $scope.card.base_word.root_word,
             clicked: item.base_word.root_word
           })
-        }, 1500)
+        }, 1000)
       };
     }
   };
+
+
+
+
+
+
 }])

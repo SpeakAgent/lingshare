@@ -1,4 +1,4 @@
-var mainApp = angular.module('mainApp', ['ngRoute', 'angular-jwt']);
+var mainApp = angular.module('mainApp', ['ngRoute', 'angular-jwt','ngAnimate']);
 
 mainApp.config(function($routeProvider) {
 	$routeProvider

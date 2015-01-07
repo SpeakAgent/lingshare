@@ -51,7 +51,7 @@ a {
 }
 
 
-/* */
+/* Resets */
 .first {
     margin-left: 0;
     padding-left: 0;
@@ -127,10 +127,51 @@ a {
     }
 }
 
+/* 0.2 Global Activity Elements
+    ====================
+*/
+
+.game-alerts {
+    background-color: $alert-positive-bground;
+    @include box-shadow(rgba($shadow-primary,0.2) 0 0 4px 2px);
+    color: $alert-dark;
+    width: 125px;
+    height: 125px;
+    border-radius: 125px;
+    padding: 0;
+    position: absolute;
+    top: -40px;
+    left: -80px;
+    text-align: center;
+    display: table;
+    z-index: 1000;
+    .alert {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 1.1em;
+        transform: rotate(-8deg);
+        margin-top: -10px;
+        &.true {
+            font-size: 4em;
+        }
+    }
+    &.ng-hide-remove {
+        -webkit-animation: bounceIn 0.7s !important;
+        -moz-animation: bounceIn 0.7s;
+        -ms-animation: bounceIn 0.7s;
+        animation: bounceIn 0.7s !important;
+    }
+}
+
 
 /*  1.0 Dashboard
     ====================
 */
+
+
+
 
 /*  2.0 Flash Cards
     ====================
@@ -148,7 +189,16 @@ body.games.flashcards {
         border-radius: 9px;
         margin-top: 30px;
         max-width: 830px;
-        padding-top: 20px;
+        padding: 30px;
+        position: relative;
+        &:before {
+            content: url('/static/images/flashcards/el-bulbs-off.svg');
+            width: 60px;
+            height: 120px;
+            position: absolute;
+            top: 12px;
+            left: -50px;
+        }
             /* Left Column - Contains Round's selected Card */
             .main-card {
                 background:
@@ -165,9 +215,9 @@ body.games.flashcards {
                     background-color: #fff;
                     border: $border-width-default $flash-cards-border-color-default solid;
                     border-radius: 12px;
-                    height: 370px;
-                    line-height: 370px;
-                    width: 430px;
+                    height: 380px;
+                    line-height: 390px;
+                    width: 440px;
                     margin: 2em auto;
                     position: relative;
                     img.large-card {
@@ -179,17 +229,18 @@ body.games.flashcards {
                     }
                 }
                 .main-card-lexeme {
-                    top: -50px;
+                    top: -54px;
                     position: relative;
                     z-index: 5;
                     span {
                         background-color: #fff;
                         border: $border-width-default $flash-cards-border-color-default solid;
                         border-radius: 9px;
+                        color: $flash-cards-border-color-default;
                         font-size: 1.8em;
                         font-weight: 700;
                         display: inline-block;
-                        padding: 4px 9px;
+                        padding: 4px 10px;
                         z-index: 1;
                     }
                 }
@@ -223,57 +274,100 @@ body.games.flashcards {
                     border-bottom: $border-width-default $flash-cards-border-color-default solid;
                     padding: 0 15px;
                     margin-bottom: 15px;
+                    position: relative;
+                    &:after {
+                        border: $border-width-default solid $flash-cards-border-color-default;
+                        color: #D7CEBF;
+                        content: "\b7";
+                        display: block;
+                        font-weight: 700;
+                        font-size: 5em;
+                        padding: 0;
+                        position: absolute;
+                        top: 0;
+                        right: 6px;
+                        display: inline-block;
+                        border-radius: 20px;
+                        height: 26px;
+                        width: 26px;
+                        line-height: 16px;
+                        text-align: center;
+                    }
                     &:last-child {
                         border-bottom: 0;
                         margin-bottom: 0;
                     }
-                }
-                .option {
-                    background-color: #fff;
-                    border: $border-width-default $flash-cards-border-color-default solid;
-                    @include box-shadow(rgba(#518296, 1) 0px 4px 0px);
-                    cursor: pointer;
-                    width: 100%;
-                    height: 110px;
-                    margin: 0 auto 20px auto;
-                    padding: 0;
-                    border-radius: 9px;
-                    text-align: center;
-                    display: table;
-                    position: relative;
-                    .lexeme {
-                        color: $brand-secondary;
-                        font-size: 20px;
-                        font-weight: 700;
-                        display: table-cell;
-                        vertical-align: middle;
-                    }
-                    img {
-                        width: 70%;
-                        height: 100px;
-                        vertical-align: middle;
-                    }
-                    &:hover {
+                    .option {
+                        background-color: #fff;
+                        border: $border-width-default solid $flash-cards-border-color-default;
+                        @include box-shadow(rgba(#407C94, 1) 0px 4px 0px);
+                        cursor: pointer;
+                        height: 110px;
+                        margin: 0 0 20px 0;
+                        padding: 0;
+                        border-radius: 9px;
+                        text-align: left;
+                        display: table;
+                        position: relative;
+                        width: 86%;
                         .lexeme {
-                            color: $brand-primary;
+                            color: $brand-secondary;
+                            font-size: 20px;
+                            font-weight: 700;
+                            display: table-cell;
+                            vertical-align: middle;
+                            text-align: center;
+                        }
+                        .symbol {
+                            margin: 0 auto;
+                            text-align: center;
+                            display: table-cell;
+                            vertical-align: middle;
+                            img {
+                                width: 70%;
+                                height: 100px;
+                                vertical-align: middle;
+                                margin: 0 auto;
+                            }
+                        }
+                        &:hover {
+                            .lexeme {
+                                color: $brand-primary;
+                            }
+                        }
+                        &:focus,&:active {
+                            top: 4px;
+                            box-shadow: none;
                         }
                     }
-                    &:focus,&:active {
-                        top: 4px;
-                        box-shadow: none;
+
+                    /* Round Results */
+
+                    &.true,&.false {
+                        .option {
+                            top: 4px;
+                            box-shadow: none;
+                        }
                     }
+                    &.true {
+                        .option {
+                            border-color: $game-success !important;
+                        }
+                        &:after {
+                            color: $game-success;
+                        }
+                    }
+                    &.false {
+                        .option {
+                            border-color: $game-error !important;
+                        }
+                        &:after {
+                            color: $game-error;
+                        }
+                    }
+
                 }
             }
-          .game-alerts {
-            background-color: orange;
-            width: 48px;
-            height: 48px;
-            border-radius: 24px;
-            padding: 12px 8px;
-            position: absolute;
-            z-index: 10;
-            top: -10px;
-          }
           .timer {
             padding: 8px 0 0;
             text-align: center;
