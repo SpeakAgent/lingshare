@@ -183,7 +183,7 @@ $flash-cards-border-color-default: #6095AA;
 
 body.games.flashcards {
     background: #C3EDEC  url('/static/images/flashcards/bground.gif') repeat-x;
-    background-position: 0% 80%;
+    background-position: 0 500px;
     /* Main Game Interface */
     .flash-cards {
         @include background-image(linear-gradient(#EFFEFD, #CDF0EF));
@@ -200,10 +200,11 @@ body.games.flashcards {
             height: 120px;
             position: absolute;
             top: 12px;
-            left: -50px;
+            left: -49px;
         }
-        &.ng-hide-remove {
-            animation: 0.5s bounceOut ease;
+        &.ng-hide-add {
+            -webkit-animation: fadeOutLeftBig 0.8s;
+            animation: fadeOutLeftBig 0.8s;
         }
 
             /* Left Column - Contains Round's selected Card */
@@ -422,6 +423,7 @@ body.games.flashcards {
             margin: 0 auto;
             text-align: center;
             width: 86%;
+
             .result {
                 display: inline-block;
                 padding: 20px 20px 0;
@@ -525,8 +527,15 @@ body.games.flashcards {
                 }
             }
         }
+        &.ng-hide {
+            top: -525px;
+        }
         &.ng-hide-remove {
-            animation: 0.5s bounceOut ease;
+            -webkit-animation: fadeInRightBig 0.8s;
+            animation: fadeInRightBig 0.8s;
+        }
+        &.ng-hide-remove-active {
+            top: -525px;
         }
     }
 }
