@@ -34,15 +34,25 @@
         </div>
       </div>
     </div>
-    <div class = "game-complete" ng-show = "done">
+    <div class = "game-complete" ng-show="done">
         <div class="frame">
-          <h3>Great Job!</h3>
-          <div class="game-results">
-            <p>You clicked correctly {{ actions.right.length }} times.</p>
-            <p>You clicked incorrectly {{ actions.wrong.length }} times.</p>
-            <p>It took you {{ seconds }} seconds!</p>
+          <h3 class="results-message">Great Job!</h3>
+          <div class="game-results clearfix">
+            <div class="clearfix">
+            <div class="result r-right-answers"><span class="result-label">Correct Answers</span><span class="result-number">{{ actions.right.length }}</span></div>
+            <div class="result r-wrong-answers"><span class="result-label">Incorrect Clicks</span><span class="result-number">{{ actions.wrong.length }}</span> </div>
+            <div class="result r-time-played"><span class="result-label">Seconds Played</span><span class="result-number">{{ seconds }}</span></div>
+            </div>
+            <div class="final-score">
+              <h3>Final Score</h3>
+              <span class="f-s-number">85</span>
+            </div>
           </div>
           <div class="user-options">
+            <ul>
+              <li><a href="/#/games/flashcards/"><i class="fa fa-reply"></i> Play Again</a></li>
+              <li><a href="/#/"><i class="fa fa-home"></i> Back Home</a></li>
+            </ul>
           </div>
         </div>
     </div>
