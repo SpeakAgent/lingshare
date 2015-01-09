@@ -1,0 +1,23 @@
+<div>
+	<h1>{{ user.first_name }} {{ user.last_name }}</h1>
+	<h2>Courses</h2>
+	<div>
+		<div ng-repeat="course in user.courses">
+			<h3>{{ course.title }}</h3>
+			<ul>
+				<li>Word Review</li>
+				<li>Flashcards</li>
+				<li>Memory</li>
+			</ul>
+		</div>
+	</div>
+	<div>
+		<h2>Acheivements</h2>
+		<div>
+			Cheevo 1
+		</div>
+		<div>
+			Cheevo 2
+		</div>
+	</div>
+</div>
