@@ -184,8 +184,45 @@ $flash-cards-border-color-default: #6095AA;
 body.games.flashcards {
     background: #C3EDEC  url('/static/images/flashcards/bground.gif') repeat-x;
     background-position: 0 500px;
+    .game-container {
+        position: relative;
+    }
     /* Main Game Interface */
-    .flash-cards {
+    .round-counter {
+        overflow: hidden;
+        max-width: 830px;
+        width: 830px;
+        position: absolute;
+        padding-left: 100px;
+        z-index: 10;
+        top: -30px;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            li {
+                display: inline-block;
+                width: 7.6%;
+                margin-right: .3%;
+                &:last-child {
+                    margin-right: 0;
+                }
+                .round-card {
+                    background-color: darken($flash-cards-border-color-default,10%);
+                    height: 30px;
+                    color: #fff;
+                    border-top-left-radius: 9px;
+                    border-top-right-radius: 9px;
+                    &.ng-hide-add {
+                        -webkit-animation: bounceOutDown 1s;
+                        animation: bounceOutDown 1s;
+                    }
+                }
+            }
+        }
+    }
+    .flash-cards-interface {
         @include background-image(linear-gradient(#EFFEFD, #CDF0EF));
         @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 0px);
         border: $border-width-default $flash-cards-border-color-default solid;
@@ -194,6 +231,7 @@ body.games.flashcards {
         max-width: 830px;
         padding: 30px;
         position: relative;
+        z-index: 20;
         &:before {
             content: url('/static/images/flashcards/el-bulbs-off.svg');
             width: 60px;
@@ -528,14 +566,14 @@ body.games.flashcards {
             }
         }
         &.ng-hide {
-            top: -525px;
+            top: -555px;
         }
         &.ng-hide-remove {
             -webkit-animation: fadeInRightBig 0.8s;
             animation: fadeInRightBig 0.8s;
         }
         &.ng-hide-remove-active {
-            top: -525px;
+            top: -555px;
         }
     }
 }

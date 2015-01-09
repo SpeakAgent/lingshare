@@ -1,6 +1,15 @@
 
   <div class="game-container" role="main" ng-controller="FlashCardController">
-    <div class="flash-cards" ng-show="!done">
+      <div class="round-counter">
+        <ul class="round-cards">
+          <li ng-repeat="word in words">
+            <div class="round-card" id="r-{{$index}}" ng-hide="$index <= previous_round-1">
+              &nbsp;
+            </div>
+          </li>
+        </ul>
+      </div>
+    <div class="flash-cards-interface" ng-show="!done">
       <div class="cards clearfix">
         <div class="col-md-9 first">
           <div class="main-card">

@@ -6,6 +6,7 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
   $scope.used_words = []
 
   $scope.seconds = 0
+  $scope.current_round = 0
 
   $rootScope.body_classes = "games flashcards"
 
@@ -15,18 +16,6 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
       $interval.cancel($scope.stop);
       $scope.stop = undefined;
     }
-  };
-
-  $scope.rightAnswerChanges = function(){
-
-    console.log('Right Answer');
-
-  };
-
-  $scope.wrongAnswerChanges = function(){
-
-    console.log('Wrong Answer');
-
   };
 
   var url = "http://127.0.0.1:8000/wordlists/json/1/"
@@ -80,11 +69,16 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
     });
     $scope.unused_words = $scope.shuffle($scope.unused_words);
     $scope.words = $scope.wordlist.words;
+    //* Setting total number of rounds */
+    $scope.rounds = $scope.words.length;
   }
 
   $scope.newScreen = function() {
     // Get new word and index of new word
     if ($scope.unused_words.length > 0) {
+      $scope.previous_round = $scope.current_round;
+      console.log($scope.previous_round);
+      $scope.current_round++;
       $scope.card = $scope.unused_words.pop()
       var indexes = []
       do {
@@ -101,11 +95,18 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
       $scope.possible_cards = [$scope.other_cards.card1, $scope.other_cards.card2,
         $scope.card
       ];
-      $scope.possible_cards = $scope.shuffle($scope.possible_cards)
+      $scope.possible_cards = $scope.shuffle($scope.possible_cards);
+     // if($scope.previous_round != 0){
+       // $scope.removeRoundCard($scope.previous_round-1);
+      //}
     } else {
       $scope.endScreen()
     }
   };
+
+  $scope.removeRoundCard = function(){
+      //angular.element(document.querySelector('#r-'+previousGameRound)).addClass('animate-hide-card');
+  }
 
   $scope.endScreen = function() {
     $scope.done = true;
