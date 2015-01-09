@@ -44,7 +44,7 @@
 			 	ng-if="hideCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1">
 				 <div ng-show = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1"
 				      class="card">
-					<img src = "http://127.0.0.1:8000{{card.word.base_word.symbol[0].image}}"
+					<img src = "http://127.0.0.1:8000{{card.word.base_word.photos[0].image}}"
 				 	  ng-if = "card.type == 'symbol'">
 					<span ng-if = "card.type == 'word'">
 					{{ card.word.base_word.root_word }}

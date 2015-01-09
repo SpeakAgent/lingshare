@@ -1,10 +1,16 @@
 mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
-  '$rootScope', 
+  '$rootScope', '$sce',
 
-  function ($scope, $http, $routeParams, $rootScope) {
+  function ($scope, $http, $routeParams, $rootScope, $sce) {
     $rootScope.body_classes = "wordslist"
     if ($routeParams.id) 
-      { $scope.id = $routeParams.id}
+      { $scope.id = $routeParams.id;
+        $scope.display = 'grid';
+      }
+    if ($routeParams.wordID) 
+    {
+        $scope.wordID = $routeParams.wordID;
+    }
     if (!$scope.id) {
       var url = "http://127.0.0.1:8000/wordlists/json/";
       $http.get(url)
@@ -19,6 +25,15 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
         $scope.list = data;
         }
       );
+    }
+    $scope.audio_url = function(path) {
+        return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
+    }
+    $scope.getNext = function(id) {
+      return parseInt(id) + 1
+    }
+    $scope.getPrev = function(id) {
+      return parseInt(id) - 1
     }
   }
 
