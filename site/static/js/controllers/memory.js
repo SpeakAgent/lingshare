@@ -1,10 +1,10 @@
 mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
-  '$interval',
+  '$interval','$rootScope',
 
-  function ($scope, $timeout, $http, $interval, $rootScope) {
+  function ($scope, $timeout, $http, $interval,$rootScope) {
 
+  $rootScope.body_classes = "games matching"
 
-$rootScope.body_classes = "games flashcards"
 
     $scope.shuffle = function(array) {
     var m = array.length,

@@ -11530,6 +11530,41 @@ body.games.flashcards .game-complete.ng-hide-remove-active {
 /*  3.0 Matching Game
     ====================
 */
+/* line 595, ../scss/styles.scss */
+body.matching {
+  background-color: #416E0D;
+}
+/* line 597, ../scss/styles.scss */
+body.matching div.memory-cards {
+  width: 1000px;
+}
+/* line 600, ../scss/styles.scss */
+body.matching div.card {
+  background-color: #fff;
+  border: 9px solid #fff;
+  height: 200px;
+  width: 200px;
+  border-radius: 9px;
+  float: left;
+  margin: 1em;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.3) 0px 4px 0px;
+  box-shadow: rgba(34, 9, 9, 0.3) 0px 4px 0px;
+}
+/* line 609, ../scss/styles.scss */
+body.matching div.card img {
+  border-radius: 9px;
+  height: 190px;
+  width: 190px;
+}
+/* line 615, ../scss/styles.scss */
+body.matching div.game-status {
+  height: 100px;
+  width: 400px;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 1em;
+}
+
 /*  4.0 Wordlists
     ====================
 */
@@ -11539,14 +11574,14 @@ body.games.flashcards .game-complete.ng-hide-remove-active {
 
     ====================
 */
-/* line 607, ../scss/styles.scss */
+/* line 635, ../scss/styles.scss */
 body,
 .game-container,
 nav {
   min-width: 550px !important;
 }
 
-/* line 612, ../scss/styles.scss */
+/* line 640, ../scss/styles.scss */
 .navbar-nav > li {
   float: left !important;
 }
