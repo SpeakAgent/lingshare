@@ -11087,51 +11087,7 @@ body.games.flashcards {
   background-position: 0 500px;
   /* Main Game Interface */
 }
-/* line 187, ../scss/styles.scss */
-body.games.flashcards .game-container {
-  position: relative;
-}
-/* line 191, ../scss/styles.scss */
-body.games.flashcards .round-counter {
-  overflow: hidden;
-  max-width: 830px;
-  width: 830px;
-  position: absolute;
-  padding-left: 100px;
-  z-index: 10;
-  top: -30px;
-}
-/* line 199, ../scss/styles.scss */
-body.games.flashcards .round-counter ul {
-  margin: 0 0 0 30px;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-/* line 204, ../scss/styles.scss */
-body.games.flashcards .round-counter ul li {
-  display: inline-block;
-  width: 7.6%;
-  margin-right: .3%;
-}
-/* line 208, ../scss/styles.scss */
-body.games.flashcards .round-counter ul li:last-child {
-  margin-right: 0;
-}
-/* line 211, ../scss/styles.scss */
-body.games.flashcards .round-counter ul li .round-card {
-  background-color: #4b7a8c;
-  height: 30px;
-  color: #fff;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
-}
-/* line 217, ../scss/styles.scss */
-body.games.flashcards .round-counter ul li .round-card.ng-hide-add {
-  -webkit-animation: bounceOutDown 1s;
-  animation: bounceOutDown 1s;
-}
-/* line 225, ../scss/styles.scss */
+/* line 188, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZmVmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NkZjBlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -11143,7 +11099,7 @@ body.games.flashcards .flash-cards-interface {
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 0px;
   border: 3px #6095aa solid;
   border-radius: 9px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   max-width: 830px;
   padding: 30px;
   position: relative;
@@ -11151,7 +11107,27 @@ body.games.flashcards .flash-cards-interface {
   /* Left Column - Contains Round's selected Card */
   /* Right Column - Contains Options for Flash Cards */
 }
-/* line 235, ../scss/styles.scss */
+/* line 198, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .round-counter {
+  color: #6095aa;
+  font-size: 1em;
+  font-style: italic;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: -14px;
+}
+/* line 208, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .round-counter span {
+  background-color: #EFFEFD;
+  border: 3px #6095aa solid;
+  border-radius: 9px;
+  display: inline-block;
+  padding: 4px 9px;
+}
+/* line 216, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface:before {
   content: url("/static/images/flashcards/el-bulbs-off.svg");
   width: 60px;
@@ -11159,47 +11135,64 @@ body.games.flashcards .flash-cards-interface:before {
   position: absolute;
   top: 12px;
   left: -49px;
+  z-index: 10;
 }
-/* line 243, ../scss/styles.scss */
+/* line 225, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface.ng-hide-add {
-  -webkit-animation: fadeOutLeftBig 0.8s;
-  animation: fadeOutLeftBig 0.8s;
+  -webkit-animation: fadeOutLeftBig 0.5s;
+  animation: fadeOutLeftBig 0.5s;
 }
-/* line 249, ../scss/styles.scss */
+@media (max-width: 992px) {
+  /* line 233, ../scss/styles.scss */
+  body.games.flashcards .flash-cards-interface .cards .first {
+    padding-right: 0;
+  }
+}
+/* line 238, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card {
   background: url("/static/images/flashcards/el-screw.svg") no-repeat 2% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 2% 98%, url("/static/images/flashcards/el-screw-crooked.svg") no-repeat 98% 98%;
   border: 3px #6095aa solid;
   border-radius: 9px;
-  height: 460px;
+  border-bottom-width: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   text-align: center;
-  position: relative;
+  height: 460px;
 }
-/* line 260, ../scss/styles.scss */
+@media (min-width: 992px) {
+  /* line 238, ../scss/styles.scss */
+  body.games.flashcards .flash-cards-interface .main-card {
+    border-bottom-width: 3px;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+  }
+}
+/* line 256, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-img {
   background-color: #fff;
   border: 3px #6095aa solid;
   border-radius: 12px;
   height: 380px;
   line-height: 390px;
-  width: 440px;
-  margin: 2em auto;
+  width: 75%;
+  margin: 0 auto 2em auto;
   position: relative;
 }
-/* line 269, ../scss/styles.scss */
+/* line 265, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-img img.large-card {
   border-radius: 10px;
   overflow: hidden;
-  height: 70%;
-  width: 70%;
+  height: 80%;
+  width: 80%;
   vertical-align: middle;
 }
-/* line 277, ../scss/styles.scss */
+/* line 273, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-lexeme {
   top: -54px;
   position: relative;
   z-index: 5;
 }
-/* line 281, ../scss/styles.scss */
+/* line 277, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-lexeme span {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11211,14 +11204,20 @@ body.games.flashcards .flash-cards-interface .main-card .main-card-lexeme span {
   padding: 4px 10px;
   z-index: 1;
 }
-/* line 296, ../scss/styles.scss */
+/* line 292, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container {
   border: 3px #6095aa solid;
-  border-radius: 9px;
   padding: 0;
-  height: 460px;
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 9px;
 }
-/* line 301, ../scss/styles.scss */
+@media (min-width: 1170px) {
+  /* line 292, ../scss/styles.scss */
+  body.games.flashcards .flash-cards-interface .options-container {
+    border-radius: 9px;
+  }
+}
+/* line 300, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container h3 {
   color: #6095aa;
   font-size: 1em;
@@ -11230,7 +11229,7 @@ body.games.flashcards .flash-cards-interface .options-container h3 {
   text-transform: uppercase;
   top: -14px;
 }
-/* line 311, ../scss/styles.scss */
+/* line 310, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container h3 span {
   background-color: #EFFEFD;
   border: 3px #6095aa solid;
@@ -11238,7 +11237,7 @@ body.games.flashcards .flash-cards-interface .options-container h3 span {
   display: inline-block;
   padding: 4px 9px;
 }
-/* line 319, ../scss/styles.scss */
+/* line 318, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container {
   border-bottom: 3px #6095aa solid;
   padding: 0 15px;
@@ -11246,7 +11245,20 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   position: relative;
   /* Round Results */
 }
-/* line 324, ../scss/styles.scss */
+@media (max-width: 970px) {
+  /* line 318, ../scss/styles.scss */
+  body.games.flashcards .flash-cards-interface .options-container .option-container {
+    border-bottom: 0;
+    display: inline-block;
+    width: 33%;
+    margin-bottom: 0;
+  }
+  /* line 328, ../scss/styles.scss */
+  body.games.flashcards .flash-cards-interface .options-container .option-container:last-child {
+    border-right: 0;
+  }
+}
+/* line 332, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container:after {
   border: 3px solid #6095aa;
   color: #D7CEBF;
@@ -11265,12 +11277,12 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   line-height: 16px;
   text-align: center;
 }
-/* line 342, ../scss/styles.scss */
+/* line 350, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container:last-child {
   border-bottom: 0;
   margin-bottom: 0;
 }
-/* line 346, ../scss/styles.scss */
+/* line 354, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option {
   background-color: #fff;
   border: 3px solid #6095aa;
@@ -11286,7 +11298,7 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   position: relative;
   width: 86%;
 }
-/* line 359, ../scss/styles.scss */
+/* line 367, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option .lexeme {
   color: #009597;
   font-size: 20px;
@@ -11295,56 +11307,56 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   vertical-align: middle;
   text-align: center;
 }
-/* line 367, ../scss/styles.scss */
+/* line 375, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option .symbol {
   margin: 0 auto;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 372, ../scss/styles.scss */
+/* line 380, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option .symbol img {
   width: 70%;
   height: 100px;
   vertical-align: middle;
   margin: 0 auto;
 }
-/* line 380, ../scss/styles.scss */
+/* line 388, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option:hover .lexeme {
   color: #6ecacb;
 }
-/* line 384, ../scss/styles.scss */
+/* line 392, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option:focus, body.games.flashcards .flash-cards-interface .options-container .option-container .option:active {
   top: 4px;
   box-shadow: none;
 }
-/* line 393, ../scss/styles.scss */
+/* line 401, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.true .option, body.games.flashcards .flash-cards-interface .options-container .option-container.false .option {
   top: 4px;
   box-shadow: none;
 }
-/* line 399, ../scss/styles.scss */
+/* line 407, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.true .option {
   border-color: #7ed321 !important;
 }
-/* line 402, ../scss/styles.scss */
+/* line 410, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.true:after {
   color: #7ed321;
 }
-/* line 407, ../scss/styles.scss */
+/* line 415, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.false .option {
   border-color: #d0021b !important;
 }
-/* line 410, ../scss/styles.scss */
+/* line 418, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.false:after {
   color: #d0021b;
 }
-/* line 417, ../scss/styles.scss */
+/* line 425, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .timer {
   padding: 8px 0 0;
   text-align: center;
 }
-/* line 423, ../scss/styles.scss */
+/* line 431, ../scss/styles.scss */
 body.games.flashcards .game-complete {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZmVmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NkZjBlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -11362,7 +11374,7 @@ body.games.flashcards .game-complete {
   padding: 30px;
   position: relative;
 }
-/* line 433, ../scss/styles.scss */
+/* line 441, ../scss/styles.scss */
 body.games.flashcards .game-complete .frame {
   background: url("/static/images/flashcards/el-screw.svg") no-repeat 2% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 2% 98%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 98%;
   border: 3px #6095aa solid;
@@ -11371,7 +11383,7 @@ body.games.flashcards .game-complete .frame {
   text-align: center;
   position: relative;
 }
-/* line 445, ../scss/styles.scss */
+/* line 453, ../scss/styles.scss */
 body.games.flashcards .game-complete h3.results-message {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11384,7 +11396,7 @@ body.games.flashcards .game-complete h3.results-message {
   margin-top: -50px;
   padding: 6px 20px;
 }
-/* line 457, ../scss/styles.scss */
+/* line 465, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11393,7 +11405,7 @@ body.games.flashcards .game-complete .game-results {
   text-align: center;
   width: 86%;
 }
-/* line 465, ../scss/styles.scss */
+/* line 473, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .result {
   display: inline-block;
   padding: 20px 20px 0;
@@ -11404,14 +11416,14 @@ body.games.flashcards .game-complete .game-results .result {
   /* Wrong Attempts Count */
   /* Total Time Played */
 }
-/* line 469, ../scss/styles.scss */
+/* line 477, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .result .result-label {
   display: block;
   font-weight: 900;
   padding-bottom: 9px;
   text-align: center;
 }
-/* line 475, ../scss/styles.scss */
+/* line 483, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .result .result-number {
   border: 3px #6095aa solid;
   border-radius: 120px;
@@ -11423,7 +11435,7 @@ body.games.flashcards .game-complete .game-results .result .result-number {
   height: 120px;
   vertical-align: middle;
 }
-/* line 489, ../scss/styles.scss */
+/* line 497, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .result:after {
   background-color: #fff;
   font-family: 'FontAwesome';
@@ -11432,34 +11444,34 @@ body.games.flashcards .game-complete .game-results .result:after {
   margin-top: -22px;
   padding: 8px;
 }
-/* line 500, ../scss/styles.scss */
+/* line 508, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .result.r-right-answers:after {
   color: #7ed321;
   content: "\f164";
 }
-/* line 508, ../scss/styles.scss */
+/* line 516, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .result.r-wrong-answers:after {
   color: #d0021b;
   content: "\f00d";
 }
-/* line 516, ../scss/styles.scss */
+/* line 524, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .result.r-time-played:after {
   color: #009597;
   content: "\f017";
 }
-/* line 523, ../scss/styles.scss */
+/* line 531, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .final-score {
   color: #009597;
   padding-bottom: 10px;
 }
-/* line 526, ../scss/styles.scss */
+/* line 534, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .final-score h3 {
   margin: 0;
   padding: 0;
   font-size: 2.5em;
   font-weight: 900;
 }
-/* line 532, ../scss/styles.scss */
+/* line 540, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .final-score .f-s-number {
   margin-top: -14px;
   display: block;
@@ -11468,21 +11480,21 @@ body.games.flashcards .game-complete .game-results .final-score .f-s-number {
   font-weight: 900;
   line-height: 1;
 }
-/* line 543, ../scss/styles.scss */
+/* line 551, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options {
   margin-top: 18px;
 }
-/* line 545, ../scss/styles.scss */
+/* line 553, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 549, ../scss/styles.scss */
+/* line 557, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul li {
   display: inline-block;
 }
-/* line 551, ../scss/styles.scss */
+/* line 559, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul li a {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11494,26 +11506,28 @@ body.games.flashcards .game-complete .user-options ul li a {
   -webkit-box-shadow: rgba(64, 124, 148, 0.8) 0px 4px 0px;
   box-shadow: rgba(64, 124, 148, 0.8) 0px 4px 0px;
 }
-/* line 560, ../scss/styles.scss */
+/* line 568, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul li a:active, body.games.flashcards .game-complete .user-options ul li a:focus {
   top: 4px;
   box-shadow: none;
 }
-/* line 568, ../scss/styles.scss */
+/* line 576, ../scss/styles.scss */
 body.games.flashcards .game-complete.ng-hide {
-  top: -555px;
+  position: absolute;
+  top: -525px;
 }
-/* line 571, ../scss/styles.scss */
+/* line 580, ../scss/styles.scss */
 body.games.flashcards .game-complete.ng-hide-remove {
-  -webkit-animation: fadeInRightBig 0.8s;
-  animation: fadeInRightBig 0.8s;
+  -webkit-animation: fadeInRightBig 0.5s;
+  animation: fadeInRightBig 0.5s;
 }
-/* line 575, ../scss/styles.scss */
+/* line 584, ../scss/styles.scss */
 body.games.flashcards .game-complete.ng-hide-remove-active {
-  top: -555px;
+  text-indent: 0;
+  top: -525px;
 }
 
-/*  3.0 Memory
+/*  3.0 Matching Game
     ====================
 */
 /*  4.0 Wordlists
@@ -11525,14 +11539,14 @@ body.games.flashcards .game-complete.ng-hide-remove-active {
 
     ====================
 */
-/* line 597, ../scss/styles.scss */
+/* line 607, ../scss/styles.scss */
 body,
 .game-container,
 nav {
-  min-width: 768px !important;
+  min-width: 550px !important;
 }
 
-/* line 602, ../scss/styles.scss */
+/* line 612, ../scss/styles.scss */
 .navbar-nav > li {
   float: left !important;
 }

@@ -1,18 +1,11 @@
 
   <div class="game-container" role="main" ng-controller="FlashCardController">
-      <div class="round-counter">
-        <ul class="round-cards">
-          <li ng-repeat="word in words">
-            <div class="round-card" id="r-{{$index}}" ng-hide="$index <= previous_round-1">
-              &nbsp;
-            </div>
-          </li>
-        </ul>
-      </div>
     <div class="flash-cards-interface" ng-show="!done">
+
       <div class="cards clearfix">
         <div class="col-md-9 first">
           <div class="main-card">
+            <div class="round-counter"><span>{{current_round}}/{{words.length}}</span></div>
             <div class="main-card-img"><img src="http://127.0.0.1:8000{{ card.base_word.symbol[0].image }}" class="large-card"></div>
             <div class="main-card-lexeme"><span>{{card.trans_word.root_word}}</span></div>
           </div>

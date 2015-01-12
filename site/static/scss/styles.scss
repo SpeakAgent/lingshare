@@ -184,54 +184,35 @@ $flash-cards-border-color-default: #6095AA;
 body.games.flashcards {
     background: #C3EDEC  url('/static/images/flashcards/bground.gif') repeat-x;
     background-position: 0 500px;
-    .game-container {
-        position: relative;
-    }
     /* Main Game Interface */
-    .round-counter {
-        overflow: hidden;
-        max-width: 830px;
-        width: 830px;
-        position: absolute;
-        padding-left: 100px;
-        z-index: 10;
-        top: -30px;
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-align: center;
-            li {
-                display: inline-block;
-                width: 7.6%;
-                margin-right: .3%;
-                &:last-child {
-                    margin-right: 0;
-                }
-                .round-card {
-                    background-color: darken($flash-cards-border-color-default,10%);
-                    height: 30px;
-                    color: #fff;
-                    border-top-left-radius: 9px;
-                    border-top-right-radius: 9px;
-                    &.ng-hide-add {
-                        -webkit-animation: bounceOutDown 1s;
-                        animation: bounceOutDown 1s;
-                    }
-                }
-            }
-        }
-    }
     .flash-cards-interface {
         @include background-image(linear-gradient(#EFFEFD, #CDF0EF));
         @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 0px);
         border: $border-width-default $flash-cards-border-color-default solid;
         border-radius: 9px;
-        margin: 0 auto;
+        margin: 0 auto 30px auto;
         max-width: 830px;
         padding: 30px;
         position: relative;
         z-index: 20;
+        .round-counter {
+            color: $flash-cards-border-color-default;
+            font-size: 1em;
+            font-style: italic;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            top: -14px;
+            span {
+                background-color: #EFFEFD;
+                border: $border-width-default $flash-cards-border-color-default solid;
+                border-radius: 9px;
+                display: inline-block;
+                padding: 4px 9px;
+            }
+        }
         &:before {
             content: url('/static/images/flashcards/el-bulbs-off.svg');
             width: 60px;
@@ -239,13 +220,21 @@ body.games.flashcards {
             position: absolute;
             top: 12px;
             left: -49px;
+            z-index: 10;
         }
         &.ng-hide-add {
-            -webkit-animation: fadeOutLeftBig 0.8s;
-            animation: fadeOutLeftBig 0.8s;
+            -webkit-animation: fadeOutLeftBig 0.5s;
+            animation: fadeOutLeftBig 0.5s;
         }
 
             /* Left Column - Contains Round's selected Card */
+            .cards {
+                @media (max-width:$screen-md-min){
+                    .first {
+                        padding-right: 0;
+                    }
+                }
+            }
             .main-card {
                 background:
                     url('/static/images/flashcards/el-screw.svg') no-repeat 2% 2%,
@@ -254,23 +243,30 @@ body.games.flashcards {
                     url('/static/images/flashcards/el-screw-crooked.svg') no-repeat 98% 98%;
                 border: $border-width-default $flash-cards-border-color-default solid;
                 border-radius: 9px;
-                height: 460px;
+                border-bottom-width: 0;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
                 text-align: center;
-                position: relative;
+                height: 460px;
+                @media (min-width:$screen-md-min){
+                    border-bottom-width: $border-width-default;
+                    border-bottom-right-radius: 9px;
+                    border-bottom-left-radius: 9px;
+                }
                 .main-card-img {
                     background-color: #fff;
                     border: $border-width-default $flash-cards-border-color-default solid;
                     border-radius: 12px;
                     height: 380px;
                     line-height: 390px;
-                    width: 440px;
-                    margin: 2em auto;
+                    width: 75%;
+                    margin: 0 auto 2em auto;
                     position: relative;
                     img.large-card {
                         border-radius: 10px;
                         overflow: hidden;
-                        height: 70%;
-                        width: 70%;
+                        height: 80%;
+                        width: 80%;
                         vertical-align: middle;
                     }
                 }
@@ -295,9 +291,12 @@ body.games.flashcards {
 
             .options-container {
                 border: $border-width-default $flash-cards-border-color-default solid;
-                border-radius: 9px;
                 padding: 0;
-                    height: 460px;
+                border-bottom-right-radius: 9px;
+                border-bottom-left-radius: 9px;
+                @media (min-width:$container-lg){
+                    border-radius: 9px;
+                }
                 h3 {
                     color: $flash-cards-border-color-default;
                     font-size: 1em;
@@ -321,6 +320,15 @@ body.games.flashcards {
                     padding: 0 15px;
                     margin-bottom: 15px;
                     position: relative;
+                    @media (max-width: $container-md) {
+                        border-bottom: 0;
+                        display: inline-block;
+                        width: 33%;
+                        margin-bottom: 0;
+                        &:last-child {
+                            border-right: 0;
+                        }
+                    }
                     &:after {
                         border: $border-width-default solid $flash-cards-border-color-default;
                         color: #D7CEBF;
@@ -566,19 +574,21 @@ body.games.flashcards {
             }
         }
         &.ng-hide {
-            top: -555px;
+            position: absolute;
+            top: -525px;
         }
         &.ng-hide-remove {
-            -webkit-animation: fadeInRightBig 0.8s;
-            animation: fadeInRightBig 0.8s;
+            -webkit-animation: fadeInRightBig 0.5s;
+            animation: fadeInRightBig 0.5s;
         }
         &.ng-hide-remove-active {
-            top: -555px;
+            text-indent: 0;
+            top: -525px;
         }
     }
 }
 
-/*  3.0 Memory
+/*  3.0 Matching Game
     ====================
 */
 
@@ -597,7 +607,7 @@ body.games.flashcards {
 body,
 .game-container,
 nav {
-    min-width: 768px !important;
+    min-width: 550px !important;
 }
 .navbar-nav > li {
     float: left !important;

@@ -76,8 +76,6 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
   $scope.newScreen = function() {
     // Get new word and index of new word
     if ($scope.unused_words.length > 0) {
-      $scope.previous_round = $scope.current_round;
-      console.log($scope.previous_round);
       $scope.current_round++;
       $scope.card = $scope.unused_words.pop()
       var indexes = []
@@ -96,17 +94,11 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
         $scope.card
       ];
       $scope.possible_cards = $scope.shuffle($scope.possible_cards);
-     // if($scope.previous_round != 0){
-       // $scope.removeRoundCard($scope.previous_round-1);
-      //}
+
     } else {
       $scope.endScreen()
     }
   };
-
-  $scope.removeRoundCard = function(){
-      //angular.element(document.querySelector('#r-'+previousGameRound)).addClass('animate-hide-card');
-  }
 
   $scope.endScreen = function() {
     $scope.done = true;
