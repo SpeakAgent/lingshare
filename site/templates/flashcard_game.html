@@ -6,7 +6,7 @@
         <div class="col-md-9 first">
           <div class="main-card">
             <div class="round-counter"><span>{{current_round}}/{{words.length}}</span></div>
-            <div class="main-card-img"><img src="http://127.0.0.1:8000{{ card.base_word.symbol[0].image }}" class="large-card"></div>
+            <div class="main-card-img"><img src="http://127.0.0.1:8000{{ card.base_word.photos[0].image }}" class="large-card"></div>
             <div class="main-card-lexeme"><span>{{card.trans_word.root_word}}</span></div>
           </div>
         </div>
@@ -22,7 +22,7 @@
                     {{ item.base_word.root_word }}
                 </div>
                 <div class="symbol" ng-show="show_symbol == item.base_word.root_word">
-                    <img src="http://127.0.0.1:8000{{ item.base_word.symbol[0].image }}" />
+                    <img src="http://127.0.0.1:8000{{ item.base_word.photos[0].image }}" />
                 </div>
               </div>
               <div class="game-alerts"
