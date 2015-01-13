@@ -166,6 +166,116 @@ a {
         animation: bounceIn 0.7s !important;
     }
 }
+.game-complete {
+        display: block;
+        h3.results-message {
+            font-size: 2em;
+            color: $brand-secondary;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .game-results {
+            margin: 0 auto;
+            text-align: center;
+            .result {
+                background-color: #fff;
+                display: inline-block;
+                padding: 20px 20px 0;
+                text-align: center;
+                .result-label {
+                    display: block;
+                    font-weight: 900;
+                    padding-bottom: 9px;
+                    text-align: center;
+                }
+                .result-number {
+                    border: $border-width-default $brand-secondary solid;
+                    border-radius: 120px;
+                    line-height: 114px;
+                    display: block;
+                    font-family: $font-family-emphasis;
+                    font-size: 3.2em;
+                    font-weight: 900;
+                    margin: 0 auto;
+                    width: 120px;
+                    height: 120px;
+                    text-align: center;
+                }
+                /* Result Types */
+
+                /* Defines Icons */
+                &:after {
+                    background-color: #fff;
+                    font-family: 'FontAwesome';
+                    font-size: 2em;
+                    display: inline-block;
+                    margin-top: -22px;
+                    padding: 8px;
+                }
+
+                /* Right Answer Count */
+                &.r-right-answers {
+                    &:after {
+                        color: $game-success;
+                        content: "\f164";
+                    }
+                }
+
+                /* Wrong Attempts Count */
+                &.r-wrong-answers {
+                    &:after {
+                        color: $game-error;
+                        content: "\f00d";
+                    }
+                }
+
+                /* Total Time Played */
+                &.r-time-played {
+                    &:after {
+                        color: $brand-secondary;
+                        content: "\f017";
+                    }
+                }
+
+            }
+            .final-score {
+                color: $brand-secondary;
+                padding-bottom: 10px;
+                h3 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 2.5em;
+                    font-weight: 900;
+                }
+                .f-s-number {
+                    margin-top: -14px;
+                    display: block;
+                    font-family: $font-family-emphasis;
+                    font-size: 7em;
+                    font-weight: 900;
+                    line-height: 1;
+                }
+            }
+
+        }
+        .user-options {
+            margin-top: 18px;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    a {
+                        font-size: 1.6em;
+                        font-weight: 700;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
 
 
 /*  1.0 Dashboard
@@ -221,10 +331,6 @@ body.games.flashcards {
             top: 12px;
             left: -49px;
             z-index: 10;
-        }
-        &.ng-hide-add {
-            -webkit-animation: fadeOutLeftBig 0.5s;
-            animation: fadeOutLeftBig 0.5s;
         }
 
             /* Left Column - Contains Round's selected Card */
@@ -471,79 +577,30 @@ body.games.flashcards {
             width: 86%;
 
             .result {
-                display: inline-block;
-                padding: 20px 20px 0;
-                text-align: center;
                 .result-label {
-                    display: block;
-                    font-weight: 900;
-                    padding-bottom: 9px;
-                    text-align: center;
                 }
                 .result-number {
-                    border: $border-width-default $flash-cards-border-color-default solid;
-                    border-radius: 120px;
-                    display: table-cell;
-                    font-family: $font-family-emphasis;
-                    font-size: 3.2em;
-                    font-weight: 900;
-                    width: 120px;
-                    height: 120px;
-                    vertical-align: middle;
+                    border-color: $flash-cards-border-color-default;
                 }
                 /* Result Types */
 
-                /* Defines Icons */
-                &:after {
-                    background-color: #fff;
-                    font-family: 'FontAwesome';
-                    font-size: 2em;
-                    display: inline-block;
-                    margin-top: -22px;
-                    padding: 8px;
-                }
-
                 /* Right Answer Count */
                 &.r-right-answers {
-                    &:after {
-                        color: $game-success;
-                        content: "\f164";
-                    }
                 }
 
                 /* Wrong Attempts Count */
                 &.r-wrong-answers {
-                    &:after {
-                        color: $game-error;
-                        content: "\f00d";
-                    }
                 }
 
                 /* Total Time Played */
                 &.r-time-played {
-                    &:after {
-                        color: $brand-secondary;
-                        content: "\f017";
-                    }
                 }
 
             }
             .final-score {
-                color: $brand-secondary;
-                padding-bottom: 10px;
                 h3 {
-                    margin: 0;
-                    padding: 0;
-                    font-size: 2.5em;
-                    font-weight: 900;
                 }
                 .f-s-number {
-                    margin-top: -14px;
-                    display: block;
-                    font-family: $font-family-emphasis;
-                    font-size: 7em;
-                    font-weight: 900;
-                    line-height: 1;
                 }
             }
 
@@ -573,18 +630,6 @@ body.games.flashcards {
                 }
             }
         }
-        &.ng-hide {
-            position: absolute;
-            top: -525px;
-        }
-        &.ng-hide-remove {
-            -webkit-animation: fadeInRightBig 0.5s;
-            animation: fadeInRightBig 0.5s;
-        }
-        &.ng-hide-remove-active {
-            text-indent: 0;
-            top: -525px;
-        }
     }
 }
 
@@ -595,16 +640,28 @@ body.games.flashcards {
 body.matching {
     background-color: #416E0D;
     div.memory-cards {
+        margin: 0 auto;
+        &.cards_6 {
+
+        }
         &.cards_12 {
-            width: 870px;
-            background-color: yellow;
+            width: 900px;
+            .card-container,
+            .card {
+                height: 180px;
+                width: 180px;
+            }
+        }
+        &.cards_24 {
+
+        }
+        &.cards_48 {
+
         }
     }
     .card-container {
         position: relative;
         margin: 1em;
-        height: 150px;
-        width: 150px;
         float: left;
     }
     div.card {
@@ -619,9 +676,7 @@ body.matching {
         font-weight: 700;
         display: table;
         text-align: center;
-        height: 150px;
-        width: 150px;
-        @include box-shadow(rgba($shadow-primary, 0.3) 0px 4px 0px);
+        @include box-shadow(rgba($shadow-primary, 0.5) 1px 1px 4px);
         img {
           border-radius: 9px;
           width: 100%;
@@ -655,6 +710,59 @@ body.matching {
         padding: 1em;
         border-radius: 10px;
         margin: 1em;
+    }
+    .game-complete {
+        margin: 0 auto;
+        width: 830px;
+        .game-results {
+            .result {
+                border-radius: 9px;
+                 @include box-shadow(rgba($shadow-primary, 0.5) 1px 1px 4px);
+                width: 200px;
+                margin: 1em;
+            }
+            .final-score {
+                background-color: #fff;
+                border-radius: 9px;
+                 @include box-shadow(rgba($shadow-primary, 0.3) 1px 1px 4px);
+                 width: 240px;
+                 height: 220px;
+                 padding-top: 56px;
+                 margin: 0 auto;
+                 @include transform(rotate(-8deg));
+                 margin-top: -10px;
+                .f-s-number {
+                }
+            }
+        }
+        .user-options {
+            margin: -140px auto 0;
+            width: 75%;
+            ul {
+                list-style: none;
+                margin: 0 auto;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    &#o-play-again {
+                        float: left;
+                    }
+                    &#o-back-home {
+                        float:right;
+                    }
+                    a {
+                        color: $accent-primary;
+                        font-size: 1.6em;
+                        font-weight: 700;
+                        position: relative;
+                        border: none;
+                        &:hover, &:focus {
+                            color: lighten($accent-primary,25%);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 /*  4.0 Wordlists

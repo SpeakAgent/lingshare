@@ -26,10 +26,25 @@
 		</div>
 	</div>
 </div>
-<div ng-if="done">
-	<p>Congrats! You did it!</p>
-	<p>You finished in {{ seconds }} seconds.</p>
-	<p>You guessed correctly {{ correct }} times.</p>
-	<p>You guessed incorrectly {{ wrong }} times.</p>
+<div class="game-complete" ng-show="done">
+    <div class="frame">
+      <div class="game-results clearfix">
+        <div class="clearfix">
+        <div class="result r-right-answers"><span class="result-label">Correct Matches</span><span class="result-number">{{ correct }}</span></div>
+        <div class="result r-wrong-answers"><span class="result-label">Incorrect Matches</span><span class="result-number">{{ wrong }}</span> </div>
+        <div class="result r-time-played"><span class="result-label">Seconds Played</span><span class="result-number">{{ seconds }}</span></div>
+        </div>
+        <div class="final-score">
+          <h3>Final Score</h3>
+          <span class="f-s-number">85</span>
+        </div>
+      </div>
+      <div class="user-options">
+        <ul>
+          <li id="o-play-again"><a href="/#/games/memory/"><i class="fa fa-reply"></i> Play Again</a></li>
+          <li id="o-back-home"><a href="/#/"><i class="fa fa-home"></i> Back Home</a></li>
+        </ul>
+      </div>
+    </div>
 </div>
 
