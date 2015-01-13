@@ -3,11 +3,11 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
 
   function ($scope, $http, $routeParams, $rootScope, $sce) {
     $rootScope.body_classes = "wordslist"
-    if ($routeParams.id) 
+    if ($routeParams.id)
       { $scope.id = $routeParams.id;
         $scope.display = 'grid';
       }
-    if ($routeParams.wordID) 
+    if ($routeParams.wordID)
     {
         $scope.wordID = $routeParams.wordID;
     }
