@@ -26,15 +26,25 @@ $transition-speed: 0.1s;
 
 
 body {
-    background-color: $brand-primary;
+    background-color: $brand-primary-light;
     color: $font-color;
     font-family: $font-family-sans-serif;
     margin-top: 20px;
 }
 
 h1 {
+    color: $brand-secondary;
     font-family: $font-family-emphasis;
+    font-size: 4em;
     font-weight: 900;
+    @include text-shadow(rgba(128, 237, 238, 1) 0 1px 1px);
+}
+h2 {
+    font-family: $font-family-emphasis;
+    font-size: 3em;
+    font-weight: 700;
+    color: #fff;
+    @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
 }
 
 a {
@@ -342,7 +352,16 @@ a {
     ====================
 */
 
-
+div.activity,
+div.achievement {
+    padding: 1em;
+    border: 5px solid white;
+    border-radius: 10px;
+    width: 200px;
+    height: 250px;
+    margin: 1em;
+    display: inline-block;
+}
 
 
 /*  2.0 Flash Cards

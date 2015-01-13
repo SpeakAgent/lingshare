@@ -10907,7 +10907,7 @@ button.close {
 /* Additional Variables */
 /* line 28, ../scss/styles.scss */
 body {
-  background-color: #6ecacb;
+  background-color: #76dbdc;
   color: #222222;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-top: 20px;
@@ -10915,11 +10915,23 @@ body {
 
 /* line 35, ../scss/styles.scss */
 h1 {
+  color: #009597;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 4em;
   font-weight: 900;
+  text-shadow: #80edee 0 1px 1px;
 }
 
-/* line 40, ../scss/styles.scss */
+/* line 42, ../scss/styles.scss */
+h2 {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+}
+
+/* line 50, ../scss/styles.scss */
 a {
   color: #009597;
   border-bottom: 3px solid #f8d338;
@@ -10931,7 +10943,7 @@ a {
   -o-transition: border-bottom-color, 0.1s;
   transition: border-bottom-color, 0.1s;
 }
-/* line 46, ../scss/styles.scss */
+/* line 56, ../scss/styles.scss */
 a:hover {
   color: #6ecacb;
   text-decoration: none;
@@ -10939,7 +10951,7 @@ a:hover {
 }
 
 /* Resets */
-/* line 56, ../scss/styles.scss */
+/* line 66, ../scss/styles.scss */
 .first {
   margin-left: 0;
   padding-left: 0;
@@ -10948,82 +10960,82 @@ a:hover {
 /*  0.1 Global Navigation
     ====================
 */
-/* line 65, ../scss/styles.scss */
+/* line 75, ../scss/styles.scss */
 .navbar-global {
   color: #009597;
   margin: 0 20px;
 }
-/* line 68, ../scss/styles.scss */
+/* line 78, ../scss/styles.scss */
 .navbar-global .navbar-nav {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   background-color: white;
   border-radius: 9px;
 }
-/* line 72, ../scss/styles.scss */
+/* line 82, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a {
   border-bottom: 0;
   color: #009597;
   font-weight: 700;
   padding: 4px 10px 4px 0;
 }
-/* line 77, ../scss/styles.scss */
+/* line 87, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a:hover {
   color: #6ecacb;
   background-color: transparent;
 }
-/* line 81, ../scss/styles.scss */
+/* line 91, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a:focus {
   color: #009597;
   background-color: transparent;
 }
-/* line 87, ../scss/styles.scss */
+/* line 97, ../scss/styles.scss */
 .navbar-global .navbar-primary {
   float: left;
 }
-/* line 90, ../scss/styles.scss */
+/* line 100, ../scss/styles.scss */
 .navbar-global .navbar-primary #el-logo img {
   height: auto;
   width: 46px;
 }
-/* line 94, ../scss/styles.scss */
+/* line 104, ../scss/styles.scss */
 .navbar-global .navbar-primary #el-logo a {
   padding: 6px 10px 6px 6px;
 }
-/* line 98, ../scss/styles.scss */
+/* line 108, ../scss/styles.scss */
 .navbar-global .navbar-primary span, .navbar-global .navbar-primary i {
   display: block;
 }
-/* line 101, ../scss/styles.scss */
+/* line 111, ../scss/styles.scss */
 .navbar-global .navbar-primary i {
   font-size: 200%;
   text-align: center;
 }
-/* line 105, ../scss/styles.scss */
+/* line 115, ../scss/styles.scss */
 .navbar-global .navbar-primary span {
   color: #cf9204;
   font-weight: 400;
   font-size: 80%;
 }
-/* line 111, ../scss/styles.scss */
+/* line 121, ../scss/styles.scss */
 .navbar-global .navbar-user {
   color: #222222;
   float: right;
 }
-/* line 114, ../scss/styles.scss */
+/* line 124, ../scss/styles.scss */
 .navbar-global .navbar-user span {
   display: block;
   font-size: 0.8em;
   font-weight: 400;
 }
-/* line 118, ../scss/styles.scss */
+/* line 128, ../scss/styles.scss */
 .navbar-global .navbar-user span.nav-label {
   font-size: 0.8em;
   margin-bottom: -5px;
   color: #222222;
   text-align: left;
 }
-/* line 125, ../scss/styles.scss */
+/* line 135, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name {
   background-color: #009597;
   border-top-left-radius: 9px;
@@ -11032,73 +11044,73 @@ a:hover {
   -o-transition: background-color, 0.1s;
   transition: background-color, 0.1s;
 }
-/* line 130, ../scss/styles.scss */
+/* line 140, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name a, .navbar-global .navbar-user .user-name .nav-label {
   color: #fff;
   padding: 0;
 }
-/* line 134, ../scss/styles.scss */
+/* line 144, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name a {
   padding: 10px 10px 11px;
 }
-/* line 136, ../scss/styles.scss */
+/* line 146, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name a:hover {
   color: #fff;
 }
-/* line 140, ../scss/styles.scss */
+/* line 150, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name .name {
   font-size: 1.2em;
   font-weight: 700;
 }
-/* line 144, ../scss/styles.scss */
+/* line 154, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name:hover {
   background-color: #00aeb1;
   -webkit-transition: background-color, 0.1s;
   -o-transition: background-color, 0.1s;
   transition: background-color, 0.1s;
 }
-/* line 149, ../scss/styles.scss */
+/* line 159, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score {
   padding: 10px 10px 0 10px;
 }
-/* line 151, ../scss/styles.scss */
+/* line 161, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score span {
   display: block;
 }
-/* line 153, ../scss/styles.scss */
+/* line 163, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score span.score-value {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
 }
-/* line 160, ../scss/styles.scss */
+/* line 170, ../scss/styles.scss */
 .navbar-global .navbar-user .user-login a {
   background-color: #009597;
   border-radius: 9px;
   color: #fff;
   padding: 10px;
 }
-/* line 165, ../scss/styles.scss */
+/* line 175, ../scss/styles.scss */
 .navbar-global .navbar-user .user-login a:hover, .navbar-global .navbar-user .user-login a:focus {
   background-color: #00e0e4;
   color: #fff;
 }
-/* line 171, ../scss/styles.scss */
+/* line 181, ../scss/styles.scss */
 .navbar-global .navbar-user .user-logout {
   border-left: 1px solid #009597;
   text-align: center;
 }
-/* line 174, ../scss/styles.scss */
+/* line 184, ../scss/styles.scss */
 .navbar-global .navbar-user .user-logout i {
   display: block;
   font-size: 2em;
   margin-bottom: -6px;
 }
-/* line 179, ../scss/styles.scss */
+/* line 189, ../scss/styles.scss */
 .navbar-global .navbar-user .user-logout a {
   color: #9d0214;
   padding: 8px 10px 6px;
 }
-/* line 182, ../scss/styles.scss */
+/* line 192, ../scss/styles.scss */
 .navbar-global .navbar-user .user-logout a:hover, .navbar-global .navbar-user .user-logout a:focus {
   color: #d0021b;
 }
@@ -11106,12 +11118,12 @@ a:hover {
 /* 0.2 Global Activity Elements
     ====================
 */
-/* line 193, ../scss/styles.scss */
+/* line 203, ../scss/styles.scss */
 .game-container {
   margin-top: 30px;
 }
 
-/* line 196, ../scss/styles.scss */
+/* line 206, ../scss/styles.scss */
 .game-alerts {
   background-color: #f8e71c;
   -webkit-box-shadow: rgba(34, 9, 9, 0.2) 0 0 4px 2px;
@@ -11128,7 +11140,7 @@ a:hover {
   display: table;
   z-index: 1000;
 }
-/* line 210, ../scss/styles.scss */
+/* line 220, ../scss/styles.scss */
 .game-alerts .alert {
   display: table-cell;
   vertical-align: middle;
@@ -11138,11 +11150,11 @@ a:hover {
   transform: rotate(-8deg);
   margin-top: -10px;
 }
-/* line 218, ../scss/styles.scss */
+/* line 228, ../scss/styles.scss */
 .game-alerts .alert.true {
   font-size: 4em;
 }
-/* line 222, ../scss/styles.scss */
+/* line 232, ../scss/styles.scss */
 .game-alerts.ng-hide-remove {
   -webkit-animation: bounceIn 0.7s !important;
   -moz-animation: bounceIn 0.7s;
@@ -11150,11 +11162,11 @@ a:hover {
   animation: bounceIn 0.7s !important;
 }
 
-/* line 229, ../scss/styles.scss */
+/* line 239, ../scss/styles.scss */
 .game-complete {
   display: block;
 }
-/* line 231, ../scss/styles.scss */
+/* line 241, ../scss/styles.scss */
 .game-complete h3.results-message {
   font-size: 2em;
   color: #009597;
@@ -11162,12 +11174,12 @@ a:hover {
   text-transform: uppercase;
   text-align: center;
 }
-/* line 238, ../scss/styles.scss */
+/* line 248, ../scss/styles.scss */
 .game-complete .game-results {
   margin: 0 auto;
   text-align: center;
 }
-/* line 241, ../scss/styles.scss */
+/* line 251, ../scss/styles.scss */
 .game-complete .game-results .result {
   background-color: #fff;
   display: inline-block;
@@ -11179,14 +11191,14 @@ a:hover {
   /* Wrong Attempts Count */
   /* Total Time Played */
 }
-/* line 246, ../scss/styles.scss */
+/* line 256, ../scss/styles.scss */
 .game-complete .game-results .result .result-label {
   display: block;
   font-weight: 900;
   padding-bottom: 9px;
   text-align: center;
 }
-/* line 252, ../scss/styles.scss */
+/* line 262, ../scss/styles.scss */
 .game-complete .game-results .result .result-number {
   border: 3px #009597 solid;
   border-radius: 120px;
@@ -11200,7 +11212,7 @@ a:hover {
   height: 120px;
   text-align: center;
 }
-/* line 268, ../scss/styles.scss */
+/* line 278, ../scss/styles.scss */
 .game-complete .game-results .result:after {
   background-color: #fff;
   font-family: 'FontAwesome';
@@ -11209,34 +11221,34 @@ a:hover {
   margin-top: -22px;
   padding: 8px;
 }
-/* line 279, ../scss/styles.scss */
+/* line 289, ../scss/styles.scss */
 .game-complete .game-results .result.r-right-answers:after {
   color: #7ed321;
   content: "\f164";
 }
-/* line 287, ../scss/styles.scss */
+/* line 297, ../scss/styles.scss */
 .game-complete .game-results .result.r-wrong-answers:after {
   color: #d0021b;
   content: "\f00d";
 }
-/* line 295, ../scss/styles.scss */
+/* line 305, ../scss/styles.scss */
 .game-complete .game-results .result.r-time-played:after {
   color: #009597;
   content: "\f017";
 }
-/* line 302, ../scss/styles.scss */
+/* line 312, ../scss/styles.scss */
 .game-complete .game-results .final-score {
   color: #009597;
   padding-bottom: 10px;
 }
-/* line 305, ../scss/styles.scss */
+/* line 315, ../scss/styles.scss */
 .game-complete .game-results .final-score h3 {
   margin: 0;
   padding: 0;
   font-size: 2.5em;
   font-weight: 900;
 }
-/* line 311, ../scss/styles.scss */
+/* line 321, ../scss/styles.scss */
 .game-complete .game-results .final-score .f-s-number {
   margin-top: -14px;
   display: block;
@@ -11245,21 +11257,21 @@ a:hover {
   font-weight: 900;
   line-height: 1;
 }
-/* line 322, ../scss/styles.scss */
+/* line 332, ../scss/styles.scss */
 .game-complete .user-options {
   margin-top: 18px;
 }
-/* line 324, ../scss/styles.scss */
+/* line 334, ../scss/styles.scss */
 .game-complete .user-options ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 328, ../scss/styles.scss */
+/* line 338, ../scss/styles.scss */
 .game-complete .user-options ul li {
   display: inline-block;
 }
-/* line 330, ../scss/styles.scss */
+/* line 340, ../scss/styles.scss */
 .game-complete .user-options ul li a {
   font-size: 1.6em;
   font-weight: 700;
@@ -11269,16 +11281,28 @@ a:hover {
 /*  1.0 Dashboard
     ====================
 */
+/* line 355, ../scss/styles.scss */
+div.activity,
+div.achievement {
+  padding: 1em;
+  border: 5px solid white;
+  border-radius: 10px;
+  width: 200px;
+  height: 250px;
+  margin: 1em;
+  display: inline-block;
+}
+
 /*  2.0 Flash Cards
     ====================
 */
-/* line 354, ../scss/styles.scss */
+/* line 373, ../scss/styles.scss */
 body.games.flashcards {
   background: #c3edec url("/static/images/flashcards/bground.gif") repeat-x;
   background-position: 0 500px;
   /* Main Game Interface */
 }
-/* line 358, ../scss/styles.scss */
+/* line 377, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZmVmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NkZjBlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -11298,7 +11322,7 @@ body.games.flashcards .flash-cards-interface {
   /* Left Column - Contains Round's selected Card */
   /* Right Column - Contains Options for Flash Cards */
 }
-/* line 368, ../scss/styles.scss */
+/* line 387, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .round-counter {
   color: #6095aa;
   font-size: 1em;
@@ -11310,7 +11334,7 @@ body.games.flashcards .flash-cards-interface .round-counter {
   text-transform: uppercase;
   top: -14px;
 }
-/* line 378, ../scss/styles.scss */
+/* line 397, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .round-counter span {
   background-color: #EFFEFD;
   border: 3px #6095aa solid;
@@ -11318,7 +11342,7 @@ body.games.flashcards .flash-cards-interface .round-counter span {
   display: inline-block;
   padding: 4px 9px;
 }
-/* line 386, ../scss/styles.scss */
+/* line 405, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface:before {
   content: url("/static/images/flashcards/el-bulbs-off.svg");
   width: 60px;
@@ -11329,12 +11353,12 @@ body.games.flashcards .flash-cards-interface:before {
   z-index: 10;
 }
 @media (max-width: 992px) {
-  /* line 399, ../scss/styles.scss */
+  /* line 418, ../scss/styles.scss */
   body.games.flashcards .flash-cards-interface .cards .first {
     padding-right: 0;
   }
 }
-/* line 404, ../scss/styles.scss */
+/* line 423, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card {
   background: url("/static/images/flashcards/el-screw.svg") no-repeat 2% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 2% 98%, url("/static/images/flashcards/el-screw-crooked.svg") no-repeat 98% 98%;
   border: 3px #6095aa solid;
@@ -11346,14 +11370,14 @@ body.games.flashcards .flash-cards-interface .main-card {
   height: 460px;
 }
 @media (min-width: 992px) {
-  /* line 404, ../scss/styles.scss */
+  /* line 423, ../scss/styles.scss */
   body.games.flashcards .flash-cards-interface .main-card {
     border-bottom-width: 3px;
     border-bottom-right-radius: 9px;
     border-bottom-left-radius: 9px;
   }
 }
-/* line 422, ../scss/styles.scss */
+/* line 441, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-img {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11364,7 +11388,7 @@ body.games.flashcards .flash-cards-interface .main-card .main-card-img {
   margin: 0 auto 2em auto;
   position: relative;
 }
-/* line 431, ../scss/styles.scss */
+/* line 450, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-img img.large-card {
   border-radius: 10px;
   overflow: hidden;
@@ -11372,13 +11396,13 @@ body.games.flashcards .flash-cards-interface .main-card .main-card-img img.large
   width: 80%;
   vertical-align: middle;
 }
-/* line 439, ../scss/styles.scss */
+/* line 458, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-lexeme {
   top: -54px;
   position: relative;
   z-index: 5;
 }
-/* line 443, ../scss/styles.scss */
+/* line 462, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-lexeme span {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11390,7 +11414,7 @@ body.games.flashcards .flash-cards-interface .main-card .main-card-lexeme span {
   padding: 4px 10px;
   z-index: 1;
 }
-/* line 458, ../scss/styles.scss */
+/* line 477, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container {
   border: 3px #6095aa solid;
   padding: 0;
@@ -11398,12 +11422,12 @@ body.games.flashcards .flash-cards-interface .options-container {
   border-bottom-left-radius: 9px;
 }
 @media (min-width: 1170px) {
-  /* line 458, ../scss/styles.scss */
+  /* line 477, ../scss/styles.scss */
   body.games.flashcards .flash-cards-interface .options-container {
     border-radius: 9px;
   }
 }
-/* line 466, ../scss/styles.scss */
+/* line 485, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container h3 {
   color: #6095aa;
   font-size: 1em;
@@ -11415,7 +11439,7 @@ body.games.flashcards .flash-cards-interface .options-container h3 {
   text-transform: uppercase;
   top: -14px;
 }
-/* line 476, ../scss/styles.scss */
+/* line 495, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container h3 span {
   background-color: #EFFEFD;
   border: 3px #6095aa solid;
@@ -11423,7 +11447,7 @@ body.games.flashcards .flash-cards-interface .options-container h3 span {
   display: inline-block;
   padding: 4px 9px;
 }
-/* line 484, ../scss/styles.scss */
+/* line 503, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container {
   border-bottom: 3px #6095aa solid;
   padding: 0 15px;
@@ -11432,19 +11456,19 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   /* Round Results */
 }
 @media (max-width: 970px) {
-  /* line 484, ../scss/styles.scss */
+  /* line 503, ../scss/styles.scss */
   body.games.flashcards .flash-cards-interface .options-container .option-container {
     border-bottom: 0;
     display: inline-block;
     width: 33%;
     margin-bottom: 0;
   }
-  /* line 494, ../scss/styles.scss */
+  /* line 513, ../scss/styles.scss */
   body.games.flashcards .flash-cards-interface .options-container .option-container:last-child {
     border-right: 0;
   }
 }
-/* line 498, ../scss/styles.scss */
+/* line 517, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container:after {
   border: 3px solid #6095aa;
   color: #D7CEBF;
@@ -11463,12 +11487,12 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   line-height: 16px;
   text-align: center;
 }
-/* line 516, ../scss/styles.scss */
+/* line 535, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container:last-child {
   border-bottom: 0;
   margin-bottom: 0;
 }
-/* line 520, ../scss/styles.scss */
+/* line 539, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option {
   background-color: #fff;
   border: 3px solid #6095aa;
@@ -11484,7 +11508,7 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   position: relative;
   width: 86%;
 }
-/* line 533, ../scss/styles.scss */
+/* line 552, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option .lexeme {
   color: #009597;
   font-size: 20px;
@@ -11493,56 +11517,56 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   vertical-align: middle;
   text-align: center;
 }
-/* line 541, ../scss/styles.scss */
+/* line 560, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option .symbol {
   margin: 0 auto;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 546, ../scss/styles.scss */
+/* line 565, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option .symbol img {
   width: 70%;
   height: 100px;
   vertical-align: middle;
   margin: 0 auto;
 }
-/* line 554, ../scss/styles.scss */
+/* line 573, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option:hover .lexeme {
   color: #6ecacb;
 }
-/* line 558, ../scss/styles.scss */
+/* line 577, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option:focus, body.games.flashcards .flash-cards-interface .options-container .option-container .option:active {
   top: 4px;
   box-shadow: none;
 }
-/* line 567, ../scss/styles.scss */
+/* line 586, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.true .option, body.games.flashcards .flash-cards-interface .options-container .option-container.false .option {
   top: 4px;
   box-shadow: none;
 }
-/* line 573, ../scss/styles.scss */
+/* line 592, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.true .option {
   border-color: #7ed321 !important;
 }
-/* line 576, ../scss/styles.scss */
+/* line 595, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.true:after {
   color: #7ed321;
 }
-/* line 581, ../scss/styles.scss */
+/* line 600, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.false .option {
   border-color: #d0021b !important;
 }
-/* line 584, ../scss/styles.scss */
+/* line 603, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.false:after {
   color: #d0021b;
 }
-/* line 591, ../scss/styles.scss */
+/* line 610, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .timer {
   padding: 8px 0 0;
   text-align: center;
 }
-/* line 597, ../scss/styles.scss */
+/* line 616, ../scss/styles.scss */
 body.games.flashcards .game-complete {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZmVmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NkZjBlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -11560,7 +11584,7 @@ body.games.flashcards .game-complete {
   padding: 30px;
   position: relative;
 }
-/* line 607, ../scss/styles.scss */
+/* line 626, ../scss/styles.scss */
 body.games.flashcards .game-complete .frame {
   background: url("/static/images/flashcards/el-screw.svg") no-repeat 2% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 2% 98%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 98%;
   border: 3px #6095aa solid;
@@ -11569,7 +11593,7 @@ body.games.flashcards .game-complete .frame {
   text-align: center;
   position: relative;
 }
-/* line 619, ../scss/styles.scss */
+/* line 638, ../scss/styles.scss */
 body.games.flashcards .game-complete h3.results-message {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11582,7 +11606,7 @@ body.games.flashcards .game-complete h3.results-message {
   margin-top: -50px;
   padding: 6px 20px;
 }
-/* line 631, ../scss/styles.scss */
+/* line 650, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11591,32 +11615,32 @@ body.games.flashcards .game-complete .game-results {
   text-align: center;
   width: 86%;
 }
-/* line 639, ../scss/styles.scss */
+/* line 658, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .result {
   /* Result Types */
   /* Right Answer Count */
   /* Wrong Attempts Count */
   /* Total Time Played */
 }
-/* line 642, ../scss/styles.scss */
+/* line 661, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .result .result-number {
   border-color: #6095aa;
 }
-/* line 668, ../scss/styles.scss */
+/* line 687, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options {
   margin-top: 18px;
 }
-/* line 670, ../scss/styles.scss */
+/* line 689, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 674, ../scss/styles.scss */
+/* line 693, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul li {
   display: inline-block;
 }
-/* line 676, ../scss/styles.scss */
+/* line 695, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul li a {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11628,7 +11652,7 @@ body.games.flashcards .game-complete .user-options ul li a {
   -webkit-box-shadow: rgba(64, 124, 148, 0.8) 0px 4px 0px;
   box-shadow: rgba(64, 124, 148, 0.8) 0px 4px 0px;
 }
-/* line 685, ../scss/styles.scss */
+/* line 704, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul li a:active, body.games.flashcards .game-complete .user-options ul li a:focus {
   top: 4px;
   box-shadow: none;
@@ -11637,31 +11661,31 @@ body.games.flashcards .game-complete .user-options ul li a:active, body.games.fl
 /*  3.0 Matching Game
     ====================
 */
-/* line 700, ../scss/styles.scss */
+/* line 719, ../scss/styles.scss */
 body.matching {
   background-color: #416E0D;
 }
-/* line 702, ../scss/styles.scss */
+/* line 721, ../scss/styles.scss */
 body.matching div.memory-cards {
   margin: 0 auto;
 }
-/* line 707, ../scss/styles.scss */
+/* line 726, ../scss/styles.scss */
 body.matching div.memory-cards.cards_12 {
   width: 900px;
 }
-/* line 709, ../scss/styles.scss */
+/* line 728, ../scss/styles.scss */
 body.matching div.memory-cards.cards_12 .card-container,
 body.matching div.memory-cards.cards_12 .card {
   height: 180px;
   width: 180px;
 }
-/* line 722, ../scss/styles.scss */
+/* line 741, ../scss/styles.scss */
 body.matching .card-container {
   position: relative;
   margin: 1em;
   float: left;
 }
-/* line 727, ../scss/styles.scss */
+/* line 746, ../scss/styles.scss */
 body.matching div.card {
   position: absolute;
   background-color: #fff;
@@ -11680,33 +11704,33 @@ body.matching div.card {
   /* Card Front */
   /* Cards have been removed, but space must remain */
 }
-/* line 740, ../scss/styles.scss */
+/* line 759, ../scss/styles.scss */
 body.matching div.card img {
   border-radius: 9px;
   width: 100%;
 }
-/* line 745, ../scss/styles.scss */
+/* line 764, ../scss/styles.scss */
 body.matching div.card.back {
   background-color: #76DBDC;
 }
-/* line 747, ../scss/styles.scss */
+/* line 766, ../scss/styles.scss */
 body.matching div.card.back span {
   border-radius: 9px;
   display: block;
 }
-/* line 754, ../scss/styles.scss */
+/* line 773, ../scss/styles.scss */
 body.matching div.card.front span {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 760, ../scss/styles.scss */
+/* line 779, ../scss/styles.scss */
 body.matching div.card.empty {
   border: 0;
   background-color: transparent;
   box-shadow: none;
   cursor: default;
 }
-/* line 767, ../scss/styles.scss */
+/* line 786, ../scss/styles.scss */
 body.matching div.game-status {
   height: 100px;
   width: 400px;
@@ -11714,12 +11738,12 @@ body.matching div.game-status {
   border-radius: 10px;
   margin: 1em;
 }
-/* line 774, ../scss/styles.scss */
+/* line 793, ../scss/styles.scss */
 body.matching .game-complete {
   margin: 0 auto;
   width: 830px;
 }
-/* line 778, ../scss/styles.scss */
+/* line 797, ../scss/styles.scss */
 body.matching .game-complete .game-results .result {
   border-radius: 9px;
   -webkit-box-shadow: rgba(34, 9, 9, 0.5) 1px 1px 4px;
@@ -11727,7 +11751,7 @@ body.matching .game-complete .game-results .result {
   width: 200px;
   margin: 1em;
 }
-/* line 784, ../scss/styles.scss */
+/* line 803, ../scss/styles.scss */
 body.matching .game-complete .game-results .final-score {
   background-color: #fff;
   border-radius: 9px;
@@ -11743,30 +11767,30 @@ body.matching .game-complete .game-results .final-score {
   transform: rotate(-8deg);
   margin-top: -10px;
 }
-/* line 798, ../scss/styles.scss */
+/* line 817, ../scss/styles.scss */
 body.matching .game-complete .user-options {
   margin: -140px auto 0;
   width: 75%;
 }
-/* line 801, ../scss/styles.scss */
+/* line 820, ../scss/styles.scss */
 body.matching .game-complete .user-options ul {
   list-style: none;
   margin: 0 auto;
   padding: 0;
 }
-/* line 805, ../scss/styles.scss */
+/* line 824, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li {
   display: inline-block;
 }
-/* line 807, ../scss/styles.scss */
+/* line 826, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li#o-play-again {
   float: left;
 }
-/* line 810, ../scss/styles.scss */
+/* line 829, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li#o-back-home {
   float: right;
 }
-/* line 813, ../scss/styles.scss */
+/* line 832, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li a {
   color: #f8d338;
   font-size: 1.6em;
@@ -11774,7 +11798,7 @@ body.matching .game-complete .user-options ul li a {
   position: relative;
   border: none;
 }
-/* line 819, ../scss/styles.scss */
+/* line 838, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li a:hover, body.matching .game-complete .user-options ul li a:focus {
   color: #fceeb3;
 }
@@ -11788,14 +11812,14 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
 
     ====================
 */
-/* line 840, ../scss/styles.scss */
+/* line 859, ../scss/styles.scss */
 body,
 .game-container,
 nav {
   min-width: 550px !important;
 }
 
-/* line 845, ../scss/styles.scss */
+/* line 864, ../scss/styles.scss */
 .navbar-nav > li {
   float: left !important;
 }
