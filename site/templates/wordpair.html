@@ -1,0 +1,52 @@
+<style type="text/css">
+	img.small {
+		width: 300px;
+	}
+	div.audio {
+		height: 100px;
+	}
+</style>
+
+<div>
+<h1>{{ word.base_word.root_word }}</h1>
+
+<div>
+	<img src="http://127.0.0.1:8000{{photo.image}}"
+		ng-repeat="photo in word.base_word.photos"
+		class="img-rounded small">
+</div>
+
+<div>
+	<dl>
+		<dt>{{ word.base_word.root_word }}</dt>
+			<dd ng-if="word.base_word.gender.title != 'NA'">({{ word.base_word.word_class.title }}, {{ word.base_word.gender }})
+			</dd>
+
+			<dd ng-if="word.base_word.gender.title == 'NA'">({{ word.base_word.word_class.title }})
+			</dd>
+		<dt>{{ word.trans_word.root_word }}</dt>
+	</dl>
+</div>
+
+<div class="audio">
+	<p ng-if="word.base_word.audio_file"
+		class="col-md-1">
+		<audio controls>
+				<source src="{{ audio_url(word.base_word.audio_file) }}" 
+					type="audio/mpeg">
+				Your browser does not support the audio tag.
+		</audio>
+	</p>
+	<p ng-if="!word.base_word.audio_file">No audio</p>
+</div>
+
+<div>
+	<p>In a sentence:</p>
+	<dl>
+		<dt ng-repeat-start="sentence in word.base_word.example_sentences">
+			{{ sentence.text }}
+		</dt>
+		<dd ng-repeat-end>{{ sentence.translations[0].text }}</dd>
+	</dl>
+</div>
+</div>

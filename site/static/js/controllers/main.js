@@ -10,11 +10,19 @@ mainApp.config(function($routeProvider, $sceDelegateProvider) {
 		templateUrl: 'templates/wordlists.html',
 		controller: 'WordListsController'
 	})
+	.when('/wordpair/:id/', {
+		templateUrl: 'templates/wordpair.html',
+		controller: 'WordPairController'
+	})
 	.when('/words/word/:id', {
 		templateUrl: 'templates/word_detail.html',
 		controller: 'WordsController'
 	})
 	.when('/words/:id/', {
+		templateUrl: 'templates/wordlists.html',
+		controller: 'WordListsController'
+	})
+	.when('/words/:id/:wordID/', {
 		templateUrl: 'templates/wordlists.html',
 		controller: 'WordListsController'
 	})
