@@ -595,7 +595,10 @@ body.games.flashcards {
 body.matching {
     background-color: #416E0D;
     div.memory-cards {
-        width: 1000px;
+        &.cards_12 {
+            width: 870px;
+            background-color: yellow;
+        }
     }
     .card-container {
         position: relative;
@@ -616,7 +619,7 @@ body.matching {
         font-weight: 700;
         display: table;
         text-align: center;
-                height: 150px;
+        height: 150px;
         width: 150px;
         @include box-shadow(rgba($shadow-primary, 0.3) 0px 4px 0px);
         img {
@@ -630,36 +633,12 @@ body.matching {
                 border-radius: 9px;
                 display: block;
             }
-            &.ng-enter {
-                -webkit-animation: bounceIn 0.7s;
-                -moz-animation: bounceIn 0.7s;
-                -ms-animation: bounceIn 0.7s;
-                animation: bounceIn 0.7s;
-            }
-            &.ng-leave {
-                -webkit-animation: bounceOut 0.5s;
-                -moz-animation: bounceOut 0.5s;
-                -ms-animation: bounceOut 0.5s;
-                animation: bounceOut 0.5s;
-            }
         }
         /* Card Front */
         &.front {
             span {
                 display: table-cell;
                 vertical-align: middle;
-            }
-            &.ng-enter {
-                -webkit-animation: bounceOut 0.5s;
-                -moz-animation: bounceOut 0.5s;
-                -ms-animation: bounceOut 0.5s;
-                animation: bounceOut 0.5s;
-            }
-            &.ng-leave {
-                -webkit-animation: bounceIn 0.5s;
-                -moz-animation: bounceIn 0.5s;
-                -ms-animation: bounceIn 0.5s;
-                animation: bounceIn 0.5s;
             }
         }
         /* Cards have been removed, but space must remain */

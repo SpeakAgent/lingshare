@@ -32,6 +32,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 $scope.createCards = function () {
       cards = []
       words = $scope.shuffle($scope.wordlist.words).slice(0,6);
+      $scope.totalCards = words.length * 2;
       for (var i = words.length - 1; i >= 0; i--) {
         card = words[i];
         cards.push({word: card, type: 'symbol',
