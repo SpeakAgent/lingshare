@@ -63,6 +63,7 @@ mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHel
         $scope.authToken = localStorage.getItem('authToken');
         $scope.User = User;
         $scope.User.username = $scope.username;
+        $rootScope.username = $scope.username;
     });
   };
 })
