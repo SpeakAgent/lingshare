@@ -23,25 +23,23 @@
 
 <nav class="navbar navbar-global" ng-controller="NavController">
 	<ul class="nav navbar-default navbar-nav navbar-primary">
-		<li id="el-logo"><a href="/#/"><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" title="Speak Agent" /></a></li>
-		<li><a href="/#/"><i class="fa fa-home"></i><span>Home</span></a></li>
+		<li id="el-logo"><a href="/#/dashboard/"><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" title="Speak Agent" /></a></li>
+		<li><a href="/#/dashboard/"><i class="fa fa-home"></i><span>Home</span></a></li>
 		<li><a href="/#/games/"><i class="fa fa-gamepad"></i><span>Activities</span></a></li>
 		<li><a href="/#/words/"><i class="fa fa-comment"></i><span>Wordlists</span></a></li>
 	</ul>
 	<ul class="nav navbar-default navbar-nav navbar-user">
-		<li class="user-icon">
-			<a ng-if="!username" href="/#/login/">No Icon</a>
-			<a ng-if="username" href="/#/dashboard/">User Icon</a>
+		<li ng-if="!username" class="user-login">
+			<a ng-if="!username" href="/#/login/">Log In</a>
 		</li>
-		<li class="user-score"><span class="score-label">Your Score</span>
+		<li class="user-name">
+			<a ng-if="username" href="/#/dashboard/"><span class="nav-label">Hi,</span> <span class="name">{{ user.first_name }}</span></a>
+		</li>
+		<li ng-if="username" class="user-score"><span class="nav-label">Your Points</span>
 			<span class="score-value">999,999</span></li>
-		<li class="user-login"><a href="/#/login/">
-			<span ng-if="username">
+		<li ng-if="username" class="user-logout"><a href="/#/login/">
+			<i class="fa fa-close"></i>
 			 Log Out
-			 </span>
-			 <span ng-if="!username">
-			 	Log in
-			 </span>
 			 </a>
 		</li>
 	</ul>

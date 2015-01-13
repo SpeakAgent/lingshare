@@ -27,6 +27,7 @@ $transition-speed: 0.1s;
 
 body {
     background-color: $brand-primary;
+    color: $font-color;
     font-family: $font-family-sans-serif;
     margin-top: 20px;
 }
@@ -108,19 +109,78 @@ a {
         }
     }
     .navbar-user {
+        color: $font-color;
         float: right;
+        span {
+            display: block;
+            font-size: 0.8em;
+            font-weight: 400;
+            &.nav-label {
+                font-size: 0.8em;
+                margin-bottom: -5px;
+                color: $font-color;
+                text-align: left;
+            }
+        }
+        .user-name {
+            background-color: $brand-secondary;
+            border-top-left-radius: 9px;
+            border-bottom-left-radius: 9px;
+            @include transition(background-color,$transition-speed);
+            a, .nav-label {
+                color: #fff;
+                padding: 0;
+            }
+            a {
+                padding: 10px 10px 11px;
+                &:hover {
+                    color:#fff;
+                }
+            }
+            .name {
+                font-size: 1.2em;
+                font-weight: 700;
+            }
+            &:hover {
+                background-color: lighten($brand-secondary,5%);
+                @include transition(background-color,$transition-speed);
+            }
+        }
         .user-score {
-            padding-top: 6px;
+            padding: 10px 10px 0 10px;
             span {
                 display: block;
-                &.score-label {
-                    font-size: 0.8em;
-                    text-transform: uppercase;
-                    margin-bottom: -5px;
-                }
                 &.score-value {
                     font-family: $font-family-emphasis;
                     font-size: 1.5em;
+                }
+            }
+        }
+        .user-login {
+            a {
+                background-color: $brand-secondary;
+                border-radius: 9px;
+                color: #fff;
+                padding: 10px;
+                &:hover, &:focus {
+                    background-color: lighten($brand-secondary, 15%);
+                    color: #fff;
+                }
+            }
+        }
+        .user-logout {
+            border-left: 1px solid $brand-secondary;
+            text-align: center;
+            i {
+                display:block;
+                font-size: 2em;
+                margin-bottom: -6px;
+            }
+            a {
+                color: darken($game-error, 10%);
+                padding: 8px 10px 6px;
+                &:hover, &:focus {
+                    color: $game-error;
                 }
             }
         }

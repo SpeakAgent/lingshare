@@ -7,7 +7,7 @@ mainApp.controller('DashboardController', function($scope, $rootScope, $http) {
 	var url = "http://127.0.0.1:8000/user/username/"
   $http.get(url + $scope.username)
     .success(function(data) {
-      $scope.user = data;
+      $rootScope.user = data;
     });
 
 
