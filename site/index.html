@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="/static/js/controllers/auth.js"></script>
 	<script type="text/javascript" src="/static/js/controllers/memory.js"></script>
 	<script type="text/javascript" src="/static/js/controllers/nav.js"></script>
+	<script type="text/javascript" src="/static/js/controllers/dashboard.js"></script>
 	<script type="text/javascript" src="/static/js/controllers/wordpair.js"></script>
 </head>
 <body class="{{ body_classes }}">
@@ -28,14 +29,17 @@
 		<li><a href="/#/words/"><i class="fa fa-comment"></i><span>Wordlists</span></a></li>
 	</ul>
 	<ul class="nav navbar-default navbar-nav navbar-user">
-		<li class="user-icon"><a href="/#/"><span>Hi,</span> Catherine</a></li>
+		<li class="user-icon">
+			<a ng-if="!username" href="/#/login/">No Icon</a>
+			<a ng-if="username" href="/#/dashboard/">User Icon</a>
+		</li>
 		<li class="user-score"><span class="score-label">Your Score</span>
 			<span class="score-value">999,999</span></li>
 		<li class="user-login"><a href="/#/login/">
-			<span ng-if="User.username">
+			<span ng-if="username">
 			 Log Out
 			 </span>
-			 <span ng-if="!User.username">
+			 <span ng-if="!username">
 			 	Log in
 			 </span>
 			 </a>

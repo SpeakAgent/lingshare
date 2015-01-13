@@ -41,6 +41,13 @@ mainApp.config(function($routeProvider, $sceDelegateProvider) {
 	.when('/games/memory/', {
 		templateUrl: 'templates/memory.html',
 		controller: 'MemoryController'
+	})
+	.when('/dashboard/', {
+		templateUrl: 'templates/dashboard.html',
+		controller: 'DashboardController'
+	}).
+	when('/wordlist/:id', {
+		templateUrl: '/templates/wordlists.html'
 	});
 
 	$sceDelegateProvider.resourceUrlWhitelist([
@@ -54,6 +61,8 @@ mainApp.controller('mainController', function($scope, $rootScope) {
 	$scope.title = "Hello, world!";
 	$rootScope.body_classes = "main"
 });
+
+
 
 mainApp.controller('GamesController', function($scope, $rootScope) {
 	$rootScope.body_classes = "games"
