@@ -1,0 +1,36 @@
+<style type="text/css">
+	div.activity {
+		padding: 1em;
+		border: 5px solid white;
+		border-radius: 10px;
+		width: 200px;
+		height: 250px;
+		margin: 1em;
+		display: inline-block;
+	}
+</style>
+
+<div>
+	<h1>{{ user.first_name }} {{ user.last_name }}</h1>
+	<h2>Courses</h2>
+	<ul>
+		<li ng-repeat="course in user.courses">{{ course.title }}</li>
+	</ul>
+	<h2>Activities</h2>
+	<div class="row">
+		<div class="activity span4"
+			ng-repeat="activity in user.activities">
+			{{ activity.wordlist.title }}<br>
+			{{ activity.activity.title }}<br>
+			<span ng-if="activity.status == 'completed'">
+				Done!
+			</span>
+			<span ng-if="activity.status == 'not_started'">
+				Not started yet
+			</span>
+			<span ng-if="activity.status == 'started'">
+				Partially done
+			</span>
+		</div>
+	</div>
+</div>

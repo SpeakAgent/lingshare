@@ -103,7 +103,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 };
 
      $scope.flipCard = function (card) {
-
+      console.log(card)
       if ($scope.showCards.indexOf(card.slug) == -1 && 
         $scope.showCards.length < 2) {
         $scope.showCards.push(card.slug)
