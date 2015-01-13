@@ -1,24 +1,28 @@
 <div class="memory-cards"
 	ng-if="!done">
 	<div
-		 ng-repeat="card in cards">
-		 <div ng-click="flipCard(card)"
+		class="card-container"
+		ng-repeat="card in cards">
+		<div class="card-controller"
+		 	ng-click="flipCard(card)"
 		 	ng-if="hideCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1">
 			 <div ng-show = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1"
-			      class="card">
-				<img src = "http://127.0.0.1:8000{{card.word.base_word.photos[0].image}}"
-			 	  ng-if = "card.type == 'symbol'">
-				<span ng-if = "card.type == 'word'">
+			      class="card front">
+				<span class="photo"><img src = "http://127.0.0.1:8000{{card.word.base_word.photos[0].image}}"
+			 	  ng-if = "card.type == 'symbol'"></span>
+				<span class="word" ng-if = "card.type == 'word'">
 				{{ card.word.base_word.root_word }}
 				</span>
 			</div>
 			<div ng-show = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1"
-			     class="card">
-				<img src = "http://i.istockimg.com/file_thumbview_approve/23865084/3/stock-illustration-23865084-simple-vintage-pattern.jpg">
+			     class="card back">
+			    <span class="pattern">
+					<img src = "/static/images/matching/card-back-pattern.png">
+				</span>
 		 	</div>
 		</div>
 		<div ng-if="hideCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1">
-			<div class="card"></div>
+			<div class="card empty"></div>
 		</div>
 	</div>
 </div>

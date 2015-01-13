@@ -11539,24 +11539,89 @@ body.matching div.memory-cards {
   width: 1000px;
 }
 /* line 600, ../scss/styles.scss */
+body.matching .card-container {
+  position: relative;
+  margin: 1em;
+  height: 150px;
+  width: 150px;
+  float: left;
+}
+/* line 607, ../scss/styles.scss */
 body.matching div.card {
+  position: absolute;
   background-color: #fff;
   border: 9px solid #fff;
-  height: 200px;
-  width: 200px;
+  color: #009597;
+  cursor: pointer;
   border-radius: 9px;
   float: left;
-  margin: 1em;
+  font-size: 1.6em;
+  font-weight: 700;
+  display: table;
+  text-align: center;
+  height: 150px;
+  width: 150px;
   -webkit-box-shadow: rgba(34, 9, 9, 0.3) 0px 4px 0px;
   box-shadow: rgba(34, 9, 9, 0.3) 0px 4px 0px;
+  /* Card Back */
+  /* Card Front */
+  /* Cards have been removed, but space must remain */
 }
-/* line 609, ../scss/styles.scss */
+/* line 622, ../scss/styles.scss */
 body.matching div.card img {
   border-radius: 9px;
-  height: 190px;
-  width: 190px;
+  width: 100%;
 }
-/* line 615, ../scss/styles.scss */
+/* line 627, ../scss/styles.scss */
+body.matching div.card.back {
+  background-color: #76DBDC;
+}
+/* line 629, ../scss/styles.scss */
+body.matching div.card.back span {
+  border-radius: 9px;
+  display: block;
+}
+/* line 633, ../scss/styles.scss */
+body.matching div.card.back.ng-enter {
+  -webkit-animation: bounceIn 0.7s;
+  -moz-animation: bounceIn 0.7s;
+  -ms-animation: bounceIn 0.7s;
+  animation: bounceIn 0.7s;
+}
+/* line 639, ../scss/styles.scss */
+body.matching div.card.back.ng-leave {
+  -webkit-animation: bounceOut 0.5s;
+  -moz-animation: bounceOut 0.5s;
+  -ms-animation: bounceOut 0.5s;
+  animation: bounceOut 0.5s;
+}
+/* line 648, ../scss/styles.scss */
+body.matching div.card.front span {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 652, ../scss/styles.scss */
+body.matching div.card.front.ng-enter {
+  -webkit-animation: bounceOut 0.5s;
+  -moz-animation: bounceOut 0.5s;
+  -ms-animation: bounceOut 0.5s;
+  animation: bounceOut 0.5s;
+}
+/* line 658, ../scss/styles.scss */
+body.matching div.card.front.ng-leave {
+  -webkit-animation: bounceIn 0.5s;
+  -moz-animation: bounceIn 0.5s;
+  -ms-animation: bounceIn 0.5s;
+  animation: bounceIn 0.5s;
+}
+/* line 666, ../scss/styles.scss */
+body.matching div.card.empty {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: default;
+}
+/* line 673, ../scss/styles.scss */
 body.matching div.game-status {
   height: 100px;
   width: 400px;
@@ -11574,14 +11639,14 @@ body.matching div.game-status {
 
     ====================
 */
-/* line 635, ../scss/styles.scss */
+/* line 693, ../scss/styles.scss */
 body,
 .game-container,
 nav {
   min-width: 550px !important;
 }
 
-/* line 640, ../scss/styles.scss */
+/* line 698, ../scss/styles.scss */
 .navbar-nav > li {
   float: left !important;
 }

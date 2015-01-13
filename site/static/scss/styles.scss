@@ -597,19 +597,77 @@ body.matching {
     div.memory-cards {
         width: 1000px;
     }
+    .card-container {
+        position: relative;
+        margin: 1em;
+        height: 150px;
+        width: 150px;
+        float: left;
+    }
     div.card {
+        position: absolute;
         background-color: #fff;
         border: 9px solid #fff;
-        height: 200px;
-        width: 200px;
+        color: $brand-secondary;
+        cursor: pointer;
         border-radius: 9px;
         float: left;
-        margin: 1em;
+        font-size: 1.6em;
+        font-weight: 700;
+        display: table;
+        text-align: center;
+                height: 150px;
+        width: 150px;
         @include box-shadow(rgba($shadow-primary, 0.3) 0px 4px 0px);
         img {
           border-radius: 9px;
-          height: 190px;
-          width: 190px;
+          width: 100%;
+        }
+        /* Card Back */
+        &.back {
+            background-color: #76DBDC;
+            span {
+                border-radius: 9px;
+                display: block;
+            }
+            &.ng-enter {
+                -webkit-animation: bounceIn 0.7s;
+                -moz-animation: bounceIn 0.7s;
+                -ms-animation: bounceIn 0.7s;
+                animation: bounceIn 0.7s;
+            }
+            &.ng-leave {
+                -webkit-animation: bounceOut 0.5s;
+                -moz-animation: bounceOut 0.5s;
+                -ms-animation: bounceOut 0.5s;
+                animation: bounceOut 0.5s;
+            }
+        }
+        /* Card Front */
+        &.front {
+            span {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            &.ng-enter {
+                -webkit-animation: bounceOut 0.5s;
+                -moz-animation: bounceOut 0.5s;
+                -ms-animation: bounceOut 0.5s;
+                animation: bounceOut 0.5s;
+            }
+            &.ng-leave {
+                -webkit-animation: bounceIn 0.5s;
+                -moz-animation: bounceIn 0.5s;
+                -ms-animation: bounceIn 0.5s;
+                animation: bounceIn 0.5s;
+            }
+        }
+        /* Cards have been removed, but space must remain */
+        &.empty {
+            border: 0;
+            background-color: transparent;
+            box-shadow: none;
+            cursor: default;
         }
     }
     div.game-status {
