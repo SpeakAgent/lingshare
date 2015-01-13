@@ -1,5 +1,6 @@
 <style type="text/css">
-	div.activity {
+	div.activity,
+	div.achievement {
 		padding: 1em;
 		border: 5px solid white;
 		border-radius: 10px;
@@ -31,6 +32,14 @@
 			<span ng-if="activity.status == 'started'">
 				Partially done
 			</span>
+		</div>
+	</div>
+	<h2>Achievements</h2>
+	<div class="row">
+		<div class="achievement span4"
+		ng-repeat="achievement in user.user.badges">
+			<em>{{ achievement.title }}</em><br>
+			{{ achievement.description}}
 		</div>
 	</div>
 </div>
