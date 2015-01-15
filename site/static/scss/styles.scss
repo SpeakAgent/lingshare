@@ -47,6 +47,7 @@ h2 {
     @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
 }
 
+
 a {
     color: $brand-secondary;
     border-bottom: $border-width-default solid $accent-primary;
@@ -347,22 +348,126 @@ a {
         }
     }
 
+/*  0.3 Global Shell Elements
+    ====================
+*/
+
+/* Interface Labels */
+h2.h3-interface-label {
+    font-family: $font-family-emphasis;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #fff;
+    @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+}
+
+/* Activity Cards */
+.promo-card {
+    background-color: #fff;
+    border-radius: 9px;
+    @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+    color: $brand-secondary;
+    padding: 1em;
+    position: relative;
+    p, h3 {
+        margin: 0;
+        padding: 0;
+    }
+    .activity-link {
+        width: 100%;
+        display: block;
+        border: 0;
+        color: $brand-secondary;
+        &:hover {
+            color: $brand-primary;
+        }
+    }
+    .activity-title {
+        font-size: 1.4em;
+        font-weight: 700;
+        margin-bottom: 2px;
+    }
+    .activity-wordlist {
+        font-size: 0.9em;
+        font-weight: 400;
+    }
+    .activity-image {
+        border-radius: 9px;
+        width: 100%;
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+        margin: 12px 0 0.8em;
+    }
+    &.size-sml {
+        min-height: 106px;
+        margin-bottom: 1em;
+        .activity-wordlist {
+            margin-left: 114px;
+            margin-bottom: 2px;
+        }
+        .activity-info {
+            float: left;
+        }
+        .activity-image {
+            margin: -17px 14px 0 0;
+            float: left;
+            width: auto;
+        }
+        .activity-status {
+            height: 40px;
+            width: 40px;
+            line-height: 34px;
+            font-size: 20px;
+            border-width: 3px;
+            top: -12px;
+            right: -13px;
+        }
+    }
+    .activity-status {
+        background-color: yellow;
+        border: 5px solid #fff;
+        position: absolute;
+        right: -20px;
+        top: -22px;
+        text-align: center;
+        font-size: 26px;
+        @include border-radius(40px);
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+        height: 55px;
+        width: 55px;
+        line-height: 45px;
+        .sr-only {
+            text-indent: -9999px;
+        }
+        &.gold {
+            background-color: #FBEA2A;
+            i {
+                color: lighten(#FBEA2A, 30%);
+            }
+        }
+        &.silver {
+            background-color: #c0c0c0;
+            i {
+                color: lighten(#c0c0c0, 12%);
+            }
+        }
+        &.bronze{
+            background-color: #cd7f32;
+            i {
+                color: lighten(#cd7f32, 25%);
+            }
+        }
+    }
+}
 
 /*  1.0 Dashboard
     ====================
 */
 
-div.activity,
-div.achievement {
-    padding: 1em;
-    border: 5px solid white;
-    border-radius: 10px;
-    width: 200px;
-    height: 250px;
-    margin: 1em;
-    display: inline-block;
+body.dashboard {
+    .recent-work {
+        margin-bottom: 1em;
+    }
 }
-
 
 /*  2.0 Flash Cards
     ====================
@@ -858,6 +963,7 @@ body.matching {
 
 body,
 .game-container,
+.container,
 nav {
     min-width: 550px !important;
 }

@@ -10931,7 +10931,7 @@ h2 {
   text-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
 
-/* line 50, ../scss/styles.scss */
+/* line 51, ../scss/styles.scss */
 a {
   color: #009597;
   border-bottom: 3px solid #f8d338;
@@ -10943,7 +10943,7 @@ a {
   -o-transition: border-bottom-color, 0.1s;
   transition: border-bottom-color, 0.1s;
 }
-/* line 56, ../scss/styles.scss */
+/* line 57, ../scss/styles.scss */
 a:hover {
   color: #6ecacb;
   text-decoration: none;
@@ -10951,7 +10951,7 @@ a:hover {
 }
 
 /* Resets */
-/* line 66, ../scss/styles.scss */
+/* line 67, ../scss/styles.scss */
 .first {
   margin-left: 0;
   padding-left: 0;
@@ -10960,82 +10960,82 @@ a:hover {
 /*  0.1 Global Navigation
     ====================
 */
-/* line 75, ../scss/styles.scss */
+/* line 76, ../scss/styles.scss */
 .navbar-global {
   color: #009597;
   margin: 0 20px;
 }
-/* line 78, ../scss/styles.scss */
+/* line 79, ../scss/styles.scss */
 .navbar-global .navbar-nav {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   background-color: white;
   border-radius: 9px;
 }
-/* line 82, ../scss/styles.scss */
+/* line 83, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a {
   border-bottom: 0;
   color: #009597;
   font-weight: 700;
   padding: 4px 10px 4px 0;
 }
-/* line 87, ../scss/styles.scss */
+/* line 88, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a:hover {
   color: #6ecacb;
   background-color: transparent;
 }
-/* line 91, ../scss/styles.scss */
+/* line 92, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a:focus {
   color: #009597;
   background-color: transparent;
 }
-/* line 97, ../scss/styles.scss */
+/* line 98, ../scss/styles.scss */
 .navbar-global .navbar-primary {
   float: left;
 }
-/* line 100, ../scss/styles.scss */
+/* line 101, ../scss/styles.scss */
 .navbar-global .navbar-primary #el-logo img {
   height: auto;
   width: 46px;
 }
-/* line 104, ../scss/styles.scss */
+/* line 105, ../scss/styles.scss */
 .navbar-global .navbar-primary #el-logo a {
   padding: 6px 10px 6px 6px;
 }
-/* line 108, ../scss/styles.scss */
+/* line 109, ../scss/styles.scss */
 .navbar-global .navbar-primary span, .navbar-global .navbar-primary i {
   display: block;
 }
-/* line 111, ../scss/styles.scss */
+/* line 112, ../scss/styles.scss */
 .navbar-global .navbar-primary i {
   font-size: 200%;
   text-align: center;
 }
-/* line 115, ../scss/styles.scss */
+/* line 116, ../scss/styles.scss */
 .navbar-global .navbar-primary span {
   color: #cf9204;
   font-weight: 400;
   font-size: 80%;
 }
-/* line 121, ../scss/styles.scss */
+/* line 122, ../scss/styles.scss */
 .navbar-global .navbar-user {
   color: #222222;
   float: right;
 }
-/* line 124, ../scss/styles.scss */
+/* line 125, ../scss/styles.scss */
 .navbar-global .navbar-user span {
   display: block;
   font-size: 0.8em;
   font-weight: 400;
 }
-/* line 128, ../scss/styles.scss */
+/* line 129, ../scss/styles.scss */
 .navbar-global .navbar-user span.nav-label {
   font-size: 0.8em;
   margin-bottom: -5px;
   color: #222222;
   text-align: left;
 }
-/* line 135, ../scss/styles.scss */
+/* line 136, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name {
   background-color: #009597;
   border-top-left-radius: 9px;
@@ -11044,73 +11044,73 @@ a:hover {
   -o-transition: background-color, 0.1s;
   transition: background-color, 0.1s;
 }
-/* line 140, ../scss/styles.scss */
+/* line 141, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name a, .navbar-global .navbar-user .user-name .nav-label {
   color: #fff;
   padding: 0;
 }
-/* line 144, ../scss/styles.scss */
+/* line 145, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name a {
   padding: 10px 10px 11px;
 }
-/* line 146, ../scss/styles.scss */
+/* line 147, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name a:hover {
   color: #fff;
 }
-/* line 150, ../scss/styles.scss */
+/* line 151, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name .name {
   font-size: 1.2em;
   font-weight: 700;
 }
-/* line 154, ../scss/styles.scss */
+/* line 155, ../scss/styles.scss */
 .navbar-global .navbar-user .user-name:hover {
   background-color: #00aeb1;
   -webkit-transition: background-color, 0.1s;
   -o-transition: background-color, 0.1s;
   transition: background-color, 0.1s;
 }
-/* line 159, ../scss/styles.scss */
+/* line 160, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score {
   padding: 10px 10px 0 10px;
 }
-/* line 161, ../scss/styles.scss */
+/* line 162, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score span {
   display: block;
 }
-/* line 163, ../scss/styles.scss */
+/* line 164, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score span.score-value {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
 }
-/* line 170, ../scss/styles.scss */
+/* line 171, ../scss/styles.scss */
 .navbar-global .navbar-user .user-login a {
   background-color: #009597;
   border-radius: 9px;
   color: #fff;
   padding: 10px;
 }
-/* line 175, ../scss/styles.scss */
+/* line 176, ../scss/styles.scss */
 .navbar-global .navbar-user .user-login a:hover, .navbar-global .navbar-user .user-login a:focus {
   background-color: #00e0e4;
   color: #fff;
 }
-/* line 181, ../scss/styles.scss */
+/* line 182, ../scss/styles.scss */
 .navbar-global .navbar-user .user-logout {
   border-left: 1px solid #009597;
   text-align: center;
 }
-/* line 184, ../scss/styles.scss */
+/* line 185, ../scss/styles.scss */
 .navbar-global .navbar-user .user-logout i {
   display: block;
   font-size: 2em;
   margin-bottom: -6px;
 }
-/* line 189, ../scss/styles.scss */
+/* line 190, ../scss/styles.scss */
 .navbar-global .navbar-user .user-logout a {
   color: #9d0214;
   padding: 8px 10px 6px;
 }
-/* line 192, ../scss/styles.scss */
+/* line 193, ../scss/styles.scss */
 .navbar-global .navbar-user .user-logout a:hover, .navbar-global .navbar-user .user-logout a:focus {
   color: #d0021b;
 }
@@ -11118,12 +11118,12 @@ a:hover {
 /* 0.2 Global Activity Elements
     ====================
 */
-/* line 203, ../scss/styles.scss */
+/* line 204, ../scss/styles.scss */
 .game-container {
   margin-top: 30px;
 }
 
-/* line 206, ../scss/styles.scss */
+/* line 207, ../scss/styles.scss */
 .game-alerts {
   background-color: #f8e71c;
   -webkit-box-shadow: rgba(34, 9, 9, 0.2) 0 0 4px 2px;
@@ -11140,7 +11140,7 @@ a:hover {
   display: table;
   z-index: 1000;
 }
-/* line 220, ../scss/styles.scss */
+/* line 221, ../scss/styles.scss */
 .game-alerts .alert {
   display: table-cell;
   vertical-align: middle;
@@ -11150,11 +11150,11 @@ a:hover {
   transform: rotate(-8deg);
   margin-top: -10px;
 }
-/* line 228, ../scss/styles.scss */
+/* line 229, ../scss/styles.scss */
 .game-alerts .alert.true {
   font-size: 4em;
 }
-/* line 232, ../scss/styles.scss */
+/* line 233, ../scss/styles.scss */
 .game-alerts.ng-hide-remove {
   -webkit-animation: bounceIn 0.7s !important;
   -moz-animation: bounceIn 0.7s;
@@ -11162,11 +11162,11 @@ a:hover {
   animation: bounceIn 0.7s !important;
 }
 
-/* line 239, ../scss/styles.scss */
+/* line 240, ../scss/styles.scss */
 .game-complete {
   display: block;
 }
-/* line 241, ../scss/styles.scss */
+/* line 242, ../scss/styles.scss */
 .game-complete h3.results-message {
   font-size: 2em;
   color: #009597;
@@ -11174,12 +11174,12 @@ a:hover {
   text-transform: uppercase;
   text-align: center;
 }
-/* line 248, ../scss/styles.scss */
+/* line 249, ../scss/styles.scss */
 .game-complete .game-results {
   margin: 0 auto;
   text-align: center;
 }
-/* line 251, ../scss/styles.scss */
+/* line 252, ../scss/styles.scss */
 .game-complete .game-results .result {
   background-color: #fff;
   display: inline-block;
@@ -11191,14 +11191,14 @@ a:hover {
   /* Wrong Attempts Count */
   /* Total Time Played */
 }
-/* line 256, ../scss/styles.scss */
+/* line 257, ../scss/styles.scss */
 .game-complete .game-results .result .result-label {
   display: block;
   font-weight: 900;
   padding-bottom: 9px;
   text-align: center;
 }
-/* line 262, ../scss/styles.scss */
+/* line 263, ../scss/styles.scss */
 .game-complete .game-results .result .result-number {
   border: 3px #009597 solid;
   border-radius: 120px;
@@ -11212,7 +11212,7 @@ a:hover {
   height: 120px;
   text-align: center;
 }
-/* line 278, ../scss/styles.scss */
+/* line 279, ../scss/styles.scss */
 .game-complete .game-results .result:after {
   background-color: #fff;
   font-family: 'FontAwesome';
@@ -11221,34 +11221,34 @@ a:hover {
   margin-top: -22px;
   padding: 8px;
 }
-/* line 289, ../scss/styles.scss */
+/* line 290, ../scss/styles.scss */
 .game-complete .game-results .result.r-right-answers:after {
   color: #7ed321;
   content: "\f164";
 }
-/* line 297, ../scss/styles.scss */
+/* line 298, ../scss/styles.scss */
 .game-complete .game-results .result.r-wrong-answers:after {
   color: #d0021b;
   content: "\f00d";
 }
-/* line 305, ../scss/styles.scss */
+/* line 306, ../scss/styles.scss */
 .game-complete .game-results .result.r-time-played:after {
   color: #009597;
   content: "\f017";
 }
-/* line 312, ../scss/styles.scss */
+/* line 313, ../scss/styles.scss */
 .game-complete .game-results .final-score {
   color: #009597;
   padding-bottom: 10px;
 }
-/* line 315, ../scss/styles.scss */
+/* line 316, ../scss/styles.scss */
 .game-complete .game-results .final-score h3 {
   margin: 0;
   padding: 0;
   font-size: 2.5em;
   font-weight: 900;
 }
-/* line 321, ../scss/styles.scss */
+/* line 322, ../scss/styles.scss */
 .game-complete .game-results .final-score .f-s-number {
   margin-top: -14px;
   display: block;
@@ -11257,52 +11257,181 @@ a:hover {
   font-weight: 900;
   line-height: 1;
 }
-/* line 332, ../scss/styles.scss */
+/* line 333, ../scss/styles.scss */
 .game-complete .user-options {
   margin-top: 18px;
 }
-/* line 334, ../scss/styles.scss */
+/* line 335, ../scss/styles.scss */
 .game-complete .user-options ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 338, ../scss/styles.scss */
+/* line 339, ../scss/styles.scss */
 .game-complete .user-options ul li {
   display: inline-block;
 }
-/* line 340, ../scss/styles.scss */
+/* line 341, ../scss/styles.scss */
 .game-complete .user-options ul li a {
   font-size: 1.6em;
   font-weight: 700;
   position: relative;
 }
 
+/*  0.3 Global Shell Elements
+    ====================
+*/
+/* Interface Labels */
+/* line 356, ../scss/styles.scss */
+h2.h3-interface-label {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+}
+
+/* Activity Cards */
+/* line 365, ../scss/styles.scss */
+.promo-card {
+  background-color: #fff;
+  border-radius: 9px;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  color: #009597;
+  padding: 1em;
+  position: relative;
+}
+/* line 372, ../scss/styles.scss */
+.promo-card p, .promo-card h3 {
+  margin: 0;
+  padding: 0;
+}
+/* line 376, ../scss/styles.scss */
+.promo-card .activity-link {
+  width: 100%;
+  display: block;
+  border: 0;
+  color: #009597;
+}
+/* line 381, ../scss/styles.scss */
+.promo-card .activity-link:hover {
+  color: #6ecacb;
+}
+/* line 385, ../scss/styles.scss */
+.promo-card .activity-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+/* line 390, ../scss/styles.scss */
+.promo-card .activity-wordlist {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+/* line 394, ../scss/styles.scss */
+.promo-card .activity-image {
+  border-radius: 9px;
+  width: 100%;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  margin: 12px 0 0.8em;
+}
+/* line 400, ../scss/styles.scss */
+.promo-card.size-sml {
+  min-height: 106px;
+  margin-bottom: 1em;
+}
+/* line 403, ../scss/styles.scss */
+.promo-card.size-sml .activity-wordlist {
+  margin-left: 114px;
+  margin-bottom: 2px;
+}
+/* line 407, ../scss/styles.scss */
+.promo-card.size-sml .activity-info {
+  float: left;
+}
+/* line 410, ../scss/styles.scss */
+.promo-card.size-sml .activity-image {
+  margin: -17px 14px 0 0;
+  float: left;
+  width: auto;
+}
+/* line 415, ../scss/styles.scss */
+.promo-card.size-sml .activity-status {
+  height: 40px;
+  width: 40px;
+  line-height: 34px;
+  font-size: 20px;
+  border-width: 3px;
+  top: -12px;
+  right: -13px;
+}
+/* line 425, ../scss/styles.scss */
+.promo-card .activity-status {
+  background-color: yellow;
+  border: 5px solid #fff;
+  position: absolute;
+  right: -20px;
+  top: -22px;
+  text-align: center;
+  font-size: 26px;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  height: 55px;
+  width: 55px;
+  line-height: 45px;
+}
+/* line 438, ../scss/styles.scss */
+.promo-card .activity-status .sr-only {
+  text-indent: -9999px;
+}
+/* line 441, ../scss/styles.scss */
+.promo-card .activity-status.gold {
+  background-color: #FBEA2A;
+}
+/* line 443, ../scss/styles.scss */
+.promo-card .activity-status.gold i {
+  color: #fef9c0;
+}
+/* line 447, ../scss/styles.scss */
+.promo-card .activity-status.silver {
+  background-color: #c0c0c0;
+}
+/* line 449, ../scss/styles.scss */
+.promo-card .activity-status.silver i {
+  color: #dfdfdf;
+}
+/* line 453, ../scss/styles.scss */
+.promo-card .activity-status.bronze {
+  background-color: #cd7f32;
+}
+/* line 455, ../scss/styles.scss */
+.promo-card .activity-status.bronze i {
+  color: #e6bf99;
+}
+
 /*  1.0 Dashboard
     ====================
 */
-/* line 355, ../scss/styles.scss */
-div.activity,
-div.achievement {
-  padding: 1em;
-  border: 5px solid white;
-  border-radius: 10px;
-  width: 200px;
-  height: 250px;
-  margin: 1em;
-  display: inline-block;
+/* line 467, ../scss/styles.scss */
+body.dashboard .recent-work {
+  margin-bottom: 1em;
 }
 
 /*  2.0 Flash Cards
     ====================
 */
-/* line 373, ../scss/styles.scss */
+/* line 478, ../scss/styles.scss */
 body.games.flashcards {
   background: #c3edec url("/static/images/flashcards/bground.gif") repeat-x;
   background-position: 0 500px;
   /* Main Game Interface */
 }
-/* line 377, ../scss/styles.scss */
+/* line 482, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZmVmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NkZjBlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -11322,7 +11451,7 @@ body.games.flashcards .flash-cards-interface {
   /* Left Column - Contains Round's selected Card */
   /* Right Column - Contains Options for Flash Cards */
 }
-/* line 387, ../scss/styles.scss */
+/* line 492, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .round-counter {
   color: #6095aa;
   font-size: 1em;
@@ -11334,7 +11463,7 @@ body.games.flashcards .flash-cards-interface .round-counter {
   text-transform: uppercase;
   top: -14px;
 }
-/* line 397, ../scss/styles.scss */
+/* line 502, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .round-counter span {
   background-color: #EFFEFD;
   border: 3px #6095aa solid;
@@ -11342,7 +11471,7 @@ body.games.flashcards .flash-cards-interface .round-counter span {
   display: inline-block;
   padding: 4px 9px;
 }
-/* line 405, ../scss/styles.scss */
+/* line 510, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface:before {
   content: url("/static/images/flashcards/el-bulbs-off.svg");
   width: 60px;
@@ -11353,12 +11482,12 @@ body.games.flashcards .flash-cards-interface:before {
   z-index: 10;
 }
 @media (max-width: 992px) {
-  /* line 418, ../scss/styles.scss */
+  /* line 523, ../scss/styles.scss */
   body.games.flashcards .flash-cards-interface .cards .first {
     padding-right: 0;
   }
 }
-/* line 423, ../scss/styles.scss */
+/* line 528, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card {
   background: url("/static/images/flashcards/el-screw.svg") no-repeat 2% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 2% 98%, url("/static/images/flashcards/el-screw-crooked.svg") no-repeat 98% 98%;
   border: 3px #6095aa solid;
@@ -11370,14 +11499,14 @@ body.games.flashcards .flash-cards-interface .main-card {
   height: 460px;
 }
 @media (min-width: 992px) {
-  /* line 423, ../scss/styles.scss */
+  /* line 528, ../scss/styles.scss */
   body.games.flashcards .flash-cards-interface .main-card {
     border-bottom-width: 3px;
     border-bottom-right-radius: 9px;
     border-bottom-left-radius: 9px;
   }
 }
-/* line 441, ../scss/styles.scss */
+/* line 546, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-img {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11388,7 +11517,7 @@ body.games.flashcards .flash-cards-interface .main-card .main-card-img {
   margin: 0 auto 2em auto;
   position: relative;
 }
-/* line 450, ../scss/styles.scss */
+/* line 555, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-img img.large-card {
   border-radius: 10px;
   overflow: hidden;
@@ -11396,13 +11525,13 @@ body.games.flashcards .flash-cards-interface .main-card .main-card-img img.large
   width: 80%;
   vertical-align: middle;
 }
-/* line 458, ../scss/styles.scss */
+/* line 563, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-lexeme {
   top: -54px;
   position: relative;
   z-index: 5;
 }
-/* line 462, ../scss/styles.scss */
+/* line 567, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .main-card .main-card-lexeme span {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11414,7 +11543,7 @@ body.games.flashcards .flash-cards-interface .main-card .main-card-lexeme span {
   padding: 4px 10px;
   z-index: 1;
 }
-/* line 477, ../scss/styles.scss */
+/* line 582, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container {
   border: 3px #6095aa solid;
   padding: 0;
@@ -11422,12 +11551,12 @@ body.games.flashcards .flash-cards-interface .options-container {
   border-bottom-left-radius: 9px;
 }
 @media (min-width: 1170px) {
-  /* line 477, ../scss/styles.scss */
+  /* line 582, ../scss/styles.scss */
   body.games.flashcards .flash-cards-interface .options-container {
     border-radius: 9px;
   }
 }
-/* line 485, ../scss/styles.scss */
+/* line 590, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container h3 {
   color: #6095aa;
   font-size: 1em;
@@ -11439,7 +11568,7 @@ body.games.flashcards .flash-cards-interface .options-container h3 {
   text-transform: uppercase;
   top: -14px;
 }
-/* line 495, ../scss/styles.scss */
+/* line 600, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container h3 span {
   background-color: #EFFEFD;
   border: 3px #6095aa solid;
@@ -11447,7 +11576,7 @@ body.games.flashcards .flash-cards-interface .options-container h3 span {
   display: inline-block;
   padding: 4px 9px;
 }
-/* line 503, ../scss/styles.scss */
+/* line 608, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container {
   border-bottom: 3px #6095aa solid;
   padding: 0 15px;
@@ -11456,19 +11585,19 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   /* Round Results */
 }
 @media (max-width: 970px) {
-  /* line 503, ../scss/styles.scss */
+  /* line 608, ../scss/styles.scss */
   body.games.flashcards .flash-cards-interface .options-container .option-container {
     border-bottom: 0;
     display: inline-block;
     width: 33%;
     margin-bottom: 0;
   }
-  /* line 513, ../scss/styles.scss */
+  /* line 618, ../scss/styles.scss */
   body.games.flashcards .flash-cards-interface .options-container .option-container:last-child {
     border-right: 0;
   }
 }
-/* line 517, ../scss/styles.scss */
+/* line 622, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container:after {
   border: 3px solid #6095aa;
   color: #D7CEBF;
@@ -11487,12 +11616,12 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   line-height: 16px;
   text-align: center;
 }
-/* line 535, ../scss/styles.scss */
+/* line 640, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container:last-child {
   border-bottom: 0;
   margin-bottom: 0;
 }
-/* line 539, ../scss/styles.scss */
+/* line 644, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option {
   background-color: #fff;
   border: 3px solid #6095aa;
@@ -11508,7 +11637,7 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   position: relative;
   width: 86%;
 }
-/* line 552, ../scss/styles.scss */
+/* line 657, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option .lexeme {
   color: #009597;
   font-size: 20px;
@@ -11517,56 +11646,56 @@ body.games.flashcards .flash-cards-interface .options-container .option-containe
   vertical-align: middle;
   text-align: center;
 }
-/* line 560, ../scss/styles.scss */
+/* line 665, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option .symbol {
   margin: 0 auto;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 565, ../scss/styles.scss */
+/* line 670, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option .symbol img {
   width: 70%;
   height: 100px;
   vertical-align: middle;
   margin: 0 auto;
 }
-/* line 573, ../scss/styles.scss */
+/* line 678, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option:hover .lexeme {
   color: #6ecacb;
 }
-/* line 577, ../scss/styles.scss */
+/* line 682, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container .option:focus, body.games.flashcards .flash-cards-interface .options-container .option-container .option:active {
   top: 4px;
   box-shadow: none;
 }
-/* line 586, ../scss/styles.scss */
+/* line 691, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.true .option, body.games.flashcards .flash-cards-interface .options-container .option-container.false .option {
   top: 4px;
   box-shadow: none;
 }
-/* line 592, ../scss/styles.scss */
+/* line 697, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.true .option {
   border-color: #7ed321 !important;
 }
-/* line 595, ../scss/styles.scss */
+/* line 700, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.true:after {
   color: #7ed321;
 }
-/* line 600, ../scss/styles.scss */
+/* line 705, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.false .option {
   border-color: #d0021b !important;
 }
-/* line 603, ../scss/styles.scss */
+/* line 708, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .options-container .option-container.false:after {
   color: #d0021b;
 }
-/* line 610, ../scss/styles.scss */
+/* line 715, ../scss/styles.scss */
 body.games.flashcards .flash-cards-interface .timer {
   padding: 8px 0 0;
   text-align: center;
 }
-/* line 616, ../scss/styles.scss */
+/* line 721, ../scss/styles.scss */
 body.games.flashcards .game-complete {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZmVmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NkZjBlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -11584,7 +11713,7 @@ body.games.flashcards .game-complete {
   padding: 30px;
   position: relative;
 }
-/* line 626, ../scss/styles.scss */
+/* line 731, ../scss/styles.scss */
 body.games.flashcards .game-complete .frame {
   background: url("/static/images/flashcards/el-screw.svg") no-repeat 2% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 2% 98%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 98%;
   border: 3px #6095aa solid;
@@ -11593,7 +11722,7 @@ body.games.flashcards .game-complete .frame {
   text-align: center;
   position: relative;
 }
-/* line 638, ../scss/styles.scss */
+/* line 743, ../scss/styles.scss */
 body.games.flashcards .game-complete h3.results-message {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11606,7 +11735,7 @@ body.games.flashcards .game-complete h3.results-message {
   margin-top: -50px;
   padding: 6px 20px;
 }
-/* line 650, ../scss/styles.scss */
+/* line 755, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11615,32 +11744,32 @@ body.games.flashcards .game-complete .game-results {
   text-align: center;
   width: 86%;
 }
-/* line 658, ../scss/styles.scss */
+/* line 763, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .result {
   /* Result Types */
   /* Right Answer Count */
   /* Wrong Attempts Count */
   /* Total Time Played */
 }
-/* line 661, ../scss/styles.scss */
+/* line 766, ../scss/styles.scss */
 body.games.flashcards .game-complete .game-results .result .result-number {
   border-color: #6095aa;
 }
-/* line 687, ../scss/styles.scss */
+/* line 792, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options {
   margin-top: 18px;
 }
-/* line 689, ../scss/styles.scss */
+/* line 794, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 693, ../scss/styles.scss */
+/* line 798, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul li {
   display: inline-block;
 }
-/* line 695, ../scss/styles.scss */
+/* line 800, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul li a {
   background-color: #fff;
   border: 3px #6095aa solid;
@@ -11652,7 +11781,7 @@ body.games.flashcards .game-complete .user-options ul li a {
   -webkit-box-shadow: rgba(64, 124, 148, 0.8) 0px 4px 0px;
   box-shadow: rgba(64, 124, 148, 0.8) 0px 4px 0px;
 }
-/* line 704, ../scss/styles.scss */
+/* line 809, ../scss/styles.scss */
 body.games.flashcards .game-complete .user-options ul li a:active, body.games.flashcards .game-complete .user-options ul li a:focus {
   top: 4px;
   box-shadow: none;
@@ -11661,31 +11790,31 @@ body.games.flashcards .game-complete .user-options ul li a:active, body.games.fl
 /*  3.0 Matching Game
     ====================
 */
-/* line 719, ../scss/styles.scss */
+/* line 824, ../scss/styles.scss */
 body.matching {
   background-color: #416E0D;
 }
-/* line 721, ../scss/styles.scss */
+/* line 826, ../scss/styles.scss */
 body.matching div.memory-cards {
   margin: 0 auto;
 }
-/* line 726, ../scss/styles.scss */
+/* line 831, ../scss/styles.scss */
 body.matching div.memory-cards.cards_12 {
   width: 900px;
 }
-/* line 728, ../scss/styles.scss */
+/* line 833, ../scss/styles.scss */
 body.matching div.memory-cards.cards_12 .card-container,
 body.matching div.memory-cards.cards_12 .card {
   height: 180px;
   width: 180px;
 }
-/* line 741, ../scss/styles.scss */
+/* line 846, ../scss/styles.scss */
 body.matching .card-container {
   position: relative;
   margin: 1em;
   float: left;
 }
-/* line 746, ../scss/styles.scss */
+/* line 851, ../scss/styles.scss */
 body.matching div.card {
   position: absolute;
   background-color: #fff;
@@ -11704,33 +11833,33 @@ body.matching div.card {
   /* Card Front */
   /* Cards have been removed, but space must remain */
 }
-/* line 759, ../scss/styles.scss */
+/* line 864, ../scss/styles.scss */
 body.matching div.card img {
   border-radius: 9px;
   width: 100%;
 }
-/* line 764, ../scss/styles.scss */
+/* line 869, ../scss/styles.scss */
 body.matching div.card.back {
   background-color: #76DBDC;
 }
-/* line 766, ../scss/styles.scss */
+/* line 871, ../scss/styles.scss */
 body.matching div.card.back span {
   border-radius: 9px;
   display: block;
 }
-/* line 773, ../scss/styles.scss */
+/* line 878, ../scss/styles.scss */
 body.matching div.card.front span {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 779, ../scss/styles.scss */
+/* line 884, ../scss/styles.scss */
 body.matching div.card.empty {
   border: 0;
   background-color: transparent;
   box-shadow: none;
   cursor: default;
 }
-/* line 786, ../scss/styles.scss */
+/* line 891, ../scss/styles.scss */
 body.matching div.game-status {
   height: 100px;
   width: 400px;
@@ -11738,12 +11867,12 @@ body.matching div.game-status {
   border-radius: 10px;
   margin: 1em;
 }
-/* line 793, ../scss/styles.scss */
+/* line 898, ../scss/styles.scss */
 body.matching .game-complete {
   margin: 0 auto;
   width: 830px;
 }
-/* line 797, ../scss/styles.scss */
+/* line 902, ../scss/styles.scss */
 body.matching .game-complete .game-results .result {
   border-radius: 9px;
   -webkit-box-shadow: rgba(34, 9, 9, 0.5) 1px 1px 4px;
@@ -11751,7 +11880,7 @@ body.matching .game-complete .game-results .result {
   width: 200px;
   margin: 1em;
 }
-/* line 803, ../scss/styles.scss */
+/* line 908, ../scss/styles.scss */
 body.matching .game-complete .game-results .final-score {
   background-color: #fff;
   border-radius: 9px;
@@ -11767,30 +11896,30 @@ body.matching .game-complete .game-results .final-score {
   transform: rotate(-8deg);
   margin-top: -10px;
 }
-/* line 817, ../scss/styles.scss */
+/* line 922, ../scss/styles.scss */
 body.matching .game-complete .user-options {
   margin: -140px auto 0;
   width: 75%;
 }
-/* line 820, ../scss/styles.scss */
+/* line 925, ../scss/styles.scss */
 body.matching .game-complete .user-options ul {
   list-style: none;
   margin: 0 auto;
   padding: 0;
 }
-/* line 824, ../scss/styles.scss */
+/* line 929, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li {
   display: inline-block;
 }
-/* line 826, ../scss/styles.scss */
+/* line 931, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li#o-play-again {
   float: left;
 }
-/* line 829, ../scss/styles.scss */
+/* line 934, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li#o-back-home {
   float: right;
 }
-/* line 832, ../scss/styles.scss */
+/* line 937, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li a {
   color: #f8d338;
   font-size: 1.6em;
@@ -11798,7 +11927,7 @@ body.matching .game-complete .user-options ul li a {
   position: relative;
   border: none;
 }
-/* line 838, ../scss/styles.scss */
+/* line 943, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li a:hover, body.matching .game-complete .user-options ul li a:focus {
   color: #fceeb3;
 }
@@ -11812,14 +11941,15 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
 
     ====================
 */
-/* line 859, ../scss/styles.scss */
+/* line 964, ../scss/styles.scss */
 body,
 .game-container,
+.container,
 nav {
   min-width: 550px !important;
 }
 
-/* line 864, ../scss/styles.scss */
+/* line 970, ../scss/styles.scss */
 .navbar-nav > li {
   float: left !important;
 }
