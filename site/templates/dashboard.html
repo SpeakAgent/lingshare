@@ -1,79 +1,90 @@
-<div>
-	<h1 class="dashboard-greeting">Hi, {{ user.first_name }}!</h1>
-	<p class="dashboard-user-since">Speak Agent since 2014</p>
-	<h2>Courses</h2>
-	<ul>
-		<li ng-repeat="course in user.courses">{{ course.title }}</li>
-	</ul>
-	<h2>Things to Do</h2>
-	<div class="row">
-		<div class="activity-container col-lg-4 col-xs-4"
-			ng-repeat="activity in user.activities">
-			<div class="activity promo-card size-lg" ng-class="{last:$last}">
-				<a href="#" title="Link to {{ activity.activity.title }}" class="activity-link">
-					<p class="activity-wordlist">{{ activity.wordlist.title }}</p>
-					<img class="activity-image" src="http://placehold.it/360x220" alt="{{ activity.activity.title }}" />
-					<div class="activity-info">
-						<h3 class="activity-title">{{ activity.activity.title }}</h3>
-						<p class="activity-course">Course: Course Name</p>
+<div class="top-container">
+	<div class="container">
+		<h1 class="dashboard-greeting mega">Hi, {{ user.first_name }}!</h1>
+		<p class="dashboard-user-since">Speak Agent since 2014</p>
+		<h2>Things to Do</h2>
+		<div class="row">
+			<div class="activity-container col-lg-4 col-xs-4"
+				ng-repeat="activity in user.activities">
+				<div class="activity promo-card size-lg" ng-class="{last:$last}">
+					<a href="#" title="Link to {{ activity.activity.title }}" class="activity-link">
+						<p class="activity-wordlist">{{ activity.wordlist.title }}</p>
+						<img class="activity-image" src="http://placehold.it/360x220" alt="{{ activity.activity.title }}" />
+						<div class="activity-info">
+							<h3 class="activity-title">{{ activity.activity.title }}</h3>
+							<p class="activity-course">Course: Course Name</p>
+						</div>
+						<div class="activity-status status-icon" ng-class="{gold:activity.status == 'completed'}" ng-if="activity.status == 'completed'">
+							<i class="fa fa-star"></i>
+							<span class="sr-only">Done!</span>
+						</div>
+						<div class="activity-status status-icon" ng-class="{bronze:activity.status == 'not_started'}" ng-if="activity.status == 'not_started'">
+							<i class="fa fa-star-o"></i>
+							<span class="sr-only">Not started yet</span>
+						</div>
+						<div class="activity-status status-icon" ng-class="{silver:activity.status == 'started'}" ng-if="activity.status == 'started'">
+							<i class="fa fa-star-half-o"></i>
+							<span class="sr-only">Partially done</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="recent-work col-lg-4 col-sml-4 col-xs-4">
+				<h2 class="h3-interface-label">Recently Played</h2>
+				<div class="activity promo-card size-sml">
+					<a href="#" title="Link to Activity Title" class="activity-link clearfix">
+						<p class="activity-wordlist">Wordlist Title</p>
+						<img class="activity-image" src="http://placehold.it/80x60" alt="Activity Title" />
+						<div class="activity-info">
+							<h3 class="activity-title">Activity Title</h3>
+							<p class="activity-course">Course: Course Name</p>
+						</div>
+						<div class="activity-status status-icon bronze">
+							<i class="fa fa-star-o"></i>
+							<span class="sr-only">Not started yet</span>
+						</div>
+					</a>
+				</div>
+				<div class="activity promo-card size-sml">
+					<a href="#" title="Link to Activity Title" class="activity-link clearfix">
+						<p class="activity-wordlist">Wordlist Title</p>
+						<img class="activity-image" src="http://placehold.it/80x60" alt="Activity Title" />
+						<div class="activity-info">
+							<h3 class="activity-title">Activity Title</h3>
+							<p class="activity-course">Course: Course Name</p>
+						</div>
+						<div class="activity-status status-icon gold">
+							<i class="fa fa-star"></i>
+							<span class="sr-only">Done!</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="achievements col-lg-8 col-sm-8 col-xs-8">
+				<h2 class="h3-interface-label">Recent Trophies</h2>
+				<div class="achievement-container"
+				ng-class="{last:$last}"
+				ng-repeat="achievement in user.user.badges">
+					<div class="achievement">
+						<em class="a-title">{{ achievement.title }}</em>
+						<i class="fa fa-trophy"></i>
 					</div>
-					<div class="activity-status status-icon" ng-class="{gold:activity.status == 'completed'}" ng-if="activity.status == 'completed'">
-						<i class="fa fa-star"></i>
-						<span class="sr-only">Done!</span>
-					</div>
-					<div class="activity-status status-icon" ng-class="{bronze:activity.status == 'not_started'}" ng-if="activity.status == 'not_started'">
-						<i class="fa fa-star-o"></i>
-						<span class="sr-only">Not started yet</span>
-					</div>
-					<div class="activity-status status-icon" ng-class="{silver:activity.status == 'started'}" ng-if="activity.status == 'started'">
-						<i class="fa fa-star-half-o"></i>
-						<span class="sr-only">Partially done</span>
-					</div>
-				</a>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="recent-work col-lg-4 col-sml-4 col-xs-4">
-			<h2 class="h3-interface-label">Recently Played</h2>
-			<div class="activity promo-card size-sml">
-				<a href="#" title="Link to Activity Title" class="activity-link clearfix">
-					<p class="activity-wordlist">Wordlist Title</p>
-					<img class="activity-image" src="http://placehold.it/100x70" alt="Activity Title" />
-					<div class="activity-info">
-						<h3 class="activity-title">Activity Title</h3>
-						<p class="activity-course">Course: Course Name</p>
-					</div>
-					<div class="activity-status status-icon bronze">
-						<i class="fa fa-star-o"></i>
-						<span class="sr-only">Not started yet</span>
-					</div>
-				</a>
-			</div>
-			<div class="activity promo-card size-sml">
-				<a href="#" title="Link to Activity Title" class="activity-link clearfix">
-					<p class="activity-wordlist">Wordlist Title</p>
-					<img class="activity-image" src="http://placehold.it/100x70" alt="Activity Title" />
-					<div class="activity-info">
-						<h3 class="activity-title">Activity Title</h3>
-						<p class="activity-course">Course: Course Name</p>
-					</div>
-					<div class="activity-status status-icon gold">
-						<i class="fa fa-star"></i>
-						<span class="sr-only">Done!</span>
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="achievements col-lg-8 col-sm-8 col-xs-8">
-			<h2 class="h3-interface-label">Recent Trophies</h2>
-			<div class="achievement-container"
-			ng-class="{last:$last}"
-			ng-repeat="achievement in user.user.badges">
-				<div class="achievement">
-				<em>{{ achievement.title }}</em><br>
-				{{ achievement.description}}
-				</div>
+</div>
+<div class="bottom-container secondary-content">
+	<div class="container">
+		<h1>Progress Report</h1>
+		<div class="row">
+			<div class="col-lg-4 col-md-4">
+				<h2>Courses</h2>
+				<ul>
+					<li ng-repeat="course in user.courses">{{ course.title }}</li>
+				</ul>
 			</div>
 		</div>
 	</div>

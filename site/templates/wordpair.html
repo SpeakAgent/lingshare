@@ -1,21 +1,16 @@
-<style type="text/css">
-	img.small {
-		width: 300px;
-	}
-	div.audio {
-		height: 100px;
-	}
-</style>
-
-<div>
+<div class="word-detail">
+<div class="container word-samples top">
 <h1>{{ word.base_word.root_word }}</h1>
 
-<div>
+<div class="word-img-examples">
 	<img src="http://127.0.0.1:8000{{photo.image}}"
 		ng-repeat="photo in word.base_word.photos"
 		class="img-rounded small">
 </div>
 
+</div>
+<div class="secondary-content word-definition">
+<div class="container">
 <div>
 	<dl>
 		<dt>{{ word.base_word.root_word }}</dt>
@@ -32,7 +27,7 @@
 	<p ng-if="word.base_word.audio_file"
 		class="col-md-1">
 		<audio controls>
-				<source src="{{ audio_url(word.base_word.audio_file) }}" 
+				<source src="{{ audio_url(word.base_word.audio_file) }}"
 					type="audio/mpeg">
 				Your browser does not support the audio tag.
 		</audio>
@@ -49,4 +44,11 @@
 		<dd ng-repeat-end>{{ sentence.translations[0].text }}</dd>
 	</dl>
 </div>
+</div>
+</div>
+</div>
+<div class="tertiary-content">
+	<div class="container">
+		<p>The area for additional information.</p>
+	</div>
 </div>
