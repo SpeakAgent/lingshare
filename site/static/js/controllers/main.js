@@ -1,6 +1,11 @@
 var mainApp = angular.module('mainApp', ['ngRoute', 'angular-jwt']);
 
-mainApp.config(function($routeProvider, $sceDelegateProvider) {
+mainApp.config(function($routeProvider, $sceDelegateProvider, 
+    $httpProvider, jwtInterceptorProvider) {
+    //    jwtInterceptorProvider.tokenGetter = function() {
+    //    return localStorage.getItem('authToken');
+    // }
+    // $httpProvider.interceptors.push('jwtInterceptor');
 	$routeProvider
 	.when('/', {
 		templateUrl: 'templates/main.html',
