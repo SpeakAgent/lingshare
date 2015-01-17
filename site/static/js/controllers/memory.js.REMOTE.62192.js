@@ -1,10 +1,7 @@
 mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
-  '$interval','$rootScope',
+  '$interval',  
 
-  function ($scope, $timeout, $http, $interval,$rootScope) {
-
-  $rootScope.body_classes = "games matching"
-
+  function ($scope, $timeout, $http, $interval) {
 
     $scope.shuffle = function(array) {
     var m = array.length,
@@ -32,10 +29,9 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 $scope.createCards = function () {
       cards = []
       words = $scope.shuffle($scope.wordlist.words).slice(0,6);
-      $scope.totalCards = words.length * 2;
       for (var i = words.length - 1; i >= 0; i--) {
         card = words[i];
-        cards.push({word: card, type: 'symbol',
+        cards.push({word: card, type: 'symbol', 
           slug: card.base_word.root_word + '-symbol'});
         cards.push({word: card, type: 'word',
           slug: card.base_word.root_word + '-word'});
@@ -44,13 +40,13 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 };
 
   	 $scope.setUpBoard = function () {
-  	 	// body...
+  	 	// body... 
   	 };
 
   	 $scope.checkCards = function (card1, card2) {
       cardarr1 = card1.split('-');
       cardarr2 = card2.split('-');
-
+      
       if (cardarr1[0] == cardarr2[0]) {
         $scope.status = "They match!";
         $scope.correct++;
@@ -77,7 +73,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
         $scope.showCards = [];
         $scope.status = "";
       }, 1000)
-
+  	 	
   	 	// Do we have two word cards?
   	 };
 
@@ -102,11 +98,12 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
     	}, 1000);}
 
   	 $scope.endGame = function () {
-  	 	// Print out an end game screen and push the data to
+  	 	// Print out an end game screen and push the data to 
   	 	// the backend.
   	 };
 
      $scope.flipCard = function (card) {
+      console.log(card)
       if ($scope.showCards.indexOf(card.slug) == -1 && 
         $scope.showCards.length < 2) {
         $scope.showCards.push(card.slug)

@@ -1,42 +1,65 @@
 
-  <div class="container flash-cards" role="main" ng-controller="FlashCardController">
-    <div class="cards clearfix" ng-show="!done">
-      <div class="col-md-9 first">
-        <div class="main-card">
-          <img src="http://127.0.0.1:8000{{ card.base_word.photos[0].image }}" class="large-card">
+  <div class="game-container" role="main" ng-controller="FlashCardController">
+    <div class="flash-cards-interface" ng-show="!done">
+
+      <div class="cards clearfix">
+        <div class="col-md-9 first">
+          <div class="main-card">
+            <div class="round-counter"><span>{{current_round}}/{{words.length}}</span></div>
+            <div  class="main-card-img">
+                  <img src="http://127.0.0.1:8000{{ card.base_word.photos[0].image }}" class="large-card"></div>
+            <div class="main-card-lexeme"><span>{{card.trans_word.root_word}}</span></div>
+          </div>
         </div>
-      </div>
-      <div class="col-md-3 options-container">
-        <h3 class="options-label"><span>Pick One</span></h3>
-        <div class="option-container"
-             ng-repeat="item in possible_cards"
-             ng-click="checkCard(item)">
-            <div class="option">
-             <div class="game-alerts animate-show"
-                  ng-show="alerts[item.base_word.root_word] != null">
-            {{ alerts[item.base_word.root_word] }}
-            </div>
-            <div class="lexeme"
-                   ng-show="show_symbol != item.base_word.root_word">
-                {{ item.base_word.root_word }}
-            </div>
-            <div class="symbol" ng-show="show_symbol == item.base_word.root_word">
-                <img src="http://127.0.0.1:8000{{ item.base_word.photos[0].image }}" />
-            </div>
+        <div class="col-md-3 options-container">
+          <h3 class="options-label"><span>Pick One</span></h3>
+          <div class="option-container"
+               ng-repeat="item in possible_cards"
+               ng-click="checkCard(item)"
+               ng-class="{true: item==selectedCard && isCorrect=='true', false: item==selectedCard && isCorrect=='false'}">
+              <div class="option">
+                <div class="lexeme"
+                       ng-show="show_symbol != item.base_word.root_word">
+                    {{ item.base_word.root_word }}
+                </div>
+                <div class="symbol" ng-show="show_symbol == item.base_word.root_word">
+                    <img src="http://127.0.0.1:8000{{ item.base_word.photos[0].image }}" />
+                </div>
+              </div>
+              <div class="game-alerts"
+            ng-show="alerts[item.base_word.root_word] != null && item.base_word.root_word == card.base_word.root_word"
+            >
+                <div class="alert" ng-class="{true:item.base_word.root_word == card.base_word.root_word,false:item.base_word.root_word != card.base_word.root_word}">
+                  {{ alerts[item.base_word.root_word] }}
+                </div>
+              </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="timer clearfix">
-      <p>{{ seconds }} seconds...</p>
+    <div class = "game-complete" ng-show="done">
+        <div class="frame">
+          <h3 class="results-message">Great Job!</h3>
+          <div class="game-results clearfix">
+            <div class="clearfix">
+            <div class="result r-right-answers"><span class="result-label">Correct Answers</span><span class="result-number">{{ actions.right.length }}</span></div>
+            <div class="result r-wrong-answers"><span class="result-label">Incorrect Clicks</span><span class="result-number">{{ actions.wrong.length }}</span> </div>
+            <div class="result r-time-played"><span class="result-label">Seconds Played</span><span class="result-number">{{ seconds }}</span></div>
+            </div>
+            <div class="final-score">
+              <h3>Final Score</h3>
+              <span class="f-s-number">85</span>
+            </div>
+          </div>
+          <div class="user-options">
+            <ul>
+              <li id="o-play-again"><a href="/#/games/flashcards/"><i class="fa fa-reply"></i> Play Again</a></li>
+              <li id="o-back-home"><a href="/#/"><i class="fa fa-home"></i> Back Home</a></li>
+            </ul>
+          </div>
+        </div>
     </div>
-    <div class = "done"
-         ng-show = "done">
-         <p>Great Job!</p>
-         <p>You clicked correctly {{ actions.right.length }} times.</p>
-         <p>You clicked incorrectly {{ actions.wrong.length }} times.</p>
-         <p>It took you {{ seconds }} seconds!</p>
-    </div>
+
   </div>
 
 

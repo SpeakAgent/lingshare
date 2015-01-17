@@ -6,6 +6,7 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
   $scope.used_words = []
 
   $scope.seconds = 0
+  $scope.current_round = 0
 
   $rootScope.body_classes = "games flashcards"
 
@@ -68,11 +69,14 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
     });
     $scope.unused_words = $scope.shuffle($scope.unused_words);
     $scope.words = $scope.wordlist.words;
+    //* Setting total number of rounds */
+    $scope.rounds = $scope.words.length;
   }
 
   $scope.newScreen = function() {
     // Get new word and index of new word
     if ($scope.unused_words.length > 0) {
+      $scope.current_round++;
       $scope.card = $scope.unused_words.pop()
       var indexes = []
       do {
@@ -89,7 +93,8 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
       $scope.possible_cards = [$scope.other_cards.card1, $scope.other_cards.card2,
         $scope.card
       ];
-      $scope.possible_cards = $scope.shuffle($scope.possible_cards)
+      $scope.possible_cards = $scope.shuffle($scope.possible_cards);
+
     } else {
       $scope.endScreen()
     }
@@ -99,16 +104,21 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
     $scope.done = true;
   }
 
+  $scope.selectedCard = 0;
+  $scope.isCorrect = "neutral";
 
   $scope.checkCard = function(item) {
     // Flip it
     if ($scope.show_symbol == null) {
       // Only do something if we don't have a card flipped
       $scope.show_symbol = item.base_word.root_word;
+      $scope.selectedCard = item;
       // Win or no?
       if (item.base_word.root_word == $scope.card.base_word.root_word) {
         $scope.alerts[item.base_word.root_word] = "+5";
+        $scope.isCorrect = 'true';
         $timeout(function() {
+          $scope.isCorrect = '';
           $scope.alerts[item.base_word.root_word] = null;
           $scope.show_symbol = null;
           $scope.actions.right.push({
@@ -116,18 +126,26 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
             clicked: item.base_word.root_word
           });
           $scope.newScreen();
-        }, 1500);
+        }, 1000);
       } else {
         $scope.alerts[item.base_word.root_word] = "Try Again!";
+        $scope.isCorrect = 'false';
         $timeout(function() {
+          $scope.isCorrect = '';
           $scope.alerts[item.base_word.root_word] = null;
           $scope.show_symbol = null;
           $scope.actions.wrong.push({
             word: $scope.card.base_word.root_word,
             clicked: item.base_word.root_word
           })
-        }, 1500)
+        }, 1000)
       };
     }
   };
+
+
+
+
+
+
 }])

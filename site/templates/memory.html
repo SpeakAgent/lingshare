@@ -1,70 +1,50 @@
-	<style>
-		div.memory-cards {
-			width: 1000px;
-		}
-
-		div.card {
-      border: 5px solid darkblue;
-      height: 200px;
-      width: 200px;
-      border-radius: 10px;
-      float: left;
-      margin: 1em;
-    }
-
-    div.card img {
-      height: 190px;
-      width: 190px;
-    }
-
-    div.card div {
-      font-size: 3em;
-    }
-
-		div.game-status {
-			height: 100px;
-			width: 400px;
-			padding: 1em;
-			border: 4px solid grey;
-			border-radius: 10px;
-			margin: 1em;
-		}
-	</style>
-
-	<div class="game-status row">
-		<p>{{ status }}</p>
-		<p>{{ seconds }} seconds...</p>
-	</div>
-
-	<div class="row memory-cards"
-		ng-if="!done">
-		<div
-			 ng-repeat="card in cards">
-			 <div ng-click="flipCard(card)"
-			 	ng-if="hideCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1">
-				 <div ng-show = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1"
-				      class="card">
-					<img src = "http://127.0.0.1:8000{{card.word.base_word.photos[0].image}}"
-				 	  ng-if = "card.type == 'symbol'">
-					<span ng-if = "card.type == 'word'">
-					{{ card.word.base_word.root_word }}
-					</span>
-				</div>
-				<div ng-show = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1"
-				     class="card">
-					<img src = "http://i.istockimg.com/file_thumbview_approve/23865084/3/stock-illustration-23865084-simple-vintage-pattern.jpg">
-			 	</div>
+<div class="memory-cards cards_{{totalCards}}"
+	ng-if="!done">
+	<div
+		class="card-container"
+		ng-repeat="card in cards">
+		<div class="card-controller"
+		 	ng-click="flipCard(card)"
+		 	ng-if="hideCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1">
+			 <div ng-show = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1"
+			      class="card front">
+				<span class="photo"><img src = "http://127.0.0.1:8000{{card.word.base_word.photos[0].image}}"
+			 	  ng-if = "card.type == 'symbol'"></span>
+				<span class="word" ng-if = "card.type == 'word'">
+				{{ card.word.base_word.root_word }}
+				</span>
 			</div>
-			<div ng-if="hideCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1">
-				<div class="card"></div>
-			</div>
+			<div ng-show = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1"
+			     class="card back">
+			    <span class="pattern">
+					<img src = "/static/images/matching/card-back-pattern.png">
+				</span>
+		 	</div>
+		</div>
+		<div ng-if="hideCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1">
+			<div class="card empty"></div>
 		</div>
 	</div>
-
-	<div ng-if="done">
-		<p>Congrats! You did it!</p>
-		<p>You finished in {{ seconds }} seconds.</p>
-		<p>You guessed correctly {{ correct }} times.</p>
-		<p>You guessed incorrectly {{ wrong }} times.</p>
-	</div>
+</div>
+<div class="game-complete" ng-show="done">
+    <div class="frame">
+      <div class="game-results clearfix">
+        <div class="clearfix">
+        <div class="result r-right-answers"><span class="result-label">Correct Matches</span><span class="result-number">{{ correct }}</span></div>
+        <div class="result r-wrong-answers"><span class="result-label">Incorrect Matches</span><span class="result-number">{{ wrong }}</span> </div>
+        <div class="result r-time-played"><span class="result-label">Seconds Played</span><span class="result-number">{{ seconds }}</span></div>
+        </div>
+        <div class="final-score">
+          <h3>Final Score</h3>
+          <span class="f-s-number">85</span>
+        </div>
+      </div>
+      <div class="user-options">
+        <ul>
+          <li id="o-play-again"><a href="/#/games/memory/"><i class="fa fa-reply"></i> Play Again</a></li>
+          <li id="o-back-home"><a href="/#/"><i class="fa fa-home"></i> Back Home</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
 

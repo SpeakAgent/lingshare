@@ -3,7 +3,7 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
 
   function ($scope, $http, $routeParams, $rootScope, $sce, jwtHelper) {
     
-    $rootScope.body_classes = "wordslist"
+    $rootScope.body_classes = "wordslist";
 
     $scope.updateActivity = function (status) {
       user = localStorage.getItem('username');
@@ -21,7 +21,16 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
       $http(req)
       .success(function () {
 
-      });
+      });}
+
+
+    if ($routeParams.id)
+      { $scope.id = $routeParams.id;
+        $scope.display = 'grid';
+      }
+    if ($routeParams.wordID)
+    {
+        $scope.wordID = $routeParams.wordID;
 
     }
 

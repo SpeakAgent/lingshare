@@ -1,3 +1,9 @@
+/*
+    Title: Styles for Speak Agent App
+    Version: 0.1
+    Description: Styles of Speak Agent Web Application.
+    ====================
+*/
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:900,900italic|Noto+Sans:400,700,400italic,700italic&subset=latin-ext);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /* line 9, ../scss/bootstrap/_normalize.scss */
@@ -6336,7 +6342,7 @@ a.thumbnail.active {
 .progress-bar-striped {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
   background-size: 40px 40px;
 }
 
@@ -6356,7 +6362,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-success {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 /* line 77, ../scss/bootstrap/_progress-bars.scss */
@@ -6367,7 +6373,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 /* line 81, ../scss/bootstrap/_progress-bars.scss */
@@ -6378,7 +6384,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-warning {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 /* line 85, ../scss/bootstrap/_progress-bars.scss */
@@ -6389,7 +6395,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-danger {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
 /* line 1, ../scss/bootstrap/_media.scss */
@@ -10899,20 +10905,40 @@ button.close {
     ====================
 */
 /* Additional Variables */
-/* line 24, ../scss/styles.scss */
+/* line 28, ../scss/styles.scss */
 body {
-  background-color: #6ecacb;
+  background-color: #76dbdc;
+  color: #222222;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-top: 20px;
 }
 
-/* line 30, ../scss/styles.scss */
+/* line 35, ../scss/styles.scss */
 h1 {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3.2em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+}
+/* line 41, ../scss/styles.scss */
+h1.mega {
+  color: #009597;
+  font-size: 4em;
   font-weight: 900;
+  text-shadow: #80edee 0 1px 1px;
 }
 
-/* line 35, ../scss/styles.scss */
+/* line 49, ../scss/styles.scss */
+h2 {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+}
+
+/* line 58, ../scss/styles.scss */
 a {
   color: #009597;
   border-bottom: 3px solid #f8d338;
@@ -10924,146 +10950,616 @@ a {
   -o-transition: border-bottom-color, 0.1s;
   transition: border-bottom-color, 0.1s;
 }
-/* line 41, ../scss/styles.scss */
+/* line 64, ../scss/styles.scss */
 a:hover {
   color: #6ecacb;
   text-decoration: none;
   border-bottom-color: #fceeb3;
 }
 
-/* */
-/* line 51, ../scss/styles.scss */
+/* line 72, ../scss/styles.scss */
+.secondary-content {
+  background-color: #fbf4d8;
+  color: #7f4023;
+}
+/* line 75, ../scss/styles.scss */
+.secondary-content h1, .secondary-content h2 {
+  color: #7f4023;
+}
+
+/* line 80, ../scss/styles.scss */
+.tertiary-content {
+  background-color: #fff;
+}
+
+/* Resets */
+/* line 86, ../scss/styles.scss */
 .first {
   margin-left: 0;
   padding-left: 0;
 }
 
+/* Buttons */
+/* line 92, ../scss/styles.scss */
+.btn, button {
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  font-weight: 700;
+}
+/* line 96, ../scss/styles.scss */
+.btn a, button a {
+  border: 0;
+}
+/* line 99, ../scss/styles.scss */
+.btn.btn-primary, button.btn-primary {
+  background-color: #F8D338;
+  border: 3px solid #F8E71C;
+  color: #7F4023;
+}
+/* line 103, ../scss/styles.scss */
+.btn.btn-primary a, button.btn-primary a {
+  color: #7F4023;
+}
+/* line 110, ../scss/styles.scss */
+.btn.btn-center, button.btn-center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 115, ../scss/styles.scss */
+.btn.btn-back, button.btn-back {
+  background-color: #00A4A8;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px inset;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px inset;
+  font-weight: normal;
+  color: #fff;
+}
+/* line 120, ../scss/styles.scss */
+.btn.btn-back a, button.btn-back a {
+  color: #fff;
+}
+
 /*  0.1 Global Navigation
     ====================
 */
-/* line 60, ../scss/styles.scss */
+/* line 130, ../scss/styles.scss */
 .navbar-global {
   color: #009597;
   margin: 0 20px;
 }
-/* line 63, ../scss/styles.scss */
+/* line 133, ../scss/styles.scss */
 .navbar-global .navbar-nav {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   background-color: white;
   border-radius: 9px;
 }
-/* line 67, ../scss/styles.scss */
+/* line 137, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a {
   border-bottom: 0;
   color: #009597;
   font-weight: 700;
   padding: 4px 10px 4px 0;
 }
-/* line 72, ../scss/styles.scss */
+/* line 142, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a:hover {
   color: #6ecacb;
   background-color: transparent;
 }
-/* line 76, ../scss/styles.scss */
+/* line 146, ../scss/styles.scss */
 .navbar-global .navbar-nav > li > a:focus {
   color: #009597;
   background-color: transparent;
 }
-/* line 82, ../scss/styles.scss */
+/* line 152, ../scss/styles.scss */
 .navbar-global .navbar-primary {
   float: left;
 }
-/* line 85, ../scss/styles.scss */
+/* line 155, ../scss/styles.scss */
 .navbar-global .navbar-primary #el-logo img {
   height: auto;
   width: 46px;
 }
-/* line 89, ../scss/styles.scss */
+/* line 159, ../scss/styles.scss */
 .navbar-global .navbar-primary #el-logo a {
   padding: 6px 10px 6px 6px;
 }
-/* line 93, ../scss/styles.scss */
+/* line 163, ../scss/styles.scss */
 .navbar-global .navbar-primary span, .navbar-global .navbar-primary i {
   display: block;
 }
-/* line 96, ../scss/styles.scss */
+/* line 166, ../scss/styles.scss */
 .navbar-global .navbar-primary i {
   font-size: 200%;
   text-align: center;
 }
-/* line 100, ../scss/styles.scss */
+/* line 170, ../scss/styles.scss */
 .navbar-global .navbar-primary span {
   color: #cf9204;
   font-weight: 400;
   font-size: 80%;
 }
-/* line 106, ../scss/styles.scss */
+/* line 176, ../scss/styles.scss */
 .navbar-global .navbar-user {
+  color: #222222;
   float: right;
 }
-/* line 108, ../scss/styles.scss */
-.navbar-global .navbar-user .user-score {
-  padding-top: 6px;
+/* line 179, ../scss/styles.scss */
+.navbar-global .navbar-user span {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 400;
 }
-/* line 110, ../scss/styles.scss */
+/* line 183, ../scss/styles.scss */
+.navbar-global .navbar-user span.nav-label {
+  font-size: 0.8em;
+  margin-bottom: -5px;
+  color: #222222;
+  text-align: left;
+}
+/* line 190, ../scss/styles.scss */
+.navbar-global .navbar-user .user-name {
+  background-color: #009597;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+  -webkit-transition: background-color, 0.1s;
+  -o-transition: background-color, 0.1s;
+  transition: background-color, 0.1s;
+}
+/* line 195, ../scss/styles.scss */
+.navbar-global .navbar-user .user-name a, .navbar-global .navbar-user .user-name .nav-label {
+  color: #fff;
+  padding: 0;
+}
+/* line 199, ../scss/styles.scss */
+.navbar-global .navbar-user .user-name a {
+  padding: 10px 10px 11px;
+}
+/* line 201, ../scss/styles.scss */
+.navbar-global .navbar-user .user-name a:hover {
+  color: #fff;
+}
+/* line 205, ../scss/styles.scss */
+.navbar-global .navbar-user .user-name .name {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+/* line 209, ../scss/styles.scss */
+.navbar-global .navbar-user .user-name:hover {
+  background-color: #00aeb1;
+  -webkit-transition: background-color, 0.1s;
+  -o-transition: background-color, 0.1s;
+  transition: background-color, 0.1s;
+}
+/* line 214, ../scss/styles.scss */
+.navbar-global .navbar-user .user-score {
+  padding: 10px 10px 0 10px;
+}
+/* line 216, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score span {
   display: block;
 }
-/* line 112, ../scss/styles.scss */
-.navbar-global .navbar-user .user-score span.score-label {
-  font-size: 0.8em;
-  text-transform: uppercase;
-  margin-bottom: -5px;
-}
-/* line 117, ../scss/styles.scss */
+/* line 218, ../scss/styles.scss */
 .navbar-global .navbar-user .user-score span.score-value {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
+}
+/* line 225, ../scss/styles.scss */
+.navbar-global .navbar-user .user-login a {
+  background-color: #009597;
+  border-radius: 9px;
+  color: #fff;
+  padding: 10px;
+}
+/* line 230, ../scss/styles.scss */
+.navbar-global .navbar-user .user-login a:hover, .navbar-global .navbar-user .user-login a:focus {
+  background-color: #00e0e4;
+  color: #fff;
+}
+/* line 236, ../scss/styles.scss */
+.navbar-global .navbar-user .user-logout {
+  border-left: 1px solid #009597;
+  text-align: center;
+}
+/* line 239, ../scss/styles.scss */
+.navbar-global .navbar-user .user-logout i {
+  display: block;
+  font-size: 2em;
+  margin-bottom: -6px;
+}
+/* line 244, ../scss/styles.scss */
+.navbar-global .navbar-user .user-logout a {
+  color: #9d0214;
+  padding: 8px 10px 6px;
+}
+/* line 247, ../scss/styles.scss */
+.navbar-global .navbar-user .user-logout a:hover, .navbar-global .navbar-user .user-logout a:focus {
+  color: #d0021b;
+}
+
+/* 0.2 Global Activity Elements
+    ====================
+*/
+/* line 258, ../scss/styles.scss */
+.game-container {
+  margin-top: 30px;
+}
+
+/* line 261, ../scss/styles.scss */
+.game-alerts {
+  background-color: #f8e71c;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.2) 0 0 4px 2px;
+  box-shadow: rgba(34, 9, 9, 0.2) 0 0 4px 2px;
+  color: #7f4023;
+  width: 125px;
+  height: 125px;
+  border-radius: 125px;
+  padding: 0;
+  position: absolute;
+  top: -40px;
+  left: -80px;
+  text-align: center;
+  display: table;
+  z-index: 1000;
+}
+/* line 275, ../scss/styles.scss */
+.game-alerts .alert {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.1em;
+  transform: rotate(-8deg);
+  margin-top: -10px;
+}
+/* line 283, ../scss/styles.scss */
+.game-alerts .alert.true {
+  font-size: 4em;
+}
+/* line 287, ../scss/styles.scss */
+.game-alerts.ng-hide-remove {
+  -webkit-animation: bounceIn 0.7s !important;
+  -moz-animation: bounceIn 0.7s;
+  -ms-animation: bounceIn 0.7s;
+  animation: bounceIn 0.7s !important;
+}
+
+/* line 294, ../scss/styles.scss */
+.game-complete {
+  display: block;
+}
+/* line 296, ../scss/styles.scss */
+.game-complete h3.results-message {
+  font-size: 2em;
+  color: #009597;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* line 303, ../scss/styles.scss */
+.game-complete .game-results {
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 306, ../scss/styles.scss */
+.game-complete .game-results .result {
+  background-color: #fff;
+  display: inline-block;
+  padding: 20px 20px 0;
+  text-align: center;
+  /* Result Types */
+  /* Defines Icons */
+  /* Right Answer Count */
+  /* Wrong Attempts Count */
+  /* Total Time Played */
+}
+/* line 311, ../scss/styles.scss */
+.game-complete .game-results .result .result-label {
+  display: block;
+  font-weight: 900;
+  padding-bottom: 9px;
+  text-align: center;
+}
+/* line 317, ../scss/styles.scss */
+.game-complete .game-results .result .result-number {
+  border: 3px #009597 solid;
+  border-radius: 120px;
+  line-height: 114px;
+  display: block;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3.2em;
+  font-weight: 900;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+}
+/* line 333, ../scss/styles.scss */
+.game-complete .game-results .result:after {
+  background-color: #fff;
+  font-family: 'FontAwesome';
+  font-size: 2em;
+  display: inline-block;
+  margin-top: -22px;
+  padding: 8px;
+}
+/* line 344, ../scss/styles.scss */
+.game-complete .game-results .result.r-right-answers:after {
+  color: #7ed321;
+  content: "\f164";
+}
+/* line 352, ../scss/styles.scss */
+.game-complete .game-results .result.r-wrong-answers:after {
+  color: #d0021b;
+  content: "\f00d";
+}
+/* line 360, ../scss/styles.scss */
+.game-complete .game-results .result.r-time-played:after {
+  color: #009597;
+  content: "\f017";
+}
+/* line 367, ../scss/styles.scss */
+.game-complete .game-results .final-score {
+  color: #009597;
+  padding-bottom: 10px;
+}
+/* line 370, ../scss/styles.scss */
+.game-complete .game-results .final-score h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.5em;
+  font-weight: 900;
+}
+/* line 376, ../scss/styles.scss */
+.game-complete .game-results .final-score .f-s-number {
+  margin-top: -14px;
+  display: block;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 7em;
+  font-weight: 900;
+  line-height: 1;
+}
+/* line 387, ../scss/styles.scss */
+.game-complete .user-options {
+  margin-top: 18px;
+}
+/* line 389, ../scss/styles.scss */
+.game-complete .user-options ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 393, ../scss/styles.scss */
+.game-complete .user-options ul li {
+  display: inline-block;
+}
+/* line 395, ../scss/styles.scss */
+.game-complete .user-options ul li a {
+  font-size: 1.6em;
+  font-weight: 700;
+  position: relative;
+}
+
+/* Achievements */
+/* line 406, ../scss/styles.scss */
+.achievement {
+  background-color: #009597;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  height: 120px;
+  width: 120px;
+  position: relative;
+  border-radius: 120px;
+  text-align: center;
+  line-height: 120px;
+}
+/* line 415, ../scss/styles.scss */
+.achievement .a-title {
+  background-color: #fff;
+  color: #009597;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 100%;
+  line-height: 1;
+}
+/* line 428, ../scss/styles.scss */
+.achievement i {
+  font-size: 7em;
+  color: #fbea2a;
+  margin-top: 10px;
+  text-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+}
+
+/*  0.3 Global Shell Elements
+    ====================
+*/
+/* Interface Labels */
+/* line 441, ../scss/styles.scss */
+h2.h3-interface-label {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+}
+
+/* Activity Cards */
+/* line 450, ../scss/styles.scss */
+.promo-card {
+  background-color: #fff;
+  border-radius: 9px;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  color: #009597;
+  padding: 1em;
+  position: relative;
+}
+/* line 457, ../scss/styles.scss */
+.promo-card p, .promo-card h3 {
+  margin: 0;
+  padding: 0;
+}
+/* line 461, ../scss/styles.scss */
+.promo-card .activity-link {
+  width: 100%;
+  display: block;
+  border: 0;
+  color: #009597;
+}
+/* line 466, ../scss/styles.scss */
+.promo-card .activity-link:hover {
+  color: #6ecacb;
+}
+/* line 470, ../scss/styles.scss */
+.promo-card .activity-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+/* line 475, ../scss/styles.scss */
+.promo-card .activity-wordlist {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+/* line 479, ../scss/styles.scss */
+.promo-card .activity-image {
+  border-radius: 9px;
+  width: 100%;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  margin: 12px 0 0.8em;
+}
+/* line 485, ../scss/styles.scss */
+.promo-card.size-sml {
+  min-height: 94px;
+  margin-bottom: 1em;
+}
+/* line 488, ../scss/styles.scss */
+.promo-card.size-sml .activity-wordlist {
+  margin-left: 94px;
+  margin-bottom: 2px;
+}
+/* line 492, ../scss/styles.scss */
+.promo-card.size-sml .activity-info {
+  float: left;
+}
+/* line 495, ../scss/styles.scss */
+.promo-card.size-sml .activity-image {
+  margin: -17px 14px 0 0;
+  float: left;
+  width: auto;
+}
+/* line 500, ../scss/styles.scss */
+.promo-card.size-sml .activity-status {
+  height: 40px;
+  width: 40px;
+  line-height: 34px;
+  font-size: 20px;
+  border-width: 3px;
+  top: -12px;
+  right: -13px;
+}
+/* line 510, ../scss/styles.scss */
+.promo-card .activity-status {
+  background-color: yellow;
+  border: 5px solid #fff;
+  position: absolute;
+  right: -20px;
+  top: -22px;
+  text-align: center;
+  font-size: 26px;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  height: 55px;
+  width: 55px;
+  line-height: 45px;
+}
+/* line 523, ../scss/styles.scss */
+.promo-card .activity-status .sr-only {
+  text-indent: -9999px;
+}
+/* line 526, ../scss/styles.scss */
+.promo-card .activity-status.gold {
+  background-color: #fbea2a;
+}
+/* line 528, ../scss/styles.scss */
+.promo-card .activity-status.gold i {
+  color: #fef9c0;
+}
+/* line 532, ../scss/styles.scss */
+.promo-card .activity-status.silver {
+  background-color: silver;
+}
+/* line 534, ../scss/styles.scss */
+.promo-card .activity-status.silver i {
+  color: #dfdfdf;
+}
+/* line 538, ../scss/styles.scss */
+.promo-card .activity-status.bronze {
+  background-color: #cd7f32;
+}
+/* line 540, ../scss/styles.scss */
+.promo-card .activity-status.bronze i {
+  color: #e6bf99;
 }
 
 /*  1.0 Dashboard
     ====================
 */
+/* line 552, ../scss/styles.scss */
+body.dashboard .dashboard-greeting {
+  margin-bottom: 0;
+}
+/* line 555, ../scss/styles.scss */
+body.dashboard .dashboard-user-since {
+  font-weight: 700;
+}
+/* line 558, ../scss/styles.scss */
+body.dashboard .recent-work {
+  margin-bottom: 1em;
+}
+
 /*  2.0 Flash Cards
     ====================
 */
-/* line 137, ../scss/styles.scss */
+/* line 569, ../scss/styles.scss */
 body.games.flashcards {
-  background-color: #C3EDEC;
+  background: #c3edec url("/static/images/flashcards/bground.gif") repeat-x;
+  background-position: 0 500px;
+  /* Main Game Interface */
 }
-/* line 141, ../scss/styles.scss */
-body.games.flashcards .flash-cards {
-  background-color: #EFFEFD;
+/* line 573, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZmVmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NkZjBlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #effefd), color-stop(100%, #cdf0ef));
+  background-image: -moz-linear-gradient(#effefd, #cdf0ef);
+  background-image: -webkit-linear-gradient(#effefd, #cdf0ef);
+  background-image: linear-gradient(#effefd, #cdf0ef);
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 0px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 0px;
   border: 3px #6095aa solid;
   border-radius: 9px;
-  margin-top: 30px;
+  margin: 0 auto 30px auto;
   max-width: 830px;
-  padding-top: 20px;
+  padding: 30px;
+  position: relative;
+  z-index: 20;
   /* Left Column - Contains Round's selected Card */
   /* Right Column - Contains Options for Flash Cards */
 }
-/* line 149, ../scss/styles.scss */
-body.games.flashcards .flash-cards .main-card {
-  border: 3px #6095aa solid;
-  border-radius: 9px;
-  text-align: center;
-}
-/* line 153, ../scss/styles.scss */
-body.games.flashcards .flash-cards .main-card img.large-card {
-  width: 430px;
-  margin: 2em auto;
-  border: 3px #6095aa solid;
-  border-radius: 10px;
-}
-/* line 162, ../scss/styles.scss */
-body.games.flashcards .flash-cards .options-container {
-  border: 3px #6095aa solid;
-  border-radius: 9px;
-  padding: 0;
-}
-/* line 166, ../scss/styles.scss */
-body.games.flashcards .flash-cards .options-container h3 {
+/* line 583, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .round-counter {
   color: #6095aa;
   font-size: 1em;
   font-style: italic;
@@ -11074,76 +11570,585 @@ body.games.flashcards .flash-cards .options-container h3 {
   text-transform: uppercase;
   top: -14px;
 }
-/* line 176, ../scss/styles.scss */
-body.games.flashcards .flash-cards .options-container h3 span {
+/* line 593, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .round-counter span {
   background-color: #EFFEFD;
   border: 3px #6095aa solid;
   border-radius: 9px;
   display: inline-block;
   padding: 4px 9px;
 }
-/* line 184, ../scss/styles.scss */
-body.games.flashcards .flash-cards .options-container .option-container {
+/* line 601, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface:before {
+  content: url("/static/images/flashcards/el-bulbs-off.svg");
+  width: 60px;
+  height: 120px;
+  position: absolute;
+  top: 12px;
+  left: -49px;
+  z-index: 10;
+}
+@media (max-width: 992px) {
+  /* line 614, ../scss/styles.scss */
+  body.games.flashcards .flash-cards-interface .cards .first {
+    padding-right: 0;
+  }
+}
+/* line 619, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .main-card {
+  background: url("/static/images/flashcards/el-screw.svg") no-repeat 2% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 2% 98%, url("/static/images/flashcards/el-screw-crooked.svg") no-repeat 98% 98%;
+  border: 3px #6095aa solid;
+  border-radius: 9px;
+  border-bottom-width: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align: center;
+  height: 460px;
+}
+@media (min-width: 992px) {
+  /* line 619, ../scss/styles.scss */
+  body.games.flashcards .flash-cards-interface .main-card {
+    border-bottom-width: 3px;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+  }
+}
+/* line 637, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .main-card .main-card-img {
+  background-color: #fff;
+  border: 3px #6095aa solid;
+  border-radius: 12px;
+  height: 380px;
+  line-height: 390px;
+  width: 75%;
+  margin: 0 auto 2em auto;
+  position: relative;
+}
+/* line 646, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .main-card .main-card-img img.large-card {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 80%;
+  width: 80%;
+  vertical-align: middle;
+}
+/* line 654, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .main-card .main-card-lexeme {
+  top: -54px;
+  position: relative;
+  z-index: 5;
+}
+/* line 658, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .main-card .main-card-lexeme span {
+  background-color: #fff;
+  border: 3px #6095aa solid;
+  border-radius: 9px;
+  color: #6095aa;
+  font-size: 1.8em;
+  font-weight: 700;
+  display: inline-block;
+  padding: 4px 10px;
+  z-index: 1;
+}
+/* line 673, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container {
+  border: 3px #6095aa solid;
+  padding: 0;
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+@media (min-width: 1170px) {
+  /* line 673, ../scss/styles.scss */
+  body.games.flashcards .flash-cards-interface .options-container {
+    border-radius: 9px;
+  }
+}
+/* line 681, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container h3 {
+  color: #6095aa;
+  font-size: 1em;
+  font-style: italic;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: -14px;
+}
+/* line 691, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container h3 span {
+  background-color: #EFFEFD;
+  border: 3px #6095aa solid;
+  border-radius: 9px;
+  display: inline-block;
+  padding: 4px 9px;
+}
+/* line 699, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container {
   border-bottom: 3px #6095aa solid;
   padding: 0 15px;
   margin-bottom: 15px;
+  position: relative;
+  /* Round Results */
 }
-/* line 188, ../scss/styles.scss */
-body.games.flashcards .flash-cards .options-container .option-container:last-child {
+@media (max-width: 970px) {
+  /* line 699, ../scss/styles.scss */
+  body.games.flashcards .flash-cards-interface .options-container .option-container {
+    border-bottom: 0;
+    display: inline-block;
+    width: 33%;
+    margin-bottom: 0;
+  }
+  /* line 709, ../scss/styles.scss */
+  body.games.flashcards .flash-cards-interface .options-container .option-container:last-child {
+    border-right: 0;
+  }
+}
+/* line 713, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container:after {
+  border: 3px solid #6095aa;
+  color: #D7CEBF;
+  content: "\b7";
+  display: block;
+  font-weight: 700;
+  font-size: 5em;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 6px;
+  display: inline-block;
+  border-radius: 20px;
+  height: 26px;
+  width: 26px;
+  line-height: 16px;
+  text-align: center;
+}
+/* line 731, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container:last-child {
   border-bottom: 0;
   margin-bottom: 0;
 }
-/* line 193, ../scss/styles.scss */
-body.games.flashcards .flash-cards .options-container .option {
+/* line 735, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container .option {
   background-color: #fff;
-  border: 3px #6095aa solid;
+  border: 3px solid #6095aa;
+  -webkit-box-shadow: rgba(64, 124, 148, 0.8) 0px 4px 0px;
+  box-shadow: rgba(64, 124, 148, 0.8) 0px 4px 0px;
   cursor: pointer;
-  width: 100%;
-  height: 120px;
-  margin: 0 auto 20px auto;
+  height: 110px;
+  margin: 0 0 20px 0;
   padding: 0;
   border-radius: 9px;
-  text-align: center;
+  text-align: left;
   display: table;
   position: relative;
+  width: 86%;
 }
-/* line 205, ../scss/styles.scss */
-body.games.flashcards .flash-cards .options-container .option .lexeme {
+/* line 748, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container .option .lexeme {
   color: #009597;
   font-size: 20px;
   font-weight: 700;
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
 }
-/* line 212, ../scss/styles.scss */
-body.games.flashcards .flash-cards .options-container .option img {
-  width: 100%;
-  height: 114px;
+/* line 756, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container .option .symbol {
+  margin: 0 auto;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
-/* line 217, ../scss/styles.scss */
-body.games.flashcards .flash-cards .options-container .option:hover .lexeme {
+/* line 761, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container .option .symbol img {
+  width: 70%;
+  height: 100px;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+/* line 769, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container .option:hover .lexeme {
   color: #6ecacb;
 }
-/* line 223, ../scss/styles.scss */
-body.games.flashcards .flash-cards .game-alerts {
-  background-color: orange;
-  width: 48px;
-  height: 48px;
-  border-radius: 24px;
-  padding: 12px 8px;
-  position: absolute;
-  z-index: 10;
-  top: -10px;
+/* line 773, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container .option:focus, body.games.flashcards .flash-cards-interface .options-container .option-container .option:active {
+  top: 4px;
+  box-shadow: none;
 }
-/* line 233, ../scss/styles.scss */
-body.games.flashcards .flash-cards .timer {
+/* line 782, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container.true .option, body.games.flashcards .flash-cards-interface .options-container .option-container.false .option {
+  top: 4px;
+  box-shadow: none;
+}
+/* line 788, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container.true .option {
+  border-color: #7ed321 !important;
+}
+/* line 791, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container.true:after {
+  color: #7ed321;
+}
+/* line 796, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container.false .option {
+  border-color: #d0021b !important;
+}
+/* line 799, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .options-container .option-container.false:after {
+  color: #d0021b;
+}
+/* line 806, ../scss/styles.scss */
+body.games.flashcards .flash-cards-interface .timer {
   padding: 8px 0 0;
   text-align: center;
 }
+/* line 812, ../scss/styles.scss */
+body.games.flashcards .game-complete {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZmVmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NkZjBlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #effefd), color-stop(100%, #cdf0ef));
+  background-image: -moz-linear-gradient(#effefd, #cdf0ef);
+  background-image: -webkit-linear-gradient(#effefd, #cdf0ef);
+  background-image: linear-gradient(#effefd, #cdf0ef);
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 0px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 0px;
+  border: 3px #6095aa solid;
+  border-radius: 9px;
+  color: #009597;
+  margin: 0 auto;
+  max-width: 830px;
+  padding: 30px;
+  position: relative;
+}
+/* line 822, ../scss/styles.scss */
+body.games.flashcards .game-complete .frame {
+  background: url("/static/images/flashcards/el-screw.svg") no-repeat 2% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 2%, url("/static/images/flashcards/el-screw.svg") no-repeat 2% 98%, url("/static/images/flashcards/el-screw.svg") no-repeat 98% 98%;
+  border: 3px #6095aa solid;
+  border-radius: 9px;
+  height: 460px;
+  text-align: center;
+  position: relative;
+}
+/* line 834, ../scss/styles.scss */
+body.games.flashcards .game-complete h3.results-message {
+  background-color: #fff;
+  border: 3px #6095aa solid;
+  border-radius: 9px;
+  font-size: 2em;
+  color: #009597;
+  font-weight: 700;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-top: -50px;
+  padding: 6px 20px;
+}
+/* line 846, ../scss/styles.scss */
+body.games.flashcards .game-complete .game-results {
+  background-color: #fff;
+  border: 3px #6095aa solid;
+  border-radius: 9px;
+  margin: 0 auto;
+  text-align: center;
+  width: 86%;
+}
+/* line 854, ../scss/styles.scss */
+body.games.flashcards .game-complete .game-results .result {
+  /* Result Types */
+  /* Right Answer Count */
+  /* Wrong Attempts Count */
+  /* Total Time Played */
+}
+/* line 857, ../scss/styles.scss */
+body.games.flashcards .game-complete .game-results .result .result-number {
+  border-color: #6095aa;
+}
+/* line 883, ../scss/styles.scss */
+body.games.flashcards .game-complete .user-options {
+  margin-top: 18px;
+}
+/* line 885, ../scss/styles.scss */
+body.games.flashcards .game-complete .user-options ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 889, ../scss/styles.scss */
+body.games.flashcards .game-complete .user-options ul li {
+  display: inline-block;
+}
+/* line 891, ../scss/styles.scss */
+body.games.flashcards .game-complete .user-options ul li a {
+  background-color: #fff;
+  border: 3px #6095aa solid;
+  border-radius: 9px;
+  font-size: 1.6em;
+  font-weight: 700;
+  padding: 4px 20px;
+  position: relative;
+  -webkit-box-shadow: rgba(64, 124, 148, 0.8) 0px 4px 0px;
+  box-shadow: rgba(64, 124, 148, 0.8) 0px 4px 0px;
+}
+/* line 900, ../scss/styles.scss */
+body.games.flashcards .game-complete .user-options ul li a:active, body.games.flashcards .game-complete .user-options ul li a:focus {
+  top: 4px;
+  box-shadow: none;
+}
 
-/*  3.0 Memory
+/*  3.0 Matching Game
     ====================
 */
+/* line 915, ../scss/styles.scss */
+body.matching {
+  background-color: #416E0D;
+}
+/* line 917, ../scss/styles.scss */
+body.matching div.memory-cards {
+  margin: 0 auto;
+}
+/* line 922, ../scss/styles.scss */
+body.matching div.memory-cards.cards_12 {
+  width: 900px;
+}
+/* line 924, ../scss/styles.scss */
+body.matching div.memory-cards.cards_12 .card-container,
+body.matching div.memory-cards.cards_12 .card {
+  height: 180px;
+  width: 180px;
+}
+/* line 937, ../scss/styles.scss */
+body.matching .card-container {
+  position: relative;
+  margin: 1em;
+  float: left;
+}
+/* line 942, ../scss/styles.scss */
+body.matching div.card {
+  position: absolute;
+  background-color: #fff;
+  border: 9px solid #fff;
+  color: #009597;
+  cursor: pointer;
+  border-radius: 9px;
+  float: left;
+  font-size: 1.6em;
+  font-weight: 700;
+  display: table;
+  text-align: center;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.5) 1px 1px 4px;
+  box-shadow: rgba(34, 9, 9, 0.5) 1px 1px 4px;
+  /* Card Back */
+  /* Card Front */
+  /* Cards have been removed, but space must remain */
+}
+/* line 955, ../scss/styles.scss */
+body.matching div.card img {
+  border-radius: 9px;
+  width: 100%;
+}
+/* line 960, ../scss/styles.scss */
+body.matching div.card.back {
+  background-color: #76DBDC;
+}
+/* line 962, ../scss/styles.scss */
+body.matching div.card.back span {
+  border-radius: 9px;
+  display: block;
+}
+/* line 969, ../scss/styles.scss */
+body.matching div.card.front span {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 975, ../scss/styles.scss */
+body.matching div.card.empty {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: default;
+}
+/* line 982, ../scss/styles.scss */
+body.matching div.game-status {
+  height: 100px;
+  width: 400px;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 1em;
+}
+/* line 989, ../scss/styles.scss */
+body.matching .game-complete {
+  margin: 0 auto;
+  width: 830px;
+}
+/* line 993, ../scss/styles.scss */
+body.matching .game-complete .game-results .result {
+  border-radius: 9px;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.5) 1px 1px 4px;
+  box-shadow: rgba(34, 9, 9, 0.5) 1px 1px 4px;
+  width: 200px;
+  margin: 1em;
+}
+/* line 999, ../scss/styles.scss */
+body.matching .game-complete .game-results .final-score {
+  background-color: #fff;
+  border-radius: 9px;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.3) 1px 1px 4px;
+  box-shadow: rgba(34, 9, 9, 0.3) 1px 1px 4px;
+  width: 240px;
+  height: 220px;
+  padding-top: 56px;
+  margin: 0 auto;
+  -moz-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  -webkit-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+  margin-top: -10px;
+}
+/* line 1013, ../scss/styles.scss */
+body.matching .game-complete .user-options {
+  margin: -140px auto 0;
+  width: 75%;
+}
+/* line 1016, ../scss/styles.scss */
+body.matching .game-complete .user-options ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+/* line 1020, ../scss/styles.scss */
+body.matching .game-complete .user-options ul li {
+  display: inline-block;
+}
+/* line 1022, ../scss/styles.scss */
+body.matching .game-complete .user-options ul li#o-play-again {
+  float: left;
+}
+/* line 1025, ../scss/styles.scss */
+body.matching .game-complete .user-options ul li#o-back-home {
+  float: right;
+}
+/* line 1028, ../scss/styles.scss */
+body.matching .game-complete .user-options ul li a {
+  color: #f8d338;
+  font-size: 1.6em;
+  font-weight: 700;
+  position: relative;
+  border: none;
+}
+/* line 1034, ../scss/styles.scss */
+body.matching .game-complete .user-options ul li a:hover, body.matching .game-complete .user-options ul li a:focus {
+  color: #fceeb3;
+}
+
 /*  4.0 Wordlists
     ====================
 */
+/* line 1048, ../scss/styles.scss */
+.wordlists .wordlist-header {
+  padding-top: 10px;
+}
+/* line 1050, ../scss/styles.scss */
+.wordlists .wordlist-header h1 {
+  margin-top: 0;
+}
+/* line 1054, ../scss/styles.scss */
+.wordlists .card {
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  border-radius: 9px;
+  font-weight: 700;
+}
+/* line 1058, ../scss/styles.scss */
+.wordlists .card a {
+  border: 0;
+  display: block;
+}
+/* line 1063, ../scss/styles.scss */
+.wordlists .grid {
+  width: 100%;
+  padding: 10px 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+/* line 1068, ../scss/styles.scss */
+.wordlists .grid .card {
+  border: 4px solid white;
+  background: white;
+  float: left;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* line 1075, ../scss/styles.scss */
+.wordlists .grid .card span {
+  display: block;
+}
+/* line 1078, ../scss/styles.scss */
+.wordlists .grid .card img {
+  width: 100%;
+}
+/* line 1081, ../scss/styles.scss */
+.wordlists .grid .card a {
+  padding: 0.5em;
+}
+/* line 1087, ../scss/styles.scss */
+.wordlists .list .card {
+  background: white;
+  margin: .5em;
+  font-size: 2em;
+}
+/* line 1090, ../scss/styles.scss */
+.wordlists .list .card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+}
+/* line 1097, ../scss/styles.scss */
+.wordlists .list .card a {
+  padding: .4em .2em;
+}
+/* line 1102, ../scss/styles.scss */
+.wordlists .small {
+  width: 300px;
+}
+/* line 1105, ../scss/styles.scss */
+.wordlists .audio {
+  height: 100px;
+}
+
+/* line 1111, ../scss/styles.scss */
+.word-detail .word-samples h1 {
+  text-align: center;
+}
+/* line 1114, ../scss/styles.scss */
+.word-detail .word-samples .word-img-examples {
+  text-align: center;
+  margin: 0 auto;
+}
+/* line 1117, ../scss/styles.scss */
+.word-detail .word-samples .word-img-examples img {
+  max-width: 600px;
+  width: 100%;
+  border: 3px solid #fff;
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
+}
+
+/*  ZZZ. Remove Phone-sized Responsive Functionality
+
+    For the pilot we are focusing on tablet and desktop experiences. For that reason, we are disabling the phone-sized levels of responsive design.
+
+    ====================
+*/
+/* line 1134, ../scss/styles.scss */
+body,
+.game-container,
+.container,
+nav {
+  min-width: 550px !important;
+}
+
+/* line 1140, ../scss/styles.scss */
+.navbar-nav > li {
+  float: left !important;
+}

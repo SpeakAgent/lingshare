@@ -1,8 +1,14 @@
+/*
+    Title: Styles for Speak Agent App
+    Version: 0.1
+    Description: Styles of Speak Agent Web Application.
+    ====================
+*/
 
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:900,900italic|Noto+Sans:400,700,400italic,700italic&subset=latin-ext);
 
 @import "bootstrap-compass";
-@import "compass/css3/transition";
+@import "compass";
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome/font-awesome.scss";
@@ -19,18 +25,35 @@ $border-width-default: 3px;
 $transition-speed: 0.1s;
 
 
-
-
 body {
-    background-color: $brand-primary;
+    background-color: $brand-primary-light;
+    color: $font-color;
     font-family: $font-family-sans-serif;
     margin-top: 20px;
 }
 
 h1 {
     font-family: $font-family-emphasis;
-    font-weight: 900;
+    font-size: 3.2em;
+    font-weight: 700;
+    color: #fff;
+    @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+    &.mega {
+        color: $brand-secondary;
+        font-size: 4em;
+        font-weight: 900;
+        @include text-shadow(rgba(128, 237, 238, 1) 0 1px 1px);
+    }
 }
+
+h2 {
+    font-family: $font-family-emphasis;
+    font-size: 3em;
+    font-weight: 700;
+    color: #fff;
+    @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+}
+
 
 a {
     color: $brand-secondary;
@@ -46,11 +69,58 @@ a {
 
 }
 
+.secondary-content {
+    background-color: $accent-light;
+    color: $font-color-alt;
+    h1, h2 {
+        color: $font-color-alt;
+    }
+}
 
-/* */
+.tertiary-content {
+    background-color: #fff;
+}
+
+
+/* Resets */
 .first {
     margin-left: 0;
     padding-left: 0;
+}
+
+/* Buttons */
+.btn, button {
+    border-radius: 20px;
+    @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+    font-weight: 700;
+    a {
+        border: 0;
+    }
+    &.btn-primary {
+        background-color: #F8D338;
+        border: 3px solid #F8E71C;
+        color: #7F4023;
+        a {
+            color: #7F4023;
+        }
+    }
+    &.btn-secondary {
+
+    }
+    &.btn-center {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &.btn-back {
+        background-color: #00A4A8;
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px inset);
+        font-weight: normal;
+        color: #fff;
+        a {
+            color: #fff;
+        }
+    }
 }
 
 /*  0.1 Global Navigation
@@ -104,29 +174,391 @@ a {
         }
     }
     .navbar-user {
+        color: $font-color;
         float: right;
+        span {
+            display: block;
+            font-size: 0.8em;
+            font-weight: 400;
+            &.nav-label {
+                font-size: 0.8em;
+                margin-bottom: -5px;
+                color: $font-color;
+                text-align: left;
+            }
+        }
+        .user-name {
+            background-color: $brand-secondary;
+            border-top-left-radius: 9px;
+            border-bottom-left-radius: 9px;
+            @include transition(background-color,$transition-speed);
+            a, .nav-label {
+                color: #fff;
+                padding: 0;
+            }
+            a {
+                padding: 10px 10px 11px;
+                &:hover {
+                    color:#fff;
+                }
+            }
+            .name {
+                font-size: 1.2em;
+                font-weight: 700;
+            }
+            &:hover {
+                background-color: lighten($brand-secondary,5%);
+                @include transition(background-color,$transition-speed);
+            }
+        }
         .user-score {
-            padding-top: 6px;
+            padding: 10px 10px 0 10px;
             span {
                 display: block;
-                &.score-label {
-                    font-size: 0.8em;
-                    text-transform: uppercase;
-                    margin-bottom: -5px;
-                }
                 &.score-value {
                     font-family: $font-family-emphasis;
                     font-size: 1.5em;
                 }
             }
         }
+        .user-login {
+            a {
+                background-color: $brand-secondary;
+                border-radius: 9px;
+                color: #fff;
+                padding: 10px;
+                &:hover, &:focus {
+                    background-color: lighten($brand-secondary, 15%);
+                    color: #fff;
+                }
+            }
+        }
+        .user-logout {
+            border-left: 1px solid $brand-secondary;
+            text-align: center;
+            i {
+                display:block;
+                font-size: 2em;
+                margin-bottom: -6px;
+            }
+            a {
+                color: darken($game-error, 10%);
+                padding: 8px 10px 6px;
+                &:hover, &:focus {
+                    color: $game-error;
+                }
+            }
+        }
     }
 }
 
+/* 0.2 Global Activity Elements
+    ====================
+*/
+.game-container {
+    margin-top: 30px;
+}
+.game-alerts {
+    background-color: $alert-positive-bground;
+    @include box-shadow(rgba($shadow-primary,0.2) 0 0 4px 2px);
+    color: $alert-dark;
+    width: 125px;
+    height: 125px;
+    border-radius: 125px;
+    padding: 0;
+    position: absolute;
+    top: -40px;
+    left: -80px;
+    text-align: center;
+    display: table;
+    z-index: 1000;
+    .alert {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 1.1em;
+        transform: rotate(-8deg);
+        margin-top: -10px;
+        &.true {
+            font-size: 4em;
+        }
+    }
+    &.ng-hide-remove {
+        -webkit-animation: bounceIn 0.7s !important;
+        -moz-animation: bounceIn 0.7s;
+        -ms-animation: bounceIn 0.7s;
+        animation: bounceIn 0.7s !important;
+    }
+}
+.game-complete {
+        display: block;
+        h3.results-message {
+            font-size: 2em;
+            color: $brand-secondary;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .game-results {
+            margin: 0 auto;
+            text-align: center;
+            .result {
+                background-color: #fff;
+                display: inline-block;
+                padding: 20px 20px 0;
+                text-align: center;
+                .result-label {
+                    display: block;
+                    font-weight: 900;
+                    padding-bottom: 9px;
+                    text-align: center;
+                }
+                .result-number {
+                    border: $border-width-default $brand-secondary solid;
+                    border-radius: 120px;
+                    line-height: 114px;
+                    display: block;
+                    font-family: $font-family-emphasis;
+                    font-size: 3.2em;
+                    font-weight: 900;
+                    margin: 0 auto;
+                    width: 120px;
+                    height: 120px;
+                    text-align: center;
+                }
+                /* Result Types */
+
+                /* Defines Icons */
+                &:after {
+                    background-color: #fff;
+                    font-family: 'FontAwesome';
+                    font-size: 2em;
+                    display: inline-block;
+                    margin-top: -22px;
+                    padding: 8px;
+                }
+
+                /* Right Answer Count */
+                &.r-right-answers {
+                    &:after {
+                        color: $game-success;
+                        content: "\f164";
+                    }
+                }
+
+                /* Wrong Attempts Count */
+                &.r-wrong-answers {
+                    &:after {
+                        color: $game-error;
+                        content: "\f00d";
+                    }
+                }
+
+                /* Total Time Played */
+                &.r-time-played {
+                    &:after {
+                        color: $brand-secondary;
+                        content: "\f017";
+                    }
+                }
+
+            }
+            .final-score {
+                color: $brand-secondary;
+                padding-bottom: 10px;
+                h3 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 2.5em;
+                    font-weight: 900;
+                }
+                .f-s-number {
+                    margin-top: -14px;
+                    display: block;
+                    font-family: $font-family-emphasis;
+                    font-size: 7em;
+                    font-weight: 900;
+                    line-height: 1;
+                }
+            }
+
+        }
+        .user-options {
+            margin-top: 18px;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    a {
+                        font-size: 1.6em;
+                        font-weight: 700;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+/* Achievements */
+
+.achievement {
+    background-color: $brand-secondary;
+    @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+    height: 120px;
+    width: 120px;
+    position: relative;
+    border-radius: 120px;
+    text-align: center;
+    line-height: 120px;
+    .a-title {
+        background-color: #fff;
+        color: $brand-secondary;
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+        display: block;
+        position: absolute;
+        bottom: -4px;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 10px;
+        width: 100%;
+        line-height: 1;
+    }
+    i {
+        font-size: 7em;
+        color: $gold;
+        margin-top: 10px;
+        @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+    }
+}
+
+/*  0.3 Global Shell Elements
+    ====================
+*/
+
+/* Interface Labels */
+h2.h3-interface-label {
+    font-family: $font-family-emphasis;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #fff;
+    @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+}
+
+/* Activity Cards */
+.promo-card {
+    background-color: #fff;
+    border-radius: 9px;
+    @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+    color: $brand-secondary;
+    padding: 1em;
+    position: relative;
+    p, h3 {
+        margin: 0;
+        padding: 0;
+    }
+    .activity-link {
+        width: 100%;
+        display: block;
+        border: 0;
+        color: $brand-secondary;
+        &:hover {
+            color: $brand-primary;
+        }
+    }
+    .activity-title {
+        font-size: 1.4em;
+        font-weight: 700;
+        margin-bottom: 2px;
+    }
+    .activity-wordlist {
+        font-size: 0.9em;
+        font-weight: 400;
+    }
+    .activity-image {
+        border-radius: 9px;
+        width: 100%;
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+        margin: 12px 0 0.8em;
+    }
+    &.size-sml {
+        min-height: 94px;
+        margin-bottom: 1em;
+        .activity-wordlist {
+            margin-left: 94px;
+            margin-bottom: 2px;
+        }
+        .activity-info {
+            float: left;
+        }
+        .activity-image {
+            margin: -17px 14px 0 0;
+            float: left;
+            width: auto;
+        }
+        .activity-status {
+            height: 40px;
+            width: 40px;
+            line-height: 34px;
+            font-size: 20px;
+            border-width: 3px;
+            top: -12px;
+            right: -13px;
+        }
+    }
+    .activity-status {
+        background-color: yellow;
+        border: 5px solid #fff;
+        position: absolute;
+        right: -20px;
+        top: -22px;
+        text-align: center;
+        font-size: 26px;
+        @include border-radius(40px);
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+        height: 55px;
+        width: 55px;
+        line-height: 45px;
+        .sr-only {
+            text-indent: -9999px;
+        }
+        &.gold {
+            background-color: $gold;
+            i {
+                color: lighten($gold, 30%);
+            }
+        }
+        &.silver {
+            background-color: $silver;
+            i {
+                color: lighten($silver, 12%);
+            }
+        }
+        &.bronze{
+            background-color: $bronze;
+            i {
+                color: lighten($bronze, 25%);
+            }
+        }
+    }
+}
 
 /*  1.0 Dashboard
     ====================
 */
+
+body.dashboard {
+    .dashboard-greeting {
+        margin-bottom: 0;
+    }
+    .dashboard-user-since {
+        font-weight: 700;
+    }
+    .recent-work {
+        margin-bottom: 1em;
+    }
+}
 
 /*  2.0 Flash Cards
     ====================
@@ -135,34 +567,117 @@ a {
 $flash-cards-border-color-default: #6095AA;
 
 body.games.flashcards {
-
-    background-color: #C3EDEC;
-
-    .flash-cards {
-        background-color: #EFFEFD;
+    background: #C3EDEC  url('/static/images/flashcards/bground.gif') repeat-x;
+    background-position: 0 500px;
+    /* Main Game Interface */
+    .flash-cards-interface {
+        @include background-image(linear-gradient(#EFFEFD, #CDF0EF));
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 0px);
         border: $border-width-default $flash-cards-border-color-default solid;
         border-radius: 9px;
-        margin-top: 30px;
+        margin: 0 auto 30px auto;
         max-width: 830px;
-        padding-top: 20px;
-            /* Left Column - Contains Round's selected Card */
-            .main-card {
+        padding: 30px;
+        position: relative;
+        z-index: 20;
+        .round-counter {
+            color: $flash-cards-border-color-default;
+            font-size: 1em;
+            font-style: italic;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            top: -14px;
+            span {
+                background-color: #EFFEFD;
                 border: $border-width-default $flash-cards-border-color-default solid;
                 border-radius: 9px;
+                display: inline-block;
+                padding: 4px 9px;
+            }
+        }
+        &:before {
+            content: url('/static/images/flashcards/el-bulbs-off.svg');
+            width: 60px;
+            height: 120px;
+            position: absolute;
+            top: 12px;
+            left: -49px;
+            z-index: 10;
+        }
+
+            /* Left Column - Contains Round's selected Card */
+            .cards {
+                @media (max-width:$screen-md-min){
+                    .first {
+                        padding-right: 0;
+                    }
+                }
+            }
+            .main-card {
+                background:
+                    url('/static/images/flashcards/el-screw.svg') no-repeat 2% 2%,
+                    url('/static/images/flashcards/el-screw.svg') no-repeat 98% 2%,
+                    url('/static/images/flashcards/el-screw.svg') no-repeat 2% 98%,
+                    url('/static/images/flashcards/el-screw-crooked.svg') no-repeat 98% 98%;
+                border: $border-width-default $flash-cards-border-color-default solid;
+                border-radius: 9px;
+                border-bottom-width: 0;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
                 text-align: center;
-                img.large-card {
-                    width: 430px;
-                    margin: 2em auto;
+                height: 460px;
+                @media (min-width:$screen-md-min){
+                    border-bottom-width: $border-width-default;
+                    border-bottom-right-radius: 9px;
+                    border-bottom-left-radius: 9px;
+                }
+                .main-card-img {
+                    background-color: #fff;
                     border: $border-width-default $flash-cards-border-color-default solid;
-                    border-radius: 10px;
+                    border-radius: 12px;
+                    height: 380px;
+                    line-height: 390px;
+                    width: 75%;
+                    margin: 0 auto 2em auto;
+                    position: relative;
+                    img.large-card {
+                        border-radius: 10px;
+                        overflow: hidden;
+                        height: 80%;
+                        width: 80%;
+                        vertical-align: middle;
+                    }
+                }
+                .main-card-lexeme {
+                    top: -54px;
+                    position: relative;
+                    z-index: 5;
+                    span {
+                        background-color: #fff;
+                        border: $border-width-default $flash-cards-border-color-default solid;
+                        border-radius: 9px;
+                        color: $flash-cards-border-color-default;
+                        font-size: 1.8em;
+                        font-weight: 700;
+                        display: inline-block;
+                        padding: 4px 10px;
+                        z-index: 1;
+                    }
                 }
             }
             /* Right Column - Contains Options for Flash Cards */
 
             .options-container {
                 border: $border-width-default $flash-cards-border-color-default solid;
-                border-radius: 9px;
                 padding: 0;
+                border-bottom-right-radius: 9px;
+                border-bottom-left-radius: 9px;
+                @media (min-width:$container-lg){
+                    border-radius: 9px;
+                }
                 h3 {
                     color: $flash-cards-border-color-default;
                     font-size: 1em;
@@ -185,63 +700,443 @@ body.games.flashcards {
                     border-bottom: $border-width-default $flash-cards-border-color-default solid;
                     padding: 0 15px;
                     margin-bottom: 15px;
+                    position: relative;
+                    @media (max-width: $container-md) {
+                        border-bottom: 0;
+                        display: inline-block;
+                        width: 33%;
+                        margin-bottom: 0;
+                        &:last-child {
+                            border-right: 0;
+                        }
+                    }
+                    &:after {
+                        border: $border-width-default solid $flash-cards-border-color-default;
+                        color: #D7CEBF;
+                        content: "\b7";
+                        display: block;
+                        font-weight: 700;
+                        font-size: 5em;
+                        padding: 0;
+                        position: absolute;
+                        top: 0;
+                        right: 6px;
+                        display: inline-block;
+                        border-radius: 20px;
+                        height: 26px;
+                        width: 26px;
+                        line-height: 16px;
+                        text-align: center;
+                    }
                     &:last-child {
                         border-bottom: 0;
                         margin-bottom: 0;
                     }
-                }
-                .option {
-                    background-color: #fff;
-                    border: $border-width-default $flash-cards-border-color-default solid;
-                    cursor: pointer;
-                    width: 100%;
-                    height: 120px;
-                    margin: 0 auto 20px auto;
-                    padding: 0;
-                    border-radius: 9px;
-                    text-align: center;
-                    display: table;
-                    position: relative;
-                    .lexeme {
-                        color: $brand-secondary;
-                        font-size: 20px;
-                        font-weight: 700;
-                        display: table-cell;
-                        vertical-align: middle;
-                    }
-                    img {
-                        width: 100%;
-                        height: 114px;
-                    }
-                    &:hover {
+                    .option {
+                        background-color: #fff;
+                        border: $border-width-default solid $flash-cards-border-color-default;
+                        @include box-shadow(rgba(#407C94, 0.8) 0px 4px 0px);
+                        cursor: pointer;
+                        height: 110px;
+                        margin: 0 0 20px 0;
+                        padding: 0;
+                        border-radius: 9px;
+                        text-align: left;
+                        display: table;
+                        position: relative;
+                        width: 86%;
                         .lexeme {
-                            color: $brand-primary;
+                            color: $brand-secondary;
+                            font-size: 20px;
+                            font-weight: 700;
+                            display: table-cell;
+                            vertical-align: middle;
+                            text-align: center;
+                        }
+                        .symbol {
+                            margin: 0 auto;
+                            text-align: center;
+                            display: table-cell;
+                            vertical-align: middle;
+                            img {
+                                width: 70%;
+                                height: 100px;
+                                vertical-align: middle;
+                                margin: 0 auto;
+                            }
+                        }
+                        &:hover {
+                            .lexeme {
+                                color: $brand-primary;
+                            }
+                        }
+                        &:focus,&:active {
+                            top: 4px;
+                            box-shadow: none;
                         }
                     }
+
+                    /* Round Results */
+
+                    &.true,&.false {
+                        .option {
+                            top: 4px;
+                            box-shadow: none;
+                        }
+                    }
+                    &.true {
+                        .option {
+                            border-color: $game-success !important;
+                        }
+                        &:after {
+                            color: $game-success;
+                        }
+                    }
+                    &.false {
+                        .option {
+                            border-color: $game-error !important;
+                        }
+                        &:after {
+                            color: $game-error;
+                        }
+                    }
+
                 }
             }
-          .game-alerts {
-            background-color: orange;
-            width: 48px;
-            height: 48px;
-            border-radius: 24px;
-            padding: 12px 8px;
-            position: absolute;
-            z-index: 10;
-            top: -10px;
-          }
           .timer {
             padding: 8px 0 0;
             text-align: center;
           }
 
     }
+    .game-complete {
+        @include background-image(linear-gradient(#EFFEFD, #CDF0EF));
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 0px);
+        border: $border-width-default $flash-cards-border-color-default solid;
+        border-radius: 9px;
+        color: $brand-secondary;
+        margin: 0 auto;
+        max-width: 830px;
+        padding: 30px;
+        position: relative;
+        .frame {
+            background:
+                url('/static/images/flashcards/el-screw.svg') no-repeat 2% 2%,
+                url('/static/images/flashcards/el-screw.svg') no-repeat 98% 2%,
+                url('/static/images/flashcards/el-screw.svg') no-repeat 2% 98%,
+                url('/static/images/flashcards/el-screw.svg') no-repeat 98% 98%;
+            border: $border-width-default $flash-cards-border-color-default solid;
+            border-radius: 9px;
+            height: 460px;
+            text-align: center;
+            position: relative;
+        }
+        h3.results-message {
+            background-color: #fff;
+            border: $border-width-default $flash-cards-border-color-default solid;
+            border-radius: 9px;
+            font-size: 2em;
+            color: $brand-secondary;
+            font-weight: 700;
+            display: inline-block;
+            text-transform: uppercase;
+            margin-top: -50px;
+            padding: 6px 20px;
+        }
+        .game-results {
+            background-color: #fff;
+            border: $border-width-default $flash-cards-border-color-default solid;
+            border-radius: 9px;
+            margin: 0 auto;
+            text-align: center;
+            width: 86%;
+
+            .result {
+                .result-label {
+                }
+                .result-number {
+                    border-color: $flash-cards-border-color-default;
+                }
+                /* Result Types */
+
+                /* Right Answer Count */
+                &.r-right-answers {
+                }
+
+                /* Wrong Attempts Count */
+                &.r-wrong-answers {
+                }
+
+                /* Total Time Played */
+                &.r-time-played {
+                }
+
+            }
+            .final-score {
+                h3 {
+                }
+                .f-s-number {
+                }
+            }
+
+        }
+        .user-options {
+            margin-top: 18px;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    a {
+                        background-color: #fff;
+                        border: $border-width-default $flash-cards-border-color-default solid;
+                        border-radius: 9px;
+                        font-size: 1.6em;
+                        font-weight: 700;
+                        padding: 4px 20px;
+                        position: relative;
+                        @include box-shadow(rgba(#407C94, 0.8) 0px 4px 0px);
+                        &:active,&:focus {
+                            top: 4px;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-/*  3.0 Memory
+/*  3.0 Matching Game
     ====================
 */
 
+body.matching {
+    background-color: #416E0D;
+    div.memory-cards {
+        margin: 0 auto;
+        &.cards_6 {
+
+        }
+        &.cards_12 {
+            width: 900px;
+            .card-container,
+            .card {
+                height: 180px;
+                width: 180px;
+            }
+        }
+        &.cards_24 {
+
+        }
+        &.cards_48 {
+
+        }
+    }
+    .card-container {
+        position: relative;
+        margin: 1em;
+        float: left;
+    }
+    div.card {
+        position: absolute;
+        background-color: #fff;
+        border: 9px solid #fff;
+        color: $brand-secondary;
+        cursor: pointer;
+        border-radius: 9px;
+        float: left;
+        font-size: 1.6em;
+        font-weight: 700;
+        display: table;
+        text-align: center;
+        @include box-shadow(rgba($shadow-primary, 0.5) 1px 1px 4px);
+        img {
+          border-radius: 9px;
+          width: 100%;
+        }
+        /* Card Back */
+        &.back {
+            background-color: #76DBDC;
+            span {
+                border-radius: 9px;
+                display: block;
+            }
+        }
+        /* Card Front */
+        &.front {
+            span {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        /* Cards have been removed, but space must remain */
+        &.empty {
+            border: 0;
+            background-color: transparent;
+            box-shadow: none;
+            cursor: default;
+        }
+    }
+    div.game-status {
+        height: 100px;
+        width: 400px;
+        padding: 1em;
+        border-radius: 10px;
+        margin: 1em;
+    }
+    .game-complete {
+        margin: 0 auto;
+        width: 830px;
+        .game-results {
+            .result {
+                border-radius: 9px;
+                 @include box-shadow(rgba($shadow-primary, 0.5) 1px 1px 4px);
+                width: 200px;
+                margin: 1em;
+            }
+            .final-score {
+                background-color: #fff;
+                border-radius: 9px;
+                 @include box-shadow(rgba($shadow-primary, 0.3) 1px 1px 4px);
+                 width: 240px;
+                 height: 220px;
+                 padding-top: 56px;
+                 margin: 0 auto;
+                 @include transform(rotate(-8deg));
+                 margin-top: -10px;
+                .f-s-number {
+                }
+            }
+        }
+        .user-options {
+            margin: -140px auto 0;
+            width: 75%;
+            ul {
+                list-style: none;
+                margin: 0 auto;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    &#o-play-again {
+                        float: left;
+                    }
+                    &#o-back-home {
+                        float:right;
+                    }
+                    a {
+                        color: $accent-primary;
+                        font-size: 1.6em;
+                        font-weight: 700;
+                        position: relative;
+                        border: none;
+                        &:hover, &:focus {
+                            color: lighten($accent-primary,25%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 /*  4.0 Wordlists
     ====================
 */
+
+.wordlists {
+    .wordlist-header {
+        padding-top: 10px;
+        h1 {
+            margin-top: 0;
+        }
+    }
+    .card {
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+        border-radius: 9px;
+        font-weight: 700;
+        a {
+            border: 0;
+            display: block;
+        }
+    }
+    .grid {
+        width: 100%;
+        padding: 10px 0;
+        margin-right: 0;
+        margin-left: 0;
+        .card {
+            border: 4px solid white;
+            background: white;
+            float: left;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-align: center;
+            span {
+                display: block;
+            }
+            img {
+                width: 100%;
+            }
+            a {
+                padding: 0.5em;
+            }
+        }
+    }
+    .list {
+        .card {
+            background: white;
+            margin: .5em;
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 10px;
+                margin: 0 10px 0 0;
+            }
+            font-size: 2em;
+            a {
+                padding: .4em .2em;
+            }
+        }
+    }
+    .small {
+        width: 300px;
+    }
+    .audio {
+        height: 100px;
+    }
+}
+.word-detail {
+    .word-samples {
+        h1 {
+            text-align: center;
+        }
+        .word-img-examples {
+            text-align: center;
+            margin: 0 auto;
+            img {
+                max-width: 600px;
+                width: 100%;
+                border: 3px solid #fff;
+                @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+            }
+        }
+    }
+}
+
+/*  ZZZ. Remove Phone-sized Responsive Functionality
+
+    For the pilot we are focusing on tablet and desktop experiences. For that reason, we are disabling the phone-sized levels of responsive design.
+
+    ====================
+*/
+
+body,
+.game-container,
+.container,
+nav {
+    min-width: 550px !important;
+}
+.navbar-nav > li {
+    float: left !important;
+}
