@@ -19,8 +19,8 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
         }
       }
       $http(req)
-      .success(function () {
-
+      .success(function (data) {
+        console.log(data);
       });}
 
 
@@ -39,10 +39,19 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
       {
           $scope.wordID = $routeParams.wordID;
           if (parseInt($scope.wordID) == 0) {
-            $scope.updateActivity("started")
+            $scope.updateActivity("started");
+            $scope.score = 0;
           }
           if (parseInt($scope.wordID) == $scope.list.words.length - 1) {
             $scope.updateActivity("completed")
+            $scope.score = 100;
+            req = {
+              url: 'http://127.0.0.1:8000/score/add/',
+              data: {
+                username: localStorage.getItem('username'),
+
+              }
+            }
           }
       }
     }
