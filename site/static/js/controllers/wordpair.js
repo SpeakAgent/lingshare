@@ -3,7 +3,7 @@ mainApp.controller('WordPairController', ['$scope', '$http', '$routeParams',
 
   function ($scope, $http, $routeParams, $rootScope, $sce) {
     $rootScope.body_classes = "wordslist"
-    if ($routeParams.id) 
+    if ($routeParams.id)
       { $scope.id = $routeParams.id;
         $scope.display = 'grid';
       }
@@ -15,6 +15,13 @@ mainApp.controller('WordPairController', ['$scope', '$http', '$routeParams',
       );
     $scope.audio_url = function(path) {
         return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
+    }
+    //* Moves the images in the Sample Set on Word Detail Pages
+    $scope.activeValue;
+    $scope.moveImage = function(photo){
+      console.log('Hi! This image should move!');
+      $scope.activePhoto = photo;
+      console.log(photo);
     }
   }
 

@@ -3,47 +3,54 @@
 <h1>{{ word.base_word.root_word }}</h1>
 
 <div class="word-img-examples">
-	<img src="http://127.0.0.1:8000{{photo.image}}"
+	<div class="word-img"
 		ng-repeat="photo in word.base_word.photos"
-		class="img-rounded small">
+		ng-class="{'first':$first,'second':$index==1,'last':$last}"
+		ng-click="moveImage(photo)"
+		>
+		<img src="http://127.0.0.1:8000{{photo.image}}" alt=""/>
+	</div>
 </div>
 
 </div>
 <div class="secondary-content word-definition">
 <div class="container">
-<div>
-	<dl>
-		<dt>{{ word.base_word.root_word }}</dt>
-			<dd ng-if="word.base_word.gender.title != 'NA'">({{ word.base_word.word_class.title }}, {{ word.base_word.gender }})
-			</dd>
-
-			<dd ng-if="word.base_word.gender.title == 'NA'">({{ word.base_word.word_class.title }})
-			</dd>
-		<dt>{{ word.trans_word.root_word }}</dt>
-	</dl>
+<div class="col-md-3 col-xs-3 first">
+	<div class="word-symbol">
+		<img src="/static/images/symbols/fpo/cat.png" alt="" />
+	</div>
+	<div class="word-audio" ng-if="word.base_word.audio_file">
+		<p class="button btn btn-primary">
+			<audio id="word-player">
+					<source src="{{ audio_url(word.base_word.audio_file) }}"
+						type="audio/mpeg">
+					Your browser does not support the audio tag.
+			</audio>
+			<span onclick="document.getElementById('word-player').play()"><i class="fa fa-play"></i> Listen</span>
+		</p>
+	</div>
 </div>
 
-<div class="audio">
-	<p ng-if="word.base_word.audio_file"
-		class="col-md-1">
-		<audio controls>
-				<source src="{{ audio_url(word.base_word.audio_file) }}"
-					type="audio/mpeg">
-				Your browser does not support the audio tag.
-		</audio>
-	</p>
-	<p ng-if="!word.base_word.audio_file">No audio</p>
-</div>
-
-<div>
-	<p>In a sentence:</p>
-	<dl>
-		<dt ng-repeat-start="sentence in word.base_word.example_sentences">
-			{{ sentence.text }}
-		</dt>
-		<dd ng-repeat-end>{{ sentence.translations[0].text }}</dd>
-	</dl>
-</div>
+<div class="col-md-9 col-xs-9">
+	<div class="word-specification">
+		<dl>
+			<dt class="word-base">{{ word.base_word.root_word }}</dt>
+				<dd class="word-meta-info">
+					<span ng-if="word.base_word.gender.title != 'NA'">({{ word.base_word.word_class.title }}, {{ word.base_word.gender }})</span>
+					<span ng-if="word.base_word.gender.title == 'NA'">({{ word.base_word.word_class.title }})</span>
+				</dd>
+			<dt class="word-trans">{{ word.trans_word.root_word }}</dt>
+		</dl>
+	</div>
+	<div class="word-phrase-examples">
+		<p>In a sentence:</p>
+		<dl class="word-balloon">
+			<dt class="sentence-base" ng-repeat-start="sentence in word.base_word.example_sentences">
+				{{ sentence.text }}
+			</dt>
+			<dd class="sentence-trans" ng-repeat-end>({{ sentence.translations[0].text }})</dd>
+		</dl>
+	</div>
 </div>
 </div>
 </div>
@@ -51,4 +58,5 @@
 	<div class="container">
 		<p>The area for additional information.</p>
 	</div>
+</div>
 </div>
