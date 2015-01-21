@@ -10,6 +10,46 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
 
   $rootScope.body_classes = "games flashcards"
 
+  $scope.sendScore = function () {
+      // Need to get our current activity before getting
+      // the score. Unique to activity and user
+      req = {
+        method: 'POST',
+        url: 'http://127.0.0.1:8000/activity/single/get/',
+        data: {
+          username: localStorage.getItem('username'),
+          activity: 'Flashcards',
+        },
+        headers: {
+          Authorization: 'JWT ' + localStorage.getItem('authToken'),
+        }
+      }
+      $http(req)
+        .success(function (data) {
+          req = {
+            method: 'POST',
+            url: 'http://127.0.0.1:8000/score/add/',
+            data: {
+              username: localStorage.getItem('username'),
+              activity_pk: data['pk'],
+              score: $scope.score,
+            },
+            headers: {
+              Authorization: 'JWT ' + localStorage.getItem('authToken'),
+            }
+          }
+          $http(req).success(function (data) {
+            
+          })
+          .error(function (data) {
+
+          });
+        })
+        .error(function (data) {
+
+        })
+       }
+
 
   $scope.stopTimer = function () {
     if ($scope.done) {
@@ -37,6 +77,7 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
         $scope.stopTimer();
       }
     }, 1000);
+      $scope.score = 0;
     });
 
   $scope.alerts = [];
@@ -102,6 +143,7 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
 
   $scope.endScreen = function() {
     $scope.done = true;
+    $scope.sendScore()
   }
 
   $scope.selectedCard = 0;
@@ -116,6 +158,7 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
       // Win or no?
       if (item.base_word.root_word == $scope.card.base_word.root_word) {
         $scope.alerts[item.base_word.root_word] = "+5";
+        $scope.score += 5;
         $scope.isCorrect = 'true';
         $timeout(function() {
           $scope.isCorrect = '';
