@@ -47,6 +47,46 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 	// body...
   	 };
 
+     $scope.sendScore = function () {
+      // Need to get our current activity before getting
+      // the score. Unique to activity and user
+      req = {
+        method: 'POST',
+        url: 'http://127.0.0.1:8000/activity/single/get/',
+        data: {
+          username: localStorage.getItem('username'),
+          activity: 'Matching',
+        },
+        headers: {
+          Authorization: 'JWT ' + localStorage.getItem('authToken'),
+        }
+      }
+      $http(req)
+        .success(function (data) {
+          req = {
+            method: 'POST',
+            url: 'http://127.0.0.1:8000/score/add/',
+            data: {
+              username: localStorage.getItem('username'),
+              activity_pk: data['pk'],
+              score: $scope.score,
+            },
+            headers: {
+              Authorization: 'JWT ' + localStorage.getItem('authToken'),
+            }
+          }
+          $http(req).success(function (data) {
+            
+          })
+          .error(function (data) {
+
+          });
+        })
+        .error(function (data) {
+
+        })
+       }
+
   	 $scope.checkCards = function (card1, card2) {
       cardarr1 = card1.split('-');
       cardarr2 = card2.split('-');
@@ -54,7 +94,9 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
       if (cardarr1[0] == cardarr2[0]) {
         $scope.status = "They match!";
         $scope.correct++;
+        $scope.score += 5;
         $scope.removeCards(card1, card2)
+        console.log("Score", $scope.score)
       } else {
         $scope.status = "Those don't match...";
         $scope.wrong++;
@@ -65,8 +107,9 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
       }
       if ($scope.hideCards.length == $scope.cards.length - 2) {
         $timeout(function () {
-        $scope.done = true;
-      }, 1000)
+          $scope.done = true;
+        }, 1000)
+        $scope.sendScore();
       }
   	 };
 
@@ -132,6 +175,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
           $scope.done = false;
           $scope.seconds = 0;
           $scope.startTimer();
+          $scope.score = 0;
   	 });
 
   }]);
