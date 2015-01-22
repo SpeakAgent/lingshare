@@ -1150,7 +1150,7 @@ body.matching {
             text-align: center;
             margin: 0 auto;
             position: relative;
-            height: auto;
+            height: 400px;
             z-index: 1;
             max-width: 830px;
             .word-img {
@@ -1160,17 +1160,17 @@ body.matching {
                 position: absolute;
                 margin: 0 auto;
                 max-width: 525px;
-                z-index: 1;
+                z-index: 10;
                 display: inline-block;
+                left: 0;
+                right: 0;
                 @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
                 img {
                     border-radius: 9px;
                     max-width: 100%;
                 }
-                &.first,
-                &.first.last {
+                &.active {
                     position: relative;
-                    z-index: 10;
                     top: 0;
                     right: 0;
                     left: 0;
@@ -1179,18 +1179,18 @@ body.matching {
                         max-width: 400px;
                     }
                 }
-                &.second {
+                &:nth-child(2) {
                     z-index: 5;
                     left: 15px;
                     right: auto;
                 }
-                &.last {
-                    z-index: 1;
+                &:nth-child(3) {
+                    z-index: 5;
                     left: auto;
                     right: 15px;
                 }
-                &.second,
-                &.last {
+                &:nth-child(2),
+                &:nth-child(3) {
                     bottom: 40px;
                     max-height: 300px;
                     overflow: hidden;

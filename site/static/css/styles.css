@@ -12167,7 +12167,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   text-align: center;
   margin: 0 auto;
   position: relative;
-  height: auto;
+  height: 400px;
   z-index: 1;
   max-width: 830px;
 }
@@ -12179,45 +12179,46 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   position: absolute;
   margin: 0 auto;
   max-width: 525px;
-  z-index: 1;
+  z-index: 10;
   display: inline-block;
+  left: 0;
+  right: 0;
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
-/* line 1166, ../scss/styles.scss */
+/* line 1168, ../scss/styles.scss */
 .word-detail .word-samples .word-img-examples .word-img img {
   border-radius: 9px;
   max-width: 100%;
 }
-/* line 1170, ../scss/styles.scss */
-.word-detail .word-samples .word-img-examples .word-img.first, .word-detail .word-samples .word-img-examples .word-img.first.last {
+/* line 1172, ../scss/styles.scss */
+.word-detail .word-samples .word-img-examples .word-img.active {
   position: relative;
-  z-index: 10;
   top: 0;
   right: 0;
   left: 0;
   max-height: 100%;
 }
 @media (max-width: 992px) {
-  /* line 1170, ../scss/styles.scss */
-  .word-detail .word-samples .word-img-examples .word-img.first, .word-detail .word-samples .word-img-examples .word-img.first.last {
+  /* line 1172, ../scss/styles.scss */
+  .word-detail .word-samples .word-img-examples .word-img.active {
     max-width: 400px;
   }
 }
 /* line 1182, ../scss/styles.scss */
-.word-detail .word-samples .word-img-examples .word-img.second {
+.word-detail .word-samples .word-img-examples .word-img:nth-child(2) {
   z-index: 5;
   left: 15px;
   right: auto;
 }
 /* line 1187, ../scss/styles.scss */
-.word-detail .word-samples .word-img-examples .word-img.last {
-  z-index: 1;
+.word-detail .word-samples .word-img-examples .word-img:nth-child(3) {
+  z-index: 5;
   left: auto;
   right: 15px;
 }
 /* line 1192, ../scss/styles.scss */
-.word-detail .word-samples .word-img-examples .word-img.second, .word-detail .word-samples .word-img-examples .word-img.last {
+.word-detail .word-samples .word-img-examples .word-img:nth-child(2), .word-detail .word-samples .word-img-examples .word-img:nth-child(3) {
   bottom: 40px;
   max-height: 300px;
   overflow: hidden;

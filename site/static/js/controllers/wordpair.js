@@ -16,12 +16,14 @@ mainApp.controller('WordPairController', ['$scope', '$http', '$routeParams',
     $scope.audio_url = function(path) {
         return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
     }
+    //* Detects clicked sample photo
+
+    $scope.selectedImage = function(photo){
+      $scope.selected = photo;
+    }
     //* Moves the images in the Sample Set on Word Detail Pages
-    $scope.activeValue;
-    $scope.moveImage = function(photo){
-      console.log('Hi! This image should move!');
-      $scope.activePhoto = photo;
-      console.log(photo);
+    $scope.isActive = function(photo){
+      return $scope.selected === photo;
     }
   }
 
