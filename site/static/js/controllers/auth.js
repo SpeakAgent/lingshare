@@ -58,6 +58,7 @@ mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHel
         $rootScope.username = $scope.loginData.username;
         localStorage.setItem('authToken', $rootScope.authToken);
         localStorage.setItem('username', $rootScope.username);
+        // localStorage.setItem('score'), $rootScope.score;
         $http.defaults.headers.common.Authorization = 'Token ' + $rootScope.authToken;
         $scope.username = localStorage.getItem('username');
         $scope.authToken = localStorage.getItem('authToken');
