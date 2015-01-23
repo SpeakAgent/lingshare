@@ -83,7 +83,7 @@ a {
 
 
 /* Resets */
-.first {
+.first, .last {
     margin-left: 0;
     padding-left: 0;
 }
@@ -91,6 +91,7 @@ a {
 /* Buttons */
 .btn, button {
     border-radius: 20px;
+    position:relative;
     @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
     font-weight: 700;
     a {
@@ -121,6 +122,16 @@ a {
             color: #fff;
         }
     }
+    &:active, &.active {
+        top: 1px;
+        box-shadow: none;
+    }
+}
+
+.see-more-cntr {
+    padding: 1em 0 0.5em;
+    text-align: center;
+    margin: 0 auto;
 }
 
 /*  0.1 Global Navigation
@@ -418,6 +429,10 @@ a {
     }
 /* Achievements */
 
+.achievement-container {
+    margin: 20px 0;
+}
+
 .achievement {
     background-color: $brand-secondary;
     @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
@@ -589,6 +604,12 @@ h2.h3-interface-label {
 */
 
 body.dashboard {
+    .top-container {
+        padding-bottom: 1.5em;
+        @media (min-width:$screen-sm-min){
+            padding-bottom: 1em;
+        }
+    }
     .dashboard-greeting {
         margin-bottom: 0;
     }

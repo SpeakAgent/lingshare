@@ -30,39 +30,46 @@
 				</div>
 			</div>
 		</div>
+		<div class="row see-more-cntr">
+			<a href="/#/games" class="btn btn-primary"><i class="fa fa-gamepad"></i> See More Activities</a>
+		</div>
 		<div class="row">
-			<div class="recent-work col-lg-4 col-sml-4 col-xs-4">
+			<div class="recent-work col-md-4 col-sm-12">
 				<h2 class="h3-interface-label">Recently Played</h2>
-				<div class="activity promo-card size-sml">
-					<a href="#" title="Link to Activity Title" class="activity-link clearfix">
-						<p class="activity-wordlist">Wordlist Title</p>
-						<img class="activity-image" src="/static/images/matching/promo-sm.jpg" alt="Activity Title" />
-						<div class="activity-info">
-							<h3 class="activity-title">Activity Title</h3>
-							<p class="activity-course">Course: Course Name</p>
-						</div>
-						<div class="activity-status status-icon bronze">
-							<i class="fa fa-star-o"></i>
-							<span class="sr-only">Not started yet</span>
-						</div>
-					</a>
+				<div class="col-md-12 col-sm-6 first">
+					<div class="activity promo-card size-sml">
+						<a href="#" title="Link to Activity Title" class="activity-link clearfix">
+							<p class="activity-wordlist">Wordlist Title</p>
+							<img class="activity-image" src="/static/images/matching/promo-sm.jpg" alt="Activity Title" />
+							<div class="activity-info">
+								<h3 class="activity-title">Activity Title</h3>
+								<p class="activity-course">Course: Course Name</p>
+							</div>
+							<div class="activity-status status-icon bronze">
+								<i class="fa fa-star-o"></i>
+								<span class="sr-only">Not started yet</span>
+							</div>
+						</a>
+					</div>
 				</div>
-				<div class="activity promo-card size-sml">
-					<a href="#" title="Link to Activity Title" class="activity-link clearfix">
-						<p class="activity-wordlist">Wordlist Title</p>
-						<img class="activity-image" src="/static/images/flashcards/promo-sm.jpg" alt="Activity Title" />
-						<div class="activity-info">
-							<h3 class="activity-title">Activity Title</h3>
-							<p class="activity-course">Course: Course Name</p>
-						</div>
-						<div class="activity-status status-icon gold">
-							<i class="fa fa-star"></i>
-							<span class="sr-only">Done!</span>
-						</div>
-					</a>
+				<div class="col-md-12 col-sm-6 last">
+					<div class="activity promo-card size-sml">
+						<a href="#" title="Link to Activity Title" class="activity-link clearfix">
+							<p class="activity-wordlist">Wordlist Title</p>
+							<img class="activity-image" src="/static/images/flashcards/promo-sm.jpg" alt="Activity Title" />
+							<div class="activity-info">
+								<h3 class="activity-title">Activity Title</h3>
+								<p class="activity-course">Course: Course Name</p>
+							</div>
+							<div class="activity-status status-icon gold">
+								<i class="fa fa-star"></i>
+								<span class="sr-only">Done!</span>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
-			<div class="achievements col-lg-8 col-sm-8 col-xs-8">
+			<div class="achievements col-md-8 col-sm-12">
 				<h2 class="h3-interface-label">Recent Trophies</h2>
 				<div class="achievement-container"
 				ng-class="{last:$last}"
@@ -71,6 +78,9 @@
 						<em class="a-title">{{ achievement.title }}</em>
 						<i class="fa fa-trophy"></i>
 					</div>
+				</div>
+				<div class="row see-more-cntr">
+					<a href="#" class="btn btn-primary"><i class="fa fa-trophy"></i> See Achievements</a>
 				</div>
 			</div>
 		</div>
