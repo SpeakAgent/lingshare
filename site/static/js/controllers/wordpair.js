@@ -23,6 +23,7 @@ mainApp.controller('WordPairController', ['$scope', '$http', '$routeParams',
     }
     //* Moves the images in the Sample Set on Word Detail Pages
     $scope.isActive = function(photo){
+      console.log('This ran!');
       return $scope.selected === photo;
     }
   }

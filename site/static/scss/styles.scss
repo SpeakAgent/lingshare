@@ -308,24 +308,35 @@ a {
                 display: inline-block;
                 padding: 20px 20px 0;
                 text-align: center;
+                @media(max-width:$screen-sm-min){
+                    padding-right: 10px;
+                    padding-left: 10px;
+                width: 30%;
+                }
                 .result-label {
                     display: block;
                     font-weight: 900;
                     padding-bottom: 9px;
                     text-align: center;
+                    @media(max-width:$screen-sm-min){
+                        padding-bottom: 0;
+                    }
                 }
                 .result-number {
-                    border: $border-width-default $brand-secondary solid;
-                    border-radius: 120px;
-                    line-height: 114px;
-                    display: block;
                     font-family: $font-family-emphasis;
                     font-size: 3.2em;
                     font-weight: 900;
-                    margin: 0 auto;
-                    width: 120px;
-                    height: 120px;
+                    display: block;
                     text-align: center;
+                    line-height: 1;
+                    @media (min-width:$screen-sm-min){
+                        border: $border-width-default $brand-secondary solid;
+                        border-radius: 120px;
+                        line-height: 114px;
+                        margin: 0 auto;
+                        width: 120px;
+                        height: 120px;
+                    }
                 }
                 /* Result Types */
 
@@ -337,6 +348,10 @@ a {
                     display: inline-block;
                     margin-top: -22px;
                     padding: 8px;
+                    @media(max-width:$screen-sm-min){
+                        margin-top: -10px;
+                        background-color: transparent;
+                    }
                 }
 
                 /* Right Answer Count */
@@ -590,10 +605,14 @@ body.dashboard {
 */
 
 $flash-cards-border-color-default: #6095AA;
+$flash-cards-smtablet-width: 800px;
 
 body.games.flashcards {
     background: #C3EDEC  url('/static/images/flashcards/bground.gif') repeat-x;
     background-position: 0 500px;
+    .game-container {
+        padding: 0 30px 0 50px;
+    }
     /* Main Game Interface */
     .flash-cards-interface {
         @include background-image(linear-gradient(#EFFEFD, #CDF0EF));
@@ -635,9 +654,18 @@ body.games.flashcards {
 
             /* Left Column - Contains Round's selected Card */
             .cards {
-                @media (max-width:$screen-md-min){
+                @media (max-width:$flash-cards-smtablet-width){
                     .first {
                         padding-right: 0;
+                    }
+                }
+            }
+            .col-md-9 {
+                @media (min-width:$flash-cards-smtablet-width){
+                    float: left;
+                    width: 75%;
+                    &.first {
+                        padding-right: 15px;
                     }
                 }
             }
@@ -653,21 +681,36 @@ body.games.flashcards {
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
                 text-align: center;
-                height: 460px;
-                @media (min-width:$screen-md-min){
+                height: 390px;
+                @media (min-width:$flash-cards-smtablet-width){
                     border-bottom-width: $border-width-default;
                     border-bottom-right-radius: 9px;
                     border-bottom-left-radius: 9px;
+                    height: 372px;
+                }
+                @media (min-width:$screen-md-min){
+                    height: 462px;
                 }
                 .main-card-img {
                     background-color: #fff;
                     border: $border-width-default $flash-cards-border-color-default solid;
                     border-radius: 12px;
-                    height: 380px;
-                    line-height: 390px;
                     width: 75%;
                     margin: 0 auto 2em auto;
                     position: relative;
+                    height: 300px;
+                    line-height: 300px;
+                    @media (min-width:$flash-cards-smtablet-width){
+                        height: 300px;
+                        line-height: 300px;
+                        border-bottom-width: $border-width-default;
+                        border-bottom-right-radius: 9px;
+                        border-bottom-left-radius: 9px;
+                    }
+                    @media (min-width:$screen-md-min){
+                        height: 380px;
+                        line-height: 380px;
+                    }
                     img.large-card {
                         border-radius: 10px;
                         overflow: hidden;
@@ -677,30 +720,41 @@ body.games.flashcards {
                     }
                 }
                 .main-card-lexeme {
-                    top: -54px;
+                    top: -48px;
                     position: relative;
                     z-index: 5;
+                    @media (min-width:$flash-cards-smtablet-width){
+                        top: -54px;
+                    }
                     span {
                         background-color: #fff;
                         border: $border-width-default $flash-cards-border-color-default solid;
                         border-radius: 9px;
                         color: $flash-cards-border-color-default;
-                        font-size: 1.8em;
+                        font-size: 1.2em;
                         font-weight: 700;
                         display: inline-block;
                         padding: 4px 10px;
                         z-index: 1;
+                        @media (min-width:$flash-cards-smtablet-width){
+                            font-size: 1.8em;
+                        }
                     }
                 }
             }
             /* Right Column - Contains Options for Flash Cards */
-
+            .col-md-3 {
+                 @media (min-width:$flash-cards-smtablet-width){
+                    float: left;
+                    width: 25%;
+                }
+            }
             .options-container {
                 border: $border-width-default $flash-cards-border-color-default solid;
                 padding: 0;
                 border-bottom-right-radius: 9px;
                 border-bottom-left-radius: 9px;
-                @media (min-width:$container-lg){
+                @media (min-width:$flash-cards-smtablet-width){
                     border-radius: 9px;
                 }
                 h3 {
@@ -722,18 +776,19 @@ body.games.flashcards {
                     }
                 }
                 .option-container {
-                    border-bottom: $border-width-default $flash-cards-border-color-default solid;
+                    display: inline-block;
+                    width: 33%;
+                    margin-bottom: 0;
                     padding: 0 15px;
-                    margin-bottom: 15px;
                     position: relative;
-                    @media (max-width: $container-md) {
-                        border-bottom: 0;
-                        display: inline-block;
-                        width: 33%;
-                        margin-bottom: 0;
-                        &:last-child {
-                            border-right: 0;
-                        }
+                    &:last-child {
+                        border-right: 0;
+                    }
+                    @media (min-width: $flash-cards-smtablet-width) {
+                        display: block;
+                        border-bottom: $border-width-default $flash-cards-border-color-default solid;
+                        margin-bottom: 15px;
+                        width: 100%;
                     }
                     &:after {
                         border: $border-width-default solid $flash-cards-border-color-default;
@@ -745,13 +800,16 @@ body.games.flashcards {
                         padding: 0;
                         position: absolute;
                         top: 0;
-                        right: 6px;
+                        right: 2px;
                         display: inline-block;
                         border-radius: 20px;
                         height: 26px;
                         width: 26px;
                         line-height: 16px;
                         text-align: center;
+                        @media (min-width: $flash-cards-smtablet-width){
+                            right: 6px;
+                        }
                     }
                     &:last-child {
                         border-bottom: 0;
@@ -762,21 +820,30 @@ body.games.flashcards {
                         border: $border-width-default solid $flash-cards-border-color-default;
                         @include box-shadow(rgba(#407C94, 0.8) 0px 4px 0px);
                         cursor: pointer;
-                        height: 110px;
                         margin: 0 0 20px 0;
                         padding: 0;
                         border-radius: 9px;
                         text-align: left;
                         display: table;
                         position: relative;
+                        height: 100px;
                         width: 86%;
+                        @media (min-width:$flash-cards-smtablet-width){
+                            height: 80px;
+                        }
+                        @media (min-width:$screen-md-min){
+                            height: 110px;
+                        }
                         .lexeme {
                             color: $brand-secondary;
-                            font-size: 20px;
+                            font-size: 1.2em;
                             font-weight: 700;
                             display: table-cell;
                             vertical-align: middle;
                             text-align: center;
+                            @media (min-width:$container-lg){
+                                font-size: 1.4em;
+                            }
                         }
                         .symbol {
                             margin: 0 auto;
@@ -875,6 +942,9 @@ body.games.flashcards {
             margin: 0 auto;
             text-align: center;
             width: 86%;
+            @media(max-width:$screen-sm-min){
+                width: 80%;
+            }
 
             .result {
                 .result-label {
@@ -1169,16 +1239,6 @@ body.matching {
                     border-radius: 9px;
                     max-width: 100%;
                 }
-                &.active {
-                    position: relative;
-                    top: 0;
-                    right: 0;
-                    left: 0;
-                    max-height: 100%;
-                    @media (max-width:$screen-md-min){
-                        max-width: 400px;
-                    }
-                }
                 &:nth-child(2) {
                     z-index: 5;
                     left: 15px;
@@ -1194,6 +1254,17 @@ body.matching {
                     bottom: 40px;
                     max-height: 300px;
                     overflow: hidden;
+                }
+                &.active {
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    max-height: 100%;
+                    z-index: 100;
+                    @media (max-width:$screen-md-min){
+                        max-width: 400px;
+                    }
                 }
             }
         }
