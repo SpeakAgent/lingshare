@@ -12052,25 +12052,16 @@ body.matching {
 /* line 1012, ../scss/styles.scss */
 body.matching div.memory-cards {
   margin: 0 auto;
+  /* Levels */
 }
-/* line 1017, ../scss/styles.scss */
-body.matching div.memory-cards.cards_12 {
-  width: 900px;
-}
-/* line 1019, ../scss/styles.scss */
-body.matching div.memory-cards.cards_12 .card-container,
-body.matching div.memory-cards.cards_12 .card {
-  height: 180px;
-  width: 180px;
-}
-/* line 1032, ../scss/styles.scss */
-body.matching .card-container {
+/* line 1014, ../scss/styles.scss */
+body.matching div.memory-cards .card-container {
   position: relative;
-  margin: 1em;
+  margin: 0.5em;
   float: left;
 }
-/* line 1037, ../scss/styles.scss */
-body.matching div.card {
+/* line 1019, ../scss/styles.scss */
+body.matching div.memory-cards .card {
   position: absolute;
   background-color: #fff;
   border: 9px solid #fff;
@@ -12088,33 +12079,153 @@ body.matching div.card {
   /* Card Front */
   /* Cards have been removed, but space must remain */
 }
-/* line 1050, ../scss/styles.scss */
-body.matching div.card img {
+/* line 1032, ../scss/styles.scss */
+body.matching div.memory-cards .card img {
   border-radius: 9px;
   width: 100%;
 }
-/* line 1055, ../scss/styles.scss */
-body.matching div.card.back {
+/* line 1037, ../scss/styles.scss */
+body.matching div.memory-cards .card.back {
   background-color: #76DBDC;
 }
-/* line 1057, ../scss/styles.scss */
-body.matching div.card.back span {
+/* line 1039, ../scss/styles.scss */
+body.matching div.memory-cards .card.back span {
   border-radius: 9px;
   display: block;
 }
-/* line 1064, ../scss/styles.scss */
-body.matching div.card.front span {
+/* line 1046, ../scss/styles.scss */
+body.matching div.memory-cards .card.front span {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 1070, ../scss/styles.scss */
-body.matching div.card.empty {
+/* line 1052, ../scss/styles.scss */
+body.matching div.memory-cards .card.empty {
   border: 0;
   background-color: transparent;
   box-shadow: none;
   cursor: default;
 }
+/* line 1062, ../scss/styles.scss */
+body.matching div.memory-cards.cards_6 {
+  width: 430px;
+}
+@media (min-width: 768px) {
+  /* line 1062, ../scss/styles.scss */
+  body.matching div.memory-cards.cards_6 {
+    width: 720px;
+  }
+}
+/* line 1067, ../scss/styles.scss */
+body.matching div.memory-cards.cards_6 .card-container,
+body.matching div.memory-cards.cards_6 .card {
+  width: 200px;
+  height: 200px;
+}
+@media (min-width: 768px) {
+  /* line 1067, ../scss/styles.scss */
+  body.matching div.memory-cards.cards_6 .card-container,
+  body.matching div.memory-cards.cards_6 .card {
+    width: 224px;
+    height: 224px;
+  }
+}
 /* line 1077, ../scss/styles.scss */
+body.matching div.memory-cards.cards_12 {
+  width: 466px;
+}
+@media (min-width: 768px) {
+  /* line 1077, ../scss/styles.scss */
+  body.matching div.memory-cards.cards_12 {
+    width: 700px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 1077, ../scss/styles.scss */
+  body.matching div.memory-cards.cards_12 {
+    width: 780px;
+  }
+}
+/* line 1085, ../scss/styles.scss */
+body.matching div.memory-cards.cards_12 .card-container,
+body.matching div.memory-cards.cards_12 .card {
+  width: 140px;
+  height: 140px;
+}
+@media (min-width: 768px) {
+  /* line 1085, ../scss/styles.scss */
+  body.matching div.memory-cards.cards_12 .card-container,
+  body.matching div.memory-cards.cards_12 .card {
+    height: 160px;
+    width: 160px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 1085, ../scss/styles.scss */
+  body.matching div.memory-cards.cards_12 .card-container,
+  body.matching div.memory-cards.cards_12 .card {
+    height: 180px;
+    width: 180px;
+  }
+}
+/* line 1099, ../scss/styles.scss */
+body.matching div.memory-cards.cards_24 {
+  width: 410px;
+}
+@media (min-width: 768px) {
+  /* line 1099, ../scss/styles.scss */
+  body.matching div.memory-cards.cards_24 {
+    width: 740px;
+  }
+}
+/* line 1104, ../scss/styles.scss */
+body.matching div.memory-cards.cards_24 .card-container,
+body.matching div.memory-cards.cards_24 .card {
+  height: 90px;
+  width: 90px;
+  font-size: 1em;
+}
+@media (min-width: 768px) {
+  /* line 1104, ../scss/styles.scss */
+  body.matching div.memory-cards.cards_24 .card-container,
+  body.matching div.memory-cards.cards_24 .card {
+    height: 110px;
+    width: 110px;
+  }
+}
+/* line 1113, ../scss/styles.scss */
+body.matching div.memory-cards.cards_24 .card-container {
+  margin: 6px;
+}
+/* line 1116, ../scss/styles.scss */
+body.matching div.memory-cards.cards_24 .card {
+  border-width: 3px;
+}
+/* line 1120, ../scss/styles.scss */
+body.matching div.memory-cards.cards_48 {
+  width: 560px;
+}
+@media (min-width: 992px) {
+  /* line 1120, ../scss/styles.scss */
+  body.matching div.memory-cards.cards_48 {
+    width: 740px;
+  }
+}
+/* line 1125, ../scss/styles.scss */
+body.matching div.memory-cards.cards_48 .card-container,
+body.matching div.memory-cards.cards_48 .card {
+  height: 80px;
+  width: 80px;
+  font-size: 1em;
+}
+/* line 1131, ../scss/styles.scss */
+body.matching div.memory-cards.cards_48 .card-container {
+  margin: 6px;
+}
+/* line 1134, ../scss/styles.scss */
+body.matching div.memory-cards.cards_48 .card {
+  border-width: 3px;
+}
+/* line 1140, ../scss/styles.scss */
 body.matching div.game-status {
   height: 100px;
   width: 400px;
@@ -12122,59 +12233,88 @@ body.matching div.game-status {
   border-radius: 10px;
   margin: 1em;
 }
-/* line 1084, ../scss/styles.scss */
+/* line 1147, ../scss/styles.scss */
 body.matching .game-complete {
   margin: 0 auto;
-  width: 830px;
 }
-/* line 1088, ../scss/styles.scss */
+/* line 1150, ../scss/styles.scss */
 body.matching .game-complete .game-results .result {
   border-radius: 9px;
   -webkit-box-shadow: rgba(34, 9, 9, 0.5) 1px 1px 4px;
   box-shadow: rgba(34, 9, 9, 0.5) 1px 1px 4px;
-  width: 200px;
   margin: 1em;
+  width: 150px;
 }
-/* line 1094, ../scss/styles.scss */
+@media (min-width: 768px) {
+  /* line 1150, ../scss/styles.scss */
+  body.matching .game-complete .game-results .result {
+    width: 200px;
+  }
+}
+/* line 1159, ../scss/styles.scss */
 body.matching .game-complete .game-results .final-score {
   background-color: #fff;
   border-radius: 9px;
   -webkit-box-shadow: rgba(34, 9, 9, 0.3) 1px 1px 4px;
   box-shadow: rgba(34, 9, 9, 0.3) 1px 1px 4px;
-  width: 240px;
-  height: 220px;
-  padding-top: 56px;
-  margin: 0 auto;
+  width: 180px;
+  height: 162px;
+  padding-top: 40px;
+  margin: -10px auto 0 auto;
   -moz-transform: rotate(-8deg);
   -ms-transform: rotate(-8deg);
   -webkit-transform: rotate(-8deg);
   transform: rotate(-8deg);
-  margin-top: -10px;
 }
-/* line 1108, ../scss/styles.scss */
+@media (min-width: 768px) {
+  /* line 1159, ../scss/styles.scss */
+  body.matching .game-complete .game-results .final-score {
+    width: 240px;
+    height: 220px;
+    padding-top: 56px;
+    margin-top: -10px;
+  }
+}
+/* line 1174, ../scss/styles.scss */
+body.matching .game-complete .game-results .final-score h3 {
+  font-size: 1.5em;
+}
+/* line 1179, ../scss/styles.scss */
 body.matching .game-complete .user-options {
   margin: -140px auto 0;
-  width: 75%;
+  width: 85%;
 }
-/* line 1111, ../scss/styles.scss */
+@media (min-width: 768px) {
+  /* line 1179, ../scss/styles.scss */
+  body.matching .game-complete .user-options {
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 1179, ../scss/styles.scss */
+  body.matching .game-complete .user-options {
+    width: 55%;
+  }
+}
+/* line 1188, ../scss/styles.scss */
 body.matching .game-complete .user-options ul {
   list-style: none;
   margin: 0 auto;
   padding: 0;
 }
-/* line 1115, ../scss/styles.scss */
+/* line 1192, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li {
   display: inline-block;
 }
-/* line 1117, ../scss/styles.scss */
+/* line 1194, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li#o-play-again {
   float: left;
 }
-/* line 1120, ../scss/styles.scss */
+/* line 1197, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li#o-back-home {
   float: right;
 }
-/* line 1123, ../scss/styles.scss */
+/* line 1200, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li a {
   color: #f8d338;
   font-size: 1.6em;
@@ -12182,7 +12322,7 @@ body.matching .game-complete .user-options ul li a {
   position: relative;
   border: none;
 }
-/* line 1129, ../scss/styles.scss */
+/* line 1206, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li a:hover, body.matching .game-complete .user-options ul li a:focus {
   color: #fceeb3;
 }
@@ -12190,17 +12330,17 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
 /*  4.0 Wordlists
     ====================
 */
-/* line 1144, ../scss/styles.scss */
+/* line 1221, ../scss/styles.scss */
 .wordlists .wordlist-header h1 {
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 1144, ../scss/styles.scss */
+  /* line 1221, ../scss/styles.scss */
   .wordlists .wordlist-header h1 {
     text-align: left;
   }
 }
-/* line 1151, ../scss/styles.scss */
+/* line 1228, ../scss/styles.scss */
 .wordlists .card {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
@@ -12213,7 +12353,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   width: 100%;
   text-align: center;
 }
-/* line 1161, ../scss/styles.scss */
+/* line 1238, ../scss/styles.scss */
 .wordlists .card a {
   border: 0;
   display: block;
@@ -12222,63 +12362,63 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   height: 152px;
   vertical-align: middle;
 }
-/* line 1170, ../scss/styles.scss */
+/* line 1247, ../scss/styles.scss */
 .wordlists .grid {
   width: 100%;
   padding: 10px 0;
 }
-/* line 1173, ../scss/styles.scss */
+/* line 1250, ../scss/styles.scss */
 .wordlists .grid .card {
   float: left;
 }
-/* line 1175, ../scss/styles.scss */
+/* line 1252, ../scss/styles.scss */
 .wordlists .grid .card a {
   display: block;
 }
-/* line 1178, ../scss/styles.scss */
+/* line 1255, ../scss/styles.scss */
 .wordlists .grid .card span {
   display: block;
 }
-/* line 1181, ../scss/styles.scss */
+/* line 1258, ../scss/styles.scss */
 .wordlists .grid .card img {
   width: 100px;
   height: 100px;
 }
-/* line 1188, ../scss/styles.scss */
+/* line 1265, ../scss/styles.scss */
 .wordlists .list .card {
   background: white;
   margin: .5em;
   height: auto;
   font-size: 2em;
 }
-/* line 1192, ../scss/styles.scss */
+/* line 1269, ../scss/styles.scss */
 .wordlists .list .card img {
   width: 50px;
   height: 50px;
   border-radius: 10px;
   margin: 0 10px 0 0;
 }
-/* line 1199, ../scss/styles.scss */
+/* line 1276, ../scss/styles.scss */
 .wordlists .list .card a {
   text-align: left;
   display: block;
   padding: .4em .2em;
   height: auto;
 }
-/* line 1207, ../scss/styles.scss */
+/* line 1284, ../scss/styles.scss */
 .wordlists .small {
   width: 300px;
 }
-/* line 1210, ../scss/styles.scss */
+/* line 1287, ../scss/styles.scss */
 .wordlists .audio {
   height: 100px;
 }
 
-/* line 1216, ../scss/styles.scss */
+/* line 1293, ../scss/styles.scss */
 .word-detail .word-samples h1 {
   text-align: center;
 }
-/* line 1219, ../scss/styles.scss */
+/* line 1296, ../scss/styles.scss */
 .word-detail .word-samples .word-img-examples {
   text-align: center;
   margin: 0 auto;
@@ -12287,7 +12427,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   z-index: 1;
   max-width: 830px;
 }
-/* line 1226, ../scss/styles.scss */
+/* line 1303, ../scss/styles.scss */
 .word-detail .word-samples .word-img-examples .word-img {
   background-color: #fff;
   border: 3px solid #fff;
@@ -12302,30 +12442,30 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
-/* line 1238, ../scss/styles.scss */
+/* line 1315, ../scss/styles.scss */
 .word-detail .word-samples .word-img-examples .word-img img {
   border-radius: 9px;
   max-width: 100%;
 }
-/* line 1242, ../scss/styles.scss */
+/* line 1319, ../scss/styles.scss */
 .word-detail .word-samples .word-img-examples .word-img:nth-child(2) {
   z-index: 5;
   left: 15px;
   right: auto;
 }
-/* line 1247, ../scss/styles.scss */
+/* line 1324, ../scss/styles.scss */
 .word-detail .word-samples .word-img-examples .word-img:nth-child(3) {
   z-index: 5;
   left: auto;
   right: 15px;
 }
-/* line 1252, ../scss/styles.scss */
+/* line 1329, ../scss/styles.scss */
 .word-detail .word-samples .word-img-examples .word-img:nth-child(2), .word-detail .word-samples .word-img-examples .word-img:nth-child(3) {
   bottom: 40px;
   max-height: 300px;
   overflow: hidden;
 }
-/* line 1258, ../scss/styles.scss */
+/* line 1335, ../scss/styles.scss */
 .word-detail .word-samples .word-img-examples .word-img.active {
   position: relative;
   top: 0;
@@ -12335,38 +12475,38 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   z-index: 100;
 }
 @media (max-width: 992px) {
-  /* line 1258, ../scss/styles.scss */
+  /* line 1335, ../scss/styles.scss */
   .word-detail .word-samples .word-img-examples .word-img.active {
     max-width: 400px;
   }
 }
-/* line 1272, ../scss/styles.scss */
+/* line 1349, ../scss/styles.scss */
 .word-detail .secondary-content {
   margin-top: -60px;
   position: relative;
 }
-/* line 1275, ../scss/styles.scss */
+/* line 1352, ../scss/styles.scss */
 .word-detail .secondary-content .container {
   padding-top: 100px;
   padding-bottom: 20px;
   max-width: 830px;
 }
-/* line 1281, ../scss/styles.scss */
+/* line 1358, ../scss/styles.scss */
 .word-detail .word-base, .word-detail .word-trans {
   font-size: 2.4em;
   line-height: 1;
 }
-/* line 1285, ../scss/styles.scss */
+/* line 1362, ../scss/styles.scss */
 .word-detail .word-trans {
   border-top: 3px solid #FFFDF7;
   margin-top: 20px;
   padding-top: 18px;
 }
-/* line 1290, ../scss/styles.scss */
+/* line 1367, ../scss/styles.scss */
 .word-detail .word-meta-info {
   font-style: italic;
 }
-/* line 1293, ../scss/styles.scss */
+/* line 1370, ../scss/styles.scss */
 .word-detail .word-symbol {
   background-color: #fff;
   border-radius: 9px;
@@ -12374,18 +12514,18 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   padding: 0.5em;
 }
-/* line 1298, ../scss/styles.scss */
+/* line 1375, ../scss/styles.scss */
 .word-detail .word-symbol img {
   width: 100%;
 }
-/* line 1303, ../scss/styles.scss */
+/* line 1380, ../scss/styles.scss */
 .word-detail .word-phrase-examples .word-balloon {
   background-color: #fffdf7;
   border-radius: 9px;
   padding: 1em;
   position: relative;
 }
-/* line 1308, ../scss/styles.scss */
+/* line 1385, ../scss/styles.scss */
 .word-detail .word-phrase-examples .word-balloon:after {
   left: 100%;
   top: 50%;
@@ -12400,63 +12540,63 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 1323, ../scss/styles.scss */
+/* line 1400, ../scss/styles.scss */
 .word-detail .word-phrase-examples .sentence-base {
   font-size: 1.4em;
   font-weight: normal;
 }
-/* line 1327, ../scss/styles.scss */
+/* line 1404, ../scss/styles.scss */
 .word-detail .word-phrase-examples .sentence-trans {
   font-style: italic;
 }
-/* line 1331, ../scss/styles.scss */
+/* line 1408, ../scss/styles.scss */
 .word-detail .word-audio {
   margin-top: -16px;
   text-align: center;
 }
-/* line 1336, ../scss/styles.scss */
+/* line 1413, ../scss/styles.scss */
 .word-detail .tertiary-content .container {
   padding-top: 40px;
   padding-bottom: 20px;
   max-width: 830px;
 }
-/* line 1342, ../scss/styles.scss */
+/* line 1419, ../scss/styles.scss */
 .word-detail .word-list-nav {
   margin: 0 auto;
   text-align: center;
 }
-/* line 1345, ../scss/styles.scss */
+/* line 1422, ../scss/styles.scss */
 .word-detail .word-list-nav button {
   background-color: #fff;
   border: none;
   border-radius: 9px;
 }
-/* line 1349, ../scss/styles.scss */
+/* line 1426, ../scss/styles.scss */
 .word-detail .word-list-nav button a {
   display: table-cell;
   height: 80px;
   width: 80px;
   vertical-align: middle;
 }
-/* line 1355, ../scss/styles.scss */
+/* line 1432, ../scss/styles.scss */
 .word-detail .word-list-nav button span, .word-detail .word-list-nav button i {
   display: block;
 }
-/* line 1358, ../scss/styles.scss */
+/* line 1435, ../scss/styles.scss */
 .word-detail .word-list-nav button img {
   width: 60px;
 }
 @media (min-width: 992px) {
-  /* line 1345, ../scss/styles.scss */
+  /* line 1422, ../scss/styles.scss */
   .word-detail .word-list-nav button {
     position: absolute;
   }
-  /* line 1363, ../scss/styles.scss */
+  /* line 1440, ../scss/styles.scss */
   .word-detail .word-list-nav button.prev-word {
     top: -40px;
     left: 20px;
   }
-  /* line 1367, ../scss/styles.scss */
+  /* line 1444, ../scss/styles.scss */
   .word-detail .word-list-nav button.next-word {
     top: -40px;
     right: 20px;
@@ -12469,7 +12609,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
 
     ====================
 */
-/* line 1383, ../scss/styles.scss */
+/* line 1460, ../scss/styles.scss */
 body,
 .game-container,
 .container,
@@ -12477,7 +12617,7 @@ nav {
   min-width: 550px !important;
 }
 
-/* line 1389, ../scss/styles.scss */
+/* line 1466, ../scss/styles.scss */
 .navbar-nav > li {
   float: left !important;
 }

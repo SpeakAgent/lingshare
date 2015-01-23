@@ -1011,69 +1011,132 @@ body.matching {
     background-color: #416E0D;
     div.memory-cards {
         margin: 0 auto;
-        &.cards_6 {
+        .card-container {
+            position: relative;
+            margin: 0.5em;
+            float: left;
+        }
+        .card {
+            position: absolute;
+            background-color: #fff;
+            border: 9px solid #fff;
+            color: $brand-secondary;
+            cursor: pointer;
+            border-radius: 9px;
+            float: left;
+            font-size: 1.6em;
+            font-weight: 700;
+            display: table;
+            text-align: center;
+            @include box-shadow(rgba($shadow-primary, 0.5) 1px 1px 4px);
+            img {
+              border-radius: 9px;
+              width: 100%;
+            }
+            /* Card Back */
+            &.back {
+                background-color: #76DBDC;
+                span {
+                    border-radius: 9px;
+                    display: block;
+                }
+            }
+            /* Card Front */
+            &.front {
+                span {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+            }
+            /* Cards have been removed, but space must remain */
+            &.empty {
+                border: 0;
+                background-color: transparent;
+                box-shadow: none;
+                cursor: default;
+            }
 
         }
-        &.cards_12 {
-            width: 900px;
+
+        /* Levels */
+        &.cards_6 {
+            width: 430px;
+            @media (min-width:$screen-sm-min){
+                width: 720px;
+            }
             .card-container,
             .card {
-                height: 180px;
-                width: 180px;
+                width: 200px;
+                height: 200px;
+                @media (min-width:$screen-sm-min){
+                    width: 224px;
+                    height: 224px;
+                }
+            }
+        }
+        &.cards_12 {
+            width: 466px;
+            @media (min-width:$screen-sm-min){
+                width: 700px;
+            }
+            @media (min-width:$screen-lg-min){
+                width: 780px;
+            }
+            .card-container,
+            .card {
+                width: 140px;
+                height: 140px;
+                @media (min-width:$screen-sm-min){
+                    height: 160px;
+                    width: 160px;
+                }
+                @media (min-width:$screen-lg-min){
+                    height: 180px;
+                    width: 180px;
+                }
             }
         }
         &.cards_24 {
-
+            width: 410px;
+            @media (min-width:$screen-sm-min){
+                width: 740px;
+            }
+            .card-container,
+            .card {
+                height: 90px;
+                width: 90px;
+                font-size: 1em;
+                @media (min-width:$screen-sm-min){
+                    height: 110px;
+                    width: 110px;
+                }                            }
+            .card-container {
+                margin: 6px;
+            }
+            .card {
+                border-width: 3px;
+            }
         }
         &.cards_48 {
+            width: 560px;
+            @media (min-width:$screen-md-min){
+                width: 740px;
+            }
+            .card-container,
+            .card {
+                height: 80px;
+                width: 80px;
+                font-size: 1em;
+            }
+            .card-container {
+                margin: 6px;
+            }
+            .card {
+                border-width: 3px;
+            }
+        }
+    }
 
-        }
-    }
-    .card-container {
-        position: relative;
-        margin: 1em;
-        float: left;
-    }
-    div.card {
-        position: absolute;
-        background-color: #fff;
-        border: 9px solid #fff;
-        color: $brand-secondary;
-        cursor: pointer;
-        border-radius: 9px;
-        float: left;
-        font-size: 1.6em;
-        font-weight: 700;
-        display: table;
-        text-align: center;
-        @include box-shadow(rgba($shadow-primary, 0.5) 1px 1px 4px);
-        img {
-          border-radius: 9px;
-          width: 100%;
-        }
-        /* Card Back */
-        &.back {
-            background-color: #76DBDC;
-            span {
-                border-radius: 9px;
-                display: block;
-            }
-        }
-        /* Card Front */
-        &.front {
-            span {
-                display: table-cell;
-                vertical-align: middle;
-            }
-        }
-        /* Cards have been removed, but space must remain */
-        &.empty {
-            border: 0;
-            background-color: transparent;
-            box-shadow: none;
-            cursor: default;
-        }
-    }
     div.game-status {
         height: 100px;
         width: 400px;
@@ -1083,31 +1146,45 @@ body.matching {
     }
     .game-complete {
         margin: 0 auto;
-        width: 830px;
         .game-results {
             .result {
                 border-radius: 9px;
                  @include box-shadow(rgba($shadow-primary, 0.5) 1px 1px 4px);
-                width: 200px;
                 margin: 1em;
+                width: 150px;
+                @media (min-width:$screen-sm-min){
+                    width: 200px;
+                }
             }
             .final-score {
                 background-color: #fff;
                 border-radius: 9px;
-                 @include box-shadow(rgba($shadow-primary, 0.3) 1px 1px 4px);
-                 width: 240px;
-                 height: 220px;
-                 padding-top: 56px;
-                 margin: 0 auto;
-                 @include transform(rotate(-8deg));
-                 margin-top: -10px;
-                .f-s-number {
+                @include box-shadow(rgba($shadow-primary, 0.3) 1px 1px 4px);
+                width: 180px;
+                height: 162px;
+                padding-top: 40px;
+                margin: -10px auto 0 auto;
+                @include transform(rotate(-8deg));
+                @media (min-width:$screen-sm-min){
+                    width: 240px;
+                    height: 220px;
+                    padding-top: 56px;
+                    margin-top: -10px;
+                }
+                h3 {
+                    font-size: 1.5em;
                 }
             }
         }
         .user-options {
             margin: -140px auto 0;
-            width: 75%;
+            width: 85%;
+            @media (min-width:$screen-sm-min){
+                width: 75%;
+            }
+            @media (min-width:$screen-md-min){
+                width: 55%;
+            }
             ul {
                 list-style: none;
                 margin: 0 auto;

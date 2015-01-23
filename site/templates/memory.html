@@ -1,4 +1,4 @@
-<div class="memory-cards cards_{{totalCards}}"
+    <div class="memory-cards cards_{{totalCards}} clearfix"
 	ng-if="!done">
 	<div
 		class="card-container"
@@ -36,7 +36,7 @@
         </div>
         <div class="final-score">
           <h3>Final Score</h3>
-          <span class="f-s-number">85</span>
+          <span class="f-s-number">{{score}}</span>
         </div>
       </div>
       <div class="user-options">
