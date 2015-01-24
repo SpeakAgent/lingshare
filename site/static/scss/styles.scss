@@ -104,6 +104,10 @@ a {
         a {
             color: #7F4023;
         }
+        &:hover, &:focus {
+            background-color: lighten(#F8D338,8%);
+            border-color: lighten(#F8E71C,12%);
+        }
     }
     &.btn-secondary {
 
@@ -125,6 +129,18 @@ a {
     &:active, &.active {
         top: 1px;
         box-shadow: none;
+    }
+
+    /* With Icon */
+
+    &.btn-with-icon {
+        padding-left: 1em;
+        padding-right: 2.4em;
+    }
+
+    /* Achievements */
+    &.btn-achievements.hvr-icon-grow:before {
+        content: "\f091";
     }
 }
 
@@ -1032,6 +1048,7 @@ body.matching {
     background-color: #416E0D;
     div.memory-cards {
         margin: 0 auto;
+        padding-top: 30px;
         .card-container {
             position: relative;
             margin: 0.5em;
@@ -1238,6 +1255,7 @@ body.matching {
 */
 
 .wordlists {
+    padding-bottom: 1em;
     .wordlist-header {
         h1 {
             text-align: center;
@@ -1287,6 +1305,7 @@ body.matching {
             background: white;
             margin: .5em;
             height: auto;
+            width: auto;
             img {
                 width: 50px;
                 height: 50px;
@@ -1470,6 +1489,16 @@ body.matching {
         }
     }
 }
+
+/*  5.0 Login/Logout Screens
+    ====================
+*/
+
+.login-container {
+
+}
+
+
 
 /*  ZZZ. Remove Phone-sized Responsive Functionality
 

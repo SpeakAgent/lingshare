@@ -200,18 +200,18 @@ $font-family-emphasis: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sa
 //##
 
 //* `<input>` background color
-// $input-bg:                       #fff
+$input-bg:                       #fff;
 //* `<input disabled>` background color
 // $input-bg-disabled:              $gray-lighter
 
 //* Text color for `<input>`s
-// $input-color:                    $gray
+$input-color:                    $gray;
 //* `<input>` border color
-// $input-border:                   #ccc
+$input-border:                   $brand-secondary;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //* Default `.form-control` border radius
-// $input-border-radius:            $border-radius-base
+$input-border-radius:            9px;
 //* Large `.form-control` border radius
 // $input-border-radius-large:      $border-radius-large
 //* Small `.form-control` border radius
