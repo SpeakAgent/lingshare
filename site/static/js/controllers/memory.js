@@ -76,7 +76,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
             }
           }
           $http(req).success(function (data) {
-            
+
           })
           .error(function (data) {
 
@@ -150,7 +150,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 };
 
      $scope.flipCard = function (card) {
-      if ($scope.showCards.indexOf(card.slug) == -1 && 
+      if ($scope.showCards.indexOf(card.slug) == -1 &&
         $scope.showCards.length < 2) {
         $scope.showCards.push(card.slug)
       }

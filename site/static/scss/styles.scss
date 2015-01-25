@@ -93,6 +93,8 @@ a {
     border-radius: 20px;
     position:relative;
     @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+    @include transition(background-color,0.1s);
+    @include transition-property(border-color,0.1s);
     font-weight: 700;
     a {
         border: 0;
@@ -130,18 +132,6 @@ a {
         top: 1px;
         box-shadow: none;
     }
-
-    /* With Icon */
-
-    &.btn-with-icon {
-        padding-left: 1em;
-        padding-right: 2.4em;
-    }
-
-    /* Achievements */
-    &.btn-achievements.hvr-icon-grow:before {
-        content: "\f091";
-    }
 }
 
 .see-more-cntr {
@@ -149,6 +139,82 @@ a {
     text-align: center;
     margin: 0 auto;
 }
+
+/*
+    Shell Interface Icons
+    Uses https://ianlunn.github.io/Hover/ for effects on buttons and other elements
+*/
+
+/* Icons are to the right natively */
+
+/* Icon - Left */
+
+.icon-left {
+    padding-right: 1em;
+    padding-left: 2.4em;
+    &:before {
+        left: 1em;
+        right: auto;
+    }
+}
+
+/* Icon - Above */
+
+.icon-above {
+
+    &:before {
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+/* Icon - Below */
+
+.icon-below {
+
+}
+
+/* Home */
+.icon-home:before {
+    content: "\f015";
+}
+
+/* Wordlists */
+.icon-wordlists:before {
+    content: "\f075";
+}
+
+/* Activities */
+.icon-activities:before {
+    content: "\f11b";
+}
+
+/* Achievements */
+.icon-achievements:before {
+    content: "\f091";
+}
+
+/* Previous */
+.icon-prev:before {
+    content: "\f11b";
+}
+
+/* Next */
+.icon-next:before {
+    content: "\f11b";
+}
+
+/* Grid */
+.icon-grid:before {
+    content: "\f009";
+}
+
+/* List */
+.icon-list:before {
+    content: "\f00b";
+}
+
 
 /*  0.1 Global Navigation
     ====================
@@ -187,6 +253,9 @@ a {
                 padding: 6px 10px 6px 6px;
             }
         }
+        a {
+            text-align: center;
+        }
         span, i {
             display: block;
         }
@@ -199,6 +268,17 @@ a {
             font-weight: 400;
             font-size: 80%;
         }
+
+        /* With Icons */
+
+        .icon-above {
+            padding-top: 28px;
+            &:before {
+                top: 8px;
+                font-size: 1.6em;
+            }
+        }
+
     }
     .navbar-user {
         color: $font-color;
