@@ -39,21 +39,9 @@ mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHel
       });
 
     responsePromise.success(function(data, status, headers, config) {
-        
-        if($rootScope.AnalyticsAvailable && $rootScope.networkAvailable) {
-          analytics.trackEvent('System', 'LoginSuccess', $scope.loginData.username);
-          analytics.setUserId($scope.loginData.username);
-          analytics.addCustomDimension('dimension1', $scope.loginData.username);
-        }
-        var timestamp = Date.now()/1000;
-        var eventData = {
-          'category': 'System',
-          'action': 'LoginSuccess',
-          'label': $scope.loginData.username,
-          'timestamp': timestamp,
-          'username': $rootScope.username
-        };
-        localStorage.setItem('analytics-'+timestamp, JSON.stringify(eventData));
+
+        mixpanel.identify($scope.loginData.username);
+
         $rootScope.authToken = data.token;
         $rootScope.username = $scope.loginData.username;
         localStorage.setItem('authToken', $rootScope.authToken);
