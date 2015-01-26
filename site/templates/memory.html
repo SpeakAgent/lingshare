@@ -1,4 +1,4 @@
-    <div class="memory-cards cards_{{totalCards}} clearfix"
+<div class="matching-cards cards_{{totalCards}} clearfix"
 	ng-if="!done">
 	<div
 		class="card-container"
@@ -21,10 +21,17 @@
 				</span>
 		 	</div>
 		</div>
-		<div ng-if="hideCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1">
+		<div class="card-spaceholder" ng-if="hideCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1">
 			<div class="card empty"></div>
 		</div>
 	</div>
+    <div class="game-alerts"
+        ng-if="status==1"
+        >
+        <div class="alert true">
+          +{{pointsAwarded}}
+        </div>
+    </div>
 </div>
 <div class="game-complete" ng-show="done">
     <div class="frame">

@@ -56,6 +56,33 @@
 }
 
 
+/* Bounce In */
+@include keyframes(bounceInHomegrown){
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.3);
+        transform: scale(.3);
+    }
+
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+    70% {
+        -webkit-transform: scale(.9);
+        transform: scale(.9);
+    }
+
+    100% {
+         -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+
 /* Additional Variables */
 
 $border-width-default: 3px;
@@ -416,6 +443,7 @@ a {
     text-align: center;
     display: table;
     z-index: 1000;
+    line-height: 0em;
     .alert {
         display: table-cell;
         vertical-align: middle;
@@ -429,10 +457,12 @@ a {
             font-size: 4.5em;
         }
     }
-    &.ng-hide-remove {
+    &.ng-enter {
         @include animation(bounceIn 0.5s);
     }
 }
+
+
 .game-complete {
         display: block;
         h3.results-message {
@@ -1225,14 +1255,27 @@ body.games.flashcards {
 */
 
 body.matching {
-    background-color: #416E0D;
-    div.memory-cards {
+background: #416e0d; /* Old browsers */
+
+
+
+    div.matching-cards {
         margin: 0 auto;
         padding-top: 30px;
+        position:relative;
         .card-container {
             position: relative;
             margin: 0.5em;
             float: left;
+            &.ng-enter {
+                @include animation(bounceIn 1s);
+            }
+        }
+        .game-alerts {
+            right: 0;
+            left: 0;
+            top: 0;
+            margin: 0 auto;
         }
         .card {
             position: absolute;
@@ -1327,7 +1370,8 @@ body.matching {
                 @media (min-width:$screen-sm-min){
                     height: 110px;
                     width: 110px;
-                }                            }
+                }
+            }
             .card-container {
                 margin: 6px;
             }
@@ -1351,6 +1395,11 @@ body.matching {
             }
             .card {
                 border-width: 3px;
+            }
+        }
+        &.card-spaceholder {
+            &.ng-enter {
+                @include animation(slideRightIn 1s);
             }
         }
     }

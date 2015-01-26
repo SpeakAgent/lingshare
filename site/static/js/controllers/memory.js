@@ -1,7 +1,7 @@
 mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
-  '$interval','$rootScope',
+  '$interval','$rootScope','$animate',
 
-  function ($scope, $timeout, $http, $interval,$rootScope) {
+  function ($scope, $timeout, $http, $interval,$rootScope,$animate) {
 
   $rootScope.body_classes = "games matching"
 
@@ -32,6 +32,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	 $scope.createCards = function () {
       cards = []
       words = $scope.shuffle($scope.wordlist.words).slice(0,6);
+      $scope.pointsAwarded = 5;
       $scope.totalCards = words.length * 2;
       for (var i = words.length - 1; i >= 0; i--) {
         card = words[i];
@@ -92,9 +93,9 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
       cardarr2 = card2.split('-');
 
       if (cardarr1[0] == cardarr2[0]) {
-        $scope.status = "They match!";
+        $scope.status = 1;
         $scope.correct++;
-        $scope.score += 5;
+        $scope.score += $scope.pointsAwarded;
         $scope.removeCards(card1, card2)
         console.log("Score", $scope.score)
         mixpanel.track("lexeme event", {
@@ -114,7 +115,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
           seconds : $scope.seconds,
         });
       } else {
-        $scope.status = "Those don't match...";
+        $scope.status = 0;
         $scope.wrong++;
         $timeout(function () {
         $scope.showCards = [];

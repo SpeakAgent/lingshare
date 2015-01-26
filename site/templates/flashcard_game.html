@@ -70,7 +70,7 @@
                 </div>
               </div>
               <div class="game-alerts"
-            ng-show="alerts[item.base_word.root_word] != null && item.base_word.root_word == card.base_word.root_word"
+            ng-if="alerts[item.base_word.root_word] != null && item.base_word.root_word == card.base_word.root_word"
             >
                 <div class="alert" ng-class="{true:item.base_word.root_word == card.base_word.root_word,false:item.base_word.root_word != card.base_word.root_word}">
                   {{ alerts[item.base_word.root_word] }}
