@@ -1,5 +1,5 @@
 mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
-  '$interval', '$rootScope',
+  '$interval', '$rootScope', '$animate',
 
   function ($scope, $timeout, $http, $interval, $rootScope) {
 
@@ -39,7 +39,7 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
             }
           }
           $http(req).success(function (data) {
-            
+
           })
           .error(function (data) {
 

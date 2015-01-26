@@ -1,6 +1,6 @@
 var mainApp = angular.module('mainApp', ['ngRoute', 'angular-jwt','ngAnimate']);
 
-mainApp.config(function($routeProvider, $sceDelegateProvider, 
+mainApp.config(function($routeProvider, $sceDelegateProvider,
     $httpProvider, jwtInterceptorProvider) {
     //    jwtInterceptorProvider.tokenGetter = function() {
     //    return localStorage.getItem('authToken');

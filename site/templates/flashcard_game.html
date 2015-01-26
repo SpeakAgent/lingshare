@@ -1,12 +1,55 @@
 
   <div class="game-container" role="main" ng-controller="FlashCardController">
-    <div class="flash-cards-interface" ng-show="!done">
+    <div class="flash-cards-interface"
+      ng-class="{true: isCorrect=='true',false: isCorrect=='false'}"
+      ng-show="!done">
+      <div class="machine-lights">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0" y="0" width="30" height="112" viewBox="-105.1 158.1 30 112" xml:space="preserve" enable-background="new -105.1 158.1 30 112"><style>.s0{overflow:visible;}.s1{enable-background:new;overflow:visible;}
+          .st0{clip-path:url(#SVGID_2_);}
+          .st1{clip-path:url(#SVGID_4_);}
+          .st2{clip-path:url(#SVGID_6_);fill:#C5E7E9;stroke:#6093A8;stroke-width:3;stroke-miterlimit:10;}
+          .st3{clip-path:url(#SVGID_8_);}
+          .st4{clip-path:url(#SVGID_10_);}
+          .st5{clip-path:url(#SVGID_12_);}
+          .st6{clip-path:url(#SVGID_14_);fill:#DFF1F2;}
+          .st7{enable-background:new    ;}
+          .st8{clip-path:url(#SVGID_16_);}
+          .st9{clip-path:url(#SVGID_18_);}
+          .st10{clip-path:url(#SVGID_20_);fill:none;stroke:#6093A8;stroke-width:8;stroke-miterlimit:10;}
+          .st11{clip-path:url(#SVGID_24_);}
+          .st12{clip-path:url(#SVGID_28_);}
+          .st13{clip-path:url(#SVGID_30_);}
+          .st14{clip-path:url(#SVGID_32_);}
+          .st15{clip-path:url(#SVGID_36_);}
+          .st16{clip-path:url(#SVGID_38_);}
+          .st17{clip-path:url(#SVGID_40_);fill:none;stroke:#6093A8;stroke-width:6;stroke-miterlimit:10;}
+          .st18{clip-path:url(#SVGID_42_);}
+          .st19{clip-path:url(#SVGID_44_);}
+          .st20{clip-path:url(#SVGID_46_);fill:#C3EDEC;stroke:#6093A8;stroke-width:3;stroke-miterlimit:10;}
+          .st21{clip-path:url(#SVGID_48_);}
+          .st22{clip-path:url(#SVGID_50_);}
+          .st23{clip-path:url(#SVGID_52_);}
+          .st24{clip-path:url(#SVGID_54_);fill:#DFF1F2;}
+          .st25{clip-path:url(#SVGID_56_);}
+          .st26{clip-path:url(#SVGID_58_);}
+          .st27{clip-path:url(#SVGID_60_);fill:none;stroke:#6093A8;stroke-width:8;stroke-miterlimit:10;}
+          .st28{clip-path:url(#SVGID_64_);}
+          .st29{clip-path:url(#SVGID_68_);}
+          .st30{clip-path:url(#SVGID_70_);}
+          .st31{clip-path:url(#SVGID_72_);}
+          .st32{clip-path:url(#SVGID_76_);}
+          .st33{clip-path:url(#SVGID_78_);}
+          .st34{clip-path:url(#SVGID_80_);fill:none;stroke:#6093A8;stroke-width:6;stroke-miterlimit:10;}
+        </style><defs><rect id="SVGID_1_" x="-106.7" y="155.9" width="57" height="63"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"/></clipPath><g class="st0"><image width="58" height="63" xlink:href="/static/images/flashcards/EFAEDB55A2501804.png" transform="matrix(0.9921 0 0 0.9921 -106.9588 156.15)" class="s1"/></g><defs><rect id="SVGID_3_" x="-104.6" y="156.9" width="53" height="59"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" overflow="visible"/></clipPath><g class="st1"><defs><rect id="SVGID_5_" x="-104.6" y="156.9" width="56" height="59"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" overflow="visible"/></clipPath><circle class="st2 bulb" cx="-84.1" cy="186.4" r="17"/><defs><rect id="SVGID_7_" x="-104.6" y="156.9" width="53" height="59"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" overflow="visible"/></clipPath><g class="st3"><defs><path id="SVGID_9_" d="M-86.6 169.4v34c0 5.3 4.3 9.5 9.5 9.5h17c5.3 0 9.5-4.3 9.5-9.5v-34c0-5.3-4.3-9.5-9.5-9.5h-17C-82.4 159.9-86.6 164.2-86.6 169.4zM-83.6 169.4c0-3.6 2.9-6.5 6.5-6.5h17c3.6 0 6.5 2.9 6.5 6.5v34c0 3.6-2.9 6.5-6.5 6.5h-17c-3.6 0-6.5-2.9-6.5-6.5C-83.6 203.4-83.6 169.4-83.6 169.4zM-106.6 139.9h76v93h-76C-106.6 232.9-106.6 139.9-106.6 139.9z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" overflow="visible"/></clipPath><g class="st4"><defs><path id="SVGID_11_" d="M-85.1 169.4c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8C-85.1 203.4-85.1 169.4-85.1 169.4z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" overflow="visible"/></clipPath><g class="st5"><defs><rect id="SVGID_13_" x="-104.6" y="156.9" width="56" height="59"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" overflow="visible"/></clipPath><path class="st6" d="M-85.1 169.4c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8C-85.1 203.4-85.1 169.4-85.1 169.4z"/></g><g class="st7"><defs><rect id="SVGID_15_" x="-104.6" y="156.9" class="st7" width="53" height="59"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" overflow="visible"/></clipPath><g class="st8"><defs><path id="SVGID_17_" d="M-85.1 169.4c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8C-85.1 203.4-85.1 169.4-85.1 169.4z"/></defs><clipPath id="SVGID_18_"><use xlink:href="#SVGID_17_" overflow="visible"/></clipPath><g class="st9"><defs><rect id="SVGID_19_" x="-104.6" y="156.9" width="56" height="59"/></defs><clipPath id="SVGID_20_"><use xlink:href="#SVGID_19_" overflow="visible"/></clipPath><path class="st10" d="M-85.1 169.4c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8C-85.1 203.4-85.1 169.4-85.1 169.4z"/></g></g></g></g><g class="st4"><defs><rect id="SVGID_21_" x="-106.7" y="209.9" width="57" height="63"/></defs><clipPath id="SVGID_22_"><use xlink:href="#SVGID_21_" overflow="visible"/></clipPath><defs><rect id="SVGID_23_" x="-104.7" y="210.9" width="53" height="59"/></defs><clipPath id="SVGID_24_"><use xlink:href="#SVGID_23_" overflow="visible"/></clipPath><g class="st11"><defs><rect id="SVGID_25_" x="-104.7" y="210.9" width="56" height="59"/></defs><clipPath id="SVGID_26_"><use xlink:href="#SVGID_25_" overflow="visible"/></clipPath><defs><rect id="SVGID_27_" x="-104.7" y="210.9" width="53" height="59"/></defs><clipPath id="SVGID_28_"><use xlink:href="#SVGID_27_" overflow="visible"/></clipPath><g class="st12"><defs><path id="SVGID_29_" d="M-86.7 223.4v34c0 5.3 4.3 9.5 9.5 9.5h17c5.3 0 9.5-4.3 9.5-9.5v-34c0-5.3-4.3-9.5-9.5-9.5h-17C-82.4 213.9-86.7 218.2-86.7 223.4zM-106.7 193.9h76v93h-76V193.9z"/></defs><clipPath id="SVGID_30_"><use xlink:href="#SVGID_29_" overflow="visible"/></clipPath><g class="st13"><defs><path id="SVGID_31_" d="M-85.2 223.4c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8V223.4z"/></defs><clipPath id="SVGID_32_"><use xlink:href="#SVGID_31_" overflow="visible"/></clipPath><g class="st14"><defs><rect id="SVGID_33_" x="-104.7" y="210.9" width="56" height="59"/></defs><clipPath id="SVGID_34_"><use xlink:href="#SVGID_33_" overflow="visible"/></clipPath></g><g class="st7"><defs><rect id="SVGID_35_" x="-104.7" y="210.9" class="st7" width="53" height="59"/></defs><clipPath id="SVGID_36_"><use xlink:href="#SVGID_35_" overflow="visible"/></clipPath><g class="st15"><defs><path id="SVGID_37_" d="M-85.2 223.4c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8V223.4z"/></defs><clipPath id="SVGID_38_"><use xlink:href="#SVGID_37_" overflow="visible"/></clipPath><g class="st16"><defs><rect id="SVGID_39_" x="-104.7" y="210.9" width="56" height="59"/></defs><clipPath id="SVGID_40_"><use xlink:href="#SVGID_39_" overflow="visible"/></clipPath><path class="st17" d="M-85.2 223.4c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8V223.4z"/></g></g></g></g></g></g></g></g></g><defs><rect id="SVGID_41_" x="-106.7" y="210.3" width="57" height="63"/></defs><clipPath id="SVGID_42_"><use xlink:href="#SVGID_41_" overflow="visible"/></clipPath><g class="st18"><image width="58" height="63" xlink:href="/static/images/flashcards/EFAEDB55A2501804.png" transform="matrix(0.9921 0 0 0.9921 -106.9588 210.5961)" class="s1"/></g><defs><rect id="SVGID_43_" x="-104.6" y="211.3" width="53" height="59"/></defs><clipPath id="SVGID_44_"><use xlink:href="#SVGID_43_" overflow="visible"/></clipPath><g class="st19"><defs><rect id="SVGID_45_" x="-104.6" y="211.3" width="56" height="59"/></defs><clipPath id="SVGID_46_"><use xlink:href="#SVGID_45_" overflow="visible"/></clipPath><circle class="st20 bulb bulb--delay" cx="-84.1" cy="240.8" r="17"/><defs><rect id="SVGID_47_" x="-104.6" y="211.3" width="53" height="59"/></defs><clipPath id="SVGID_48_"><use xlink:href="#SVGID_47_" overflow="visible"/></clipPath><g class="st21"><defs><path id="SVGID_49_" d="M-86.6 223.8v34c0 5.3 4.3 9.5 9.5 9.5h17c5.3 0 9.5-4.3 9.5-9.5v-34c0-5.3-4.3-9.5-9.5-9.5h-17C-82.4 214.3-86.6 218.6-86.6 223.8zM-83.6 223.8c0-3.6 2.9-6.5 6.5-6.5h17c3.6 0 6.5 2.9 6.5 6.5v34c0 3.6-2.9 6.5-6.5 6.5h-17c-3.6 0-6.5-2.9-6.5-6.5C-83.6 257.8-83.6 223.8-83.6 223.8zM-106.6 194.3h76v93h-76C-106.6 287.3-106.6 194.3-106.6 194.3z"/></defs><clipPath id="SVGID_50_"><use xlink:href="#SVGID_49_" overflow="visible"/></clipPath><g class="st22"><defs><path id="SVGID_51_" d="M-85.1 223.8c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8C-85.1 257.8-85.1 223.8-85.1 223.8z"/></defs><clipPath id="SVGID_52_"><use xlink:href="#SVGID_51_" overflow="visible"/></clipPath><g class="st23"><defs><rect id="SVGID_53_" x="-104.6" y="211.3" width="56" height="59"/></defs><clipPath id="SVGID_54_"><use xlink:href="#SVGID_53_" overflow="visible"/></clipPath><path class="st24" d="M-85.1 223.8c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8C-85.1 257.8-85.1 223.8-85.1 223.8z"/></g><g class="st7"><defs><rect id="SVGID_55_" x="-104.6" y="211.3" class="st7" width="53" height="59"/></defs><clipPath id="SVGID_56_"><use xlink:href="#SVGID_55_" overflow="visible"/></clipPath><g class="st25"><defs><path id="SVGID_57_" d="M-85.1 223.8c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8C-85.1 257.8-85.1 223.8-85.1 223.8z"/></defs><clipPath id="SVGID_58_"><use xlink:href="#SVGID_57_" overflow="visible"/></clipPath><g class="st26"><defs><rect id="SVGID_59_" x="-104.6" y="211.3" width="56" height="59"/></defs><clipPath id="SVGID_60_"><use xlink:href="#SVGID_59_" overflow="visible"/></clipPath><path class="st27" d="M-85.1 223.8c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8C-85.1 257.8-85.1 223.8-85.1 223.8z"/></g></g></g></g><g class="st22"><defs><rect id="SVGID_61_" x="-106.7" y="264.3" width="57" height="63"/></defs><clipPath id="SVGID_62_"><use xlink:href="#SVGID_61_" overflow="visible"/></clipPath><defs><rect id="SVGID_63_" x="-104.7" y="265.3" width="53" height="59"/></defs><clipPath id="SVGID_64_"><use xlink:href="#SVGID_63_" overflow="visible"/></clipPath><g class="st28"><defs><rect id="SVGID_65_" x="-104.7" y="265.3" width="56" height="59"/></defs><clipPath id="SVGID_66_"><use xlink:href="#SVGID_65_" overflow="visible"/></clipPath><defs><rect id="SVGID_67_" x="-104.7" y="265.3" width="53" height="59"/></defs><clipPath id="SVGID_68_"><use xlink:href="#SVGID_67_" overflow="visible"/></clipPath><g class="st29"><defs><path id="SVGID_69_" d="M-86.7 277.8v34c0 5.3 4.3 9.5 9.5 9.5h17c5.3 0 9.5-4.3 9.5-9.5v-34c0-5.3-4.3-9.5-9.5-9.5h-17C-82.4 268.3-86.7 272.6-86.7 277.8zM-106.7 248.3h76v93h-76V248.3z"/></defs><clipPath id="SVGID_70_"><use xlink:href="#SVGID_69_" overflow="visible"/></clipPath><g class="st30"><defs><path id="SVGID_71_" d="M-85.2 277.8c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8V277.8z"/></defs><clipPath id="SVGID_72_"><use xlink:href="#SVGID_71_" overflow="visible"/></clipPath><g class="st31"><defs><rect id="SVGID_73_" x="-104.7" y="265.3" width="56" height="59"/></defs><clipPath id="SVGID_74_"><use xlink:href="#SVGID_73_" overflow="visible"/></clipPath></g><g class="st7"><defs><rect id="SVGID_75_" x="-104.7" y="265.3" class="st7" width="53" height="59"/></defs><clipPath id="SVGID_76_"><use xlink:href="#SVGID_75_" overflow="visible"/></clipPath><g class="st32"><defs><path id="SVGID_77_" d="M-85.2 277.8c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8V277.8z"/></defs><clipPath id="SVGID_78_"><use xlink:href="#SVGID_77_" overflow="visible"/></clipPath><g class="st33"><defs><rect id="SVGID_79_" x="-104.7" y="265.3" width="56" height="59"/></defs><clipPath id="SVGID_80_"><use xlink:href="#SVGID_79_" overflow="visible"/></clipPath><path class="st34" d="M-85.2 277.8c0-4.4 3.6-8 8-8h17c4.4 0 8 3.6 8 8v34c0 4.4-3.6 8-8 8h-17c-4.4 0-8-3.6-8-8V277.8z"/></g></g></g></g></g></g></g></g></g></svg>
 
+            </div>
       <div class="cards clearfix">
         <div class="col-md-9 first">
-          <div class="main-card">
+          <div class="main-card"
+            ng-class="{true: isCorrect=='true',false: isCorrect=='false'}"
+          >
             <div class="round-counter"><span>{{current_round}}/{{words.length}}</span></div>
-            <div  class="main-card-img">
+            <div class="main-card-img">
                   <img src="http://127.0.0.1:8000{{ card.base_word.photos[0].image }}" class="large-card"></div>
             <div class="main-card-lexeme"><span>{{card.trans_word.root_word}}</span></div>
           </div>
@@ -59,7 +102,6 @@
           </div>
         </div>
     </div>
-
   </div>
 
 

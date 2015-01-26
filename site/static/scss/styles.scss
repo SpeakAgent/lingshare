@@ -19,6 +19,43 @@
     ====================
 */
 
+/* Animations */
+
+/* Flickering Bulbs in Flash Cards */
+@include keyframes(bulbFlicker){
+    0% {fill:#faf5bb;}
+    50% {fill:#faf5bb;}
+    52% {fill:#C5E7E9;}
+    53% {fill:#faf5bb;}
+    54% {fill:#C5E7E9;}
+    55%,100% {fill:#faf5bb;}
+}
+
+/* Slide Left - Out */
+@include keyframes(slideLeftOut){
+  from { left: 0; }
+  to { left: -100%; }
+}
+
+/* Slide Left - In */
+@include keyframes(slideLeftIn){
+  from { left: -100%; }
+  to { left: 0%; }
+}
+
+/* Slide Right - Out */
+@include keyframes(slideRightOut){
+  from { right: 0; }
+  to { right: -100%; }
+}
+
+/* Slide Right - In */
+@include keyframes(slideRightIn){
+  from { right: -100%; }
+  to { right: 0; }
+}
+
+
 /* Additional Variables */
 
 $border-width-default: 3px;
@@ -387,15 +424,13 @@ a {
         line-height: 1.1em;
         transform: rotate(-8deg);
         margin-top: -10px;
+        @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
         &.true {
-            font-size: 4em;
+            font-size: 4.5em;
         }
     }
     &.ng-hide-remove {
-        -webkit-animation: bounceIn 0.7s !important;
-        -moz-animation: bounceIn 0.7s;
-        -ms-animation: bounceIn 0.7s;
-        animation: bounceIn 0.7s !important;
+        @include animation(bounceIn 0.5s);
     }
 }
 .game-complete {
@@ -729,6 +764,7 @@ body.games.flashcards {
     background-position: 0 500px;
     .game-container {
         padding: 0 30px 0 50px;
+        position: relative;
     }
     /* Main Game Interface */
     .flash-cards-interface {
@@ -759,264 +795,301 @@ body.games.flashcards {
                 padding: 4px 9px;
             }
         }
-        &:before {
-            content: url('/static/images/flashcards/el-bulbs-off.svg');
-            width: 60px;
-            height: 120px;
+
+        .machine-lights {
             position: absolute;
-            top: 12px;
-            left: -49px;
-            z-index: 10;
+            top: 0;
+            left: -33px;
+            .bulb {
+                @include animation(bulbFlicker 8s ease infinite);
+                &.bulb--delay {
+                    -webkit-animation-delay: 0.8s; /* Chrome, Safari, Opera */
+                    animation-delay: 0.8s;
+                }
+            }
+
         }
 
-            /* Left Column - Contains Round's selected Card */
-            .cards {
-                @media (max-width:$flash-cards-smtablet-width){
-                    .first {
-                        padding-right: 0;
-                    }
+        &.true {
+            .machine-lights {
+                .bulb {
+                    fill: $game-success;
+                    animation: none;
+                    -webkit-animation: none;
                 }
             }
-            .col-md-9 {
-                @media (min-width:$flash-cards-smtablet-width){
-                    float: left;
-                    width: 75%;
-                    &.first {
-                        padding-right: 15px;
-                    }
+        }
+        &.false {
+            .machine-lights {
+                .bulb {
+                    fill: $game-error;
+                    animation: none;
+                    -webkit-animation: none;
                 }
             }
-            .main-card {
-                background:
-                    url('/static/images/flashcards/el-screw.svg') no-repeat 2% 2%,
-                    url('/static/images/flashcards/el-screw.svg') no-repeat 98% 2%,
-                    url('/static/images/flashcards/el-screw.svg') no-repeat 2% 98%,
-                    url('/static/images/flashcards/el-screw-crooked.svg') no-repeat 98% 98%;
+        }
+
+        /* Left Column - Contains Round's selected Card */
+        .cards {
+            @media (max-width:$flash-cards-smtablet-width){
+                .first {
+                    padding-right: 0;
+                }
+            }
+        }
+        .col-md-9 {
+            @media (min-width:$flash-cards-smtablet-width){
+                float: left;
+                width: 75%;
+                &.first {
+                    padding-right: 15px;
+                }
+            }
+        }
+        .main-card {
+            background:
+                url('/static/images/flashcards/el-screw.svg') no-repeat 2% 2%,
+                url('/static/images/flashcards/el-screw.svg') no-repeat 98% 2%,
+                url('/static/images/flashcards/el-screw.svg') no-repeat 2% 98%,
+                url('/static/images/flashcards/el-screw-crooked.svg') no-repeat 98% 98%;
+            border: $border-width-default $flash-cards-border-color-default solid;
+            border-radius: 9px;
+            border-bottom-width: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            text-align: center;
+            height: 390px;
+            @media (min-width:$flash-cards-smtablet-width){
+                border-bottom-width: $border-width-default;
+                border-bottom-right-radius: 9px;
+                border-bottom-left-radius: 9px;
+                height: 372px;
+            }
+            @media (min-width:$screen-md-min){
+                height: 462px;
+            }
+            .main-card-img {
+                background-color: #fff;
                 border: $border-width-default $flash-cards-border-color-default solid;
-                border-radius: 9px;
-                border-bottom-width: 0;
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-                text-align: center;
-                height: 390px;
+                border-radius: 12px;
+                width: 75%;
+                margin: 0 auto 2em auto;
+                position: relative;
+                height: 300px;
+                line-height: 300px;
                 @media (min-width:$flash-cards-smtablet-width){
+                    height: 300px;
+                    line-height: 300px;
                     border-bottom-width: $border-width-default;
                     border-bottom-right-radius: 9px;
                     border-bottom-left-radius: 9px;
-                    height: 372px;
                 }
                 @media (min-width:$screen-md-min){
-                    height: 462px;
+                    height: 380px;
+                    line-height: 380px;
                 }
-                .main-card-img {
+                img.large-card {
+                    border-radius: 10px;
+                    overflow: hidden;
+                    height: auto;
+                    width: 80%;
+                    vertical-align: middle;
+                }
+            }
+            .main-card-lexeme {
+                top: -48px;
+                position: relative;
+                z-index: 5;
+                @media (min-width:$flash-cards-smtablet-width){
+                    top: -54px;
+                }
+                span {
                     background-color: #fff;
                     border: $border-width-default $flash-cards-border-color-default solid;
-                    border-radius: 12px;
-                    width: 75%;
-                    margin: 0 auto 2em auto;
-                    position: relative;
-                    height: 300px;
-                    line-height: 300px;
+                    border-radius: 9px;
+                    color: $flash-cards-border-color-default;
+                    font-size: 1.2em;
+                    font-weight: 700;
+                    display: inline-block;
+                    padding: 4px 10px;
+                    z-index: 1;
                     @media (min-width:$flash-cards-smtablet-width){
-                        height: 300px;
-                        line-height: 300px;
-                        border-bottom-width: $border-width-default;
-                        border-bottom-right-radius: 9px;
-                        border-bottom-left-radius: 9px;
+                        font-size: 1.8em;
                     }
-                    @media (min-width:$screen-md-min){
-                        height: 380px;
-                        line-height: 380px;
-                    }
-                    img.large-card {
-                        border-radius: 10px;
-                        overflow: hidden;
-                        height: 80%;
-                        width: 80%;
-                        vertical-align: middle;
-                    }
+                }
+            }
+            &.true {
+                .main-card-img {
+                    border-color: $game-success;
                 }
                 .main-card-lexeme {
-                    top: -48px;
-                    position: relative;
-                    z-index: 5;
-                    @media (min-width:$flash-cards-smtablet-width){
-                        top: -54px;
-                    }
                     span {
-                        background-color: #fff;
-                        border: $border-width-default $flash-cards-border-color-default solid;
-                        border-radius: 9px;
-                        color: $flash-cards-border-color-default;
+                        border-color: $game-success;
+                        color: $game-success;
+                    }
+                }
+            }
+        }
+        /* Right Column - Contains Options for Flash Cards */
+        .col-md-3 {
+             @media (min-width:$flash-cards-smtablet-width){
+                float: left;
+                width: 25%;
+            }
+        }
+        .options-container {
+            border: $border-width-default $flash-cards-border-color-default solid;
+            padding: 0;
+            border-bottom-right-radius: 9px;
+            border-bottom-left-radius: 9px;
+            @media (min-width:$flash-cards-smtablet-width){
+                border-radius: 9px;
+            }
+            h3 {
+                color: $flash-cards-border-color-default;
+                font-size: 1em;
+                font-style: italic;
+                margin: 0 auto;
+                padding: 0;
+                position: relative;
+                text-align: center;
+                text-transform: uppercase;
+                top: -14px;
+                span {
+                    background-color: #EFFEFD;
+                    border: $border-width-default $flash-cards-border-color-default solid;
+                    border-radius: 9px;
+                    display: inline-block;
+                    padding: 4px 9px;
+                }
+            }
+            .option-container {
+                display: inline-block;
+                width: 33%;
+                margin-bottom: 0;
+                padding: 0 15px;
+                position: relative;
+                &:last-child {
+                    border-right: 0;
+                }
+                @media (min-width: $flash-cards-smtablet-width) {
+                    display: block;
+                    border-bottom: $border-width-default $flash-cards-border-color-default solid;
+                    margin-bottom: 15px;
+                    width: 100%;
+                }
+                &:after {
+                    border: $border-width-default solid $flash-cards-border-color-default;
+                    color: #D7CEBF;
+                    content: "\b7";
+                    display: block;
+                    font-weight: 700;
+                    font-size: 5em;
+                    padding: 0;
+                    position: absolute;
+                    top: 0;
+                    right: 2px;
+                    display: inline-block;
+                    border-radius: 20px;
+                    height: 26px;
+                    width: 26px;
+                    line-height: 16px;
+                    text-align: center;
+                    @media (min-width: $flash-cards-smtablet-width){
+                        right: 6px;
+                    }
+                }
+                &:last-child {
+                    border-bottom: 0;
+                    margin-bottom: 0;
+                }
+                .option {
+                    background-color: #fff;
+                    border: $border-width-default solid $flash-cards-border-color-default;
+                    @include box-shadow(rgba(#407C94, 0.8) 0px 4px 0px);
+                    cursor: pointer;
+                    margin: 0 0 20px 0;
+                    padding: 0;
+                    border-radius: 9px;
+                    text-align: left;
+                    display: table;
+                    position: relative;
+                    height: 100px;
+                    width: 86%;
+                    @media (min-width:$flash-cards-smtablet-width){
+                        height: 80px;
+                    }
+                    @media (min-width:$screen-md-min){
+                        height: 110px;
+                    }
+                    .lexeme {
+                        color: $brand-secondary;
                         font-size: 1.2em;
                         font-weight: 700;
-                        display: inline-block;
-                        padding: 4px 10px;
-                        z-index: 1;
-                        @media (min-width:$flash-cards-smtablet-width){
-                            font-size: 1.8em;
+                        display: table-cell;
+                        vertical-align: middle;
+                        text-align: center;
+                        @media (min-width:$container-lg){
+                            font-size: 1.4em;
                         }
                     }
-                }
-            }
-            /* Right Column - Contains Options for Flash Cards */
-            .col-md-3 {
-                 @media (min-width:$flash-cards-smtablet-width){
-                    float: left;
-                    width: 25%;
-                }
-            }
-            .options-container {
-                border: $border-width-default $flash-cards-border-color-default solid;
-                padding: 0;
-                border-bottom-right-radius: 9px;
-                border-bottom-left-radius: 9px;
-                @media (min-width:$flash-cards-smtablet-width){
-                    border-radius: 9px;
-                }
-                h3 {
-                    color: $flash-cards-border-color-default;
-                    font-size: 1em;
-                    font-style: italic;
-                    margin: 0 auto;
-                    padding: 0;
-                    position: relative;
-                    text-align: center;
-                    text-transform: uppercase;
-                    top: -14px;
-                    span {
-                        background-color: #EFFEFD;
-                        border: $border-width-default $flash-cards-border-color-default solid;
-                        border-radius: 9px;
-                        display: inline-block;
-                        padding: 4px 9px;
+                    .symbol {
+                        margin: 0 auto;
+                        text-align: center;
+                        display: table-cell;
+                        vertical-align: middle;
+                        img {
+                            width: 70%;
+                            height: auto;
+                            vertical-align: middle;
+                            margin: 0 auto;
+                        }
+                    }
+                    &:hover {
+                        .lexeme {
+                            color: $brand-primary;
+                        }
+                    }
+                    &:focus,&:active {
+                        top: 4px;
+                        box-shadow: none;
                     }
                 }
-                .option-container {
-                    display: inline-block;
-                    width: 33%;
-                    margin-bottom: 0;
-                    padding: 0 15px;
-                    position: relative;
-                    &:last-child {
-                        border-right: 0;
+
+                /* Round Results */
+
+                &.true,&.false {
+                    .option {
+                        top: 4px;
+                        box-shadow: none;
                     }
-                    @media (min-width: $flash-cards-smtablet-width) {
-                        display: block;
-                        border-bottom: $border-width-default $flash-cards-border-color-default solid;
-                        margin-bottom: 15px;
-                        width: 100%;
+                }
+                &.true {
+                    .option {
+                        border-color: $game-success !important;
                     }
                     &:after {
-                        border: $border-width-default solid $flash-cards-border-color-default;
-                        color: #D7CEBF;
-                        content: "\b7";
-                        display: block;
-                        font-weight: 700;
-                        font-size: 5em;
-                        padding: 0;
-                        position: absolute;
-                        top: 0;
-                        right: 2px;
-                        display: inline-block;
-                        border-radius: 20px;
-                        height: 26px;
-                        width: 26px;
-                        line-height: 16px;
-                        text-align: center;
-                        @media (min-width: $flash-cards-smtablet-width){
-                            right: 6px;
-                        }
+                        color: $game-success;
                     }
-                    &:last-child {
-                        border-bottom: 0;
-                        margin-bottom: 0;
-                    }
-                    .option {
-                        background-color: #fff;
-                        border: $border-width-default solid $flash-cards-border-color-default;
-                        @include box-shadow(rgba(#407C94, 0.8) 0px 4px 0px);
-                        cursor: pointer;
-                        margin: 0 0 20px 0;
-                        padding: 0;
-                        border-radius: 9px;
-                        text-align: left;
-                        display: table;
-                        position: relative;
-                        height: 100px;
-                        width: 86%;
-                        @media (min-width:$flash-cards-smtablet-width){
-                            height: 80px;
-                        }
-                        @media (min-width:$screen-md-min){
-                            height: 110px;
-                        }
-                        .lexeme {
-                            color: $brand-secondary;
-                            font-size: 1.2em;
-                            font-weight: 700;
-                            display: table-cell;
-                            vertical-align: middle;
-                            text-align: center;
-                            @media (min-width:$container-lg){
-                                font-size: 1.4em;
-                            }
-                        }
-                        .symbol {
-                            margin: 0 auto;
-                            text-align: center;
-                            display: table-cell;
-                            vertical-align: middle;
-                            img {
-                                width: 70%;
-                                height: 100px;
-                                vertical-align: middle;
-                                margin: 0 auto;
-                            }
-                        }
-                        &:hover {
-                            .lexeme {
-                                color: $brand-primary;
-                            }
-                        }
-                        &:focus,&:active {
-                            top: 4px;
-                            box-shadow: none;
-                        }
-                    }
-
-                    /* Round Results */
-
-                    &.true,&.false {
-                        .option {
-                            top: 4px;
-                            box-shadow: none;
-                        }
-                    }
-                    &.true {
-                        .option {
-                            border-color: $game-success !important;
-                        }
-                        &:after {
-                            color: $game-success;
-                        }
-                    }
-                    &.false {
-                        .option {
-                            border-color: $game-error !important;
-                        }
-                        &:after {
-                            color: $game-error;
-                        }
-                    }
-
                 }
+                &.false {
+                    .option {
+                        border-color: $game-error !important;
+                    }
+                    &:after {
+                        color: $game-error;
+                    }
+                }
+
             }
-          .timer {
+        }
+        .timer {
             padding: 8px 0 0;
             text-align: center;
-          }
-
+        }
+        &.ng-hide-add {
+            @include animation(slideLeftOut 0.5s);
+        }
     }
     .game-complete {
         @include background-image(linear-gradient(#EFFEFD, #CDF0EF));
@@ -1026,8 +1099,11 @@ body.games.flashcards {
         color: $brand-secondary;
         margin: 0 auto;
         max-width: 830px;
-        padding: 30px;
+        padding: 30px 30px 20px 30px;
         position: relative;
+        @media (min-width:$screen-sm-min) {
+            padding: 30px;
+        }
         .frame {
             background:
                 url('/static/images/flashcards/el-screw.svg') no-repeat 2% 2%,
@@ -1036,7 +1112,10 @@ body.games.flashcards {
                 url('/static/images/flashcards/el-screw.svg') no-repeat 98% 98%;
             border: $border-width-default $flash-cards-border-color-default solid;
             border-radius: 9px;
-            height: 460px;
+            height: 430px;
+            @media (min-width:$screen-sm-min) {
+                height: 460px;
+            }
             text-align: center;
             position: relative;
         }
@@ -1086,8 +1165,14 @@ body.games.flashcards {
             }
             .final-score {
                 h3 {
+                    @media (min-width:$screen-sm-min) {
+                        font-size: 1.5em;
+                    }
                 }
                 .f-s-number {
+                    @media (min-width:$screen-sm-min) {
+                        font-size: 6em;
+                    }
                 }
             }
 
@@ -1115,6 +1200,21 @@ body.games.flashcards {
                         }
                     }
                 }
+            }
+        }
+        &.ng-hide-remove {
+            @include animation(slideRightIn 0.5s);
+        }
+        &.ng-hide, &.ng-hide-remove-active {
+            top: -646px;
+            @media (min-width:$screen-sm-min) {
+                top: -468px;
+            }
+            @media (min-width:768px){
+                top: -646px;
+            }
+            @media (min-width:$screen-md-min) {
+                top: -558px;
             }
         }
     }
