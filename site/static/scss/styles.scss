@@ -19,7 +19,9 @@
     ====================
 */
 
-/* Animations */
+/*  Home grown Animations
+    Other animations are found in animate.css
+ */
 
 /* Flickering Bulbs in Flash Cards */
 @include keyframes(bulbFlicker){
@@ -55,30 +57,16 @@
   to { right: 0; }
 }
 
+/* Slide Down - Out */
+@include keyframes(slideDownOut){
+  from { top: 0; }
+  to { top: 999px; }
+}
 
-/* Bounce In */
-@include keyframes(bounceInHomegrown){
-    0% {
-        opacity: 0;
-        -webkit-transform: scale(.3);
-        transform: scale(.3);
-    }
-
-    50% {
-        opacity: 1;
-        -webkit-transform: scale(1.05);
-        transform: scale(1.05);
-    }
-
-    70% {
-        -webkit-transform: scale(.9);
-        transform: scale(.9);
-    }
-
-    100% {
-         -webkit-transform: scale(1);
-        transform: scale(1);
-    }
+/* Slide Down - In */
+@include keyframes(slideDownIn){
+  from { top: -999px; }
+  to { top: 0; }
 }
 
 
@@ -1268,7 +1256,15 @@ background: #416e0d; /* Old browsers */
             margin: 0.5em;
             float: left;
             &.ng-enter {
-                @include animation(bounceIn 1s);
+                @include animation(slideDownIn 0.3s);
+            }
+            &.ng-enter-stagger {
+                /* 200ms will be applied between each sucessive enter operation */
+                -webkit-animation-delay: 0.3s;
+                animation-delay: 0.3s;
+            }
+            &.ng-leave {
+                @include animation(slideDownOut 0.2s);
             }
         }
         .game-alerts {
