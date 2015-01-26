@@ -26,7 +26,7 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   }
 
   	 $scope.playGame = function () {
-  	 	// while gameWon == false...
+  	 // while gameWon == false...
   	 };
 
   	 $scope.createCards = function () {
@@ -97,12 +97,44 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
         $scope.score += 5;
         $scope.removeCards(card1, card2)
         console.log("Score", $scope.score)
+        mixpanel.track("lexeme event", {
+          activity :  "matching",
+          match : true,
+          lexeme : cardarr1[0],
+          card_type : cardarr1[1],
+          lexeme_pair: cardarr2[0],
+          seconds : $scope.seconds,
+        });
+        mixpanel.track("lexeme event", {
+          activity :  "matching",
+          lexeme : cardarr2[0],
+          card_type : cardarr2[1],
+          lexeme_pair: cardarr1[0],
+          match : true,
+          seconds : $scope.seconds,
+        });
       } else {
         $scope.status = "Those don't match...";
         $scope.wrong++;
         $timeout(function () {
         $scope.showCards = [];
         $scope.status = "";
+        mixpanel.track("lexeme event", {
+          activity :  "matching",
+          match : false,
+          lexeme : cardarr1[0],
+          card_type : cardarr1[1],
+          lexeme_pair: cardarr2[0],
+          seconds : $scope.seconds,
+        });
+        mixpanel.track("lexeme event", {
+          activity :  "matching",
+          lexeme : cardarr2[0],
+          card_type : cardarr2[1],
+          lexeme_pair: cardarr1[0],
+          match : false,
+          seconds : $scope.seconds,
+        });
       }, 1000);
       }
       if ($scope.hideCards.length == $scope.cards.length - 2) {
@@ -131,22 +163,45 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	$scope.stopTimer = function () {
     	if ($scope.done) {
       		$interval.cancel($scope.stop);
+          mixpanel.track("timer end", {
+            activity: "matching",
+            seconds: $scope.seconds,
+          });
       		$scope.stop = undefined;
     	}
   	};
 
   	$scope.startTimer = function () {
+      mixpanel.track("timer start", {
+        activity: "matching"
+      });
   		$scope.stop = $interval(function () {
     		if (!$scope.done) {
        			$scope.seconds++;
       		} else {
         		$scope.stopTimer();
+            $scope.activityCompleted();
       		}
     	}, 1000);}
 
   	 $scope.endGame = function () {
   	 	// Print out an end game screen and push the data to
   	 	// the backend.
+     };
+
+     $scope.activityCompleted = function () {
+      mixpanel.track("activity complete", {
+        activity: "matching",
+        game_won : $scope.gameWon,
+        correct : $scope.correct,
+        wrong : $scope.wrong,
+        elapsed: $scope.seconds,
+        score : $scope.score,
+        wordlist_id : $scope.wordlist["pk"],
+        wordlist : $scope.wordlist["title"],
+        base_language : $scope.base_language,
+        trans_language : $scope.trans_language
+      });
   	 };
 
      $scope.flipCard = function (card) {
@@ -162,7 +217,27 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   	var url = "http://127.0.0.1:8000/wordlists/json/1/";
   	$http.get(url)
   	 	.success(function (data) {
-	  	   	$scope.wordlist = data;
+
+          $scope.wordlist = data;
+
+          $scope.base_language = "unknown";
+          $scope.trans_language = "unknown";
+
+          try {
+            $scope.base_language = data["base_language"]["title"].toLowerCase();
+            $scope.trans_language = data["trans_language"]["title"].toLowerCase();
+          } catch(e) {
+            // we don't care really, it either works or not
+          }
+
+          mixpanel.track("activity launched", {
+            activity :  "matching",
+            wordlist_id : $scope.wordlist["pk"],
+            wordlist : $scope.wordlist["title"],
+            base_language : $scope.base_language,
+            trans_language : $scope.trans_language
+          });
+
 	  	   	$scope.gameWon = false;
 	  	   	$scope.cards = $scope.createCards();
 	  	   	$scope.setUpBoard();

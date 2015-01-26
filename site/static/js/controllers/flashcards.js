@@ -23,7 +23,8 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
         headers: {
           Authorization: 'JWT ' + localStorage.getItem('authToken'),
         }
-      }
+      };
+
       $http(req)
         .success(function (data) {
           req = {
@@ -37,7 +38,8 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
             headers: {
               Authorization: 'JWT ' + localStorage.getItem('authToken'),
             }
-          }
+          };
+
           $http(req).success(function (data) {
 
           })
@@ -47,27 +49,50 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
         })
         .error(function (data) {
 
-        })
-       }
+        });
+       };
 
 
   $scope.stopTimer = function () {
     if ($scope.done) {
       $interval.cancel($scope.stop);
+      mixpanel.track("timer end", {
+        activity: "flashcard",
+        seconds: $scope.seconds,
+      });
       $scope.stop = undefined;
     }
   };
 
-  var url = "http://127.0.0.1:8000/wordlists/json/1/"
+  var url = "http://127.0.0.1:8000/wordlists/json/1/";
   $http.get(url)
     .success(function(data) {
       $scope.wordlist = data;
-      $scope.getUnusedWords()
-      $scope.newScreen()
+
+      $scope.base_language = "unknown";
+      $scope.trans_language = "unknown";
+
+      try {
+        $scope.base_language = data["base_language"]["title"].toLowerCase();
+        $scope.trans_language = data["trans_language"]["title"].toLowerCase();
+      } catch(e) {
+        // we don't care really, it either works or not
+      }
+
+      mixpanel.track("activity launched", {
+        activity :  "flashcard",
+        wordlist_id : $scope.wordlist["pk"],
+        wordlist : $scope.wordlist["title"],
+        base_language : $scope.base_language,
+        trans_language : $scope.trans_language
+      });
+
+      $scope.getUnusedWords();
+      $scope.newScreen();
       $scope.actions = {
         wrong: [],
         right: []
-      }
+      };
       $scope.done = false;
       $scope.seconds = 0;
       $scope.stop = $interval(function () {
@@ -137,19 +162,34 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
       $scope.possible_cards = $scope.shuffle($scope.possible_cards);
 
     } else {
-      $scope.endScreen()
+      $scope.endScreen();
     }
   };
 
   $scope.endScreen = function() {
     $scope.done = true;
-    $scope.sendScore()
-  }
+    $scope.sendScore();
+    $scope.activityCompleted();
+  };
+
+  $scope.activityCompleted = function () {
+    mixpanel.track("activity complete", {
+      activity: "flashcard",
+      elapsed: $scope.seconds,
+      score : $scope.score,
+      wordlist_id : $scope.wordlist["pk"],
+      wordlist : $scope.wordlist["title"],
+      base_language : $scope.base_language,
+      trans_language : $scope.trans_language
+    });
+  };
 
   $scope.selectedCard = 0;
   $scope.isCorrect = "neutral";
+  $scope.tries = 0;
 
   $scope.checkCard = function(item) {
+    $scope.tries = $scope.tries + 1;
     // Flip it
     if ($scope.show_symbol == null) {
       // Only do something if we don't have a card flipped
@@ -160,6 +200,18 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
         $scope.alerts[item.base_word.root_word] = "+5";
         $scope.score += 5;
         $scope.isCorrect = 'true';
+
+        mixpanel.track("lexeme event", {
+          activity :  "flashcard",
+          match : true,
+          lexeme_id: $scope.card.base_word.pk,
+          lexeme_root : $scope.card.base_word.root_word,
+          lexeme_trans_root: $scope.card.trans_word.root_word,
+          lexeme_pair_root: item.base_word.root_word,
+          seconds : $scope.seconds,
+          tries: $scope.tries,
+        });
+        $scope.tries = 0;
         $timeout(function() {
           $scope.isCorrect = '';
           $scope.alerts[item.base_word.root_word] = null;
@@ -173,6 +225,17 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
       } else {
         $scope.alerts[item.base_word.root_word] = "Try Again!";
         $scope.isCorrect = 'false';
+        mixpanel.track("lexeme event", {
+          activity :  "flashcard",
+          match : false,
+          lexeme_id: $scope.card.base_word.pk,
+          lexeme_root : $scope.card.base_word.root_word,
+          lexeme_trans_root: $scope.card.trans_word.root_word,
+          lexeme_pair_root: item.base_word.root_word,
+          seconds : $scope.seconds,
+          tries: $scope.tries
+        });
+
         $timeout(function() {
           $scope.isCorrect = '';
           $scope.alerts[item.base_word.root_word] = null;

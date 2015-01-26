@@ -6,6 +6,7 @@ mainApp.config(function($routeProvider, $sceDelegateProvider,
     //    return localStorage.getItem('authToken');
     // }
     // $httpProvider.interceptors.push('jwtInterceptor');
+
 	$routeProvider
 	.when('/', {
 		templateUrl: 'templates/main.html',
@@ -65,6 +66,14 @@ mainApp.config(function($routeProvider, $sceDelegateProvider,
 mainApp.controller('mainController', function($scope, $rootScope) {
 	$scope.title = "Hello, world!";
 	$rootScope.body_classes = "main"
+
+	// Use this value to track # of seconds the app's been running
+	// TO DO: Send app ended events when window close; not sure how best
+	// to do that yet.
+	$rootScope.appLaunched = $rootScope.appLaunched || new Date().valueOf();
+
+  mixpanel.track("application launched");
+
 });
 
 
