@@ -6,7 +6,7 @@
 		<div class="card-controller"
 		 	ng-click="flipCard(card)"
 		 	ng-if="hideCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1">
-			 <div ng-show = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1"
+			 <div ng-if = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1"
 			      class="card front">
 				<span class="photo"><img src = "http://127.0.0.1:8000{{card.word.base_word.photos[0].image}}"
 			 	  ng-if = "card.type == 'symbol'"></span>
@@ -14,7 +14,7 @@
 				{{ card.word.base_word.root_word }}
 				</span>
 			</div>
-			<div ng-show = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1"
+			<div ng-if = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1"
 			     class="card back">
 			    <span class="pattern">
 					<img src = "/static/images/matching/card-back-pattern.png">

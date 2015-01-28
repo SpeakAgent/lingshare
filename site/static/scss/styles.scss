@@ -326,7 +326,7 @@ a {
         .icon-above {
             padding-top: 28px;
             &:before {
-                top: 8px;
+                top: 11px;
                 font-size: 1.6em;
             }
         }
@@ -1243,11 +1243,17 @@ body.games.flashcards {
 */
 
 body.matching {
-background: #416e0d; /* Old browsers */
-
-
-
+    background: #416e0d;
+        background-image: -moz-radial-gradient(center, ellipse cover,  #63a610 0%, #416e0d 70%);
+        background-image: -webkit-gradient(radial, center center, 0px, center center, 70%, color-stop(0%,#63a610), color-stop(70%,#416e0d));
+        background-image: -webkit-radial-gradient(center, ellipse cover,  #63a610 0%,#416e0d 70%);
+        background-image: -o-radial-gradient(center, ellipse cover,  #63a610 0%,#416e0d 70%);
+        background-image: -ms-radial-gradient(center, ellipse cover,  #63a610 0%,#416e0d 70%);
+        background-image: radial-gradient(ellipse at center,  #63a610 0%,#416e0d 70%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63a610', endColorstr='#416e0d',GradientType=1 );
+        background-repeat: no-repeat;
     div.matching-cards {
+
         margin: 0 auto;
         padding-top: 30px;
         position:relative;
@@ -1408,6 +1414,9 @@ background: #416e0d; /* Old browsers */
     }
     .game-complete {
         margin: 0 auto;
+        &.ng-hide-remove {
+            @include animation(slideDownIn 1s);
+        }
         .game-results {
             .result {
                 border-radius: 9px;
