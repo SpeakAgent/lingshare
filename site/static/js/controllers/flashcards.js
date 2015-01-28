@@ -1,7 +1,7 @@
 mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
-  '$interval', '$rootScope',
+  '$interval', '$rootScope', '$animate',
 
-  function ($scope, $timeout, $http, $interval, $rootScope) {
+  function ($scope, $timeout, $http, $interval, $rootScope, $animate) {
 
   $scope.used_words = []
 

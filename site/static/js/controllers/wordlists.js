@@ -2,7 +2,7 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
   '$rootScope', '$sce', 'jwtHelper',
 
   function ($scope, $http, $routeParams, $rootScope, $sce, jwtHelper) {
-    
+
     $rootScope.body_classes = "wordslist";
 
     $scope.updateActivity = function (status) {
@@ -11,7 +11,7 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
       req = {
         url: 'http://127.0.0.1:8000/user/username/' + user + '/',
         method: "PUT",
-        data: {activities :  [{title: "Word Review", 
+        data: {activities :  [{title: "Word Review",
           status: status,
           wordlist_pk: $scope.list.pk}] },
         headers: {
@@ -35,7 +35,7 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
     }
 
     $scope.viewWords = function() {
-      if ($routeParams.wordID) 
+      if ($routeParams.wordID)
       {
           $scope.wordID = $routeParams.wordID;
           if (parseInt($scope.wordID) == 0) {
@@ -71,7 +71,7 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
                   }
                 }
                 $http(req).success(function (data) {
-                  
+
                 })
                 .error(function (data) {
                   console.log(data);
@@ -83,7 +83,7 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
           }
       }
     }
-    if ($routeParams.id) 
+    if ($routeParams.id)
         { $scope.id = $routeParams.id;
           $scope.display = 'grid';
         }
@@ -103,11 +103,24 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
         }
       );
     }
-    
+
 
     $scope.audio_url = function(path) {
         return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
     }
+
+    //* Creates Word Samples Navigation and Functionality
+    //  From http://onehungrymind.com/build-sweet-photo-slider-angularjs-animate/
+
+    $scope.currentSampleIndex = 0;
+
+    $scope.setCurrentSampleIndex = function (index) {
+        $scope.currentSampleIndex = index;
+    };
+
+    $scope.isCurrentSampleIndex = function (index) {
+        return $scope.currentSampleIndex === index;
+    };
     $scope.getNext = function(id) {
       return parseInt(id) + 1
     }

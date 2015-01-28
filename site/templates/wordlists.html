@@ -2,32 +2,38 @@
 
 <div class="wordlists app-container" role="main" ng-controller="WordListsController">
 <div ng-if="!id">
-<div class="container">
-	<h1>All word lists</h1>
-	<div ng-repeat="list in wordlists"><a href = "/#/words/{{list.pk}}">{{ list.title }}</a></div>
+	<div class="container">
+		<h1>Your Wordlists</h1>
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4" ng-repeat="list in wordlists">
+				<div class="card">
+					<a href = "/#/words/{{list.pk}}">{{ list.title }}</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 <div ng-if="id">
 	<div ng-show="!wordID">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-2"><button class="btn btn-back"><a href="/#/words/"><i class="fa fa-arrow-left"></i> Back to Topics</a></button></div>
-			</div>
 			<div class="row wordlist-header">
-				<div class="col-md-10"><h1>{{ list.title }}</h1></div>
-				<div class="col-md-1">
-					<button class="btn btn-primary"
-						ng-click="display='grid'"><i class="fa fa-th-large"></i> Grid</button>
-				</div>
-				<div class="col-md-1">
-					<button class="btn btn-primary"
-						ng-click="display='list'"><i class="fa fa-th-list"></i> List</button>
+				<div class="wordlist-title col-md-8 col-sm-6 col-xs-12"><h1>{{ list.title }}</h1></div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<ul class="view-controls">
+						<li>
+							<button class="btn btn-primary icon-grid icon-left hvr-icon-grow"
+							ng-click="display='grid'">Grid</button>
+						</li>
+						<li>
+							<button class="btn btn-primary icon-list icon-left hvr-icon-grow"
+							ng-click="display='list'">List</button>
+						</li>
+					</ul>
 				</div>
 			</div>
-
 			<div class="row grid"
 				ng-show="display=='grid'">
-				<div class="col-md-2 col-sm-2 col-xs-2"
+				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4"
 					ng-repeat="word in list.words">
 					<div class="card">
 						<a href = "/#/wordpair/{{ word.pk }}/">
@@ -51,77 +57,96 @@
 			  				Your browser does not support the audio tag.
 						</audio>
 					</span>
-					<span ng-if="!word.base_word.audio_file">No audio</span>
 					<img src = "http://127.0.0.1:8000{{ word.base_word.photos[0].image }}">
 					<span>{{ word.base_word.root_word }}</span>
 					</a>
 				</div>
 			</div>
 			<div class="row">
-				<button class="btn btn-primary btn-center">
-					<a href = "/#/words/{{ id }}/0/"><i class="fa fa-comment"></i> Review words</a>
+				<button class="btn btn-primary btn-center icon-wordlists icon-left hvr-icon-grow">
+					<a href = "/#/words/{{ id }}/0/">Review All Words</a>
 				</button>
 			</div>
 		</div>
 	</div>
 
 	<div ng-show="wordID" class="word-detail">
-		<div class="container word-samples top">
+		<div class="container top">
 			<h1>{{ list.words[wordID].base_word.root_word }}</h1>
-			<div>
-				<img src="http://127.0.0.1:8000{{photo.image}}"
-					ng-repeat="photo in list.words[wordID].base_word.photos"
-					class="img-rounded small">
-			</div>
+            <div class="word-samples">
+                <div class="word-sample"
+                    ng-repeat="photo in list.words[wordID].base_word.photos"
+                    ng-class="sample_{{$index+1}}_container"
+                    ng-hide="!isCurrentSampleIndex($index)"
+                    >
+                    <img src="http://127.0.0.1:8000{{photo.image}}" alt="" class="sample" id="sample_0{{$index+1}}" />
+                </div>
+                <ul class="word-samples-nav">
+                    <li
+                    ng-repeat="photo in list.words[wordID].base_word.photos"
+                    ng-click="setCurrentSampleIndex($index)"
+                    ng-class="{'active':isCurrentSampleIndex($index)}"
+                    >
+                        <i><img src="http://127.0.0.1:8000{{photo.image}}" alt="" class="hvr-grow" id="nav_sample_0{{$index+1}}" /></i>
+                    </li>
+                </ul>
+            </div>
 		</div>
 		<div class="secondary-content word-definition">
-		<div class="container">
-		<div>
-			<dl>
-				<dt>{{ list.words[wordID].base_word.root_word }}</dt>
-					<dd ng-if="list.words[wordID].base_word.gender.title != 'NA'">({{ list.words[wordID].base_word.word_class.title }}, {{ list.words[wordID].base_word.gender }})
-					</dd>
-
-					<dd ng-if="list.words[wordID].base_word.gender.title == 'NA'">({{ list.words[wordID].base_word.word_class.title }})
-					</dd>
-				<dt>{{ list.words[wordID].trans_word.root_word }}</dt>
-			</dl>
-		</div>
-
-		<div class="audio">
-			<p ng-if="list.words[wordID].base_word.audio_file"
-				class="col-md-1">
-				<audio controls>
-						<source src="{{ audio_url(list.words[wordID].base_word.audio_file) }}"
-							type="audio/mpeg">
-						Your browser does not support the audio tag.
-				</audio>
-			</p>
-			<p ng-if="!list.words[wordID].base_word.audio_file">No audio</p>
-		</div>
-
-		<div>
-			<p>In a sentence:</p>
-			<dl>
-				<dt ng-repeat-start="sentence in list.words[wordID].base_word.example_sentences">
-					{{ sentence.text }}
-				</dt>
-				<dd ng-repeat-end>{{ sentence.translations[0].text }}</dd>
-			</dl>
-		</div>
-		<div>
-			<button ng-if="wordID > 0">
-				<a href="/#/words/{{ id }}/{{ getPrev(wordID) }}">
-					{{ list.words[getPrev(wordID)].base_word.root_word }}
-				</a>
-			</button>
-			<button ng-if="wordID < list.words.length - 1">
-				<a href="/#/words/{{ id }}/{{ getNext(wordID) }}">
-					{{ list.words[getNext(wordID)].base_word.root_word }}
-				</a>
-			</button>
-		</div>
-		</div>
+			<div class="container">
+				<div class="col-md-3 col-xs-3 first">
+					<div class="word-symbol">
+						<img src="/static/images/symbols/fpo/cat.png" alt="" />
+					</div>
+					<div class="word-audio" ng-if="list.words[wordID].base_word.audio_file">
+						<p class="button btn btn-primary">
+							<audio id="word-player">
+									<source src="{{ audio_url(list.words[wordID].base_word.audio_file) }}"
+										type="audio/mpeg">
+									Your browser does not support the audio tag.
+							</audio>
+							<span onclick="document.getElementById('word-player').play()"><i class="fa fa-play"></i> Listen</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-9 col-xs-9">
+					<div class="word-specification">
+						<dl>
+							<dt class="word-base">{{ list.words[wordID].base_word.root_word }}</dt>
+								<dd class="word-base-meta">
+								<span ng-if="list.words[wordID].base_word.gender.title != 'NA'">({{ list.words[wordID].base_word.word_class.title }}, {{ list.words[wordID].base_word.gender }})</span>
+								<span ng-if="list.words[wordID].base_word.gender.title == 'NA'">({{ list.words[wordID].base_word.word_class.title }})</span>
+								</dd>
+							<dt class="word-trans">{{ list.words[wordID].trans_word.root_word }}</dt>
+						</dl>
+					</div>
+					<div class="word-phrase-examples">
+						<p>In a sentence:</p>
+						<dl class="word-balloon">
+							<dt class="sentence-base" ng-repeat-start="sentence in list.words[wordID].base_word.example_sentences">
+								{{ sentence.text }}
+							</dt>
+							<dd class="sentence-trans" ng-repeat-end>{{ sentence.translations[0].text }}</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="word-list-nav">
+					<button class="prev-word" ng-if="wordID > 0">
+						<a href="/#/words/{{ id }}/{{ getPrev(wordID) }}">
+							<span><img src="http://127.0.0.1:8000{{ list.words[getPrev(wordID)].base_word.photos[0].image }}"/></span>
+							<span>{{ list.words[getPrev(wordID)].base_word.root_word }}</span>
+							<i class="fa fa-arrow-left"></i>
+						</a>
+					</button>
+					<button class="next-word" ng-if="wordID < list.words.length - 1">
+						<a href="/#/words/{{ id }}/{{ getNext(wordID) }}">
+							<span><img src="http://127.0.0.1:8000{{ list.words[getNext(wordID)].base_word.photos[0].image }}" /></span>
+							<span>{{ list.words[getNext(wordID)].base_word.root_word }}</span>
+							<i class="fa fa-arrow-right"></i>
+						</a>
+					</button>
+				</div>
+			</div>
 		</div>
 		<div class="tertiary-content">
 			<div class="container">
