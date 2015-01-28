@@ -1,7 +1,7 @@
 mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
-  '$interval','$rootScope','$animate',
+  '$interval','$rootScope','$animate', '$sce',
 
-  function ($scope, $timeout, $http, $interval,$rootScope,$animate) {
+  function ($scope, $timeout, $http, $interval,$rootScope,$animate, $sce) {
 
   $rootScope.body_classes = "games matching"
 
@@ -93,7 +93,12 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
       cardarr2 = card2.split('-');
 
       if (cardarr1[0] == cardarr2[0]) {
+<<<<<<< HEAD
         $scope.status = 1;
+=======
+        $scope.status = "They match!";
+        $scope.play = cardarr1[0];
+>>>>>>> game-sound
         $scope.correct++;
         $scope.score += $scope.pointsAwarded;
         $scope.removeCards(card1, card2)
@@ -253,5 +258,9 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
           $scope.startTimer();
           $scope.score = 0;
   	 });
+
+  $scope.audio_url = function(path) {
+        return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
+    }
 
   }]);

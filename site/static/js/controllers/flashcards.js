@@ -1,8 +1,8 @@
 mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
-  '$interval', '$rootScope', '$animate',
+  '$interval', '$rootScope', '$animate', '$sce',
 
-  function ($scope, $timeout, $http, $interval, $rootScope, $animate) {
-
+  function ($scope, $timeout, $http, $interval, $rootScope, $animate, $sce) {
+    
   $scope.used_words = []
 
   $scope.seconds = 0
@@ -200,6 +200,7 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
         $scope.alerts[item.base_word.root_word] = "+5";
         $scope.score += 5;
         $scope.isCorrect = 'true';
+        $scope.play = item.base_word.root_word;
 
         mixpanel.track("lexeme event", {
           activity :  "flashcard",
@@ -249,7 +250,9 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
     }
   };
 
-
+  $scope.audio_url = function(path) {
+        return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
+    }
 
 
 
