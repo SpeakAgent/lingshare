@@ -17,6 +17,12 @@
                ng-repeat="item in possible_cards"
                ng-click="checkCard(item)"
                ng-class="{true: item==selectedCard && isCorrect=='true', false: item==selectedCard && isCorrect=='false'}">
+              <audio
+                autoplay
+                ng-if="play==item.base_word.root_word">
+                <source src="{{ audio_url(item.base_word.audio_file) }}"
+                  type="audio/mpeg" />
+              </audio>
               <div class="option">
                 <div class="lexeme"
                        ng-show="show_symbol != item.base_word.root_word">
