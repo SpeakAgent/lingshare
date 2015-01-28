@@ -60,7 +60,7 @@
 /* Slide Down - Out */
 @include keyframes(slideDownOut){
   from { top: 0; }
-  to { top: 999px; }
+  to { top: 10px; }
 }
 
 /* Slide Down - In */
@@ -1259,7 +1259,6 @@ background: #416e0d; /* Old browsers */
                 @include animation(slideDownIn 0.3s);
             }
             &.ng-enter-stagger {
-                /* 200ms will be applied between each sucessive enter operation */
                 -webkit-animation-delay: 0.3s;
                 animation-delay: 0.3s;
             }
@@ -1554,65 +1553,80 @@ background: #416e0d; /* Old browsers */
     }
 }
 .word-detail {
-    .word-samples {
+    .top {
+        position: relative;
         h1 {
             text-align: center;
         }
-        .word-img-examples {
+        .word-samples {
             text-align: center;
             margin: 0 auto;
             position: relative;
             height: 400px;
             z-index: 1;
-            max-width: 830px;
-            .word-img {
-                background-color: #fff;
-                border: 3px solid #fff;
-                border-radius: 9px;
-                position: absolute;
+            width: 520px;
+            max-height: 400px;
+            display: table;
+            .word-sample {
                 margin: 0 auto;
-                max-width: 525px;
-                z-index: 10;
-                display: inline-block;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+                img {
+                    background-color: #fff;
+                    border-radius: 9px;
+                    border: 3px solid #fff;
+                    max-width: 520px;
+                    max-height: 400px;
+                    @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+                }
+
+            }
+            .word-samples-nav {
+                list-style: none;
+                margin: 0 auto 0;
+                padding: 0;
+                position: absolute;
+                bottom: -40px;
                 left: 0;
                 right: 0;
-                @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
-                img {
+                li {
                     border-radius: 9px;
-                    max-width: 100%;
-                }
-                &:nth-child(2) {
-                    z-index: 5;
-                    left: 15px;
-                    right: auto;
-                }
-                &:nth-child(3) {
-                    z-index: 5;
-                    left: auto;
-                    right: 15px;
-                }
-                &:nth-child(2),
-                &:nth-child(3) {
-                    bottom: 40px;
-                    max-height: 300px;
-                    overflow: hidden;
-                }
-                &.active {
+                    display: inline-block;
+                    border: 3px solid #F8E71C;
+                    background-color: #F8D338;
+                    margin: 0 3px;
+                    @include transition(border-color 0.1s);
+                    @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
                     position: relative;
-                    top: 0;
-                    right: 0;
-                    left: 0;
-                    max-height: 100%;
-                    z-index: 100;
-                    @media (max-width:$screen-md-min){
-                        max-width: 400px;
+                    &:hover, &:focus {
+                        cursor: pointer;
+                        background-color: lighten(#F8D338,8%);
+                        border-color: lighten(#F8E71C,12%);
+                    }
+                    i {
+                        display: table-cell;
+                        width: 80px;
+                        height: 80px;
+                        vertical-align: middle;
+                    }
+                    img {
+                        width: 80%;
+                        vertical-align: middle;
+                        border-radius: 9px;
+                    }
+                    &.active {
+                        border-color: #F8D338;
+                        box-shadow: none;
+                        top: 4px;
+                        @include transition(none);
                     }
                 }
             }
         }
     }
     .secondary-content {
-        margin-top: -60px;
+        margin-top: -30px;
         position: relative;
         .container {
             padding-top: 100px;

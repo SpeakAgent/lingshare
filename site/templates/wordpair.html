@@ -1,17 +1,25 @@
 <div class="word-detail">
-<div class="container word-samples top">
-<h1>{{ word.base_word.root_word }}</h1>
+<div class="container top">
+	<h1>{{ word.base_word.root_word }}</h1>
 
-<div class="word-img-examples">
-	<div class="word-img"
-		ng-repeat="photo in word.base_word.photos"
-		ng-class="{'second':$index==1,'last':$last,'active':isActive(photo)}"
-		ng-click="selectedImage(photo)"
-		>
-		<img src="http://127.0.0.1:8000{{photo.image}}" alt=""/>
+	<div class="word-samples">
+		<div class="word-sample"
+			ng-repeat="photo in word.base_word.photos"
+			ng-class="sample_{{$index+1}}_container"
+			ng-hide="!isCurrentSampleIndex($index)"
+			>
+			<img src="http://127.0.0.1:8000{{photo.image}}" alt="" class="sample" id="sample_0{{$index+1}}" />
+		</div>
+		<ul class="word-samples-nav">
+			<li
+			ng-repeat="photo in word.base_word.photos"
+			ng-click="setCurrentSampleIndex($index)"
+			ng-class="{'active':isCurrentSampleIndex($index)}"
+			>
+				<i><img src="http://127.0.0.1:8000{{photo.image}}" alt="" class="hvr-grow" id="nav_sample_0{{$index+1}}" /></i>
+			</li>
+		</ul>
 	</div>
-</div>
-
 </div>
 <div class="secondary-content word-definition">
 <div class="container">
