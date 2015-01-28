@@ -12,6 +12,14 @@
 			 	  ng-if = "card.type == 'symbol'"></span>
 				<span class="word" ng-if = "card.type == 'word'">
 				{{ card.word.base_word.root_word }}
+				<audio 
+					autoplay
+					ng-if="play==card.word.base_word.root_word">
+					<source 
+						src="{{audio_url(card.word.base_word.audio_file)}}"
+						type="audio/mpeg"
+					/>
+				</audio>
 				</span>
 			</div>
 			<div ng-show = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1"
