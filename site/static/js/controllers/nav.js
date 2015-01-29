@@ -1,4 +1,5 @@
 mainApp.controller('NavController', 
-	function($scope, User){
+	function($scope, $rootScope){
   		$scope.username = localStorage.getItem('username');
+  		$rootScope.username = $scope.username;
  	});
