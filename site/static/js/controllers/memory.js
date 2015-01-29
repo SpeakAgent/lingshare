@@ -93,12 +93,8 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
       cardarr2 = card2.split('-');
 
       if (cardarr1[0] == cardarr2[0]) {
-<<<<<<< HEAD
         $scope.status = 1;
-=======
-        $scope.status = "They match!";
         $scope.play = cardarr1[0];
->>>>>>> game-sound
         $scope.correct++;
         $scope.score += $scope.pointsAwarded;
         $scope.removeCards(card1, card2)
