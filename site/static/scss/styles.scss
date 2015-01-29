@@ -583,34 +583,75 @@ a {
 }
 
 .achievement {
-    background-color: $brand-secondary;
-    @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
-    height: 120px;
-    width: 120px;
-    position: relative;
-    border-radius: 120px;
-    text-align: center;
-    line-height: 120px;
-    .a-title {
-        background-color: #fff;
-        color: $brand-secondary;
+    .trophy {
+        background-color: $brand-secondary;
         @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
-        display: block;
-        position: absolute;
-        bottom: -4px;
+        height: 120px;
+        width: 120px;
+        position: relative;
+        border-radius: 120px;
         text-align: center;
-        padding: 5px 10px;
-        border-radius: 10px;
-        width: 100%;
-        line-height: 1;
-    }
-    i {
-        font-size: 7em;
-        color: $gold;
-        margin-top: 10px;
-        @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+        line-height: 120px;
+        .a-title {
+            background-color: #fff;
+            color: $brand-secondary;
+            @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+            display: block;
+            position: absolute;
+            bottom: -4px;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 10px;
+            width: 100%;
+            line-height: 1;
+        }
+        i {
+            font-size: 7em;
+            color: $gold;
+            margin-top: 10px;
+            @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+        }
     }
 }
+
+/* Achievements - Trophy Case */
+.trophy-case {
+    .achievement-container {
+        margin-top: 0;
+        .achievement {
+            background-color: #fff;
+            border-radius: 9px;
+            @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+            padding: 1em;
+            .trophy {
+                float: left;
+                height: 100px;
+                width: 100px;
+                position: relative;
+                border-radius: 100px;
+                text-align: center;
+                line-height: 100px;
+                i {
+                    margin-top: 14px;
+                    font-size: 5.5em;
+                }
+            }
+            .a-desc {
+                margin-left: 114px;
+                h4 {
+                    margin: 2px 0 4px;
+                    padding: 0;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* Grid/List Toggle Buttons */
 
 ul.view-controls {
     float: right;

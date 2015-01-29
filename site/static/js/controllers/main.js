@@ -51,9 +51,13 @@ mainApp.config(function($routeProvider, $sceDelegateProvider,
 	.when('/dashboard/', {
 		templateUrl: 'templates/dashboard.html',
 		controller: 'DashboardController'
-	}).
-	when('/wordlist/:id', {
+	})
+	.when('/wordlist/:id', {
 		templateUrl: '/templates/wordlists.html'
+	})
+	.when('/trophies/', {
+		templateUrl: 'templates/trophies.html',
+		controller: 'TrophiesController'
 	});
 
 	$sceDelegateProvider.resourceUrlWhitelist([
