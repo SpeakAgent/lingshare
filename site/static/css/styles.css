@@ -11146,7 +11146,7 @@ button.close {
 
   /* line 63, ../scss/styles.scss */
   to {
-    top: 10px;
+    top: 999px;
   }
 }
 @-webkit-keyframes slideDownOut {
@@ -11157,7 +11157,7 @@ button.close {
 
   /* line 63, ../scss/styles.scss */
   to {
-    top: 10px;
+    top: 999px;
   }
 }
 @keyframes slideDownOut {
@@ -11168,7 +11168,7 @@ button.close {
 
   /* line 63, ../scss/styles.scss */
   to {
-    top: 10px;
+    top: 999px;
   }
 }
 /* Slide Down - In */
@@ -12637,20 +12637,14 @@ body.matching div.matching-cards .card-container.ng-enter-stagger {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
-/* line 1312, ../scss/styles.scss */
-body.matching div.matching-cards .card-container.ng-leave {
-  -webkit-animation: slideDownOut 0.2s;
-  -o-animation: slideDownOut 0.2s;
-  animation: slideDownOut 0.2s;
-}
-/* line 1316, ../scss/styles.scss */
+/* line 1313, ../scss/styles.scss */
 body.matching div.matching-cards .game-alerts {
   right: 0;
   left: 0;
   top: 0;
   margin: 0 auto;
 }
-/* line 1322, ../scss/styles.scss */
+/* line 1319, ../scss/styles.scss */
 body.matching div.matching-cards .card {
   position: absolute;
   background-color: #fff;
@@ -12669,80 +12663,80 @@ body.matching div.matching-cards .card {
   /* Card Front */
   /* Cards have been removed, but space must remain */
 }
-/* line 1335, ../scss/styles.scss */
+/* line 1332, ../scss/styles.scss */
 body.matching div.matching-cards .card img {
   border-radius: 9px;
   width: 100%;
 }
-/* line 1340, ../scss/styles.scss */
+/* line 1337, ../scss/styles.scss */
 body.matching div.matching-cards .card.back {
   background-color: #76DBDC;
 }
-/* line 1342, ../scss/styles.scss */
+/* line 1339, ../scss/styles.scss */
 body.matching div.matching-cards .card.back span {
   border-radius: 9px;
   display: block;
 }
-/* line 1349, ../scss/styles.scss */
+/* line 1346, ../scss/styles.scss */
 body.matching div.matching-cards .card.front span {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 1355, ../scss/styles.scss */
+/* line 1352, ../scss/styles.scss */
 body.matching div.matching-cards .card.empty {
   border: 0;
   background-color: transparent;
   box-shadow: none;
   cursor: default;
 }
-/* line 1365, ../scss/styles.scss */
+/* line 1362, ../scss/styles.scss */
 body.matching div.matching-cards.cards_6 {
   width: 430px;
 }
 @media (min-width: 768px) {
-  /* line 1365, ../scss/styles.scss */
+  /* line 1362, ../scss/styles.scss */
   body.matching div.matching-cards.cards_6 {
     width: 720px;
   }
 }
-/* line 1370, ../scss/styles.scss */
+/* line 1367, ../scss/styles.scss */
 body.matching div.matching-cards.cards_6 .card-container,
 body.matching div.matching-cards.cards_6 .card {
   width: 200px;
   height: 200px;
 }
 @media (min-width: 768px) {
-  /* line 1370, ../scss/styles.scss */
+  /* line 1367, ../scss/styles.scss */
   body.matching div.matching-cards.cards_6 .card-container,
   body.matching div.matching-cards.cards_6 .card {
     width: 224px;
     height: 224px;
   }
 }
-/* line 1380, ../scss/styles.scss */
+/* line 1377, ../scss/styles.scss */
 body.matching div.matching-cards.cards_12 {
   width: 466px;
 }
 @media (min-width: 768px) {
-  /* line 1380, ../scss/styles.scss */
+  /* line 1377, ../scss/styles.scss */
   body.matching div.matching-cards.cards_12 {
     width: 700px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 1380, ../scss/styles.scss */
+  /* line 1377, ../scss/styles.scss */
   body.matching div.matching-cards.cards_12 {
     width: 780px;
   }
 }
-/* line 1388, ../scss/styles.scss */
+/* line 1385, ../scss/styles.scss */
 body.matching div.matching-cards.cards_12 .card-container,
 body.matching div.matching-cards.cards_12 .card {
   width: 140px;
   height: 140px;
 }
 @media (min-width: 768px) {
-  /* line 1388, ../scss/styles.scss */
+  /* line 1385, ../scss/styles.scss */
   body.matching div.matching-cards.cards_12 .card-container,
   body.matching div.matching-cards.cards_12 .card {
     height: 160px;
@@ -12750,24 +12744,24 @@ body.matching div.matching-cards.cards_12 .card {
   }
 }
 @media (min-width: 1200px) {
-  /* line 1388, ../scss/styles.scss */
+  /* line 1385, ../scss/styles.scss */
   body.matching div.matching-cards.cards_12 .card-container,
   body.matching div.matching-cards.cards_12 .card {
     height: 180px;
     width: 180px;
   }
 }
-/* line 1402, ../scss/styles.scss */
+/* line 1399, ../scss/styles.scss */
 body.matching div.matching-cards.cards_24 {
   width: 410px;
 }
 @media (min-width: 768px) {
-  /* line 1402, ../scss/styles.scss */
+  /* line 1399, ../scss/styles.scss */
   body.matching div.matching-cards.cards_24 {
     width: 740px;
   }
 }
-/* line 1407, ../scss/styles.scss */
+/* line 1404, ../scss/styles.scss */
 body.matching div.matching-cards.cards_24 .card-container,
 body.matching div.matching-cards.cards_24 .card {
   height: 90px;
@@ -12775,51 +12769,53 @@ body.matching div.matching-cards.cards_24 .card {
   font-size: 1em;
 }
 @media (min-width: 768px) {
-  /* line 1407, ../scss/styles.scss */
+  /* line 1404, ../scss/styles.scss */
   body.matching div.matching-cards.cards_24 .card-container,
   body.matching div.matching-cards.cards_24 .card {
     height: 110px;
     width: 110px;
   }
 }
-/* line 1417, ../scss/styles.scss */
+/* line 1414, ../scss/styles.scss */
 body.matching div.matching-cards.cards_24 .card-container {
   margin: 6px;
 }
-/* line 1420, ../scss/styles.scss */
+/* line 1417, ../scss/styles.scss */
 body.matching div.matching-cards.cards_24 .card {
   border-width: 3px;
 }
-/* line 1424, ../scss/styles.scss */
+/* line 1421, ../scss/styles.scss */
 body.matching div.matching-cards.cards_48 {
   width: 560px;
 }
 @media (min-width: 992px) {
-  /* line 1424, ../scss/styles.scss */
+  /* line 1421, ../scss/styles.scss */
   body.matching div.matching-cards.cards_48 {
     width: 740px;
   }
 }
-/* line 1429, ../scss/styles.scss */
+/* line 1426, ../scss/styles.scss */
 body.matching div.matching-cards.cards_48 .card-container,
 body.matching div.matching-cards.cards_48 .card {
   height: 80px;
   width: 80px;
   font-size: 1em;
 }
-/* line 1435, ../scss/styles.scss */
+/* line 1432, ../scss/styles.scss */
 body.matching div.matching-cards.cards_48 .card-container {
   margin: 6px;
 }
-/* line 1438, ../scss/styles.scss */
+/* line 1435, ../scss/styles.scss */
 body.matching div.matching-cards.cards_48 .card {
   border-width: 3px;
 }
-/* line 1443, ../scss/styles.scss */
-body.matching div.matching-cards.card-spaceholder.ng-enter {
-  -webkit-animation: slideRightIn 1s;
-  -o-animation: slideRightIn 1s;
-  animation: slideRightIn 1s;
+/* line 1441, ../scss/styles.scss */
+body.matching div.matching-cards .card-controller.ng-leave {
+  position: absolute;
+  z-index: 100;
+  -webkit-animation: bounceOutDown 1s;
+  -o-animation: bounceOutDown 1s;
+  animation: bounceOutDown 1s;
 }
 /* line 1449, ../scss/styles.scss */
 body.matching div.game-status {

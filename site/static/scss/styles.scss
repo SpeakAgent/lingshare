@@ -60,7 +60,7 @@
 /* Slide Down - Out */
 @include keyframes(slideDownOut){
   from { top: 0; }
-  to { top: 10px; }
+  to { top: 999px; }
 }
 
 /* Slide Down - In */
@@ -1309,9 +1309,6 @@ body.matching {
                 -webkit-animation-delay: 0.3s;
                 animation-delay: 0.3s;
             }
-            &.ng-leave {
-                @include animation(slideDownOut 0.2s);
-            }
         }
         .game-alerts {
             right: 0;
@@ -1439,9 +1436,12 @@ body.matching {
                 border-width: 3px;
             }
         }
-        &.card-spaceholder {
-            &.ng-enter {
-                @include animation(slideRightIn 1s);
+
+        .card-controller {
+            &.ng-leave {
+                position: absolute;
+                z-index: 100;
+                @include animation(bounceOutDown 1s);
             }
         }
     }
