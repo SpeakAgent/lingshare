@@ -1,0 +1,18 @@
+<div class="container">
+	<h1>Trophies</h1>
+	<div class="achievements">
+		<div class="achievement-container col-md-4 col-sm-6"
+		ng-class="{first:$first,last:$last}"
+		ng-repeat="achievement in user.user.badges">
+			<div class="achievement clearfix">
+				<div class="trophy">
+					<i class="fa fa-trophy"></i>
+				</div>
+				<div class="a-desc">
+					<h4 class="a-title">{{ achievement.title }}</h4>
+					<p>{{ achievement.description }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
