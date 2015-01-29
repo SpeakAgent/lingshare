@@ -75,12 +75,14 @@
 				ng-class="{last:$last}"
 				ng-repeat="achievement in user.user.badges">
 					<div class="achievement">
-						<em class="a-title">{{ achievement.title }}</em>
-						<i class="fa fa-trophy"></i>
+						<div class="trophy">
+							<em class="a-title">{{ achievement.title }}</em>
+							<i class="fa fa-trophy"></i>
+						</div>
 					</div>
 				</div>
 				<div class="row see-more-cntr">
-					<a href="#" class="btn btn-primary icon-left hvr-icon-grow icon-achievements">See Achievements</a>
+					<a href="/#/trophies/" class="btn btn-primary icon-left hvr-icon-grow icon-achievements">See More Trophies</a>
 				</div>
 			</div>
 		</div>
