@@ -60,7 +60,7 @@
 /* Slide Down - Out */
 @include keyframes(slideDownOut){
   from { top: 0; }
-  to { top: 10px; }
+  to { top: 999px; }
 }
 
 /* Slide Down - In */
@@ -1309,9 +1309,6 @@ body.matching {
                 -webkit-animation-delay: 0.3s;
                 animation-delay: 0.3s;
             }
-            &.ng-leave {
-                @include animation(slideDownOut 0.2s);
-            }
         }
         .game-alerts {
             right: 0;
@@ -1439,9 +1436,12 @@ body.matching {
                 border-width: 3px;
             }
         }
-        &.card-spaceholder {
-            &.ng-enter {
-                @include animation(slideRightIn 1s);
+
+        .card-controller {
+            &.ng-leave {
+                position: absolute;
+                z-index: 100;
+                @include animation(bounceOutDown 1s);
             }
         }
     }
@@ -1454,19 +1454,23 @@ body.matching {
         margin: 1em;
     }
     .game-complete {
-        margin: 0 auto;
-        &.ng-hide-remove {
-            @include animation(slideDownIn 1s);
-        }
+        margin: 20px auto;
         .game-results {
             .result {
                 border-radius: 9px;
-                 @include box-shadow(rgba($shadow-primary, 0.5) 1px 1px 4px);
+                @include box-shadow(rgba($shadow-primary, 0.5) 1px 1px 4px);
                 margin: 1em;
                 width: 150px;
                 @media (min-width:$screen-sm-min){
                     width: 200px;
                 }
+                @include animation(bounceInDown 0.3s);
+            }
+            .result:nth-child(2){
+                @include animation(bounceInDown 0.5s);
+            }
+            .result:nth-child(3){
+                @include animation(bounceInDown 0.7s);
             }
             .final-score {
                 background-color: #fff;
@@ -1475,17 +1479,17 @@ body.matching {
                 width: 180px;
                 height: 162px;
                 padding-top: 40px;
-                margin: -10px auto 0 auto;
-                @include transform(rotate(-8deg));
+                margin: 10px auto 0 auto;
                 @media (min-width:$screen-sm-min){
                     width: 240px;
                     height: 220px;
                     padding-top: 56px;
-                    margin-top: -10px;
+                    margin-top: 10px;
                 }
                 h3 {
                     font-size: 1.5em;
                 }
+                @include animation(bounceInDown 0.8s);
             }
         }
         .user-options {
