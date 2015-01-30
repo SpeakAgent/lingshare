@@ -12827,29 +12827,38 @@ body.matching div.game-status {
 }
 /* line 1456, ../scss/styles.scss */
 body.matching .game-complete {
-  margin: 0 auto;
+  margin: 20px auto;
 }
-/* line 1458, ../scss/styles.scss */
-body.matching .game-complete.ng-hide-remove {
-  -webkit-animation: slideDownIn 1s;
-  -o-animation: slideDownIn 1s;
-  animation: slideDownIn 1s;
-}
-/* line 1462, ../scss/styles.scss */
+/* line 1459, ../scss/styles.scss */
 body.matching .game-complete .game-results .result {
   border-radius: 9px;
   -webkit-box-shadow: rgba(34, 9, 9, 0.5) 1px 1px 4px;
   box-shadow: rgba(34, 9, 9, 0.5) 1px 1px 4px;
   margin: 1em;
   width: 150px;
+  -webkit-animation: bounceInDown 0.3s;
+  -o-animation: bounceInDown 0.3s;
+  animation: bounceInDown 0.3s;
 }
 @media (min-width: 768px) {
-  /* line 1462, ../scss/styles.scss */
+  /* line 1459, ../scss/styles.scss */
   body.matching .game-complete .game-results .result {
     width: 200px;
   }
 }
-/* line 1471, ../scss/styles.scss */
+/* line 1469, ../scss/styles.scss */
+body.matching .game-complete .game-results .result:nth-child(2) {
+  -webkit-animation: bounceInDown 0.5s;
+  -o-animation: bounceInDown 0.5s;
+  animation: bounceInDown 0.5s;
+}
+/* line 1472, ../scss/styles.scss */
+body.matching .game-complete .game-results .result:nth-child(3) {
+  -webkit-animation: bounceInDown 0.7s;
+  -o-animation: bounceInDown 0.7s;
+  animation: bounceInDown 0.7s;
+}
+/* line 1475, ../scss/styles.scss */
 body.matching .game-complete .game-results .final-score {
   background-color: #fff;
   border-radius: 9px;
@@ -12858,61 +12867,60 @@ body.matching .game-complete .game-results .final-score {
   width: 180px;
   height: 162px;
   padding-top: 40px;
-  margin: -10px auto 0 auto;
-  -moz-transform: rotate(-8deg);
-  -ms-transform: rotate(-8deg);
-  -webkit-transform: rotate(-8deg);
-  transform: rotate(-8deg);
+  margin: 10px auto 0 auto;
+  -webkit-animation: bounceInDown 0.8s;
+  -o-animation: bounceInDown 0.8s;
+  animation: bounceInDown 0.8s;
 }
 @media (min-width: 768px) {
-  /* line 1471, ../scss/styles.scss */
+  /* line 1475, ../scss/styles.scss */
   body.matching .game-complete .game-results .final-score {
     width: 240px;
     height: 220px;
     padding-top: 56px;
-    margin-top: -10px;
+    margin-top: 10px;
   }
 }
-/* line 1486, ../scss/styles.scss */
+/* line 1489, ../scss/styles.scss */
 body.matching .game-complete .game-results .final-score h3 {
   font-size: 1.5em;
 }
-/* line 1491, ../scss/styles.scss */
+/* line 1495, ../scss/styles.scss */
 body.matching .game-complete .user-options {
   margin: -140px auto 0;
   width: 85%;
 }
 @media (min-width: 768px) {
-  /* line 1491, ../scss/styles.scss */
+  /* line 1495, ../scss/styles.scss */
   body.matching .game-complete .user-options {
     width: 75%;
   }
 }
 @media (min-width: 992px) {
-  /* line 1491, ../scss/styles.scss */
+  /* line 1495, ../scss/styles.scss */
   body.matching .game-complete .user-options {
     width: 55%;
   }
 }
-/* line 1500, ../scss/styles.scss */
+/* line 1504, ../scss/styles.scss */
 body.matching .game-complete .user-options ul {
   list-style: none;
   margin: 0 auto;
   padding: 0;
 }
-/* line 1504, ../scss/styles.scss */
+/* line 1508, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li {
   display: inline-block;
 }
-/* line 1506, ../scss/styles.scss */
+/* line 1510, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li#o-play-again {
   float: left;
 }
-/* line 1509, ../scss/styles.scss */
+/* line 1513, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li#o-back-home {
   float: right;
 }
-/* line 1512, ../scss/styles.scss */
+/* line 1516, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li a {
   color: #f8d338;
   font-size: 1.6em;
@@ -12920,7 +12928,7 @@ body.matching .game-complete .user-options ul li a {
   position: relative;
   border: none;
 }
-/* line 1518, ../scss/styles.scss */
+/* line 1522, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li a:hover, body.matching .game-complete .user-options ul li a:focus {
   color: #fceeb3;
 }
@@ -12928,21 +12936,21 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
 /*  4.0 Wordlists
     ====================
 */
-/* line 1531, ../scss/styles.scss */
+/* line 1535, ../scss/styles.scss */
 .wordlists {
   padding-bottom: 1em;
 }
-/* line 1534, ../scss/styles.scss */
+/* line 1538, ../scss/styles.scss */
 .wordlists .wordlist-header h1 {
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 1534, ../scss/styles.scss */
+  /* line 1538, ../scss/styles.scss */
   .wordlists .wordlist-header h1 {
     text-align: left;
   }
 }
-/* line 1541, ../scss/styles.scss */
+/* line 1545, ../scss/styles.scss */
 .wordlists .card {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
@@ -12955,7 +12963,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   width: 100%;
   text-align: center;
 }
-/* line 1551, ../scss/styles.scss */
+/* line 1555, ../scss/styles.scss */
 .wordlists .card a {
   border: 0;
   display: block;
@@ -12964,29 +12972,29 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   height: 152px;
   vertical-align: middle;
 }
-/* line 1560, ../scss/styles.scss */
+/* line 1564, ../scss/styles.scss */
 .wordlists .grid {
   width: 100%;
   padding: 10px 0;
 }
-/* line 1563, ../scss/styles.scss */
+/* line 1567, ../scss/styles.scss */
 .wordlists .grid .card {
   float: left;
 }
-/* line 1565, ../scss/styles.scss */
+/* line 1569, ../scss/styles.scss */
 .wordlists .grid .card a {
   display: block;
 }
-/* line 1568, ../scss/styles.scss */
+/* line 1572, ../scss/styles.scss */
 .wordlists .grid .card span {
   display: block;
 }
-/* line 1571, ../scss/styles.scss */
+/* line 1575, ../scss/styles.scss */
 .wordlists .grid .card img {
   width: 100px;
   height: 100px;
 }
-/* line 1578, ../scss/styles.scss */
+/* line 1582, ../scss/styles.scss */
 .wordlists .list .card {
   background: white;
   margin: .5em;
@@ -12994,38 +13002,38 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   width: auto;
   font-size: 2em;
 }
-/* line 1583, ../scss/styles.scss */
+/* line 1587, ../scss/styles.scss */
 .wordlists .list .card img {
   width: 50px;
   height: 50px;
   border-radius: 10px;
   margin: 0 10px 0 0;
 }
-/* line 1590, ../scss/styles.scss */
+/* line 1594, ../scss/styles.scss */
 .wordlists .list .card a {
   text-align: left;
   display: block;
   padding: .4em .2em;
   height: auto;
 }
-/* line 1598, ../scss/styles.scss */
+/* line 1602, ../scss/styles.scss */
 .wordlists .small {
   width: 300px;
 }
-/* line 1601, ../scss/styles.scss */
+/* line 1605, ../scss/styles.scss */
 .wordlists .audio {
   height: 100px;
 }
 
-/* line 1606, ../scss/styles.scss */
+/* line 1610, ../scss/styles.scss */
 .word-detail .top {
   position: relative;
 }
-/* line 1608, ../scss/styles.scss */
+/* line 1612, ../scss/styles.scss */
 .word-detail .top h1 {
   text-align: center;
 }
-/* line 1611, ../scss/styles.scss */
+/* line 1615, ../scss/styles.scss */
 .word-detail .top .word-samples {
   text-align: center;
   margin: 0 auto;
@@ -13036,14 +13044,14 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   max-height: 400px;
   display: table;
 }
-/* line 1620, ../scss/styles.scss */
+/* line 1624, ../scss/styles.scss */
 .word-detail .top .word-samples .word-sample {
   margin: 0 auto;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 1625, ../scss/styles.scss */
+/* line 1629, ../scss/styles.scss */
 .word-detail .top .word-samples .word-sample img {
   background-color: #fff;
   border-radius: 9px;
@@ -13053,7 +13061,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
-/* line 1635, ../scss/styles.scss */
+/* line 1639, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav {
   list-style: none;
   margin: 0 auto 0;
@@ -13063,7 +13071,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   left: 0;
   right: 0;
 }
-/* line 1643, ../scss/styles.scss */
+/* line 1647, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav li {
   border-radius: 9px;
   display: inline-block;
@@ -13077,26 +13085,26 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   position: relative;
 }
-/* line 1652, ../scss/styles.scss */
+/* line 1656, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav li:hover, .word-detail .top .word-samples .word-samples-nav li:focus {
   cursor: pointer;
   background-color: #f9dc5f;
   border-color: #faed57;
 }
-/* line 1657, ../scss/styles.scss */
+/* line 1661, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav li i {
   display: table-cell;
   width: 80px;
   height: 80px;
   vertical-align: middle;
 }
-/* line 1663, ../scss/styles.scss */
+/* line 1667, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav li img {
   width: 80%;
   vertical-align: middle;
   border-radius: 9px;
 }
-/* line 1668, ../scss/styles.scss */
+/* line 1672, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav li.active {
   border-color: #F8D338;
   box-shadow: none;
@@ -13105,33 +13113,33 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   -o-transition: none;
   transition: none;
 }
-/* line 1678, ../scss/styles.scss */
+/* line 1682, ../scss/styles.scss */
 .word-detail .secondary-content {
   margin-top: -30px;
   position: relative;
 }
-/* line 1681, ../scss/styles.scss */
+/* line 1685, ../scss/styles.scss */
 .word-detail .secondary-content .container {
   padding-top: 100px;
   padding-bottom: 20px;
   max-width: 830px;
 }
-/* line 1687, ../scss/styles.scss */
+/* line 1691, ../scss/styles.scss */
 .word-detail .word-base, .word-detail .word-trans {
   font-size: 2.4em;
   line-height: 1;
 }
-/* line 1691, ../scss/styles.scss */
+/* line 1695, ../scss/styles.scss */
 .word-detail .word-trans {
   border-top: 3px solid #FFFDF7;
   margin-top: 20px;
   padding-top: 18px;
 }
-/* line 1696, ../scss/styles.scss */
+/* line 1700, ../scss/styles.scss */
 .word-detail .word-meta-info {
   font-style: italic;
 }
-/* line 1699, ../scss/styles.scss */
+/* line 1703, ../scss/styles.scss */
 .word-detail .word-symbol {
   background-color: #fff;
   border-radius: 9px;
@@ -13139,18 +13147,18 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   padding: 0.5em;
 }
-/* line 1704, ../scss/styles.scss */
+/* line 1708, ../scss/styles.scss */
 .word-detail .word-symbol img {
   width: 100%;
 }
-/* line 1709, ../scss/styles.scss */
+/* line 1713, ../scss/styles.scss */
 .word-detail .word-phrase-examples .word-balloon {
   background-color: #fffdf7;
   border-radius: 9px;
   padding: 1em;
   position: relative;
 }
-/* line 1714, ../scss/styles.scss */
+/* line 1718, ../scss/styles.scss */
 .word-detail .word-phrase-examples .word-balloon:after {
   left: 100%;
   top: 50%;
@@ -13165,63 +13173,63 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 1729, ../scss/styles.scss */
+/* line 1733, ../scss/styles.scss */
 .word-detail .word-phrase-examples .sentence-base {
   font-size: 1.4em;
   font-weight: normal;
 }
-/* line 1733, ../scss/styles.scss */
+/* line 1737, ../scss/styles.scss */
 .word-detail .word-phrase-examples .sentence-trans {
   font-style: italic;
 }
-/* line 1737, ../scss/styles.scss */
+/* line 1741, ../scss/styles.scss */
 .word-detail .word-audio {
   margin-top: -16px;
   text-align: center;
 }
-/* line 1742, ../scss/styles.scss */
+/* line 1746, ../scss/styles.scss */
 .word-detail .tertiary-content .container {
   padding-top: 40px;
   padding-bottom: 20px;
   max-width: 830px;
 }
-/* line 1748, ../scss/styles.scss */
+/* line 1752, ../scss/styles.scss */
 .word-detail .word-list-nav {
   margin: 0 auto;
   text-align: center;
 }
-/* line 1751, ../scss/styles.scss */
+/* line 1755, ../scss/styles.scss */
 .word-detail .word-list-nav button {
   background-color: #fff;
   border: none;
   border-radius: 9px;
 }
-/* line 1755, ../scss/styles.scss */
+/* line 1759, ../scss/styles.scss */
 .word-detail .word-list-nav button a {
   display: table-cell;
   height: 80px;
   width: 80px;
   vertical-align: middle;
 }
-/* line 1761, ../scss/styles.scss */
+/* line 1765, ../scss/styles.scss */
 .word-detail .word-list-nav button span, .word-detail .word-list-nav button i {
   display: block;
 }
-/* line 1764, ../scss/styles.scss */
+/* line 1768, ../scss/styles.scss */
 .word-detail .word-list-nav button img {
   width: 60px;
 }
 @media (min-width: 992px) {
-  /* line 1751, ../scss/styles.scss */
+  /* line 1755, ../scss/styles.scss */
   .word-detail .word-list-nav button {
     position: absolute;
   }
-  /* line 1769, ../scss/styles.scss */
+  /* line 1773, ../scss/styles.scss */
   .word-detail .word-list-nav button.prev-word {
     top: -40px;
     left: 20px;
   }
-  /* line 1773, ../scss/styles.scss */
+  /* line 1777, ../scss/styles.scss */
   .word-detail .word-list-nav button.next-word {
     top: -40px;
     right: 20px;
@@ -13237,7 +13245,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
 
     ====================
 */
-/* line 1799, ../scss/styles.scss */
+/* line 1803, ../scss/styles.scss */
 body,
 .game-container,
 .container,
@@ -13245,7 +13253,7 @@ nav {
   min-width: 550px !important;
 }
 
-/* line 1805, ../scss/styles.scss */
+/* line 1809, ../scss/styles.scss */
 .navbar-nav > li {
   float: left !important;
 }
