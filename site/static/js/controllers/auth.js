@@ -1,4 +1,4 @@
-mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHelper, User){
+mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHelper, User, $location){
   // Form data for the login modal
   $scope.loginData = {};
   $scope.authToken = localStorage.getItem('authToken');

@@ -9,8 +9,8 @@ mainApp.config(function($routeProvider, $sceDelegateProvider,
 
 	$routeProvider
 	.when('/', {
-		templateUrl: 'templates/main.html',
-		controller: 'mainController'
+		templateUrl: 'templates/dashboard.html',
+		controller: 'DashboardController'
 	})
 	.when('/words/', {
 		templateUrl: 'templates/wordlists.html',

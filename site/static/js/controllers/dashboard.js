@@ -4,6 +4,7 @@ mainApp.controller('DashboardController', function($scope, $rootScope, $http) {
 
 	// Get the user
 	$scope.username = localStorage.getItem('username');
+	if ($scope.username) {
 	req = {
 		url: 'http://127.0.0.1:8000/user/username/' + $scope.username + '/',
 		method: 'GET',
@@ -19,6 +20,7 @@ mainApp.controller('DashboardController', function($scope, $rootScope, $http) {
     .error(function (data) {
     	console.log(data);
     });
+}
 
 
 });
