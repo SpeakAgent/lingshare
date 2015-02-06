@@ -1,7 +1,7 @@
 <div class="top-container" ng-if="username">
 	<div class="container">
 		<h1 class="dashboard-greeting mega">Hi, {{ user.first_name }}!</h1>
-		<p class="dashboard-user-since">Speak Agent since 2014</p>
+		<p class="dashboard-user-since">Speak Agent since 2015</p>
 		<h2>Things to Do</h2>
 		<div class="row">
 			<div class="activity-container col-lg-4 col-xs-4"
@@ -13,18 +13,6 @@
 						<div class="activity-info">
 							<h3 class="activity-title">{{ activity.activity.title }}</h3>
 							<p class="activity-wordlist">{{ activity.wordlist.title }}</p>
-						</div>
-						<div class="activity-status status-icon" ng-class="{gold:activity.status == 'completed'}" ng-if="activity.status == 'completed'">
-							<i class="fa fa-star"></i>
-							<span class="sr-only">Done!</span>
-						</div>
-						<div class="activity-status status-icon" ng-class="{bronze:activity.status == 'not_started'}" ng-if="activity.status == 'not_started'">
-							<i class="fa fa-star-o"></i>
-							<span class="sr-only">Not started yet</span>
-						</div>
-						<div class="activity-status status-icon" ng-class="{silver:activity.status == 'started'}" ng-if="activity.status == 'started'">
-							<i class="fa fa-star-half-o"></i>
-							<span class="sr-only">Partially done</span>
 						</div>
 					</a>
 				</div>
@@ -45,10 +33,6 @@
 								<h3 class="activity-title">Activity Title</h3>
 								<p class="activity-course">Course: Course Name</p>
 							</div>
-							<div class="activity-status status-icon bronze">
-								<i class="fa fa-star-o"></i>
-								<span class="sr-only">Not started yet</span>
-							</div>
 						</a>
 					</div>
 				</div>
@@ -60,10 +44,6 @@
 							<div class="activity-info">
 								<h3 class="activity-title">Activity Title</h3>
 								<p class="activity-course">Course: Course Name</p>
-							</div>
-							<div class="activity-status status-icon gold">
-								<i class="fa fa-star"></i>
-								<span class="sr-only">Done!</span>
 							</div>
 						</a>
 					</div>
@@ -88,19 +68,7 @@
 		</div>
 	</div>
 </div>
-<div class="bottom-container secondary-content" ng-if="username">
-	<div class="container">
-		<h1>Progress Report</h1>
-		<div class="row">
-			<div class="col-lg-4 col-md-4">
-				<h2>Courses</h2>
-				<ul>
-					<li ng-repeat="course in user.courses">{{ course.title }}</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
+
 
 <div ng-if="!username" ng-controller="LoginController">
 	    <div class="login-container col-md-6 col-md-offset-3" ng-if="!authToken">
