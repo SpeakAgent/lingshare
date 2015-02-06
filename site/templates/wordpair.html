@@ -50,7 +50,7 @@
 			<dt class="word-trans">{{ word.trans_word.root_word }}</dt>
 		</dl>
 	</div>
-	<div class="word-phrase-examples">
+	<div class="word-phrase-examples" ng-if="sentence.text !== undefined">
 		<p>In a sentence:</p>
 		<dl class="word-balloon">
 			<dt class="sentence-base" ng-repeat-start="sentence in word.base_word.example_sentences">
@@ -61,10 +61,5 @@
 	</div>
 </div>
 </div>
-</div>
-<div class="tertiary-content">
-	<div class="container">
-		<p>The area for additional information.</p>
-	</div>
 </div>
 </div>

@@ -120,7 +120,7 @@
 							<dt class="word-trans">{{ list.words[wordID].trans_word.root_word }}</dt>
 						</dl>
 					</div>
-					<div class="word-phrase-examples">
+					<div class="word-phrase-examples" ng-if='sentence.text !== undefined'>
 						<p>In a sentence:</p>
 						<dl class="word-balloon">
 							<dt class="sentence-base" ng-repeat-start="sentence in list.words[wordID].base_word.example_sentences">
@@ -146,11 +146,6 @@
 						</a>
 					</button>
 				</div>
-			</div>
-		</div>
-		<div class="tertiary-content">
-			<div class="container">
-				<p>The area for additional information.</p>
 			</div>
 		</div>
 	</div>
