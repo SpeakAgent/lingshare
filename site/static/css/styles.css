@@ -13121,7 +13121,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
 /* line 1685, ../scss/styles.scss */
 .word-detail .secondary-content .container {
   padding-top: 100px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   max-width: 830px;
 }
 /* line 1691, ../scss/styles.scss */
