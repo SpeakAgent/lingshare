@@ -1,8 +1,8 @@
-mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
+mainApp.controller('FlashCardController', ['$scope', '$route', '$timeout', '$http',
   '$interval', '$rootScope', '$animate', '$sce',
 
-  function ($scope, $timeout, $http, $interval, $rootScope, $animate, $sce) {
-    
+  function ($scope, $route, $timeout, $http, $interval, $rootScope, $animate, $sce) {
+
   $scope.used_words = []
 
   $scope.seconds = 0
@@ -253,7 +253,9 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
   $scope.audio_url = function(path) {
         return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
     }
-
+  $scope.reloadRoute = function() {
+     $route.reload();
+  }
 
 
 
