@@ -1,7 +1,7 @@
-mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
+mainApp.controller('MemoryController', ['$scope', '$route', '$timeout', '$http',
   '$interval','$rootScope','$animate', '$sce',
 
-  function ($scope, $timeout, $http, $interval,$rootScope,$animate, $sce) {
+  function ($scope, $route, $timeout, $http, $interval,$rootScope,$animate, $sce) {
 
   $rootScope.body_classes = "games matching"
 
@@ -258,5 +258,8 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
   $scope.audio_url = function(path) {
         return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
     }
+  $scope.reloadRoute = function() {
+     $route.reload();
+  }
 
   }]);
