@@ -14,6 +14,10 @@
 @import "font-awesome/font-awesome.scss";
 @import "bootstrap-variables";
 
+*:not(input), *:not(textarea) {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
 
 /*  0.0 Shell
     ====================
@@ -77,6 +81,7 @@ $border-width-default: 3px;
 $transition-speed: 0.1s;
 
 
+
 body {
     background-color: $brand-primary-light;
     color: $font-color;
@@ -118,6 +123,8 @@ a {
         text-decoration: none;
         border-bottom-color: lighten($accent-primary, 25%);
     }
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 
 }
 
@@ -808,6 +815,23 @@ body.dashboard {
     }
     .recent-work {
         margin-bottom: 1em;
+    }
+}
+.dashboard-footer {
+    background-color: $brand-secondary;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+    text-align: right;
+    a {
+        color: #fff;
+        border-color: #fff;
+        &:hover, &:focus {
+            border-color: $brand-primary;
+        }
+    }
+    @media (max-width:$screen-md-min){
+        text-align: center;
     }
 }
 
