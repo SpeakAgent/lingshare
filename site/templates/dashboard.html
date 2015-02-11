@@ -8,7 +8,7 @@
 				ng-repeat="activity in user.activities">
 				<div class="activity promo-card size-lg" ng-class="{last:$last}">
 					<a href="#" title="Link to {{ activity.activity.title }}" class="activity-link">
-						<p class="activity-course">Course Name</p>
+						<p class="activity-course">Spanish Beginner A</p>
 						<img class="activity-image" src="/static/images/flashcards/promo-lg.jpg" alt="{{ activity.activity.title }}" />
 						<div class="activity-info">
 							<h3 class="activity-title">{{ activity.activity.title }}</h3>
@@ -27,11 +27,11 @@
 				<div class="col-md-12 col-sm-6 first">
 					<div class="activity promo-card size-sml">
 						<a href="#" title="Link to Activity Title" class="activity-link clearfix">
-							<p class="activity-wordlist">Wordlist Title</p>
+							<p class="activity-course">Spanish Beginner B</p>
 							<img class="activity-image" src="/static/images/matching/promo-sm.jpg" alt="Activity Title" />
 							<div class="activity-info">
-								<h3 class="activity-title">Activity Title</h3>
-								<p class="activity-course">Course: Course Name</p>
+								<h3 class="activity-title">Matching</h3>
+								<p class="activity-wordlist">Outside the House</p>
 							</div>
 						</a>
 					</div>
@@ -39,11 +39,11 @@
 				<div class="col-md-12 col-sm-6 last">
 					<div class="activity promo-card size-sml">
 						<a href="#" title="Link to Activity Title" class="activity-link clearfix">
-							<p class="activity-wordlist">Wordlist Title</p>
+							<p class="activity-course">Chinese</p>
 							<img class="activity-image" src="/static/images/flashcards/promo-sm.jpg" alt="Activity Title" />
 							<div class="activity-info">
-								<h3 class="activity-title">Activity Title</h3>
-								<p class="activity-course">Course: Course Name</p>
+								<h3 class="activity-title">Flash Cards</h3>
+								<p class="activity-wordlist">Outside the House</p>
 							</div>
 						</a>
 					</div>
@@ -76,7 +76,7 @@
       <h1 ng-if="authToken">Logout</h1>
       <p>You must login in order to use this app.</p>
       <p class="error" ng-if="loginError">{{loginError}}
-        <br>Please doublecheck your username and password.
+        <br>Please double check your username and password.
       </p>
       <form ng-submit="doLogin()">
         <div class="form-group">
@@ -90,4 +90,7 @@
           <button class="btn btn-primary" type="submit">Log In</button>
       </form>
     </div>
+</div>
+<div class="dashboard-footer">
+    <a href="mail&#116;o&#58;sup&#112;&#111;&#114;%74&#64;sp%6&#53;ak&#97;gent&#46;com">Contact Speak Agent Support</a>
 </div>

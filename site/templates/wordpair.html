@@ -1,7 +1,7 @@
 <div class="word-detail">
 <div class="container top">
 	<h1>{{ word.base_word.root_word }}</h1>
-
+			<div class="back-wordlist"><a href="/#/words/{{ id }}/" class="btn btn-back"><i class="fa fa-arrow-left"></i> Back to {{ list.title }}</a></div>
 	<div class="word-samples">
 		<div class="word-sample"
 			ng-repeat="photo in word.base_word.photos"

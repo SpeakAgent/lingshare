@@ -14,6 +14,10 @@
 @import "font-awesome/font-awesome.scss";
 @import "bootstrap-variables";
 
+*:not(input), *:not(textarea) {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
 
 /*  0.0 Shell
     ====================
@@ -77,6 +81,7 @@ $border-width-default: 3px;
 $transition-speed: 0.1s;
 
 
+
 body {
     background-color: $brand-primary-light;
     color: $font-color;
@@ -118,6 +123,8 @@ a {
         text-decoration: none;
         border-bottom-color: lighten($accent-primary, 25%);
     }
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 
 }
 
@@ -173,11 +180,15 @@ a {
     }
     &.btn-back {
         background-color: #00A4A8;
+        border: 0;
         @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px inset);
         font-weight: normal;
         color: #fff;
         a {
             color: #fff;
+        }
+        &:active, &.active {
+            top: 0;
         }
     }
     &:active, &.active {
@@ -721,7 +732,7 @@ h2.h3-interface-label {
     &.size-sml {
         min-height: 94px;
         margin-bottom: 1em;
-        .activity-wordlist {
+        .activity-course {
             margin-left: 94px;
             margin-bottom: 2px;
         }
@@ -808,6 +819,23 @@ body.dashboard {
     }
     .recent-work {
         margin-bottom: 1em;
+    }
+}
+.dashboard-footer {
+    background-color: $brand-secondary;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+    text-align: right;
+    a {
+        color: #fff;
+        border-color: #fff;
+        &:hover, &:focus {
+            border-color: $brand-primary;
+        }
+    }
+    @media (max-width:$screen-md-min){
+        text-align: center;
     }
 }
 
@@ -1533,7 +1561,6 @@ body.matching {
 */
 
 .wordlists {
-    padding-bottom: 1em;
     .wordlist-header {
         h1 {
             text-align: center;
@@ -1605,12 +1632,19 @@ body.matching {
     .audio {
         height: 100px;
     }
+
 }
 .word-detail {
     .top {
         position: relative;
         h1 {
             text-align: center;
+            margin-bottom: 4px;
+        }
+        .back-wordlist {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 12px;
         }
         .word-samples {
             text-align: center;
