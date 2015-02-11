@@ -36,7 +36,7 @@
 				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4"
 					ng-repeat="word in list.words">
 					<div class="card">
-						<a href = "/#/wordpair/{{ word.pk }}/">
+						<a href = "/#/words/{{ id }}/{{ word.pk-1 }}/">
 							<img src = "http://127.0.0.1:8000{{ word.base_word.photos[0].image }}">
 							<span>{{ word.base_word.root_word }}</span>
 						</a>
@@ -48,7 +48,7 @@
 				ng-show="display=='list'">
 				<div class="card"
 					ng-repeat="word in list.words">
-					<a href = "/#/wordpair/{{ word.pk }}/">
+					<a href = "/#/words/{{ id }}/{{ word.pk }}/">
 					<span ng-if="list.words[wordID].base_word.audio_file"
 						class="col-md-1">
 						<audio controls>
@@ -73,6 +73,7 @@
 	<div ng-show="wordID" class="word-detail">
 		<div class="container top">
 			<h1>{{ list.words[wordID].base_word.root_word }}</h1>
+			<div class="back-wordlist"><a href="/#/words/{{ id }}/" class="btn btn-back"><i class="fa fa-arrow-left"></i> Back to {{ list.title }}</a></div>
             <div class="word-samples">
                 <div class="word-sample"
                     ng-repeat="photo in list.words[wordID].base_word.photos"

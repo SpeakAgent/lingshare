@@ -180,11 +180,15 @@ a {
     }
     &.btn-back {
         background-color: #00A4A8;
+        border: 0;
         @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px inset);
         font-weight: normal;
         color: #fff;
         a {
             color: #fff;
+        }
+        &:active, &.active {
+            top: 0;
         }
     }
     &:active, &.active {
@@ -1557,7 +1561,6 @@ body.matching {
 */
 
 .wordlists {
-    padding-bottom: 1em;
     .wordlist-header {
         h1 {
             text-align: center;
@@ -1629,12 +1632,19 @@ body.matching {
     .audio {
         height: 100px;
     }
+
 }
 .word-detail {
     .top {
         position: relative;
         h1 {
             text-align: center;
+            margin-bottom: 4px;
+        }
+        .back-wordlist {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 12px;
         }
         .word-samples {
             text-align: center;
