@@ -12657,31 +12657,31 @@ body.matching div.matching-cards {
   position: relative;
   /* Levels */
 }
-/* line 1329, ../scss/styles.scss */
+/* line 1328, ../scss/styles.scss */
 body.matching div.matching-cards .card-container {
   position: relative;
   margin: 0.5em;
   float: left;
 }
-/* line 1333, ../scss/styles.scss */
+/* line 1332, ../scss/styles.scss */
 body.matching div.matching-cards .card-container.ng-enter {
   -webkit-animation: slideDownIn 0.3s;
   -o-animation: slideDownIn 0.3s;
   animation: slideDownIn 0.3s;
 }
-/* line 1336, ../scss/styles.scss */
+/* line 1335, ../scss/styles.scss */
 body.matching div.matching-cards .card-container.ng-enter-stagger {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
-/* line 1341, ../scss/styles.scss */
+/* line 1340, ../scss/styles.scss */
 body.matching div.matching-cards .game-alerts {
   right: 0;
   left: 0;
   top: 0;
   margin: 0 auto;
 }
-/* line 1347, ../scss/styles.scss */
+/* line 1346, ../scss/styles.scss */
 body.matching div.matching-cards .card {
   position: absolute;
   background-color: #fff;
@@ -12700,80 +12700,80 @@ body.matching div.matching-cards .card {
   /* Card Front */
   /* Cards have been removed, but space must remain */
 }
-/* line 1360, ../scss/styles.scss */
+/* line 1359, ../scss/styles.scss */
 body.matching div.matching-cards .card img {
   border-radius: 9px;
   width: 100%;
 }
-/* line 1365, ../scss/styles.scss */
+/* line 1364, ../scss/styles.scss */
 body.matching div.matching-cards .card.back {
   background-color: #76DBDC;
 }
-/* line 1367, ../scss/styles.scss */
+/* line 1366, ../scss/styles.scss */
 body.matching div.matching-cards .card.back span {
   border-radius: 9px;
   display: block;
 }
-/* line 1374, ../scss/styles.scss */
+/* line 1373, ../scss/styles.scss */
 body.matching div.matching-cards .card.front span {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 1380, ../scss/styles.scss */
+/* line 1379, ../scss/styles.scss */
 body.matching div.matching-cards .card.empty {
   border: 0;
   background-color: transparent;
   box-shadow: none;
   cursor: default;
 }
-/* line 1390, ../scss/styles.scss */
+/* line 1389, ../scss/styles.scss */
 body.matching div.matching-cards.cards_6 {
   width: 430px;
 }
 @media (min-width: 768px) {
-  /* line 1390, ../scss/styles.scss */
+  /* line 1389, ../scss/styles.scss */
   body.matching div.matching-cards.cards_6 {
     width: 720px;
   }
 }
-/* line 1395, ../scss/styles.scss */
+/* line 1394, ../scss/styles.scss */
 body.matching div.matching-cards.cards_6 .card-container,
 body.matching div.matching-cards.cards_6 .card {
   width: 200px;
   height: 200px;
 }
 @media (min-width: 768px) {
-  /* line 1395, ../scss/styles.scss */
+  /* line 1394, ../scss/styles.scss */
   body.matching div.matching-cards.cards_6 .card-container,
   body.matching div.matching-cards.cards_6 .card {
     width: 224px;
     height: 224px;
   }
 }
-/* line 1405, ../scss/styles.scss */
+/* line 1404, ../scss/styles.scss */
 body.matching div.matching-cards.cards_12 {
   width: 466px;
 }
 @media (min-width: 768px) {
-  /* line 1405, ../scss/styles.scss */
+  /* line 1404, ../scss/styles.scss */
   body.matching div.matching-cards.cards_12 {
     width: 700px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 1405, ../scss/styles.scss */
+  /* line 1404, ../scss/styles.scss */
   body.matching div.matching-cards.cards_12 {
     width: 780px;
   }
 }
-/* line 1413, ../scss/styles.scss */
+/* line 1412, ../scss/styles.scss */
 body.matching div.matching-cards.cards_12 .card-container,
 body.matching div.matching-cards.cards_12 .card {
   width: 140px;
   height: 140px;
 }
 @media (min-width: 768px) {
-  /* line 1413, ../scss/styles.scss */
+  /* line 1412, ../scss/styles.scss */
   body.matching div.matching-cards.cards_12 .card-container,
   body.matching div.matching-cards.cards_12 .card {
     height: 160px;
@@ -12781,24 +12781,24 @@ body.matching div.matching-cards.cards_12 .card {
   }
 }
 @media (min-width: 1200px) {
-  /* line 1413, ../scss/styles.scss */
+  /* line 1412, ../scss/styles.scss */
   body.matching div.matching-cards.cards_12 .card-container,
   body.matching div.matching-cards.cards_12 .card {
     height: 180px;
     width: 180px;
   }
 }
-/* line 1427, ../scss/styles.scss */
+/* line 1426, ../scss/styles.scss */
 body.matching div.matching-cards.cards_24 {
   width: 410px;
 }
 @media (min-width: 768px) {
-  /* line 1427, ../scss/styles.scss */
+  /* line 1426, ../scss/styles.scss */
   body.matching div.matching-cards.cards_24 {
     width: 740px;
   }
 }
-/* line 1432, ../scss/styles.scss */
+/* line 1431, ../scss/styles.scss */
 body.matching div.matching-cards.cards_24 .card-container,
 body.matching div.matching-cards.cards_24 .card {
   height: 90px;
@@ -12806,47 +12806,47 @@ body.matching div.matching-cards.cards_24 .card {
   font-size: 1em;
 }
 @media (min-width: 768px) {
-  /* line 1432, ../scss/styles.scss */
+  /* line 1431, ../scss/styles.scss */
   body.matching div.matching-cards.cards_24 .card-container,
   body.matching div.matching-cards.cards_24 .card {
     height: 110px;
     width: 110px;
   }
 }
-/* line 1442, ../scss/styles.scss */
+/* line 1441, ../scss/styles.scss */
 body.matching div.matching-cards.cards_24 .card-container {
   margin: 6px;
 }
-/* line 1445, ../scss/styles.scss */
+/* line 1444, ../scss/styles.scss */
 body.matching div.matching-cards.cards_24 .card {
   border-width: 3px;
 }
-/* line 1449, ../scss/styles.scss */
+/* line 1448, ../scss/styles.scss */
 body.matching div.matching-cards.cards_48 {
   width: 560px;
 }
 @media (min-width: 992px) {
-  /* line 1449, ../scss/styles.scss */
+  /* line 1448, ../scss/styles.scss */
   body.matching div.matching-cards.cards_48 {
     width: 740px;
   }
 }
-/* line 1454, ../scss/styles.scss */
+/* line 1453, ../scss/styles.scss */
 body.matching div.matching-cards.cards_48 .card-container,
 body.matching div.matching-cards.cards_48 .card {
   height: 80px;
   width: 80px;
   font-size: 1em;
 }
-/* line 1460, ../scss/styles.scss */
+/* line 1459, ../scss/styles.scss */
 body.matching div.matching-cards.cards_48 .card-container {
   margin: 6px;
 }
-/* line 1463, ../scss/styles.scss */
+/* line 1462, ../scss/styles.scss */
 body.matching div.matching-cards.cards_48 .card {
   border-width: 3px;
 }
-/* line 1469, ../scss/styles.scss */
+/* line 1468, ../scss/styles.scss */
 body.matching div.matching-cards .card-controller.ng-leave {
   position: absolute;
   z-index: 100;
@@ -12854,7 +12854,7 @@ body.matching div.matching-cards .card-controller.ng-leave {
   -o-animation: bounceOutDown 1s;
   animation: bounceOutDown 1s;
 }
-/* line 1477, ../scss/styles.scss */
+/* line 1476, ../scss/styles.scss */
 body.matching div.game-status {
   height: 100px;
   width: 400px;
@@ -12862,11 +12862,11 @@ body.matching div.game-status {
   border-radius: 10px;
   margin: 1em;
 }
-/* line 1484, ../scss/styles.scss */
+/* line 1483, ../scss/styles.scss */
 body.matching .game-complete {
   margin: 20px auto;
 }
-/* line 1487, ../scss/styles.scss */
+/* line 1486, ../scss/styles.scss */
 body.matching .game-complete .game-results .result {
   border-radius: 9px;
   -webkit-box-shadow: rgba(34, 9, 9, 0.5) 1px 1px 4px;
@@ -12878,24 +12878,24 @@ body.matching .game-complete .game-results .result {
   animation: bounceInDown 0.3s;
 }
 @media (min-width: 768px) {
-  /* line 1487, ../scss/styles.scss */
+  /* line 1486, ../scss/styles.scss */
   body.matching .game-complete .game-results .result {
     width: 200px;
   }
 }
-/* line 1497, ../scss/styles.scss */
+/* line 1496, ../scss/styles.scss */
 body.matching .game-complete .game-results .result:nth-child(2) {
   -webkit-animation: bounceInDown 0.5s;
   -o-animation: bounceInDown 0.5s;
   animation: bounceInDown 0.5s;
 }
-/* line 1500, ../scss/styles.scss */
+/* line 1499, ../scss/styles.scss */
 body.matching .game-complete .game-results .result:nth-child(3) {
   -webkit-animation: bounceInDown 0.7s;
   -o-animation: bounceInDown 0.7s;
   animation: bounceInDown 0.7s;
 }
-/* line 1503, ../scss/styles.scss */
+/* line 1502, ../scss/styles.scss */
 body.matching .game-complete .game-results .final-score {
   background-color: #fff;
   border-radius: 9px;
@@ -12910,7 +12910,7 @@ body.matching .game-complete .game-results .final-score {
   animation: bounceInDown 0.8s;
 }
 @media (min-width: 768px) {
-  /* line 1503, ../scss/styles.scss */
+  /* line 1502, ../scss/styles.scss */
   body.matching .game-complete .game-results .final-score {
     width: 240px;
     height: 220px;
@@ -12918,46 +12918,46 @@ body.matching .game-complete .game-results .final-score {
     margin-top: 10px;
   }
 }
-/* line 1517, ../scss/styles.scss */
+/* line 1516, ../scss/styles.scss */
 body.matching .game-complete .game-results .final-score h3 {
   font-size: 1.5em;
 }
-/* line 1523, ../scss/styles.scss */
+/* line 1522, ../scss/styles.scss */
 body.matching .game-complete .user-options {
   margin: -140px auto 0;
   width: 85%;
 }
 @media (min-width: 768px) {
-  /* line 1523, ../scss/styles.scss */
+  /* line 1522, ../scss/styles.scss */
   body.matching .game-complete .user-options {
     width: 75%;
   }
 }
 @media (min-width: 992px) {
-  /* line 1523, ../scss/styles.scss */
+  /* line 1522, ../scss/styles.scss */
   body.matching .game-complete .user-options {
     width: 55%;
   }
 }
-/* line 1532, ../scss/styles.scss */
+/* line 1531, ../scss/styles.scss */
 body.matching .game-complete .user-options ul {
   list-style: none;
   margin: 0 auto;
   padding: 0;
 }
-/* line 1536, ../scss/styles.scss */
+/* line 1535, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li {
   display: inline-block;
 }
-/* line 1538, ../scss/styles.scss */
+/* line 1537, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li#o-play-again {
   float: left;
 }
-/* line 1541, ../scss/styles.scss */
+/* line 1540, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li#o-back-home {
   float: right;
 }
-/* line 1544, ../scss/styles.scss */
+/* line 1543, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li a {
   color: #f8d338;
   font-size: 1.6em;
@@ -12965,7 +12965,7 @@ body.matching .game-complete .user-options ul li a {
   position: relative;
   border: none;
 }
-/* line 1550, ../scss/styles.scss */
+/* line 1549, ../scss/styles.scss */
 body.matching .game-complete .user-options ul li a:hover, body.matching .game-complete .user-options ul li a:focus {
   color: #fceeb3;
 }
@@ -12973,28 +12973,29 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
 /*  4.0 Wordlists
     ====================
 */
-/* line 1565, ../scss/styles.scss */
+/* line 1564, ../scss/styles.scss */
 .wordlists .wordlist-header h1 {
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 1565, ../scss/styles.scss */
+  /* line 1564, ../scss/styles.scss */
   .wordlists .wordlist-header h1 {
     text-align: left;
   }
 }
-/* line 1572, ../scss/styles.scss */
+/* line 1571, ../scss/styles.scss */
 .wordlists .card {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   background: #fff;
   border-radius: 9px;
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: 20px;
   height: 152px;
   width: 100%;
   text-align: center;
+  line-height: 1.1em;
 }
 /* line 1582, ../scss/styles.scss */
 .wordlists .card a {
@@ -13021,13 +13022,15 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
 /* line 1599, ../scss/styles.scss */
 .wordlists .grid .card span {
   display: block;
+  margin-top: 4px;
 }
-/* line 1602, ../scss/styles.scss */
+/* line 1603, ../scss/styles.scss */
 .wordlists .grid .card img {
-  width: 100px;
-  height: 100px;
+  margin-top: 10px;
+  width: 90px;
+  height: 90px;
 }
-/* line 1609, ../scss/styles.scss */
+/* line 1611, ../scss/styles.scss */
 .wordlists .list .card {
   background: white;
   margin: .5em;
@@ -13035,45 +13038,45 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   width: auto;
   font-size: 2em;
 }
-/* line 1614, ../scss/styles.scss */
+/* line 1616, ../scss/styles.scss */
 .wordlists .list .card img {
   width: 50px;
   height: 50px;
   border-radius: 10px;
   margin: 0 10px 0 0;
 }
-/* line 1621, ../scss/styles.scss */
+/* line 1623, ../scss/styles.scss */
 .wordlists .list .card a {
   text-align: left;
   display: block;
   padding: .4em .2em;
   height: auto;
 }
-/* line 1629, ../scss/styles.scss */
+/* line 1631, ../scss/styles.scss */
 .wordlists .small {
   width: 300px;
 }
-/* line 1632, ../scss/styles.scss */
+/* line 1634, ../scss/styles.scss */
 .wordlists .audio {
   height: 100px;
 }
 
-/* line 1638, ../scss/styles.scss */
+/* line 1640, ../scss/styles.scss */
 .word-detail .top {
   position: relative;
 }
-/* line 1640, ../scss/styles.scss */
+/* line 1642, ../scss/styles.scss */
 .word-detail .top h1 {
   text-align: center;
   margin-bottom: 4px;
 }
-/* line 1644, ../scss/styles.scss */
+/* line 1646, ../scss/styles.scss */
 .word-detail .top .back-wordlist {
   text-align: center;
   margin-bottom: 20px;
   font-size: 12px;
 }
-/* line 1649, ../scss/styles.scss */
+/* line 1651, ../scss/styles.scss */
 .word-detail .top .word-samples {
   text-align: center;
   margin: 0 auto;
@@ -13084,14 +13087,14 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   max-height: 400px;
   display: table;
 }
-/* line 1658, ../scss/styles.scss */
+/* line 1660, ../scss/styles.scss */
 .word-detail .top .word-samples .word-sample {
   margin: 0 auto;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 1663, ../scss/styles.scss */
+/* line 1665, ../scss/styles.scss */
 .word-detail .top .word-samples .word-sample img {
   background-color: #fff;
   border-radius: 9px;
@@ -13101,7 +13104,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
-/* line 1673, ../scss/styles.scss */
+/* line 1675, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav {
   list-style: none;
   margin: 0 auto 0;
@@ -13111,7 +13114,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   left: 0;
   right: 0;
 }
-/* line 1681, ../scss/styles.scss */
+/* line 1683, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav li {
   border-radius: 9px;
   display: inline-block;
@@ -13125,26 +13128,26 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   position: relative;
 }
-/* line 1690, ../scss/styles.scss */
+/* line 1692, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav li:hover, .word-detail .top .word-samples .word-samples-nav li:focus {
   cursor: pointer;
   background-color: #f9dc5f;
   border-color: #faed57;
 }
-/* line 1695, ../scss/styles.scss */
+/* line 1697, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav li i {
   display: table-cell;
   width: 80px;
   height: 80px;
   vertical-align: middle;
 }
-/* line 1701, ../scss/styles.scss */
+/* line 1703, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav li img {
   width: 80%;
   vertical-align: middle;
   border-radius: 9px;
 }
-/* line 1706, ../scss/styles.scss */
+/* line 1708, ../scss/styles.scss */
 .word-detail .top .word-samples .word-samples-nav li.active {
   border-color: #F8D338;
   box-shadow: none;
@@ -13153,33 +13156,33 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   -o-transition: none;
   transition: none;
 }
-/* line 1716, ../scss/styles.scss */
+/* line 1718, ../scss/styles.scss */
 .word-detail .secondary-content {
   margin-top: -30px;
   position: relative;
 }
-/* line 1719, ../scss/styles.scss */
+/* line 1721, ../scss/styles.scss */
 .word-detail .secondary-content .container {
   padding-top: 100px;
   padding-bottom: 40px;
   max-width: 830px;
 }
-/* line 1725, ../scss/styles.scss */
+/* line 1727, ../scss/styles.scss */
 .word-detail .word-base, .word-detail .word-trans {
   font-size: 2.4em;
   line-height: 1;
 }
-/* line 1729, ../scss/styles.scss */
+/* line 1731, ../scss/styles.scss */
 .word-detail .word-trans {
   border-top: 3px solid #FFFDF7;
   margin-top: 20px;
   padding-top: 18px;
 }
-/* line 1734, ../scss/styles.scss */
+/* line 1736, ../scss/styles.scss */
 .word-detail .word-meta-info {
   font-style: italic;
 }
-/* line 1737, ../scss/styles.scss */
+/* line 1739, ../scss/styles.scss */
 .word-detail .word-symbol {
   background-color: #fff;
   border-radius: 9px;
@@ -13187,18 +13190,18 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   padding: 0.5em;
 }
-/* line 1742, ../scss/styles.scss */
+/* line 1744, ../scss/styles.scss */
 .word-detail .word-symbol img {
   width: 100%;
 }
-/* line 1747, ../scss/styles.scss */
+/* line 1749, ../scss/styles.scss */
 .word-detail .word-phrase-examples .word-balloon {
   background-color: #fffdf7;
   border-radius: 9px;
   padding: 1em;
   position: relative;
 }
-/* line 1752, ../scss/styles.scss */
+/* line 1754, ../scss/styles.scss */
 .word-detail .word-phrase-examples .word-balloon:after {
   left: 100%;
   top: 50%;
@@ -13213,63 +13216,63 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   border-width: 10px;
   margin-top: -10px;
 }
-/* line 1767, ../scss/styles.scss */
+/* line 1769, ../scss/styles.scss */
 .word-detail .word-phrase-examples .sentence-base {
   font-size: 1.4em;
   font-weight: normal;
 }
-/* line 1771, ../scss/styles.scss */
+/* line 1773, ../scss/styles.scss */
 .word-detail .word-phrase-examples .sentence-trans {
   font-style: italic;
 }
-/* line 1775, ../scss/styles.scss */
+/* line 1777, ../scss/styles.scss */
 .word-detail .word-audio {
   margin-top: -16px;
   text-align: center;
 }
-/* line 1780, ../scss/styles.scss */
+/* line 1782, ../scss/styles.scss */
 .word-detail .tertiary-content .container {
   padding-top: 40px;
   padding-bottom: 20px;
   max-width: 830px;
 }
-/* line 1786, ../scss/styles.scss */
+/* line 1788, ../scss/styles.scss */
 .word-detail .word-list-nav {
   margin: 0 auto;
   text-align: center;
 }
-/* line 1789, ../scss/styles.scss */
+/* line 1791, ../scss/styles.scss */
 .word-detail .word-list-nav button {
   background-color: #fff;
   border: none;
   border-radius: 9px;
 }
-/* line 1793, ../scss/styles.scss */
+/* line 1795, ../scss/styles.scss */
 .word-detail .word-list-nav button a {
   display: table-cell;
   height: 80px;
   width: 80px;
   vertical-align: middle;
 }
-/* line 1799, ../scss/styles.scss */
+/* line 1801, ../scss/styles.scss */
 .word-detail .word-list-nav button span, .word-detail .word-list-nav button i {
   display: block;
 }
-/* line 1802, ../scss/styles.scss */
+/* line 1804, ../scss/styles.scss */
 .word-detail .word-list-nav button img {
   width: 60px;
 }
 @media (min-width: 992px) {
-  /* line 1789, ../scss/styles.scss */
+  /* line 1791, ../scss/styles.scss */
   .word-detail .word-list-nav button {
     position: absolute;
   }
-  /* line 1807, ../scss/styles.scss */
+  /* line 1809, ../scss/styles.scss */
   .word-detail .word-list-nav button.prev-word {
     top: -40px;
     left: 20px;
   }
-  /* line 1811, ../scss/styles.scss */
+  /* line 1813, ../scss/styles.scss */
   .word-detail .word-list-nav button.next-word {
     top: -40px;
     right: 20px;
@@ -13285,7 +13288,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
 
     ====================
 */
-/* line 1837, ../scss/styles.scss */
+/* line 1839, ../scss/styles.scss */
 body,
 .game-container,
 .container,
@@ -13293,7 +13296,7 @@ nav {
   min-width: 550px !important;
 }
 
-/* line 1843, ../scss/styles.scss */
+/* line 1845, ../scss/styles.scss */
 .navbar-nav > li {
   float: left !important;
 }

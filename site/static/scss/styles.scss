@@ -1322,7 +1322,6 @@ body.matching {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63a610', endColorstr='#416e0d',GradientType=1 );
         background-repeat: no-repeat;
     div.matching-cards {
-
         margin: 0 auto;
         padding-top: 30px;
         position:relative;
@@ -1574,11 +1573,12 @@ body.matching {
         background: #fff;
         border-radius: 9px;
         font-weight: 700;
-        font-size: 1.2em;
+        font-size: 1.1em;
         margin-bottom: 20px;
         height: 152px;
         width: 100%;
         text-align: center;
+        line-height: 1.1em;
         a {
             border: 0;
             display: block;
@@ -1598,10 +1598,12 @@ body.matching {
             }
             span {
                 display: block;
+                margin-top: 4px;
             }
             img {
-                width: 100px;
-                height: 100px;
+                margin-top: 10px;
+                width: 90px;
+                height: 90px;
             }
         }
     }
