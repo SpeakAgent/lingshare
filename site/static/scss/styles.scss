@@ -1808,6 +1808,7 @@ body.matching {
             background-color: #fff;
             border: none;
             border-radius: 9px;
+            position:relative;
             a {
                 display: table-cell;
                 height: 80px;
@@ -1825,10 +1826,16 @@ body.matching {
                 &.prev-word {
                     top: -40px;
                     left: 20px;
+                    &:active,&:focus {
+                        top: -38px;
+                    }
                 }
                 &.next-word {
                     top: -40px;
                     right: 20px;
+                    &:active,&:focus {
+                        top: -38px;
+                    }
                 }
             }
         }

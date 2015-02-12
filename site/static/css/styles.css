@@ -13266,19 +13266,20 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   background-color: #fff;
   border: none;
   border-radius: 9px;
+  position: relative;
 }
-/* line 1811, ../scss/styles.scss */
+/* line 1812, ../scss/styles.scss */
 .word-detail .word-list-nav button a {
   display: table-cell;
   height: 80px;
   width: 80px;
   vertical-align: middle;
 }
-/* line 1817, ../scss/styles.scss */
+/* line 1818, ../scss/styles.scss */
 .word-detail .word-list-nav button span, .word-detail .word-list-nav button i {
   display: block;
 }
-/* line 1820, ../scss/styles.scss */
+/* line 1821, ../scss/styles.scss */
 .word-detail .word-list-nav button img {
   width: 60px;
 }
@@ -13287,15 +13288,23 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
   .word-detail .word-list-nav button {
     position: absolute;
   }
-  /* line 1825, ../scss/styles.scss */
+  /* line 1826, ../scss/styles.scss */
   .word-detail .word-list-nav button.prev-word {
     top: -40px;
     left: 20px;
   }
   /* line 1829, ../scss/styles.scss */
+  .word-detail .word-list-nav button.prev-word:active, .word-detail .word-list-nav button.prev-word:focus {
+    top: -38px;
+  }
+  /* line 1833, ../scss/styles.scss */
   .word-detail .word-list-nav button.next-word {
     top: -40px;
     right: 20px;
+  }
+  /* line 1836, ../scss/styles.scss */
+  .word-detail .word-list-nav button.next-word:active, .word-detail .word-list-nav button.next-word:focus {
+    top: -38px;
   }
 }
 
@@ -13308,7 +13317,7 @@ body.matching .game-complete .user-options ul li a:hover, body.matching .game-co
 
     ====================
 */
-/* line 1855, ../scss/styles.scss */
+/* line 1862, ../scss/styles.scss */
 body,
 .game-container,
 .container,
@@ -13316,7 +13325,7 @@ nav {
   min-width: 550px !important;
 }
 
-/* line 1861, ../scss/styles.scss */
+/* line 1868, ../scss/styles.scss */
 .navbar-nav > li {
   float: left !important;
 }
