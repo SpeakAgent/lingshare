@@ -87,6 +87,12 @@ body {
     color: $font-color;
     font-family: $font-family-sans-serif;
     margin-top: 20px;
+    -webkit-touch-callout: none;
+    -moz-touch-callout: none;
+    touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 h1 {
@@ -307,29 +313,29 @@ a {
     }
     .navbar-primary {
         float: left;
+        li {
+            cursor: pointer;
+            text-align: center;
+                @include transition(color, 0.2s);
+                                            @include transition(top, 0.2s);
+
+            &.hvr-icon-float {
+                padding-right: 10px;
+            }
+        }
         #el-logo {
             img {
                 height: auto;
                 width: 46px;
             }
-            a {
-                padding: 6px 10px 6px 6px;
-            }
-        }
-        a {
-            text-align: center;
-        }
-        span, i {
-            display: block;
-        }
-        i {
-            font-size: 200%;
-            text-align: center;
+            padding: 6px 10px 6px 6px;
         }
         span {
+            display: block;
             color: $accent-dark;
             font-weight: 400;
             font-size: 80%;
+            padding-top: 4px;
         }
 
         /* With Icons */
@@ -337,9 +343,15 @@ a {
         .icon-above {
             padding-top: 28px;
             &:before {
-                top: 11px;
-                font-size: 1.6em;
+                top: 2px;
+                font-size: 2em;
+                margin-left: -10px;
             }
+        }
+        li:hover {
+                &:before {
+                    color: $brand-primary;
+                }
         }
 
     }
@@ -720,8 +732,12 @@ h2.h3-interface-label {
         margin-bottom: 2px;
     }
     .activity-wordlist {
-        font-size: 0.9em;
+        font-size: 1em;
         font-weight: 400;
+    }
+    .activity-course {
+        font-size: 80%;
+        font-style: italic;
     }
     .activity-image {
         border-radius: 9px;
@@ -1322,10 +1338,10 @@ body.matching {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63a610', endColorstr='#416e0d',GradientType=1 );
         background-repeat: no-repeat;
     div.matching-cards {
-
         margin: 0 auto;
         padding-top: 30px;
         position:relative;
+        overflow-y: hidden;
         .card-container {
             position: relative;
             margin: 0.5em;
@@ -1574,11 +1590,12 @@ body.matching {
         background: #fff;
         border-radius: 9px;
         font-weight: 700;
-        font-size: 1.2em;
+        font-size: 1.1em;
         margin-bottom: 20px;
         height: 152px;
         width: 100%;
         text-align: center;
+        line-height: 1.1em;
         a {
             border: 0;
             display: block;
@@ -1598,10 +1615,12 @@ body.matching {
             }
             span {
                 display: block;
+                margin-top: 4px;
             }
             img {
-                width: 100px;
-                height: 100px;
+                margin-top: 10px;
+                width: 90px;
+                height: 90px;
             }
         }
     }
@@ -1790,6 +1809,7 @@ body.matching {
             background-color: #fff;
             border: none;
             border-radius: 9px;
+            position:relative;
             a {
                 display: table-cell;
                 height: 80px;
@@ -1807,10 +1827,16 @@ body.matching {
                 &.prev-word {
                     top: -40px;
                     left: 20px;
+                    &:active,&:focus {
+                        top: -38px;
+                    }
                 }
                 &.next-word {
                     top: -40px;
                     right: 20px;
+                    &:active,&:focus {
+                        top: -38px;
+                    }
                 }
             }
         }
