@@ -114,9 +114,9 @@
 					<div class="word-specification">
 						<dl>
 							<dt class="word-base">{{ list.words[wordID].base_word.root_word }}</dt>
-								<dd class="word-base-meta">
-								<span ng-if="list.words[wordID].base_word.gender.title != 'NA'">({{ list.words[wordID].base_word.word_class.title }}, {{ list.words[wordID].base_word.gender }})</span>
-								<span ng-if="list.words[wordID].base_word.gender.title == 'NA'">({{ list.words[wordID].base_word.word_class.title }})</span>
+								<dd class="word-meta-info">
+								<span ng-if="list.words[wordID].base_word.gender != 'NA'">({{ list.words[wordID].base_word.word_class.title }}, {{ list.words[wordID].base_word.gender }})</span>
+								<span ng-if="list.words[wordID].base_word.gender == 'NA'">({{ list.words[wordID].base_word.word_class.title }})</span>
 								</dd>
 							<dt class="word-trans">{{ list.words[wordID].trans_word.root_word }}</dt>
 						</dl>

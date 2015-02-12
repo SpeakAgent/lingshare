@@ -44,8 +44,8 @@
 		<dl>
 			<dt class="word-base">{{ word.base_word.root_word }}</dt>
 				<dd class="word-meta-info">
-					<span ng-if="word.base_word.gender.title != 'NA'">({{ word.base_word.word_class.title }}, {{ word.base_word.gender }})</span>
-					<span ng-if="word.base_word.gender.title == 'NA'">({{ word.base_word.word_class.title }})</span>
+					<span ng-if="word.base_word.gender != 'NA'">({{ word.base_word.word_class.title }}, {{ word.base_word.gender }})</span>
+					<span ng-if="word.base_word.gender == 'NA'">({{ word.base_word.word_class.title }})</span>
 				</dd>
 			<dt class="word-trans">{{ word.trans_word.root_word }}</dt>
 		</dl>
