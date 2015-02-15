@@ -1,6 +1,6 @@
 /*
     Title: Styles for Speak Agent App
-    Version: 0.1
+    Version: 1.0
     Description: Styles of Speak Agent Web Application.
     ====================
 */
@@ -101,12 +101,6 @@ h1 {
     font-weight: 700;
     color: #fff;
     @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
-    &.mega {
-        color: $brand-secondary;
-        font-size: 4em;
-        font-weight: 900;
-        @include text-shadow(rgba(128, 237, 238, 1) 0 1px 1px);
-    }
 }
 
 h2 {
@@ -115,6 +109,13 @@ h2 {
     font-weight: 700;
     color: #fff;
     @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+}
+
+h3 {
+    color: $brand-secondary;
+    font-size: 2em;
+    font-weight: 900;
+    @include text-shadow(rgba(128, 237, 238, 1) 0 1px 1px);
 }
 
 
@@ -144,6 +145,10 @@ a {
 
 .tertiary-content {
     background-color: #fff;
+}
+
+.bottom-row {
+    padding-bottom: 2em;
 }
 
 
@@ -813,6 +818,12 @@ h2.h3-interface-label {
                 color: lighten($bronze, 25%);
             }
         }
+    }
+}
+
+.games {
+    .promo-card {
+        margin-bottom: 2em;
     }
 }
 

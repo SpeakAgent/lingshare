@@ -1,29 +1,18 @@
 <div class="container">
-<h1>Activities</h1>
-<div class="row">
-    <div class="activity-container col-lg-4 col-xs-4">
-        <div class="activity promo-card size-lg">
-            <a href="/#/games/flashcards/" title="Flashcards" class="activity-link">
-                <p class="activity-course">Spanish Beginner A</p>
-                <img class="activity-image" src="/static/images/flashcards/promo-lg.jpg" alt="{{ activity.activity.title }}" />
-                <div class="activity-info">
-                    <h3 class="activity-title">Flashcards</h3>
-                    <p class="activity-wordlist">Nature</p>
-                </div>
-            </a>
+    <h1>Activities</h1>
+    <div class="row">
+        <div class="activity-container col-lg-4 col-xs-4"
+                ng-repeat="activity in user.activities">
+            <div class="activity promo-card size-lg">
+                <a href="/#/games/flashcards/" title="Flashcards" class="activity-link">
+                    <p class="activity-course">{{ activity.course.title }}</p>
+                    <img class="activity-image" src="/static/images/flashcards/promo-lg.jpg" alt="{{ activity.activity.title }}" />
+                    <div class="activity-info">
+                        <h3 class="activity-title">{{ activity.activity.title }}</h3>
+                        <p class="activity-wordlist">{{ activity.wordlist.title }}</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
-    <div class="activity-container col-lg-4 col-xs-4">
-        <div class="activity promo-card size-lg">
-            <a href="/#/games/memory/" title="Matching" class="activity-link">
-                    <p class="activity-course">Spanish Beginner A</p>
-                <img class="activity-image" src="/static/images/matching/promo-lg.jpg" alt="{{ activity.activity.title }}" />
-                <div class="activity-info">
-                    <h3 class="activity-title">Matching</h3>
-                    <p class="activity-wordlist">Nature</p>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
 </div>
