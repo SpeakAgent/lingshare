@@ -1,6 +1,6 @@
 /*
     Title: Styles for Speak Agent App
-    Version: 0.1
+    Version: 1.0
     Description: Styles of Speak Agent Web Application.
     ====================
 */
@@ -813,6 +813,12 @@ h2.h3-interface-label {
                 color: lighten($bronze, 25%);
             }
         }
+    }
+}
+
+.games {
+    .promo-card {
+        margin-bottom: 2em;
     }
 }
 
