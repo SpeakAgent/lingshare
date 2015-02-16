@@ -1,4 +1,5 @@
-mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHelper, User, $location){
+mainApp.controller('LoginController', function($scope, $http,
+  $rootScope, jwtHelper, User, $location){
   // Form data for the login modal
   $scope.loginData = {};
   $scope.authToken = localStorage.getItem('authToken');
@@ -53,6 +54,8 @@ mainApp.controller('LoginController', function($scope, $http, $rootScope, jwtHel
         $scope.User = User;
         $scope.User.username = $scope.username;
         $rootScope.username = $scope.username;
+
+        $location.path('/dashboard');
     });
   };
 })
