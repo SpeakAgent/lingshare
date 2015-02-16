@@ -22,8 +22,7 @@
       <p><strong>Hi, {{username}}</strong>. Logging out will clear the application cache and your user profile.</p>
       <form class="form-inline" ng-submit="doLogout()">
         <div class="form-group">
-          <input type="password" class="form-control" ng-model="loginData.magicPhrase" placeholder="Enter the magic word">
-          <button ng-disabled="loginData.magicPhrase != 'frodo'" class="btn btn-primary" type="submit">log out</button>
+          <button class="btn btn-primary" type="submit">log out</button>
         </div>
       </form>
     </div>
