@@ -57,6 +57,11 @@ mainApp.controller('LoginController', function($scope, $http,
 
         $location.path('/dashboard');
     });
+
+    responsePromise.error(function(data, status, headers, config) {
+      $scope.loginError = "Unable to log in with the provided username and password.";
+    });
+
   };
 })
 
