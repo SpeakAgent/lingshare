@@ -30,7 +30,7 @@
 
 <nav class="navbar navbar-global" ng-controller="NavController">
   <ul class="nav navbar-default navbar-nav navbar-primary">
-    <li id="el-logo" data-href="/#/dashboard/" ><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" title="Speak Agent" /></li>
+    <li data-href="/#/dashboard/" id="el-logo"><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" title="Speak Agent" /></li>
     <li data-href="/#/dashboard/" class="icon-home icon-above hvr-icon-float"><span>Home</span></li>
     <li data-href="/#/games/" class="icon-activities icon-above hvr-icon-float"><span>Activities</span></li>
     <li data-href="/#/words/" class="icon-wordlists icon-above hvr-icon-float"><span>Wordlists</span></li>
@@ -66,7 +66,7 @@
     angular.forEach(allLIs, function(item) {
       if (item.dataset['href']) {
         item.addEventListener('click', function(e) {
-          window.location.href=e.target.dataset['href'];
+          window.location.href=item.dataset['href'];
           return false;
         });
       }
