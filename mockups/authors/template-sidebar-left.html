@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
+  <title>Your Dashboard | Speak Agent</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Speak Agent</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-left">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="n-home"><a href="#"><i class="fa fa-home"></i> <span class="sr-only">Home</span></a></li>
+                <li class="n-wordlists"><a href="/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
+                <li class="n-activities"><a href="#"><i class="fa fa-gamepad"></i> Activities</a></li>
+                <li class="n-learners"><a href="#"><i class="fa fa-child"></i> Classes</a></li>
+                <li class="n-groups"><a href="#"><i class="fa fa-users"></i> Groups</a></li>
+                <li class="n-settings"><a href="#"><i class="fa fa-cog"></i> Username</a></li>
+                <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
+                <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Wordlists <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Activities</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">Groups</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-10 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            Main Content Area
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
+  <title>Wordlist Sample . Wordlists | Speak Agent</title>
+</head>
+<body>
+<div class="container-fluid parent-container-main">
+    <nav class="navbar navbar-default navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+            </div>
+            <div id="navbar">
+                <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+                <ul class="nav navbar-nav navbar-right nav-secondary">
+                    <li class="n-user"><a href="#">Username</a></li>
+                    <li class="n-settings"><a href="#"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
+                    <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
+                    <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="n-home"><a href="#"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
+                    <li class="n-wordlists"><a href="/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
+                    <li class="n-activities"><a href="#"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
+                    <li class="n-learners"><a href="#"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
+                    <li class="n-groups"><a href="#"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="col-sm-12 col-md-12 l-main">
+            <div class="row">
+                <div class="col-sm-12 col-sm-12">
+                    <ol class="breadcrumb">
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/wordlists">Wordlists</a></li>
+                      <li><a href="/wordlists/wordlist-sample.html">Physical Characteristics</a></li>
+                      <li class="active">el color de ojos</a></li>
+                    </ol>
+                    <h1 class="page-title pull-left">el color de ojos</h1>
+                    <ol class="list-inline pull-right">
+                        <li><a href="#">Copy</a></li>
+                        <li><a href="#">Delete</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 col-md-8">
+                    <div class="wl-lexeme-dataitems list-group">
+                        <div class="wl-lexeme-dataitem list-group-item">
+                            <h3>Metadata</h3>
+                            <ul>
+                                <li>Base Word: eye color</li>
+                                <li>Translated Word: el color de ojos</li>
+                                <li>Gender: Male</li>
+                                <li>Part of Speech: adjective</li>
+                            </ul>
+                        </div>
+                        <div class="wl-lexeme-dataitem list-group-item">
+                            <h3>Audio</h3>
+                            <audio controls>
+                              <source src="#" type="audio/ogg">
+                              <source src="#" type="audio/mpeg">
+                              Sorry, your browser does not support the audio tag.
+                            </audio>
+                            <label for="wl-lexeme-audio">Change Audio</label>
+                            <input type="file" id="exampleInputFile">
+                        </div>
+                        <div class="wl-lexeme-dataitem list-group-item">
+                            <h3>Media</h3>
+                            <ul class="list-inline">
+                                <li>
+                                    <img src="http://placehold.it/120x100" class="img-thumbnail">
+                                    <ul class="list-inline">
+                                        <li><a href="#">Edit</a></li>
+                                        <li><a href="#">Remove</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <img src="http://placehold.it/120x100" class="img-thumbnail">
+                                    <ul class="list-inline">
+                                        <li><a href="#">Edit</a></li>
+                                        <li><a href="#">Remove</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <img src="http://placehold.it/120x100" class="img-thumbnail">
+                                    <ul class="list-inline">
+                                        <li><a href="#">Edit</a></li>
+                                        <li><a href="#">Remove</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="wl-lexeme-dataitem list-group-item">
+                            <h3>Sentences</h3>
+                            <ul class="wl-lexeme-sentence">
+                                <li><small>Base Sentence:</small> This is a sentence.</li>
+                                <li><small>Translated Sentence:</small> This is a translated sentence.</li>
+                                <li><a href="#">Delete</a></li>
+                            </ul>
+                            <ul class="wl-lexeme-sentence">
+                                <li><small>Base Sentence:</small> This is a sentence.</li>
+                                <li><small>Translated Sentence:</small> This is a translated sentence.</li>
+                                <li><a href="#">Delete</a></li>
+                            </ul>
+                            <ul class="wl-lexeme-sentence">
+                                <li><small>Base Sentence:</small> This is a sentence.</li>
+                                <li><small>Translated Sentence:</small> This is a translated sentence.</li>
+                                <li><a href="#">Delete</a></li>
+                            </ul>
+                            <p><a href="#" class="btn btn-default"><i class="fa fa-plus"></i> Add Sentence</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="wl-symbol c-img">
+                                <figure>
+                                    <img src="/static/images/fpo/symbol-eye_color.png" alt="eye color">
+                                    <figcaption><a href="#">Edit Symbol</a></figcaption>
+                                </figure>
+                            </div>
+                            <dl>
+                                <dt>Labels</dt>
+                                <dd>Tag One</dd>
+                                <dd>Tag Two</dd>
+                            </dl>
+                            <p><a href="#"><i class="fa fa-plus"></i> Add Label</a></p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid footer-main">
+    <nav class="nav-utility">
+        <ul class="list-inline">
+            <li><a href="#">About Speak Agent</a></li>
+            <li><a href="#">Site Policies</a></li>
+            <li><a href="#">Contact Support</a></li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
