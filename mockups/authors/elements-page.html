@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="static/css/styles.css" rel="stylesheet" type="text/css" />
   <title>Elements Page | Speak Agent</title>
 </head>
 <body>
   <div class="navbar navbar-default navbar-inverse navbar-static-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/"><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+            <a class="navbar-brand" href="/"><img src="static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
         </div>
         <ul class="nav navbar-nav">
           <li class="dropdown">
@@ -156,7 +156,20 @@
             <p><small>This is text in a <code>small</code> wrapper. <abbr title="No Big Deal">NBD</abbr>, right?</small></p>
             <hr>
             <div class="row">
-              <address class="col-6">                <strong>Twitter, Inc.</strong><br>                795 Folsom Ave, Suite 600<br>                San Francisco, CA 94107<br>                <abbr title="Phone">P:</abbr> (123) 456-7890              </address><address class="col-6">                <strong>Full Name</strong><br>                <a href="mailto:#">first.last@example.com</a>              </address>
+              <div class="col-6">
+                <address>
+                <strong>Twitter, Inc.</strong><br>
+                795 Folsom Ave, Suite 600<br>
+                San Francisco, CA 94107<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+                </address>
+              </div>
+              <div class="col-6">
+                <address>
+                <strong>Full Name</strong><br>
+                <a href="mailto:#">first.last@example.com</a>
+                </address>
+              </div>
             </div>
             <hr>
             <blockquote>Here's what a blockquote looks like in Bootstrap. <small>Use <code>small</code> to identify the source.</small>
