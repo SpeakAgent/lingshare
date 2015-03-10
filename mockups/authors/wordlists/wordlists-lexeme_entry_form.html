@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
-  <title>Add Base Lexemes | Speak Agent</title>
+  <title>Add Base Words | Speak Agent</title>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-inverse navbar-static-top">
@@ -31,14 +31,25 @@
     </div>
 </nav>
 <div class="container-fluid">
-    <div class="col-sm-12 col-md-12 l-main">
+    <div class="col-sm-12 col-md-12 l-main no-breadcrumb">
+        <div class="row">
+
+        </div>
         <div class="row">
             <div class="col-sm-12 col-md-12">
-                <h1 class="page-header">Add Base Lexemes</h1>
+                <h1 class="page-header">Add Words</h2>
             </div>
         </div>
         <div class="row c-lexeme c-lemexe-entries">
             <div class="col-sm-12 col-md-12">
+            <div class="form-group">
+                <label for="wl-base_language">1. Select the Language you are entering</label>
+                <select class="form-control" id="wl-base_language">
+                    <option>English</option>
+                    <option>Spanish</option>
+                </select>
+            </div>
+            <h4>2. Enter Words</h4>
             <ul class="list-group">
                 <li class="list-group-item">
                     <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
@@ -85,14 +96,14 @@
                     <a href="#">Delete</a>
                 </li>
                 <li class="list-group-item">
-                    <a href="#" class="btn btn-primary">Add Another Lexeme</a>
+                    <a href="#" class="btn btn-primary">Add Another Word</a>
                 </li>
             </ul>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-12">
-                <a href="/wordlists/wordlists-settings_form.html" class="btn btn-primary">Save Lexemes</a>
+                <a href="/wordlists/wordlists-processing.html" class="btn btn-primary">Save Words</a>
             </div>
         </div>
     </div>

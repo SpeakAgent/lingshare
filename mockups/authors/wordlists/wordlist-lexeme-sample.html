@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
-  <title>Wordlist Sample . Wordlists | Speak Agent</title>
+  <title>Sample Lexeme . Wordlist Sample . Wordlists | Speak Agent</title>
 </head>
 <body>
 <div class="container-fluid parent-container-main">
@@ -31,7 +31,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid c-fluid-main">
         <div class="col-sm-12 col-md-12 l-main">
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
@@ -41,7 +41,7 @@
                       <li><a href="/wordlists/wordlist-sample.html">Physical Characteristics</a></li>
                       <li class="active">el color de ojos</a></li>
                     </ol>
-                    <h1 class="page-header pull-left">el color de ojos</h1>
+                    <h1 class="page-header pull-left">el color de ojos <small><span class="label label-warning">Draft</span> <span class="label label-warning">Not In Use</span></small></h1>
                     <ol class="list-inline pull-right">
                         <li><a href="#">Copy</a></li>
                         <li><a href="#">Delete</a></li>
@@ -50,89 +50,147 @@
             </div>
             <div class="row">
                 <div class="col-sm-8 col-md-8">
-                    <div class="wl-lexeme-dataitems list-group">
-                        <div class="wl-lexeme-dataitem list-group-item">
-                            <h3>Metadata</h3>
-                            <ul>
-                                <li>Base Word: eye color</li>
-                                <li>Translated Word: el color de ojos</li>
-                                <li>Gender: Male</li>
-                                <li>Part of Speech: adjective</li>
-                            </ul>
+                    <div class="wl-lexeme-dataitems">
+                        <div class="wl-lexeme-dataitem panel panel-default no-shadow">
+                            <div class="panel-heading clearfix">
+                                <h2 class="pull-left">Word Details</h2>
+                                <div class="pull-right dataitem-controls">
+                                    <a href="#">Edit Details</a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Base Word: eye color</li>
+                                    <li>Translated Word: el color de ojos</li>
+                                    <li>Alternative: Alternative Characters</li>
+                                    <li>Transliteration: Latin Translation</li>
+                                    <li>Gender: Male</li>
+                                    <li>Part of Speech: adjective</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="wl-lexeme-dataitem list-group-item">
-                            <h3>Audio</h3>
-                            <audio controls>
-                              <source src="#" type="audio/ogg">
-                              <source src="#" type="audio/mpeg">
-                              Sorry, your browser does not support the audio tag.
-                            </audio>
-                            <label for="wl-lexeme-audio">Change Audio</label>
-                            <input type="file" id="exampleInputFile">
+                        <div class="wl-lexeme-dataitem panel panel-default no-shadow">
+                            <div class="panel-heading clearfix">
+                                <h2 class="pull-left">Word Sense</h2>
+                                <div class="pull-right dataitem-controls">
+                                    <a href="#">Edit Word Sense</a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Bat as in baseball, not as in animal.</li>
+                            </div>
                         </div>
-                        <div class="wl-lexeme-dataitem list-group-item">
-                            <h3>Media</h3>
-                            <ul class="list-inline">
-                                <li>
-                                    <img src="http://placehold.it/120x100" class="img-thumbnail">
-                                    <ul class="list-inline">
-                                        <li><a href="#">Edit</a></li>
-                                        <li><a href="#">Remove</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <img src="http://placehold.it/120x100" class="img-thumbnail">
-                                    <ul class="list-inline">
-                                        <li><a href="#">Edit</a></li>
-                                        <li><a href="#">Remove</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <img src="http://placehold.it/120x100" class="img-thumbnail">
-                                    <ul class="list-inline">
-                                        <li><a href="#">Edit</a></li>
-                                        <li><a href="#">Remove</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <div class="wl-lexeme-dataitem panel panel-default no-shadow">
+                            <div class="panel-heading clearfix">
+                                <h3 class="pull-left">Audio</h3>
+                                <div class="pull-right dataitem-controls">
+                                    <a href="#">Edit Audio</a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <audio controls>
+                                  <source src="#" type="audio/ogg">
+                                  <source src="#" type="audio/mpeg">
+                                  Sorry, your browser does not support the audio tag.
+                                </audio>
+                                <label for="wl-lexeme-audio">Change Audio</label>
+                                <input type="file" id="exampleInputFile">
+                            </div>
                         </div>
-                        <div class="wl-lexeme-dataitem list-group-item">
-                            <h3>Sentences</h3>
-                            <ul class="wl-lexeme-sentence">
-                                <li><small>Base Sentence:</small> This is a sentence.</li>
-                                <li><small>Translated Sentence:</small> This is a translated sentence.</li>
-                                <li><a href="#">Delete</a></li>
-                            </ul>
-                            <ul class="wl-lexeme-sentence">
-                                <li><small>Base Sentence:</small> This is a sentence.</li>
-                                <li><small>Translated Sentence:</small> This is a translated sentence.</li>
-                                <li><a href="#">Delete</a></li>
-                            </ul>
-                            <ul class="wl-lexeme-sentence">
-                                <li><small>Base Sentence:</small> This is a sentence.</li>
-                                <li><small>Translated Sentence:</small> This is a translated sentence.</li>
-                                <li><a href="#">Delete</a></li>
-                            </ul>
-                            <p><a href="#" class="btn btn-default"><i class="fa fa-plus"></i> Add Sentence</a></p>
+                        <div class="wl-lexeme-dataitem panel panel-default no-shadow">
+                            <div class="panel-heading clearfix">
+                                <h3 class="pull-left">Photos &amp; Videos <small><span class="flag-optional">optional</span></small></h3>
+                                 <div class="pull-right dataitem-controls">
+                                    <a href="#">Edit Photos &amp; Videos</a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="list-inline">
+                                    <li>
+                                        <img src="http://placehold.it/120x100" class="img-thumbnail">
+                                        <ul class="list-inline">
+                                            <li><a href="#">Edit</a></li>
+                                            <li><a href="#">Remove</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <img src="http://placehold.it/120x100" class="img-thumbnail">
+                                        <ul class="list-inline">
+                                            <li><a href="#">Edit</a></li>
+                                            <li><a href="#">Remove</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <img src="http://placehold.it/120x100" class="img-thumbnail">
+                                        <ul class="list-inline">
+                                            <li><a href="#">Edit</a></li>
+                                            <li><a href="#">Remove</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                        <div class="wl-lexeme-dataitem panel panel-default">
+                            <div class="panel-heading clearfix">
+                                <h3 class="pull-left">Sentences <small><span class="flag-optional">optional</span></small></h3>
+                                <div class="pull-right dataitem-controls">
+                                    <a href="#">Edit Sentences</a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="wl-lexeme-sentence">
+                                    <li><small>Base Sentence:</small> This is a sentence.</li>
+                                    <li><small>Translated Sentence:</small> This is a translated sentence.</li>
+                                    <li><a href="#">Delete</a></li>
+                                </ul>
+                                <ul class="wl-lexeme-sentence">
+                                    <li><small>Base Sentence:</small> This is a sentence.</li>
+                                    <li><small>Translated Sentence:</small> This is a translated sentence.</li>
+                                    <li><a href="#">Delete</a></li>
+                                </ul>
+                                <ul class="wl-lexeme-sentence">
+                                    <li><small>Base Sentence:</small> This is a sentence.</li>
+                                    <li><small>Translated Sentence:</small> This is a translated sentence.</li>
+                                    <li><a href="#">Delete</a></li>
+                                </ul>
+                                <p><a href="#" class="btn btn-default"><i class="fa fa-plus"></i> Add Sentence</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wl-lexeme-controls c-buttons">
+                        <p><a href="wordlist-sample-published.html" class="btn btn-primary">Publish Word</a></p><a href="wordlist-sample-published.html" class="btn btn-default">Save Word</a></p>
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4">
-                    <div class="panel panel-default">
+                    <div class="wl-lexeme-dataitem panel panel-default no-shadow">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">Word Symbol</h3>
+                            <div class="pull-right dataitem-controls">
+                                <a href="#">Edit Symbol</a>
+                            </div>
+                        </div>
                         <div class="panel-body">
                             <div class="wl-symbol c-img">
                                 <figure>
                                     <img src="/static/images/fpo/symbol-eye_color.png" alt="eye color">
-                                    <figcaption><a href="#">Edit Symbol</a></figcaption>
                                 </figure>
                             </div>
+                        </div>
+                    </div>
+                    <div class="wl-lexeme-dataitem panel panel-default">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">Tags</h3>
+                            <div class="pull-right dataitem-controls">
+                                <a href="#">Edit Tags</a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
                             <dl>
-                                <dt>Labels</dt>
                                 <dd>Tag One</dd>
                                 <dd>Tag Two</dd>
                             </dl>
-                            <p><a href="#"><i class="fa fa-plus"></i> Add Label</a></p>
-                        </div>
+                            <p><a href="#"><i class="fa fa-plus"></i> Add Tag</a></p>
                         </div>
                     </div>
                 </div>
