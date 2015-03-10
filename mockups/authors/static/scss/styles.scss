@@ -16,6 +16,10 @@
 // Import Bootstrap for Sass
 @import "bootstrap";
 
+// Variables
+
+$img-listitem-width: 50px;
+
 /*
     0.0 Base Structure
     ====================
@@ -34,6 +38,15 @@ a {
     img {
         max-width: 100%;
     }
+}
+.c-fluid-main {
+    padding: 0;
+}
+.no-shadow {
+    box-shadow: none !important;
+}
+.c-buttons {
+    margin-top: 20px;
 }
 
 /* Sticky Footer Code */
@@ -57,14 +70,47 @@ a {
 
 /* Panels */
 
-.panel-heading {
-    font-weight: 900;
+.panel {
+    border-radius: 0;
+    .panel-heading {
+        font-weight: 900;
+    }
 }
 
 /* List Groups */
 .list-group {
     .list-group-item:last-child {
         @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+    }
+    .list-inline {
+        margin-bottom: 0;
+    }
+    .with-label {
+        small {
+            color: $gray-lighter;
+            font-size: 80%;
+            font-weight: 300;
+            font-style: italic;
+            display: block;
+        }
+    }
+}
+
+/* Buttons */
+
+.btn {
+    @include box-shadow(rgba($shadow-primary, 0.1) 0px 1px 0px);
+    position: relative;
+    border-width: 2px;
+    &:focus, &:active {
+        box-shadow: none;
+        top: 2px;
+    }
+    &.btn-with-icon {
+        padding-bottom: 4px;
+        i {
+            font-size: 120%;
+        }
     }
 }
 
@@ -80,6 +126,7 @@ a {
 
 .navbar-static-top {
     border: 0;
+    margin-bottom: 0;
     @include box-shadow(rgba($shadow-primary, 0.15) 0px 2px 1px);
     .form-control {
         border: 0;
@@ -152,7 +199,16 @@ a {
 */
 
 .l-main {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
+  .breadcrumb {
+    border-radius: 0;
+    font-size: 90%;
+    margin: 0 -20px 20px -20px;
+    padding: 24px 20px 8px 22px;
+  }
+  &.no-breadcrumb {
+    padding-top: 32px;
+  }
 }
 
 /*
@@ -165,15 +221,47 @@ a {
 */
 
 
+/*
+    C.1 Wordlists Landing Page
+*/
+
+.wl-item {
+    .wl-title {
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    .wl-symbol {
+        width: $img-listitem-width;
+    }
+}
+
+/*
+    C.2 Wordlist Page
+*/
 
 /*
     1. List of Items
 */
-.wl-item {
-    .wl-lexeme-symbol {
-        width: 50px;
+.wl-dataitems {
+    .wl-dataitem {
+        margin-bottom: 0;
+        border-bottom-width: 0;
+        &:last-child {
+            border-bottom-width: 1px;
+            margin-bottom: 20px;
+        }
+        .wl-item {
+            .wl-lexeme-title {
+                 font-size: 1.2em;
+                font-weight: 700;
+            }
+            .wl-lexeme-symbol {
+                width: $img-listitem-width;
+            }
+        }
     }
 }
+
 
 /*
     2. Sidebar
@@ -186,5 +274,17 @@ a {
 .wl-symbol {
     img {
         max-width: 100%;
+    }
+}
+
+/*
+    C.3 Word Detail Page
+    */
+.wl-lexeme-dataitem {
+    border-bottom-width: 0;
+    margin-bottom: 0;
+    &:last-child {
+        border-bottom-width: 1px;
+        margin-bottom: 20px;
     }
 }

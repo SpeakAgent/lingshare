@@ -31,7 +31,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid c-fluid-main">
         <div class="col-sm-12 col-md-12 l-main">
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
@@ -42,85 +42,150 @@
                     </ol>
                     <h1 class="page-header pull-left">Physical Characteristics <small><span class="label label-warning">Draft</span> <span class="label label-warning">Not In Use</span></small></h1>
                     <ol class="list-inline pull-right">
-                        <li><a href="wordlists-sharing_form.html">Sharing Settings</a></li>
                         <li><a href="#">Copy</a></li>
-                        <li><a href="#">Fork</a></li>
                         <li><a href="#">Delete</a></li>
                     </ol>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-8 col-md-8">
-                    <h2>Words <small><a href="wordlists-add_new.html"><i class="fa fa-plus"></i> Add New</a></small></h2>
-                    <div class="wl-items list-group">
-                        <div class="wl-item list-group-item lexeme-status-ready">
-                            <ul class="list-inline">
-                                <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
-                                <li class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-eye_color.png" alt="eye color" /></li>
-                                <li><a href="wordlist-lexeme-sample.html">el color de ojos</a></li>
-                                <li class="pull-right"><span class="label label-success">Ready</span></li>
-                            </ul>
-                        </div>
-                        <div class="wl-item list-group-item lexeme-status-ready">
-                            <ul class="list-inline">
-                                <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
-                                <li class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-favorite.png" alt="favorite" /></li>
-                                <li class="wl-lexeme-word"><a href="wordlist-lexeme-sample.html">favorite</a></li>
-                                <li class="pull-right"><span class="label label-success">Ready</span></li>
-                            </ul>
-                        </div>
-                        <div class="wl-item list-group-item lexeme-status-ready">
-                            <ul class="list-inline">
-                                <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
-                                <li class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-grande.png" alt="grande" /></li>
-                                <li class="wl-lexeme-word"><a href="wordlist-lexeme-sample.html">grande</a></li>
-                                <li class="pull-right"><span class="label label-success">Ready</span></li>
-                            </ul>
-                        </div>
-                        <div class="wl-item list-group-item lexeme-status-draft">
-                            <ul class="list-inline">
-                                <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
-                                <li class="wl-lexeme-symbol c-img">No Symbol</li>
-                                <li class="wl-lexeme-word"><a href="wordlist-lexeme-sample.html">celestes</a></li>
-                                <li class="pull-right"><span class="label label-warning">Draft</span></li>
-                            </ul>
-                        </div>
-                        <div class="wl-item list-group-item lexeme-status-ready">
-                            <ul class="list-inline">
-                                <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
-                                <li class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-grande.png" alt="grande" /></li>
-                                <li class="wl-lexeme-word"><a href="wordlist-lexeme-sample.html">grande</a></li>
-                                <li class="pull-right"><span class="label label-success">Ready</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <p><a href="wordlist-sample-published.html" class="btn btn-primary">Publish Wordlist</a></p>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="wl-symbol">
-                                <figure>
-                                    <img src="/static/images/fpo/symbol-favorite.png" alt="favorite" />
-                                    <figcaption><a href="#">Edit Symbol</a></figcaption>
-                                </figure>
+                <div class="col-sm-8 col-md-8 wl-dataitems">
+                    <div class="panel panel-default no-shadow wl-dataitem">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">List Details</h3>
+                            <div class="pull-right dataitem-controls">
+                                <a href="#">Edit Details</a>
                             </div>
-
+                        </div>
+                        <div class="panel-body">
                             <ul>
-                                <li>Language: Spanish</li>
+                                <li>Base Language: English</li>
+                                <li>Target Language: Spanish</li>
                                 <li>Difficulty: 5</li>
+                                <li>Status: Public</li>
+                            </ul>
+                            <ul>
                                 <li>Date Created: March 12, 2015</li>
                                 <li>Last Update: September 99, 9999</li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default wl-dataitem">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">Words</h2>
+                            <div class="pull-right dataitem-controls">
+                                <a href="#">Add New Word</a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="wl-items list-group">
+                                <div class="wl-item list-group-item lexeme-status-ready clearfix">
+                                    <ul class="list-inline pull-left">
+                                        <li class="wl-item-move"><i class="fa fa-arrows"></i></li>
+                                        <li class="wl-lexeme-status"><span class="label label-success">Ready</span></li>
+
+                                        <li class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-eye_color.png" alt="eye color" /></li>
+                                        <li class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">el color de ojos</a></li>
+                                    </ul>
+                                    <ul class="list-inline pull-right">
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-eye"></i> Preview</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-volume-up"></i> Listen</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-times"></i> Delete</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wl-item list-group-item lexeme-status-ready clearfix">
+                                    <ul class="list-inline pull-left">
+                                        <li class="wl-item-move"><i class="fa fa-arrows"></i></li>
+                                        <li class="wl-lexeme-status"><span class="label label-success">Ready</span></li>
+                                        <li class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-favorite.png" alt="favorite" /></li>
+                                        <li class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">favorite</a></li>
+                                    </ul>
+                                    <ul class="list-inline pull-right">
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
+                                         <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-eye"></i> Preview</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-volume-up"></i> Listen</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-times"></i> Delete</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wl-item list-group-item lexeme-status-ready clearfix">
+                                    <ul class="list-inline pull-left">
+                                        <li class="wl-item-move"><i class="fa fa-arrows"></i></li>
+                                        <li class="wl-lexeme-status"><span class="label label-success">Ready</span></li>
+                                        <li class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-grande.png" alt="grande" /></li>
+                                        <li class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">grande</a></li>
+                                    </ul>
+                                    <ul class="list-inline pull-right">
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-eye"></i> Preview</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-volume-up"></i> Listen</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-times"></i> Delete</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wl-item list-group-item lexeme-status-draft clearfix">
+                                    <ul class="list-inline pull-left">
+                                        <li class="wl-item-move"><i class="fa fa-arrows"></i></li>
+                                        <li class="wl-lexeme-status"><span class="label label-warning">Draft</span></li>
+                                        <li class="wl-lexeme-symbol no-symbol c-img">No Symbol</li>
+                                        <li class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">celestes</a></li>
+                                    </ul>
+                                    <ul class="list-inline pull-right">
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-eye"></i> Preview</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-volume-up"></i> Listen</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-times"></i> Delete</a></li>
+                                    </ul>
+                                </div>
+                                <div class="wl-item list-group-item lexeme-status-ready clearfix">
+                                    <ul class="list-inline pull-left">
+                                        <li class="wl-item-move"><i class="fa fa-arrows"></i></li>
+                                        <li class="wl-lexeme-status"><span class="label label-success">Ready</span></li>
+                                        <li class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-grande.png" alt="grande" /></li>
+                                        <li class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">grande</a></li>
+                                    </ul>
+                                    <ul class="list-inline pull-right">
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-eye"></i> Preview</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-volume-up"></i> Listen</a></li>
+                                        <li><a href="wordlist-lexeme-sample.html"><i class="fa fa-times"></i> Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wl-controls c-buttons">
+                        <p><a href="wordlist-sample-published.html" class="btn btn-primary">Publish Wordlist</a></p><a href="wordlist-sample-published.html" class="btn btn-default">Save Wordlist</a></p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4">
+                    <div class="wl-lexeme-dataitem panel panel-default no-shadow">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">List Symbol</h3>
+                            <div class="pull-right dataitem-controls">
+                                <a href="#">Edit Symbol</a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="wl-symbol c-img">
+                                <figure>
+                                    <img src="/static/images/fpo/symbol-eye_color.png" alt="eye color">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wl-lexeme-dataitem panel panel-default">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">Tags</h3>
+                            <div class="pull-right dataitem-controls">
+                                <a href="#">Edit Tags</a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
                             <dl>
-                                <dt>Labels</dt>
                                 <dd>Tag One</dd>
                                 <dd>Tag Two</dd>
                             </dl>
-                            <p><a href="#">Add Label</a></p>
-                        </div>
+                            <p><a href="#"><i class="fa fa-plus"></i> Add Tag</a></p>
                         </div>
                     </div>
                 </div>

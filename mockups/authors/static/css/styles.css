@@ -4475,7 +4475,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #bfbfbf;
 }
 
 /* line 125, ../scss/bootstrap/_scaffolding.scss */
@@ -4784,7 +4784,7 @@ a.bg-danger:hover {
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #bfbfbf;
 }
 
 /* line 149, ../scss/bootstrap/_type.scss */
@@ -4886,7 +4886,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 17.5px;
-  border-left: 5px solid #eeeeee;
+  border-left: 5px solid #bfbfbf;
 }
 /* line 250, ../scss/bootstrap/_type.scss */
 blockquote p:last-child,
@@ -4915,7 +4915,7 @@ blockquote .small:before {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid #bfbfbf;
   border-left: 0;
   text-align: right;
 }
@@ -6519,7 +6519,7 @@ output {
 /* line 141, ../scss/bootstrap/_forms.scss */
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
   cursor: not-allowed;
-  background-color: #eeeeee;
+  background-color: #bfbfbf;
   opacity: 1;
 }
 
@@ -7851,7 +7851,7 @@ tbody.collapse.in {
   line-height: 1;
   color: #555555;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: #bfbfbf;
   border: 1px solid #cccccc;
   border-radius: 9px;
 }
@@ -7969,7 +7969,7 @@ tbody.collapse.in {
 /* line 23, ../scss/bootstrap/_navs.scss */
 .nav > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #bfbfbf;
 }
 /* line 31, ../scss/bootstrap/_navs.scss */
 .nav > li.disabled > a {
@@ -7984,7 +7984,7 @@ tbody.collapse.in {
 }
 /* line 46, ../scss/bootstrap/_navs.scss */
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: #eeeeee;
+  background-color: #bfbfbf;
   border-color: #009597;
 }
 /* line 59, ../scss/bootstrap/_navs.scss */
@@ -8017,7 +8017,7 @@ tbody.collapse.in {
 }
 /* line 89, ../scss/bootstrap/_navs.scss */
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #dddddd;
+  border-color: #bfbfbf #bfbfbf #dddddd;
 }
 /* line 96, ../scss/bootstrap/_navs.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
@@ -8841,7 +8841,7 @@ tbody.collapse.in {
 .pagination > li > span:hover,
 .pagination > li > span:focus {
   color: #00aeb1;
-  background-color: #eeeeee;
+  background-color: #bfbfbf;
   border-color: #dddddd;
 }
 /* line 51, ../scss/bootstrap/_pagination.scss */
@@ -8939,7 +8939,7 @@ tbody.collapse.in {
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #bfbfbf;
 }
 /* line 31, ../scss/bootstrap/_pager.scss */
 .pager .next > a,
@@ -9104,7 +9104,7 @@ a.badge:hover, a.badge:focus {
   padding: 30px 15px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: #bfbfbf;
 }
 /* line 12, ../scss/bootstrap/_jumbotron.scss */
 .jumbotron h1,
@@ -9119,7 +9119,7 @@ a.badge:hover, a.badge:focus {
 }
 /* line 23, ../scss/bootstrap/_jumbotron.scss */
 .jumbotron > hr {
-  border-top-color: #d5d5d5;
+  border-top-color: #a6a6a6;
 }
 /* line 27, ../scss/bootstrap/_jumbotron.scss */
 .container .jumbotron, .container-fluid .jumbotron {
@@ -9477,14 +9477,14 @@ a.thumbnail.active {
 }
 /* line 31, ../scss/bootstrap/_list-group.scss */
 .list-group-item:first-child {
-  border-top-right-radius: 9px;
-  border-top-left-radius: 9px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 34, ../scss/bootstrap/_list-group.scss */
 .list-group-item:last-child {
   margin-bottom: 0;
-  border-bottom-right-radius: 9px;
-  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 /* line 46, ../scss/bootstrap/_list-group.scss */
@@ -9504,7 +9504,7 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 /* line 64, ../scss/bootstrap/_list-group.scss */
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
-  background-color: #eeeeee;
+  background-color: #bfbfbf;
   color: #777777;
   cursor: not-allowed;
 }
@@ -9659,7 +9659,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   margin-bottom: 20px;
   background-color: white;
   border: 1px solid transparent;
-  border-radius: 9px;
+  border-radius: 0;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -9682,8 +9682,8 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  border-top-right-radius: -1;
+  border-top-left-radius: -1;
 }
 /* line 27, ../scss/bootstrap/_panels.scss */
 .panel-heading > .dropdown .dropdown-toggle {
@@ -9711,8 +9711,8 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   padding: 10px 15px;
   background-color: whitesmoke;
   border-top: 1px solid #dddddd;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 
 /* line 63, ../scss/bootstrap/_panels.scss */
@@ -9730,15 +9730,15 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel > .list-group:first-child .list-group-item:first-child,
 .panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {
   border-top: 0;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  border-top-right-radius: -1;
+  border-top-left-radius: -1;
 }
 /* line 81, ../scss/bootstrap/_panels.scss */
 .panel > .list-group:last-child .list-group-item:last-child,
 .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {
   border-bottom: 0;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 
 /* line 90, ../scss/bootstrap/_panels.scss */
@@ -9767,16 +9767,16 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 /* line 115, ../scss/bootstrap/_panels.scss */
 .panel > .table:first-child,
 .panel > .table-responsive:first-child > .table:first-child {
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  border-top-right-radius: -1;
+  border-top-left-radius: -1;
 }
 /* line 121, ../scss/bootstrap/_panels.scss */
 .panel > .table:first-child > thead:first-child > tr:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: -1;
+  border-top-right-radius: -1;
 }
 /* line 125, ../scss/bootstrap/_panels.scss */
 .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
@@ -9787,7 +9787,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
-  border-top-left-radius: 8px;
+  border-top-left-radius: -1;
 }
 /* line 129, ../scss/bootstrap/_panels.scss */
 .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
@@ -9798,21 +9798,21 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
-  border-top-right-radius: 8px;
+  border-top-right-radius: -1;
 }
 /* line 137, ../scss/bootstrap/_panels.scss */
 .panel > .table:last-child,
 .panel > .table-responsive:last-child > .table:last-child {
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
 }
 /* line 143, ../scss/bootstrap/_panels.scss */
 .panel > .table:last-child > tbody:last-child > tr:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: -1;
+  border-bottom-right-radius: -1;
 }
 /* line 147, ../scss/bootstrap/_panels.scss */
 .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
@@ -9823,7 +9823,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
-  border-bottom-left-radius: 8px;
+  border-bottom-left-radius: -1;
 }
 /* line 151, ../scss/bootstrap/_panels.scss */
 .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
@@ -9834,7 +9834,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
-  border-bottom-right-radius: 8px;
+  border-bottom-right-radius: -1;
 }
 /* line 158, ../scss/bootstrap/_panels.scss */
 .panel > .panel-body + .table,
@@ -9918,7 +9918,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 /* line 220, ../scss/bootstrap/_panels.scss */
 .panel-group .panel {
   margin-bottom: 0;
-  border-radius: 9px;
+  border-radius: 0;
 }
 /* line 224, ../scss/bootstrap/_panels.scss */
 .panel-group .panel + .panel {
@@ -11243,31 +11243,46 @@ button.close {
     0.0 Base Structure
     ====================
     */
-/* line 23, ../scss/styles.scss */
+/* line 27, ../scss/styles.scss */
 html {
   height: 100%;
 }
 
-/* line 26, ../scss/styles.scss */
+/* line 30, ../scss/styles.scss */
 body {
   height: 100%;
   font-weight: 400;
 }
 
-/* line 30, ../scss/styles.scss */
+/* line 34, ../scss/styles.scss */
 a {
   -webkit-transition: color 0.2s, background-color 0.2s;
   -o-transition: color 0.2s, background-color 0.2s;
   transition: color 0.2s, background-color 0.2s;
 }
 
-/* line 34, ../scss/styles.scss */
+/* line 38, ../scss/styles.scss */
 .c-img img {
   max-width: 100%;
 }
 
+/* line 42, ../scss/styles.scss */
+.c-fluid-main {
+  padding: 0;
+}
+
+/* line 45, ../scss/styles.scss */
+.no-shadow {
+  box-shadow: none !important;
+}
+
+/* line 48, ../scss/styles.scss */
+.c-buttons {
+  margin-top: 20px;
+}
+
 /* Sticky Footer Code */
-/* line 40, ../scss/styles.scss */
+/* line 53, ../scss/styles.scss */
 .parent-container-main {
   min-height: 100%;
   height: auto;
@@ -11275,13 +11290,13 @@ a {
   padding: 0 0 40px;
 }
 
-/* line 46, ../scss/styles.scss */
+/* line 59, ../scss/styles.scss */
 .footer-main {
   height: 40px;
 }
 
 /* Headers */
-/* line 52, ../scss/styles.scss */
+/* line 65, ../scss/styles.scss */
 .page-header {
   border-bottom: 0;
   margin: 0;
@@ -11289,36 +11304,75 @@ a {
 }
 
 /* Panels */
-/* line 60, ../scss/styles.scss */
-.panel-heading {
+/* line 73, ../scss/styles.scss */
+.panel {
+  border-radius: 0;
+}
+/* line 75, ../scss/styles.scss */
+.panel .panel-heading {
   font-weight: 900;
 }
 
 /* List Groups */
-/* line 66, ../scss/styles.scss */
+/* line 82, ../scss/styles.scss */
 .list-group .list-group-item:last-child {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
+/* line 85, ../scss/styles.scss */
+.list-group .list-inline {
+  margin-bottom: 0;
+}
+/* line 89, ../scss/styles.scss */
+.list-group .with-label small {
+  color: #bfbfbf;
+  font-size: 80%;
+  font-weight: 300;
+  font-style: italic;
+  display: block;
+}
+
+/* Buttons */
+/* line 101, ../scss/styles.scss */
+.btn {
+  -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 1px 0px;
+  box-shadow: rgba(34, 9, 9, 0.1) 0px 1px 0px;
+  position: relative;
+  border-width: 2px;
+}
+/* line 105, ../scss/styles.scss */
+.btn:focus, .btn:active {
+  box-shadow: none;
+  top: 2px;
+}
+/* line 109, ../scss/styles.scss */
+.btn.btn-with-icon {
+  padding-bottom: 4px;
+}
+/* line 111, ../scss/styles.scss */
+.btn.btn-with-icon i {
+  font-size: 120%;
+}
 
 /*
     A. Main Navigation */
-/* line 74, ../scss/styles.scss */
+/* line 120, ../scss/styles.scss */
 .navbar-brand {
   padding: 4px 0 0 15px;
 }
-/* line 76, ../scss/styles.scss */
+/* line 122, ../scss/styles.scss */
 .navbar-brand img {
   width: 72px;
 }
 
-/* line 81, ../scss/styles.scss */
+/* line 127, ../scss/styles.scss */
 .navbar-static-top {
   border: 0;
+  margin-bottom: 0;
   -webkit-box-shadow: rgba(34, 9, 9, 0.15) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.15) 0px 2px 1px;
 }
-/* line 84, ../scss/styles.scss */
+/* line 131, ../scss/styles.scss */
 .navbar-static-top .form-control {
   border: 0;
   border-radius: 18px;
@@ -11326,22 +11380,22 @@ a {
   box-shadow: rgba(34, 9, 9, 0.15) 0px 2px 1px;
 }
 
-/* line 92, ../scss/styles.scss */
+/* line 139, ../scss/styles.scss */
 .navbar-nav i {
   font-size: 1.5em;
 }
-/* line 95, ../scss/styles.scss */
+/* line 142, ../scss/styles.scss */
 .navbar-nav a {
   text-shadow: rgba(34, 9, 9, 0.15) 0px 1px 1px;
 }
 
 /*
     A.1.0 Secondary Navigation */
-/* line 104, ../scss/styles.scss */
+/* line 151, ../scss/styles.scss */
 .navbar-nav.nav-secondary {
   background-color: #6ecacb;
 }
-/* line 108, ../scss/styles.scss */
+/* line 155, ../scss/styles.scss */
 .navbar-nav.nav-secondary li a:hover {
   color: #dff3f3;
 }
@@ -11352,12 +11406,12 @@ a {
 /*
     C. Content Panels
 */
-/* line 126, ../scss/styles.scss */
+/* line 173, ../scss/styles.scss */
 .panel {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
-/* line 129, ../scss/styles.scss */
+/* line 176, ../scss/styles.scss */
 .panel .panel-body p:last-child,
 .panel .panel-body .list-group:last-child,
 .panel .panel-body ul:last-child {
@@ -11368,7 +11422,7 @@ a {
 /*
     D. Application Footer
 */
-/* line 144, ../scss/styles.scss */
+/* line 191, ../scss/styles.scss */
 .footer-main {
   font-size: 90%;
   text-align: right;
@@ -11377,9 +11431,20 @@ a {
 /*
     B. Main Content Area
 */
-/* line 154, ../scss/styles.scss */
+/* line 201, ../scss/styles.scss */
 .l-main {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
+}
+/* line 203, ../scss/styles.scss */
+.l-main .breadcrumb {
+  border-radius: 0;
+  font-size: 90%;
+  margin: 0 -20px 20px -20px;
+  padding: 24px 20px 8px 22px;
+}
+/* line 209, ../scss/styles.scss */
+.l-main.no-breadcrumb {
+  padding-top: 32px;
 }
 
 /*
@@ -11390,10 +11455,41 @@ a {
     C. Wordlists
 */
 /*
+    C.1 Wordlists Landing Page
+*/
+/* line 229, ../scss/styles.scss */
+.wl-item .wl-title {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+/* line 233, ../scss/styles.scss */
+.wl-item .wl-symbol {
+  width: 50px;
+}
+
+/*
+    C.2 Wordlist Page
+*/
+/*
     1. List of Items
 */
-/* line 173, ../scss/styles.scss */
-.wl-item .wl-lexeme-symbol {
+/* line 246, ../scss/styles.scss */
+.wl-dataitems .wl-dataitem {
+  margin-bottom: 0;
+  border-bottom-width: 0;
+}
+/* line 249, ../scss/styles.scss */
+.wl-dataitems .wl-dataitem:last-child {
+  border-bottom-width: 1px;
+  margin-bottom: 20px;
+}
+/* line 254, ../scss/styles.scss */
+.wl-dataitems .wl-dataitem .wl-item .wl-lexeme-title {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+/* line 258, ../scss/styles.scss */
+.wl-dataitems .wl-dataitem .wl-item .wl-lexeme-symbol {
   width: 50px;
 }
 
@@ -11403,7 +11499,21 @@ a {
 /*
     a. Wordlist Detail Page Sidebar
 */
-/* line 187, ../scss/styles.scss */
+/* line 275, ../scss/styles.scss */
 .wl-symbol img {
   max-width: 100%;
+}
+
+/*
+    C.3 Word Detail Page
+    */
+/* line 283, ../scss/styles.scss */
+.wl-lexeme-dataitem {
+  border-bottom-width: 0;
+  margin-bottom: 0;
+}
+/* line 286, ../scss/styles.scss */
+.wl-lexeme-dataitem:last-child {
+  border-bottom-width: 1px;
+  margin-bottom: 20px;
 }
