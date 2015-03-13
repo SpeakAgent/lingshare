@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
+  <title>Wordlist Sample . Wordlists | Speak Agent</title>
+</head>
+<body>
+<div class="container-fluid parent-container-main">
+    <nav class="navbar navbar-default navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+            </div>
+            <div id="navbar">
+                <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control form-primary" placeholder="Search...">
+                </form>
+                <ul class="nav navbar-nav navbar-right nav-secondary">
+                    <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
+                    <li class="n-settings"><a href="/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
+                    <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
+                    <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="n-home"><a href="/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
+                    <li class="n-wordlists"><a href="../wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
+                    <li class="n-activities"><a href="/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
+                    <li class="n-learners"><a href="/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
+                    <li class="n-groups"><a href="/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid c-fluid-main">
+        <div class="col-sm-12 col-md-12 l-main">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <ol class="breadcrumb">
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/wordlists">Wordlists</a></li>
+                      <li class="active">Physical Characteristics</li>
+                    </ol>
+                    <h1 class="page-header pull-left">Physical Characteristics <small><span class="label label-success">Public</span> <span class="label label-warning">Not In Use</span></small></h1>
+                    <ol class="list-inline pull-right">
+                        <li class="no-padding"><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
+                        <li class="no-padding"><a href="#" class="btn btn-link btn-favorite not-favorite"><i class="fa fa-star-o"></i> Favorite</a></li>
+                        <li class="no-padding"><a href="#" class="btn btn-link"><i class="fa fa-files-o"></i> Copy</a></li>
+                        <li class="no-padding"><a href="#" class="btn btn-delete btn-link"><i class="fa fa-times"></i> Delete</a></li>
+                    </ol>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                    <ul class="wl-dates list-inline clearfix">
+                        <li>Date Updated: March 17, 2015</li>
+                        <li>Date Created: March 12, 2015</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 col-md-8 wl-dataitems">
+                    <div class="panel panel-default no-shadow wl-dataitem">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">List Details</h3>
+                            <div class="pull-right dataitem-controls">
+                                <a href="#" class="btn btn-default"><i class="fa fa-pencil-square-o"></i> Edit Details</a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-inline">
+                                <ul class="list-unstyled">
+                                    <li><label>Set Base Language:</label>
+                                    <select class="form-control">
+                                    <option selected="selected">English</option>
+                                    <option>Spanish</option>
+                                    <option>French</option>
+                                    <option>Chinese</option>
+                                    </select>
+                                    </li>
+                                    <li><label>Set Target Language:</label>
+                                    <select class="form-control">
+                                    <option>English</option>
+                                    <option selected="selected">Spanish</option>
+                                    <option>French</option>
+                                    <option>Chinese</option>
+                                    </select>
+                                    </li>
+                                    <li><label>Set Difficulty:</label>
+                                    <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option selected="selected">4</option>
+                                    <option>5</option></select>
+                                    </li>
+                                    <li><label>Set Status:</label>
+                                    <select class="form-control"><option>Draft</option>
+                                    <option selected="selected">Public</option></select></li>
+                                    <li><button class="btn btn-primary">Save Changes</button></li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="panel panel-default wl-items">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">Words</h2>
+                            <div class="pull-right dataitem-controls">
+                                <a href="#" class="btn btn-default"><i class="fa fa-plus"></i> Add New Word</a>
+                            </div>
+                        </div>
+                        <table class="wl-items table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="wl-lexeme-move th-empty"></th>
+                                    <th class="wl-lexeme-status"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="wl-lexeme-symbol"><span class="pull-left">Symbol</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="wl-lexeme-title"><span class="pull-left">Title</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="wl-lexeme-controls th-empty"></th>
+                                    <th class="wl-lexeme-delete th-empty"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="wl-item lexeme-status-ready">
+                                    <td class="wl-lexeme-move"><i class="fa fa-arrows-v"></i></td>
+                                    <td class="wl-lexeme-status"><span class="label label-warning">Draft</span></td>
+                                    <td class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-eye_color.png" alt="eye color" /></td>
+                                    <td class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">el color de ojos</a></td>
+                                    <td class="wl-lexeme-controls">
+                                        <ul class="list-inline no-margin">
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample-editor.html" class="btn btn-link"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-volume-up"></i> Listen</a></li>
+                                        </ul>
+                                    </td>
+                                    <td class="wl-lexeme-delete">
+                                        <a href="wordlist-lexeme-sample.html" class="btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                <tr class="wl-item lexeme-status-ready">
+                                    <td class="wl-item-move"><i class="fa fa-arrows-v"></i></td>
+                                    <td class="wl-lexeme-status"><span class="label label-success">Ready</span></td>
+                                    <td class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-montar.png" alt="montar" /></td>
+                                    <td class="wl-lexeme-title"><a href="wordlist-lexeme-sample_montar.html">montar</a></td>
+                                    <td class="wl-lexeme-controls">
+                                        <ul class="list-inline no-margin">
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample-editor.html" class="btn btn-link"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-volume-up"></i> Listen</a></li>
+                                        </ul>
+                                    </td>
+                                    <td class="wl-lexeme-delete">
+                                        <a href="wordlist-lexeme-sample.html" class="btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                <tr class="wl-item lexeme-status-ready">
+                                    <td class="wl-item-move"><i class="fa fa-arrows-v"></i></td>
+                                    <td class="wl-lexeme-status"><span class="label label-success">Ready</span></td>
+                                    <td class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-favorite.png" alt="favorite" /></td>
+                                    <td class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">favorito</a></td>
+                                    <td class="wl-lexeme-controls">
+                                        <ul class="list-inline no-margin">
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-volume-up"></i> Listen</a></li>
+                                        </ul>
+                                    </td>
+                                    <td class="wl-lexeme-delete">
+                                        <a href="wordlist-lexeme-sample.html" class="btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                <tr class="wl-item lexeme-status-ready">
+                                    <td class="wl-item-move"><i class="fa fa-arrows-v"></i></td>
+                                    <td class="wl-lexeme-status"><span class="label label-success">Ready</span></td>
+                                    <td class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-grande.png" alt="grande" /></td>
+                                    <td class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">grande</a></td>
+                                    <td class="wl-lexeme-controls">
+                                        <ul class="list-inline no-margin">
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-volume-up"></i> Listen</a></li>
+                                        </ul>
+                                    </td>
+                                    <td class="wl-lexeme-delete">
+                                        <a href="wordlist-lexeme-sample.html" class="btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                <tr class="wl-item lexeme-status-draft">
+                                    <td class="wl-item-move"><i class="fa fa-arrows-v"></i></td>
+                                    <td class="wl-lexeme-status"><span class="label label-warning">Draft</span></td>
+                                    <td class="wl-lexeme-symbol no-symbol c-img">No Symbol</td>
+                                    <td class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">celestes</a></td>
+                                    <td class="wl-lexeme-controls">
+                                        <ul class="list-inline no-margin">
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-pencil-square-o"></i> Edit</a></li>
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
+                                            <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-volume-up"></i> Listen</a></li>
+                                        </ul>
+                                    </td>
+                                    <td class="wl-lexeme-delete">
+                                        <a href="wordlist-lexeme-sample.html" class="btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="wl-controls c-buttons">
+                        <ul class="list-inline">
+                                                    <li><a href="wordlist-sample-published.html" class="btn btn-default"><i class="fa fa-gamepad"></i> Generate Activities</a></li>
+                            <li><a href="wordlist-sample-published.html" class="btn btn-default"><i class="fa fa-floppy-o"></i> Save Wordlist</a></li>
+                            <li><a href="wordlist-sample-published.html" class="btn btn-primary"><i class="fa fa-share-square-o"></i> Publish Wordlist</a></li>
+
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4">
+                    <div class="wl-lexeme-dataitem panel panel-default no-shadow">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">List Symbol</h3>
+                            <div class="pull-right dataitem-controls">
+                                <a href="#" class="btn btn-default"><i class="fa fa-pencil-square-o"></i> Edit Symbol</a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="wl-symbol wl-list-symbol c-img">
+                                <figure>
+                                    <img src="/static/images/fpo/symbol-eye_color.png" alt="eye color">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wl-lexeme-dataitem panel panel-default">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">Tags</h3>
+                            <div class="pull-right dataitem-controls">
+                                <a href="#" class="btn btn-default"><i class="fa fa-plus"></i> Edit Tags</a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-inline wl-tags">
+                                <li><a href="#" class="tag"><i class="fa fa-times"></i> Human face</a></li>
+                                <li><a href="#" class="tag"><i class="fa fa-times"></i> identification</a></li>
+                            </ul>
+
+                            <form>
+                                <label>Add New Tag</label>
+                                <input type="text" />
+                                <button class="btn btn-primary">Save</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid footer-main">
+    <nav class="nav-utility">
+        <ul class="list-inline">
+            <li><a href="#">About Speak Agent</a></li>
+            <li><a href="#">Site Policies</a></li>
+            <li><a href="#">Contact Support</a></li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

@@ -13,7 +13,7 @@
             </div>
             <div id="navbar">
                 <form class="navbar-form navbar-left">
-                    <input type="text" class="form-control" placeholder="Search...">
+                    <input type="text" class="form-control form-primary" placeholder="Search...">
                 </form>
                 <ul class="nav navbar-nav navbar-right nav-secondary">
                     <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
@@ -51,28 +51,57 @@
                             </form>
                         </div>
                     </div>
-                    <h2>Your Wordlists <small><a href="wordlists-add_new.html" class="btn btn-default"><i class="fa fa-plus"></i> Add New</a></small></h2>
-                    <div class="wl-items list-group">
-                        <div class="wl-item list-group-item clearfix">
-                            <ul class="list-inline pull-left">
-                                <li class="wl-status-publishing with-label"><span class="label label-success">Public</span></li>
-                                <li class="wl-symbol c-img"><a href="wordlist-sample.html"><img src="/static/images/fpo/symbol-eye_color.png" alt="eye color"></a></li>
-                                <li class="wl-title"><a href="wordlist-sample.html">Physical Characteristics</a></li>
-                                <li class="wl-date-created with-label"><small>Date Created:</small> March 12, 2015</li>
-                                <li class="wl-date-updated with-label"><small>Last Updated:</small> September 99, 9999</li>
-                                <li class="wl-language with-label"><small>Language:</small> Spanish</li>
+                    <div class="panel panel-default">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">Lists</h3>
+                             <div class="pull-right dataitem-controls"><a href="wordlists-add_new.html" class="btn btn-default"><i class="fa fa-plus"></i> Add New Wordlist</a></div>
+                        </div>
+                        <div class="panel-heading sub-heading">
+                            <ul class="nav nav-pills">
+                              <li class="active">
+                                <a href="#">All</a>
+                              </li>
+                              <li>
+                                <a href="#">Your Wordlists</a>
+                              </li>
+                              <li>
+                                <a href="#">Favorites</a>
+                              </li>
+                              <li>
+                                <a href="#">Shared with You</a>
+                              </li>
                             </ul>
                         </div>
-                        <div class="wl-item list-group-item clearfix">
-                            <ul class="list-inline pull-left">
-                                <li class="wl-status-publishing with-label"><span class="label label-warning">Draft</span></li>
-                                <li class="wl-symbol c-img"><a href="wordlist-sample.html"><img src="/static/images/fpo/symbol-eye_color.png" alt="eye color"></a></li>
-                                <li class="wl-title"><a href="wordlist-sample.html">Physical Characteristics</a></li>
-                                <li class="wl-date-created with-label"><small>Date Created:</small> March 12, 2015</li>
-                                <li class="wl-date-updated with-label"><small>Last Updated:</small> September 99, 9999</li>
-                                <li class="wl-language with-label"><small>Language:</small> Spanish</li>
-                            </ul>
-                        </div>
+                        <table class="wl-items table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="wl-status"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="wl-symbol"><span class="pull-left">Symbol</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="wl-title"><span class="pull-left">Title</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="wl-date-created"><span class="pull-left">Date Created</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="wl-date-updated"><span class="pull-left">Date Updated</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="wl-language"><span class="pull-left">Language</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="wl-item item-status-public">
+                                    <td class="wl-status with-label"><span class="label label-success">Public</span></td>
+                                    <td class="wl-symbol c-img"><a href="wordlist-sample.html"><img src="/static/images/fpo/symbol-eye_color.png" alt="eye color"></a></td>
+                                    <td class="wl-title"><a href="wordlist-sample.html">Physical Characteristics</a></td>
+                                    <td class="wl-date-created">March 12, 2015</td>
+                                    <td class="wl-date-updated">March 17, 2015</td>
+                                    <td class="wl-language">Spanish</td>
+                                </tr>
+                                <tr class="wl-item item-status-draft">
+                                    <td class="wl-status-publishing with-label"><span class="label label-warning">Draft</span></td>
+                                    <td class="wl-symbol c-img"><a href="wordlist-sample.html"><img src="/static/images/fpo/symbol-happy.png" alt="happy"></a></td>
+                                    <td class="wl-title"><a href="wordlist-sample.html">Greetings and Emotions</a></td>
+                                    <td class="wl-date-created">March 12, 2015</td>
+                                    <td class="wl-date-updated">March 17, 2015</td>
+                                    <td class="wl-language">Mandarin Chinese</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <nav class="c-pagination">
                       <ul class="pagination">

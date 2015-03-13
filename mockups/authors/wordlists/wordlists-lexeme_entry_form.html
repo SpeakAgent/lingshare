@@ -4,7 +4,9 @@
   <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
   <title>Add Base Words | Speak Agent</title>
 </head>
-<body>
+<body class="alt">
+<div class="container-fluid parent-container-main">
+
 <nav class="navbar navbar-default navbar-inverse navbar-static-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -12,7 +14,7 @@
         </div>
         <div id="navbar">
             <form class="navbar-form navbar-left">
-                <input type="text" class="form-control" placeholder="Search...">
+                <input type="text" class="form-control form-primary" placeholder="Search...">
             </form>
             <ul class="nav navbar-nav navbar-right nav-secondary">
                 <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
@@ -31,82 +33,79 @@
     </div>
 </nav>
 <div class="container-fluid">
-    <div class="col-sm-12 col-md-12 l-main no-breadcrumb">
+    <div class="col-sm-12 col-md-12 l-main">
         <div class="row">
-
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <h1 class="page-header">Add Words</h2>
+            <div class="col-sm-12 col-sm-12">
+                <div class="special-header clearfix">
+                    <h1 class="page-header pull-left">Create A New Wordlist</h1>
+                    <div class="flag-process pull-right">
+                        Step <em>2</em> of 3
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row c-lexeme c-lemexe-entries">
-            <div class="col-sm-12 col-md-12">
-            <div class="form-group">
-                <label for="wl-base_language">1. Select the Language you are entering</label>
-                <select class="form-control" id="wl-base_language">
-                    <option>English</option>
-                    <option>Spanish</option>
-                </select>
+            <div class="col-sm-12 col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label for="wl-base_language">Are you entering <em>Base Language (FPO)</em> or <em>Target Language (FPO)</em> words?</label>
+                    <select class="form-control" id="wl-base_language">
+                        <option>Base Language (FPO)</option>
+                        <option>Target Language (FPO)</option>
+                    </select>
+                </div>
+                <h4 class="form-label">Enter your words!</h4>
+                <ul class="list-group form-inline wl-new-lexeme-entry">
+                    <li class="list-group-item">
+                        <input type="text" class="form-control input-lexeme" id="base-lexeme-01" placeholder="Enter the base word">
+                        <a href="#" class="pull-right btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                    </li>
+                    <li class="list-group-item">
+                        <input type="text" class="form-control input-lexeme" id="base-lexeme-02" placeholder="Enter the base word">
+                        <a href="#" class="pull-right btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                    </li>
+                    <li class="list-group-item">
+                        <input type="text" class="form-control input-lexeme" id="base-lexeme-03" placeholder="Enter the base word">
+                        <a href="#" class="pull-right btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                    </li>
+                    <li class="list-group-item">
+                        <input type="text" class="form-control input-lexeme" id="base-lexeme-04" placeholder="Enter the base word">
+                        <a href="#" class="pull-right btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                    </li>
+                    <li class="list-group-item">
+                        <input type="text" class="form-control input-lexeme" id="base-lexeme-05" placeholder="Enter the base word">
+                        <a href="#" class="pull-right btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                    </li>
+                    <li class="list-group-item">
+                        <input type="text" class="form-control input-lexeme" id="base-lexeme-06" placeholder="Enter the base word">
+                        <a href="#" class="pull-right btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                    </li>
+                    <li class="list-group-item">
+                        <input type="text" class="form-control input-lexeme" id="base-lexeme-07" placeholder="Enter the base word">
+                        <a href="#" class="pull-right btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                    </li>
+                    <li class="list-group-item">
+                        <input type="text" class="form-control input-lexeme" id="base-lexeme-08" placeholder="Enter the base word">
+                        <a href="#" class="pull-right btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="btn btn-default"><i class="fa fa-plus"></i> Add Another Word</a>
+                    </li>
+                </ul>
+                <a href="/wordlists/wordlists-processing.html" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Save Words</a>
             </div>
-            <h4>2. Enter Words</h4>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
-                    <a href="#">Delete</a>
-                </li>
-                <li class="list-group-item">
-                    <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
-                    <a href="#">Delete</a>
-                </li>
-                <li class="list-group-item">
-                    <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
-                    <a href="#">Delete</a>
-                </li>
-                <li class="list-group-item">
-                    <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
-                    <a href="#">Delete</a>
-                </li>
-                <li class="list-group-item">
-                    <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
-                    <a href="#">Delete</a>
-                </li>
-                <li class="list-group-item">
-                    <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
-                    <a href="#">Delete</a>
-                </li>
-                <li class="list-group-item">
-                    <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
-                    <a href="#">Delete</a>
-                </li>
-                <li class="list-group-item">
-                    <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
-                    <a href="#">Delete</a>
-                </li>
-                <li class="list-group-item">
-                    <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
-                    <a href="#">Delete</a>
-                </li>
-                <li class="list-group-item">
-                    <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
-                    <a href="#">Delete</a>
-                </li>
-                <li class="list-group-item">
-                    <input type="text" class="form-control" id="base-lexeme" placeholder="Enter the base word">
-                    <a href="#">Delete</a>
-                </li>
-                <li class="list-group-item">
-                    <a href="#" class="btn btn-primary">Add Another Word</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <a href="/wordlists/wordlists-processing.html" class="btn btn-primary">Save Words</a>
-            </div>
+
         </div>
     </div>
+</div>
+</div>
+<div class="container-fluid footer-main">
+    <nav class="nav-utility">
+        <ul class="list-inline">
+            <li><a href="#">About Speak Agent</a></li>
+            <li><a href="#">Site Policies</a></li>
+            <li><a href="#">Contact Support</a></li>
+        </ul>
+    </nav>
 </div>
 </body>
 </html>
