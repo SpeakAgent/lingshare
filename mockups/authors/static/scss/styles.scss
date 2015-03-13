@@ -45,6 +45,12 @@ a {
 .no-shadow {
     box-shadow: none !important;
 }
+.no-margin {
+    margin: 0 !important;
+}
+.no-padding {
+    padding: 0 !important;
+}
 .c-buttons {
     margin-top: 20px;
 }
@@ -67,13 +73,38 @@ a {
     margin: 0;
     padding: 0 0 8px 0;
 }
+h1, .h1 {
+    font-size: 28px;
+    font-weight: 900;
+    small {
+        text-shadow: none;
+    }
+}
+h5 {
+    font-weight: 700;
+}
+
+/* Used Primarily on Process areas like adding a new wordlist */
+.special-header {
+    margin: 0 -35px 20px -35px;
+    padding: 24px 20px 8px 22px;
+    h1 {
+        font-size: 1.3em;
+    }
+}
 
 /* Panels */
-
 .panel {
     border-radius: 0;
     .panel-heading {
         font-weight: 900;
+        h3 {
+            font-size: 1.2em;
+            font-weight: 900;
+            line-height: 2.2em;
+            margin: 0;
+            padding: 0;
+        }
     }
 }
 
@@ -96,12 +127,20 @@ a {
     }
 }
 
+/* Animation */
+
+.animation-center {
+    text-align: center;
+    margin: 0 auto;
+}
+
 /* Buttons */
 
 .btn {
     @include box-shadow(rgba($shadow-primary, 0.1) 0px 1px 0px);
     position: relative;
     border-width: 2px;
+    border-radius: $border-radius-large;
     &:focus, &:active {
         box-shadow: none;
         top: 2px;
@@ -110,6 +149,61 @@ a {
         padding-bottom: 4px;
         i {
             font-size: 120%;
+        }
+    }
+    &.btn-link {
+        text-decoration: none;
+        border: none;
+        box-shadow: none;
+    }
+    &.btn-delete {
+        color: $brand-danger;
+        &:hover, &:focus {
+            color: lighten($brand-danger, 15%);
+        }
+    }
+}
+
+
+/* Forms */
+
+
+input[type="text"],
+input[type="number"]{
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $gray-lighter;
+    box-shadow: none;
+    padding: 0;
+}
+.form-control {
+    &.form-primary {
+        border: 0;
+        border-radius: $border-radius-large;
+        background-color: $accent-light;
+        @include box-shadow(rgba($shadow-primary, 0.15) 0px 2px 1px);
+        padding: 6px 12px;
+    }
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+small.flag-optional {
+    font-weight: 300;
+    font-style: italic;
+}
+.form-label {
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+form {
+    ul {
+        li {
+            margin-bottom: 8px;
         }
     }
 }
@@ -128,11 +222,7 @@ a {
     border: 0;
     margin-bottom: 0;
     @include box-shadow(rgba($shadow-primary, 0.15) 0px 2px 1px);
-    .form-control {
-        border: 0;
-        border-radius: $border-radius-large;
-        @include box-shadow(rgba($shadow-primary, 0.15) 0px 2px 1px);
-    }
+    font-weight: 700;
 }
 
 .navbar-nav {
@@ -172,6 +262,17 @@ a {
 */
 .panel {
     @include box-shadow(rgba($shadow-primary, 0.10) 0px 2px 1px);
+    .panel-heading {
+        .nav-pills {
+            a {
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
     .panel-body {
         p:last-child,
         .list-group:last-child,
@@ -226,12 +327,20 @@ a {
 */
 
 .wl-item {
-    .wl-title {
-        font-size: 1.2em;
+    td {
+        vertical-align: middle !important;
+    }
+    .wl-title,
+    .wl-lexeme-title {
         font-weight: 700;
     }
-    .wl-symbol {
-        width: $img-listitem-width;
+    .wl-symbol,
+    .wl-lexeme-symbol {
+        max-width: 80px;
+        text-align: center;
+        img {
+            max-width: $img-listitem-width;
+        }
     }
 }
 
@@ -252,39 +361,59 @@ a {
         }
         .wl-item {
             .wl-lexeme-title {
-                 font-size: 1.2em;
                 font-weight: 700;
             }
             .wl-lexeme-symbol {
-                width: $img-listitem-width;
+                img {
+                    max-width: $img-listitem-width;
+                    width: $img-listitem-width;
+                }
             }
         }
     }
 }
 
-
-/*
-    2. Sidebar
-*/
-
-
-/*
-    a. Wordlist Detail Page Sidebar
-*/
+.wl-photos-videos {
+    ul {
+        li {
+            img.img-thumbnail {
+                max-width: 160px;
+                border-radius: 0;
+            }
+        }
+        .media-controls {
+            text-align: center;
+        }
+    }
+}
 .wl-symbol {
     img {
         max-width: 100%;
     }
+    &.wl-list-symbol,
+    &.wl-lexeme-symbol {
+        img {
+        max-width: 200px;
+        }
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
-/*
-    C.3 Word Detail Page
-    */
+
+
 .wl-lexeme-dataitem {
     border-bottom-width: 0;
     margin-bottom: 0;
     &:last-child {
         border-bottom-width: 1px;
         margin-bottom: 20px;
+    }
+}
+
+
+.wl-new-lexeme-entry {
+    input.input-lexeme {
+        width: 80%;
     }
 }

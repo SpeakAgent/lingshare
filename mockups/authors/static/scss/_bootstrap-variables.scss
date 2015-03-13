@@ -9,10 +9,10 @@
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              #000;
-// $gray-darker:            lighten($gray-base, 13.5%) // #222
-// $gray-dark:              lighten($gray-base, 20%)   // #333
-// $gray:                   lighten($gray-base, 33.5%) // #555
-// $gray-light:             lighten($gray-base, 46.7%) // #777
+$gray-darker:            lighten($gray-base, 13.5%); // #222
+$gray-dark:              lighten($gray-base, 20%);   // #333
+$gray:                   lighten($gray-base, 33.5%); // #555
+$gray-light:             lighten($gray-base, 46.7%); // #777
 $gray-lighter:           lighten($gray-base, 75%); // #eee
 
 $brand-primary: #6ECACB;
@@ -119,9 +119,9 @@ $icon-font-path: if($bootstrap-sass-asset-helper, "/static/fonts/bootstrap/", ".
 // $line-height-large:         1.3333333 // extra decimals for Win 8.1 Chrome
 // $line-height-small:         1.5
 
-$border-radius-base:        9px;
-$border-radius-large:       18px;
-// $border-radius-small:       3px
+$border-radius-base:        8px;
+$border-radius-large:       24px;
+$border-radius-small:       4px;
 
 //* Global color for active items (e.g., navs or dropdowns).
 // $component-active-color:    #fff
@@ -159,13 +159,18 @@ $border-radius-large:       18px;
 
 $btn-font-weight:                700;
 
-$btn-default-color:              $font-color-alt;
-$btn-default-bg:                 $accent-primary;
-$btn-default-border:             $accent-primary-light;
+$btn-default-color:              $brand-secondary;
+$btn-default-bg:                 #fff;
+$btn-default-border:             lighten($gray-lighter, 1%);
 
-// $btn-primary-color:              #fff
-$btn-primary-bg:                 $brand-primary;
-$btn-primary-border:             lighten($btn-primary-bg, 5%);
+$btn-primary-color:              $font-color-alt;
+$btn-primary-bg:                 $accent-primary;
+$btn-primary-border:             $accent-primary-light;
+
+
+// $btn-secondary
+$btn-secondary-bg:                 $brand-primary;
+$btn-secondary-border:             lighten($brand-primary, 5%);
 
 // $btn-success-color:              #fff
 $btn-success-bg:                 $brand-success;
@@ -190,7 +195,7 @@ $btn-success-border:             lighten($btn-success-bg, 5%);
 //##
 
 //* `<input>` background color
-$input-bg:  #FBF4D8;
+$input-bg:  #fff;
 //* `<input disabled>` background color
 // $input-bg-disabled:              $gray-lighter
 
@@ -209,7 +214,7 @@ $input-border-radius-large: $border-radius-large;
 // $input-border-radius-small:      $border-radius-small
 
 //* Border color for inputs on focus
-// $input-border-focus:             #66afe9
+$input-border-focus:             $accent-primary;
 
 //* Placeholder text color
 // $input-color-placeholder:        #999
