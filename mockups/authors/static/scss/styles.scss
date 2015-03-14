@@ -51,6 +51,9 @@ a {
 .no-padding {
     padding: 0 !important;
 }
+.no-bottom-border {
+    border-bottom-width: 0;
+}
 .c-buttons {
     margin-top: 20px;
 }
@@ -82,6 +85,9 @@ h1, .h1 {
 }
 h5 {
     font-weight: 700;
+}
+img.img-thumbnail {
+    border-radius: 0;
 }
 
 /* Used Primarily on Process areas like adding a new wordlist */
@@ -169,12 +175,20 @@ h5 {
 
 
 input[type="text"],
-input[type="number"]{
+input[type="number"],
+input[type="email"],
+input[type="url"] {
     border: none;
     border-radius: 0;
     border-bottom: 1px solid $gray-lighter;
     box-shadow: none;
     padding: 0;
+}
+textarea.form-control {
+    border: 1px solid $gray-lighter;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 100px;
 }
 .form-control {
     &.form-primary {
@@ -189,9 +203,10 @@ input[type="number"]{
         outline: none;
     }
 }
-small.flag-optional {
+.flag-optional {
     font-weight: 300;
     font-style: italic;
+    text-transform: capitalize;
 }
 .form-label {
     max-width: 100%;
@@ -210,11 +225,36 @@ form {
 
 /*
     A. Main Navigation */
-
-.navbar-brand {
-    padding: 4px 0 0 15px;
-    img {
-        width: 72px;
+.navbar {
+    border-radius: 0;
+    .navbar-brand {
+        padding: 4px 0 0 15px;
+        img {
+            width: 72px;
+        }
+    }
+    &.nav-secondary {
+        li {
+            a {
+                &:hover, &:focus {
+                    background-color: #fff;
+                }
+            }
+            &.active {
+                a {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    .nav-error {
+        a {
+            color: $brand-danger;
+            &:hover,
+            &:focus {
+                color: lighten($brand-danger, 8%);
+            }
+        }
     }
 }
 
@@ -223,6 +263,10 @@ form {
     margin-bottom: 0;
     @include box-shadow(rgba($shadow-primary, 0.15) 0px 2px 1px);
     font-weight: 700;
+    li a {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
 }
 
 .navbar-nav {
@@ -317,9 +361,33 @@ form {
     ====================
     */
 
+.happy-scale {
+    .radio-inline {
+        font-size: 1.2em;
+    }
+    .value-1 {
+        color: $brand-error;
+    }
+    .value-2 {
+        color: darken($brand-error, 15%);
+    }
+    .value-1, .value-5 {
+        font-weight: 700;
+    }
+    .value-4 {
+        color: darken($brand-success, 15%);
+    }
+    .value-5 {
+        color: $brand-success;
+    }
+}
+
+
+
 /*
-    C. Wordlists
-*/
+    2.0 Wordlists
+    ====================
+    */
 
 
 /*
@@ -378,7 +446,6 @@ form {
         li {
             img.img-thumbnail {
                 max-width: 160px;
-                border-radius: 0;
             }
         }
         .media-controls {
