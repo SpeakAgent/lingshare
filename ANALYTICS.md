@@ -16,6 +16,8 @@ These are the events that are defined in the Lingshare Mixpanel:
 | ------------- | ----------------- | --------- |
 | (all)         | application launched | Triggered when the application's mainController is invoked. |
 | (all)         | user nav click    | Generated when the user clicks a link in the application navigation menu.
+| (all)         | login             | Generated when the user authenticates to the app. **success** - true if the authentication attempt was successful, false if it failed. **username** - the username that was provided.  **cookieauth** - if the user authenticated using a session cookie or directly via the server.
+| (all)         | logout            | Generated when the user clicks the logout option. **username** - username of the user logging out.
 | flashcard     |  timer end        | Generated when the timer stops. **seconds** - number of seconds that the activity has been running.
 | flashcard     | activity launched | Generated when the wordlist is successfully retrieved and the game can begin. **wordlist_id** - wordlist id from the api **wordlist** - title of the wordlist used for the game. **base_language** - base language for the game. **trans_language** - the second language for the game.
 | flashcard     | activity complete | Generated when the round of gameplay is complete. **seconds** - number of seconds the game lasted. **score** the score at the end. **wordlist_id** - wordlist id from the api **wordlist** - title of the wordlist used for the game. **base_language** - base language for the game. **trans_language** - the second language for the game.

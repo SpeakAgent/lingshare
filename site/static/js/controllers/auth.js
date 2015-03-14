@@ -5,11 +5,21 @@ mainApp.controller('LoginController', function($scope, $http,
   $scope.authToken = localStorage.getItem('authToken');
   if ($scope.authToken) {
     $scope.username = jwtHelper.decodeToken($scope.authToken).username;
-    mixpanel.identify($scope.loginData.username);
+    mixpanel.identify($scope.username);
+    mixpanel.track("login", {
+      success : true,
+      username: $scope.username,
+      cookieauth : true,
+    });
   }
 
   // Perform logout
   $scope.doLogout = function(data, status, headers, config) {
+
+    mixpanel.track("logout", {
+      username: $scope.username
+    });
+
     $rootScope.authToken = null;
     $scope.authToken = null;
     $scope.username= null;
@@ -25,6 +35,7 @@ mainApp.controller('LoginController', function($scope, $http,
       'userProfile',
       'location.favorites',
     ];
+
   };
 
   // Perform the login action when the user submits the login form
@@ -43,6 +54,11 @@ mainApp.controller('LoginController', function($scope, $http,
     responsePromise.success(function(data, status, headers, config) {
 
         mixpanel.identify($scope.loginData.username);
+        mixpanel.track("login", {
+          success : true,
+          username: $scope.loginData.username,
+          cookieauth : false,
+        });
 
 
         $rootScope.authToken = data.token;
@@ -62,6 +78,13 @@ mainApp.controller('LoginController', function($scope, $http,
 
     responsePromise.error(function(data, status, headers, config) {
       $scope.loginError = "Unable to log in with the provided username and password.";
+      mixpanel.track("login", {
+        success : false,
+        username: $scope.loginData.username,
+        cookieauth : false,
+      });
+
+
     });
 
   };
