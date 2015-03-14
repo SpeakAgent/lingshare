@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
-  <title>User Profile . Settings | Speak Agent</title>
+  <title>Settings | Speak Agent</title>
 </head>
 <body>
 <div class="container-fluid parent-container-main">
@@ -37,17 +37,31 @@
                 <div class="col-sm-12 col-sm-12">
                     <ol class="breadcrumb">
                       <li><a href="/">Home</a></li>
-                      <li class="active">Hi, {{Firstname}}</li>
+                      <li><a href="index.html">Settings</a></li>
+                      <li class="active">Invitations</li>
                     </ol>
-                    <h1 class="page-header">{{Firstname}}</h1>
+                    <h1 class="page-header">Settings</h1>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-8 col-md-8">
-                   User Profile
-                </div>
                 <div class="col-sm-4 col-md-4">
-                    Sidebar - will probably have a nav in it.
+                    <ul class="nav navbar navbar-default navbar-stacked nav-secondary">
+                        <li><a href="index.html"><i class="fa fa-user"></i> Public Profile</a></li>
+                        <li><a href="account-settings.html"><i class="fa fa-gear"></i> Account Settings</a></li>
+                        <li class="active"><a href="invitations.html"><i class="fa fa-envelope"></i> Invitations</a></li>
+                        <li class="nav-error"><a href="delete-account.html"><i class="fa fa-times"></i> Delete Account</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-8 col-md-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Send Invitations</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>This is a stub page for the invitations process.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

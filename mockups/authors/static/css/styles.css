@@ -11287,12 +11287,17 @@ a {
 }
 
 /* line 54, ../scss/styles.scss */
+.no-bottom-border {
+  border-bottom-width: 0;
+}
+
+/* line 57, ../scss/styles.scss */
 .c-buttons {
   margin-top: 20px;
 }
 
 /* Sticky Footer Code */
-/* line 59, ../scss/styles.scss */
+/* line 62, ../scss/styles.scss */
 .parent-container-main {
   min-height: 100%;
   height: auto;
@@ -11300,55 +11305,60 @@ a {
   padding: 0 0 40px;
 }
 
-/* line 65, ../scss/styles.scss */
+/* line 68, ../scss/styles.scss */
 .footer-main {
   height: 40px;
 }
 
 /* Headers */
-/* line 71, ../scss/styles.scss */
+/* line 74, ../scss/styles.scss */
 .page-header {
   border-bottom: 0;
   margin: 0;
   padding: 0 0 8px 0;
 }
 
-/* line 76, ../scss/styles.scss */
+/* line 79, ../scss/styles.scss */
 h1, .h1 {
   font-size: 28px;
   font-weight: 900;
 }
-/* line 79, ../scss/styles.scss */
+/* line 82, ../scss/styles.scss */
 h1 small, .h1 small {
   text-shadow: none;
 }
 
-/* line 83, ../scss/styles.scss */
+/* line 86, ../scss/styles.scss */
 h5 {
   font-weight: 700;
 }
 
+/* line 89, ../scss/styles.scss */
+img.img-thumbnail {
+  border-radius: 0;
+}
+
 /* Used Primarily on Process areas like adding a new wordlist */
-/* line 88, ../scss/styles.scss */
+/* line 94, ../scss/styles.scss */
 .special-header {
   margin: 0 -35px 20px -35px;
   padding: 24px 20px 8px 22px;
 }
-/* line 91, ../scss/styles.scss */
+/* line 97, ../scss/styles.scss */
 .special-header h1 {
   font-size: 1.3em;
 }
 
 /* Panels */
-/* line 97, ../scss/styles.scss */
+/* line 103, ../scss/styles.scss */
 .panel {
   border-radius: 0;
 }
-/* line 99, ../scss/styles.scss */
+/* line 105, ../scss/styles.scss */
 .panel .panel-heading {
   font-weight: 900;
 }
-/* line 101, ../scss/styles.scss */
+/* line 107, ../scss/styles.scss */
 .panel .panel-heading h3 {
   font-size: 1.2em;
   font-weight: 900;
@@ -11358,16 +11368,16 @@ h5 {
 }
 
 /* List Groups */
-/* line 113, ../scss/styles.scss */
+/* line 119, ../scss/styles.scss */
 .list-group .list-group-item:last-child {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
-/* line 116, ../scss/styles.scss */
+/* line 122, ../scss/styles.scss */
 .list-group .list-inline {
   margin-bottom: 0;
 }
-/* line 120, ../scss/styles.scss */
+/* line 126, ../scss/styles.scss */
 .list-group .with-label small {
   color: #bfbfbf;
   font-size: 80%;
@@ -11377,14 +11387,14 @@ h5 {
 }
 
 /* Animation */
-/* line 132, ../scss/styles.scss */
+/* line 138, ../scss/styles.scss */
 .animation-center {
   text-align: center;
   margin: 0 auto;
 }
 
 /* Buttons */
-/* line 139, ../scss/styles.scss */
+/* line 145, ../scss/styles.scss */
 .btn {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 1px 0px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 1px 0px;
@@ -11392,38 +11402,40 @@ h5 {
   border-width: 2px;
   border-radius: 24px;
 }
-/* line 144, ../scss/styles.scss */
+/* line 150, ../scss/styles.scss */
 .btn:focus, .btn:active {
   box-shadow: none;
   top: 2px;
 }
-/* line 148, ../scss/styles.scss */
+/* line 154, ../scss/styles.scss */
 .btn.btn-with-icon {
   padding-bottom: 4px;
 }
-/* line 150, ../scss/styles.scss */
+/* line 156, ../scss/styles.scss */
 .btn.btn-with-icon i {
   font-size: 120%;
 }
-/* line 154, ../scss/styles.scss */
+/* line 160, ../scss/styles.scss */
 .btn.btn-link {
   text-decoration: none;
   border: none;
   box-shadow: none;
 }
-/* line 159, ../scss/styles.scss */
+/* line 165, ../scss/styles.scss */
 .btn.btn-delete {
   color: #d0021b;
 }
-/* line 161, ../scss/styles.scss */
+/* line 167, ../scss/styles.scss */
 .btn.btn-delete:hover, .btn.btn-delete:focus {
   color: #fd223c;
 }
 
 /* Forms */
-/* line 171, ../scss/styles.scss */
+/* line 177, ../scss/styles.scss */
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="email"],
+input[type="url"] {
   border: none;
   border-radius: 0;
   border-bottom: 1px solid #bfbfbf;
@@ -11431,7 +11443,15 @@ input[type="number"] {
   padding: 0;
 }
 
-/* line 180, ../scss/styles.scss */
+/* line 187, ../scss/styles.scss */
+textarea.form-control {
+  border: 1px solid #bfbfbf;
+  border-radius: 0;
+  box-shadow: none;
+  min-height: 100px;
+}
+
+/* line 194, ../scss/styles.scss */
 .form-control.form-primary {
   border: 0;
   border-radius: 24px;
@@ -11440,19 +11460,20 @@ input[type="number"] {
   box-shadow: rgba(34, 9, 9, 0.15) 0px 2px 1px;
   padding: 6px 12px;
 }
-/* line 187, ../scss/styles.scss */
+/* line 201, ../scss/styles.scss */
 .form-control:focus {
   box-shadow: none;
   outline: none;
 }
 
-/* line 192, ../scss/styles.scss */
-small.flag-optional {
+/* line 206, ../scss/styles.scss */
+.flag-optional {
   font-weight: 300;
   font-style: italic;
+  text-transform: capitalize;
 }
 
-/* line 196, ../scss/styles.scss */
+/* line 211, ../scss/styles.scss */
 .form-label {
   max-width: 100%;
   margin-bottom: 5px;
@@ -11460,23 +11481,43 @@ small.flag-optional {
   font-size: 100%;
 }
 
-/* line 205, ../scss/styles.scss */
+/* line 220, ../scss/styles.scss */
 form ul li {
   margin-bottom: 8px;
 }
 
 /*
     A. Main Navigation */
-/* line 214, ../scss/styles.scss */
-.navbar-brand {
+/* line 228, ../scss/styles.scss */
+.navbar {
+  border-radius: 0;
+}
+/* line 230, ../scss/styles.scss */
+.navbar .navbar-brand {
   padding: 4px 0 0 15px;
 }
-/* line 216, ../scss/styles.scss */
-.navbar-brand img {
+/* line 232, ../scss/styles.scss */
+.navbar .navbar-brand img {
   width: 72px;
 }
+/* line 239, ../scss/styles.scss */
+.navbar.nav-secondary li a:hover, .navbar.nav-secondary li a:focus {
+  background-color: #fff;
+}
+/* line 244, ../scss/styles.scss */
+.navbar.nav-secondary li.active a {
+  background-color: #fff;
+}
+/* line 251, ../scss/styles.scss */
+.navbar .nav-error a {
+  color: #d0021b;
+}
+/* line 253, ../scss/styles.scss */
+.navbar .nav-error a:hover, .navbar .nav-error a:focus {
+  color: #f80220;
+}
 
-/* line 221, ../scss/styles.scss */
+/* line 261, ../scss/styles.scss */
 .navbar-static-top {
   border: 0;
   margin-bottom: 0;
@@ -11484,23 +11525,28 @@ form ul li {
   box-shadow: rgba(34, 9, 9, 0.15) 0px 2px 1px;
   font-weight: 700;
 }
+/* line 266, ../scss/styles.scss */
+.navbar-static-top li a {
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
-/* line 229, ../scss/styles.scss */
+/* line 273, ../scss/styles.scss */
 .navbar-nav i {
   font-size: 1.5em;
 }
-/* line 232, ../scss/styles.scss */
+/* line 276, ../scss/styles.scss */
 .navbar-nav a {
   text-shadow: rgba(34, 9, 9, 0.15) 0px 1px 1px;
 }
 
 /*
     A.1.0 Secondary Navigation */
-/* line 241, ../scss/styles.scss */
+/* line 285, ../scss/styles.scss */
 .navbar-nav.nav-secondary {
   background-color: #6ecacb;
 }
-/* line 245, ../scss/styles.scss */
+/* line 289, ../scss/styles.scss */
 .navbar-nav.nav-secondary li a:hover {
   color: #dff3f3;
 }
@@ -11511,16 +11557,16 @@ form ul li {
 /*
     C. Content Panels
 */
-/* line 263, ../scss/styles.scss */
+/* line 307, ../scss/styles.scss */
 .panel {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
-/* line 268, ../scss/styles.scss */
+/* line 312, ../scss/styles.scss */
 .panel .panel-heading .nav-pills a:hover, .panel .panel-heading .nav-pills a:focus, .panel .panel-heading .nav-pills a:active {
   background-color: #fff;
 }
-/* line 277, ../scss/styles.scss */
+/* line 321, ../scss/styles.scss */
 .panel .panel-body p:last-child,
 .panel .panel-body .list-group:last-child,
 .panel .panel-body ul:last-child {
@@ -11531,7 +11577,7 @@ form ul li {
 /*
     D. Application Footer
 */
-/* line 292, ../scss/styles.scss */
+/* line 336, ../scss/styles.scss */
 .footer-main {
   font-size: 90%;
   text-align: right;
@@ -11540,18 +11586,18 @@ form ul li {
 /*
     B. Main Content Area
 */
-/* line 302, ../scss/styles.scss */
+/* line 346, ../scss/styles.scss */
 .l-main {
   padding: 0 20px 20px 20px;
 }
-/* line 304, ../scss/styles.scss */
+/* line 348, ../scss/styles.scss */
 .l-main .breadcrumb {
   border-radius: 0;
   font-size: 90%;
   margin: 0 -20px 20px -20px;
   padding: 24px 20px 8px 22px;
 }
-/* line 310, ../scss/styles.scss */
+/* line 354, ../scss/styles.scss */
 .l-main.no-breadcrumb {
   padding-top: 32px;
 }
@@ -11560,28 +11606,54 @@ form ul li {
     1.0 Settings and User Profile
     ====================
     */
+/* line 365, ../scss/styles.scss */
+.happy-scale .radio-inline {
+  font-size: 1.2em;
+}
+/* line 368, ../scss/styles.scss */
+.happy-scale .value-1 {
+  color: #d0021b;
+}
+/* line 371, ../scss/styles.scss */
+.happy-scale .value-2 {
+  color: #840111;
+}
+/* line 374, ../scss/styles.scss */
+.happy-scale .value-1, .happy-scale .value-5 {
+  font-weight: 700;
+}
+/* line 377, ../scss/styles.scss */
+.happy-scale .value-4 {
+  color: #569117;
+}
+/* line 380, ../scss/styles.scss */
+.happy-scale .value-5 {
+  color: #7ed321;
+}
+
 /*
-    C. Wordlists
-*/
+    2.0 Wordlists
+    ====================
+    */
 /*
     C.1 Wordlists Landing Page
 */
-/* line 330, ../scss/styles.scss */
+/* line 398, ../scss/styles.scss */
 .wl-item td {
   vertical-align: middle !important;
 }
-/* line 333, ../scss/styles.scss */
+/* line 401, ../scss/styles.scss */
 .wl-item .wl-title,
 .wl-item .wl-lexeme-title {
   font-weight: 700;
 }
-/* line 337, ../scss/styles.scss */
+/* line 405, ../scss/styles.scss */
 .wl-item .wl-symbol,
 .wl-item .wl-lexeme-symbol {
   max-width: 80px;
   text-align: center;
 }
-/* line 341, ../scss/styles.scss */
+/* line 409, ../scss/styles.scss */
 .wl-item .wl-symbol img,
 .wl-item .wl-lexeme-symbol img {
   max-width: 50px;
@@ -11593,62 +11665,61 @@ form ul li {
 /*
     1. List of Items
 */
-/* line 355, ../scss/styles.scss */
+/* line 423, ../scss/styles.scss */
 .wl-dataitems .wl-dataitem {
   margin-bottom: 0;
   border-bottom-width: 0;
 }
-/* line 358, ../scss/styles.scss */
+/* line 426, ../scss/styles.scss */
 .wl-dataitems .wl-dataitem:last-child {
   border-bottom-width: 1px;
   margin-bottom: 20px;
 }
-/* line 363, ../scss/styles.scss */
+/* line 431, ../scss/styles.scss */
 .wl-dataitems .wl-dataitem .wl-item .wl-lexeme-title {
   font-weight: 700;
 }
-/* line 367, ../scss/styles.scss */
+/* line 435, ../scss/styles.scss */
 .wl-dataitems .wl-dataitem .wl-item .wl-lexeme-symbol img {
   max-width: 50px;
   width: 50px;
 }
 
-/* line 379, ../scss/styles.scss */
+/* line 447, ../scss/styles.scss */
 .wl-photos-videos ul li img.img-thumbnail {
   max-width: 160px;
-  border-radius: 0;
 }
-/* line 384, ../scss/styles.scss */
+/* line 451, ../scss/styles.scss */
 .wl-photos-videos ul .media-controls {
   text-align: center;
 }
 
-/* line 390, ../scss/styles.scss */
+/* line 457, ../scss/styles.scss */
 .wl-symbol img {
   max-width: 100%;
 }
-/* line 393, ../scss/styles.scss */
+/* line 460, ../scss/styles.scss */
 .wl-symbol.wl-list-symbol, .wl-symbol.wl-lexeme-symbol {
   text-align: center;
   margin: 0 auto;
 }
-/* line 395, ../scss/styles.scss */
+/* line 462, ../scss/styles.scss */
 .wl-symbol.wl-list-symbol img, .wl-symbol.wl-lexeme-symbol img {
   max-width: 200px;
 }
 
-/* line 405, ../scss/styles.scss */
+/* line 472, ../scss/styles.scss */
 .wl-lexeme-dataitem {
   border-bottom-width: 0;
   margin-bottom: 0;
 }
-/* line 408, ../scss/styles.scss */
+/* line 475, ../scss/styles.scss */
 .wl-lexeme-dataitem:last-child {
   border-bottom-width: 1px;
   margin-bottom: 20px;
 }
 
-/* line 416, ../scss/styles.scss */
+/* line 483, ../scss/styles.scss */
 .wl-new-lexeme-entry input.input-lexeme {
   width: 80%;
 }
