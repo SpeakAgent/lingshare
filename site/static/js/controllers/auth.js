@@ -5,6 +5,7 @@ mainApp.controller('LoginController', function($scope, $http,
   $scope.authToken = localStorage.getItem('authToken');
   if ($scope.authToken) {
     $scope.username = jwtHelper.decodeToken($scope.authToken).username;
+    mixpanel.identify($scope.loginData.username);
   }
 
   // Perform logout
@@ -42,6 +43,7 @@ mainApp.controller('LoginController', function($scope, $http,
     responsePromise.success(function(data, status, headers, config) {
 
         mixpanel.identify($scope.loginData.username);
+
 
         $rootScope.authToken = data.token;
         $rootScope.username = $scope.loginData.username;
