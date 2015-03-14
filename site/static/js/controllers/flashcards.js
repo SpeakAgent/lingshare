@@ -95,6 +95,10 @@ mainApp.controller('FlashCardController', ['$scope', '$route', '$timeout', '$htt
       };
       $scope.done = false;
       $scope.seconds = 0;
+      mixpanel.track("timer start", {
+        activity: "flashcard"
+      });
+
       $scope.stop = $interval(function () {
       if (!$scope.done) {
        $scope.seconds++;
