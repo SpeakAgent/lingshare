@@ -1,23 +1,28 @@
     <!-- this part is shown when you are NOT logged in - e.g. if there
          is NO an authToken set -->
 
-    <div class="login-container col-md-6 col-md-offset-3" ng-if="!authToken">
-      <h1 ng-if="!authToken">Login</h1>
-      <p>You must log in order to use this app.</p>
-      <p class="error" ng-if="loginError">{{loginError}}
-        <br>Please double-check your username and password.
-      </p>
-      <form ng-submit="doLogin()">
-        <div class="form-group">
-          <label class="item item-input"><span class="input-label">Username</span></label>
-          <input type="text" ng-model="loginData.username">
-        </div>
-        <div class="form-group">
-          <label class="item item-input"><span class="input-label">Password</span></label>
-          <input type="password" ng-model="loginData.password">
+    <div class="login-container col-md-4" ng-if="!authToken">
+      <h1 class="l-intro-msg">Welcome to<br />Speak Agent!</h1>
+      <div class="l-inner">
+        <p class="error" ng-if="loginError">{{loginError}}
+          Please double-check your username and password.
+        </p>
+        <form class="form-login" ng-submit="doLogin()">
+          <div class="form-group">
+            <label class="item item-input"><span class="input-label">Username</span></label>
+            <input type="text" ng-model="loginData.username">
           </div>
-          <button class="btn btn-primary" type="submit">Log In</button>
-      </form>
+          <div class="form-group">
+            <label class="item item-input"><span class="input-label">Password</span></label>
+            <input type="password" ng-model="loginData.password">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-lg icon-left hvr-icon-grow fa-sign-in" type="submit">Log In</button>
+          </div>
+        </form>
+        <p><a href="mail&#116;o&#58;sup&#112;&#111;&#114;%74&#64;sp%6&#53;ak&#97;gent&#46;com?subject=I forgot the password to Speak Agent" class="f-pw-reminder">Help! I forgot my password!</a></p>
+      </div>
+      <div class="app-status"><a href="http://www.speakagent.com/site-policies/">Terms of Service</a> &middot; Invitation Only Pilot </div>
     </div>
 
     <!-- END not-logged-in part  -->
@@ -26,14 +31,16 @@
 
     <!-- this part is shown when you are logged in - if there is an authToken set -->
 
-    <div class="logout-container col-md-6 col-md-offset-3" ng-if="authToken">
-      <h1>See you later!</h1>
-      <p><strong>Hi, {{username}}</strong>. Are you sure you want to log out?</p>
-      <form class="form-inline" ng-submit="doLogout()">
-        <div class="form-group">
-          <button class="btn btn-primary" type="submit">log out</button>
-        </div>
-      </form>
+    <div class="logout-container col-md-4" ng-if="authToken">
+      <h1>See you later, {{ user.first_name }}!</h1>
+      <div class="l-inner">
+        <p><strong>Are you all done for now?</p>
+        <form class="form-inline form-logout" ng-submit="doLogout()">
+          <div class="form-group">
+            <button class="btn btn-lg btn-primary icon-left hvr-icon-grow fa-sign-out" type="submit">Yes! Log me out.</button>
+          </div>
+        </form>
+      </strong>
     </div>
 
     <!-- END logged-in-only part  -->

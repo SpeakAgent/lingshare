@@ -3,10 +3,32 @@
 		<h2>Things to Do</h2>
 		<div class="row">
 			<div class="activity-container col-lg-4 col-xs-4"
-				ng-repeat="activity in user.activities">
+				ng-repeat="activity in user.activities | limitTo: 3">
 				<div class="activity promo-card size-lg" ng-class="{last:$last}">
-					<a href="#" title="Link to {{ activity.activity.title }}" class="activity-link">
-						<p class="activity-course">Spanish Beginner A</p>
+					<a ng-if="activity.activity.title=='Word Review'"
+					href="/#/wordlist/{{ activity.wordlist.pk }}"
+					title="Link to {{ activity.activity.title }}" class="activity-link">
+					<p class="activity-course">{{ activity.course.title }}</p>
+						<img class="activity-image" src="/static/images/wordlists/promo-lg.png" alt="{{ activity.activity.title }}" />
+						<div class="activity-info">
+							<h3 class="activity-title">{{ activity.activity.title }}</h3>
+							<p class="activity-wordlist">{{ activity.wordlist.title }}</p>
+						</div>
+					</a>
+					<a ng-if="activity.activity.title=='Memory'"
+					href="/#/games/memory/{{ activity.wordlist.pk }}"
+					title="Link to {{ activity.activity.title }}" class="activity-link">
+						<p class="activity-course">{{ activity.course.title }}</p>
+						<img class="activity-image" src="/static/images/matching/promo-lg.jpg" alt="{{ activity.activity.title }}" />
+						<div class="activity-info">
+							<h3 class="activity-title">{{ activity.activity.title }}</h3>
+							<p class="activity-wordlist">{{ activity.wordlist.title }}</p>
+						</div>
+					</a>
+					<a ng-if="activity.activity.title=='Flashcards'"
+					href="/#/games/flashcards/{{ activity.wordlist.pk }}"
+					title="Link to {{ activity.activity.title }}" class="activity-link">
+						<p class="activity-course">{{ activity.course.title }}</p>
 						<img class="activity-image" src="/static/images/flashcards/promo-lg.jpg" alt="{{ activity.activity.title }}" />
 						<div class="activity-info">
 							<h3 class="activity-title">{{ activity.activity.title }}</h3>
@@ -20,44 +42,19 @@
 			<a href="/#/games" class="btn icon-activities icon-left hvr-icon-grow btn-primary">See More Activities</a>
 		</div>
 		<div class="row">
-			<div class="recent-work col-md-4 col-sm-12">
-				<h2 class="h3-interface-label">Recently Played</h2>
-				<div class="col-md-12 col-sm-6 first">
-					<div class="activity promo-card size-sml">
-						<a href="#" title="Link to Activity Title" class="activity-link clearfix">
-							<p class="activity-course">Spanish Beginner B</p>
-							<img class="activity-image" src="/static/images/matching/promo-sm.jpg" alt="Activity Title" />
-							<div class="activity-info">
-								<h3 class="activity-title">Matching</h3>
-								<p class="activity-wordlist">Outside the House</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-12 col-sm-6 last">
-					<div class="activity promo-card size-sml">
-						<a href="#" title="Link to Activity Title" class="activity-link clearfix">
-							<p class="activity-course">Chinese</p>
-							<img class="activity-image" src="/static/images/flashcards/promo-sm.jpg" alt="Activity Title" />
-							<div class="activity-info">
-								<h3 class="activity-title">Flash Cards</h3>
-								<p class="activity-wordlist">Outside the House</p>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="achievements col-md-8 col-sm-12">
+			<div class="achievements col-md-12 col-sm-12">
 				<h2 class="h3-interface-label">Recent Trophies</h2>
-				<div class="achievement-container"
+				<div class="row">
+				<div class="achievement-container col-lg-2 col-sm-2"
 				ng-class="{last:$last}"
-				ng-repeat="achievement in user.user.badges">
+				ng-repeat="achievement in user.user.badges | limitTo: 6">
 					<div class="achievement">
 						<div class="trophy">
 							<em class="a-title">{{ achievement.title }}</em>
 							<i class="fa fa-trophy"></i>
 						</div>
 					</div>
+				</div>
 				</div>
 				<div class="row see-more-cntr">
 					<a href="/#/trophies/" class="btn btn-primary icon-left hvr-icon-grow icon-achievements">See More Trophies</a>
@@ -69,26 +66,32 @@
 
 
 <div ng-if="!username" ng-controller="LoginController">
-	    <div class="login-container col-md-6 col-md-offset-3" ng-if="!authToken">
-      <h1 ng-if="!authToken">Login</h1>
-      <h1 ng-if="authToken">Logout</h1>
-      <p>You must login in order to use this app.</p>
-      <p class="error" ng-if="loginError">{{loginError}}
-        <br>Please double check your username and password.
-      </p>
-      <form ng-submit="doLogin()">
-        <div class="form-group">
-          <label class="item item-input"><span class="input-label">Username</span></label>
-          <input type="text" ng-model="loginData.username">
-        </div>
-        <div class="form-group">
-          <label class="item item-input"><span class="input-label">Password</span></label>
-          <input type="password" ng-model="loginData.password">
-          </div>
-          <button class="btn btn-primary" type="submit">Log In</button>
-      </form>
+	<div class="login-container col-md-4" ng-if="!authToken">
+      	<h1 class="l-intro-msg">Welcome to<br />Speak Agent!</h1>
+		<div class="l-inner">
+	      <p class="error" ng-if="loginError">{{loginError}}
+	        <br>Please double check your username and password.
+	      </p>
+	      <form ng-submit="doLogin()">
+	        <div class="form-group">
+	          <label class="item item-input"><span class="input-label">Username</span></label>
+	          <input type="text" ng-model="loginData.username">
+	        </div>
+	        <div class="form-group">
+	          <label class="item item-input"><span class="input-label">Password</span></label>
+	          <input type="password" ng-model="loginData.password">
+	        </div>
+			<div class="form-group">
+				<button class="btn btn-primary btn-lg icon-left hvr-icon-grow fa-sign-in" type="submit">Log In</button>
+			</div>
+			</form>
+        	<p><a href="mail&#116;o&#58;sup&#112;&#111;&#114;%74&#64;sp%6&#53;ak&#97;gent&#46;com?subject=I forgot the password to Speak Agent" class="f-pw-reminder">Help! I forgot my password!</a></p>
+		</div>
+      	<div class="app-status"><a href="http://www.speakagent.com/site-policies/">Terms of Service</a> &middot; Invitation Only Pilot </div>
     </div>
 </div>
 <div class="dashboard-footer">
-    <a href="http://www.speakagent.com/site-policies/">Site Policies</a> | <a href="http://www.speakagent.com/contact-us/">Contact Speak Agent Support</a>
+	<div class="footer-container">
+    	<a href="http://www.speakagent.com/site-policies/">Site Policies</a> | <a href="http://www.speakagent.com/contact-us/">Contact Speak Agent Support</a>
+    </div>
 </div>

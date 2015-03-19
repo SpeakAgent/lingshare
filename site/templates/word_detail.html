@@ -1,7 +1,7 @@
 <div class="word-detail app-container">
     <h1>{{ word.root_word }}</h1>
     <p ng-repeat="photo in word.photos">
-    	<img src = "http://127.0.0.1:8000{{ photo.image }}" class="img-rounded" style="max-width: 200px;">
+    	<img src="{{ photo.image }}" class="img-rounded" style="max-width: 200px;">
     </p>
     <p>{{ word.word_class.title }}</p>
     <p ng-repeat="definition in word.definitions">

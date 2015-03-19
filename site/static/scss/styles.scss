@@ -14,11 +14,6 @@
 @import "font-awesome/font-awesome.scss";
 @import "bootstrap-variables";
 
-*:not(input), *:not(textarea) {
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-}
-
 /*  0.0 Shell
     ====================
 */
@@ -378,24 +373,15 @@ a {
             background-color: $brand-secondary;
             border-top-left-radius: 9px;
             border-bottom-left-radius: 9px;
-            @include transition(background-color,$transition-speed);
-            a, .nav-label {
+            color: #fff;
+            padding: 11px 10px 11px;
+            .nav-label {
                 color: #fff;
                 padding: 0;
-            }
-            a {
-                padding: 10px 10px 11px;
-                &:hover {
-                    color:#fff;
-                }
             }
             .name {
                 font-size: 1.2em;
                 font-weight: 700;
-            }
-            &:hover {
-                background-color: lighten($brand-secondary,5%);
-                @include transition(background-color,$transition-speed);
             }
         }
         .user-score {
@@ -604,10 +590,23 @@ a {
             }
         }
     }
+
+.activity-splash {
+    .splash-inner {
+    text-align: center;
+        .btn {
+            font-size: 2em;
+        }
+    }
+}
+
 /* Achievements */
 
 .achievement-container {
     margin: 20px 0;
+    &.first, &.last {
+        padding-left: 15px;
+    }
 }
 
 .achievement {
@@ -721,6 +720,7 @@ h2.h3-interface-label {
     p, h3 {
         margin: 0;
         padding: 0;
+        text-shadow: none;
     }
     .activity-link {
         width: 100%;
@@ -819,6 +819,11 @@ h2.h3-interface-label {
             }
         }
     }
+    &:hover {
+        h3 {
+            color: $brand-primary;
+        }
+    }
 }
 
 .games {
@@ -827,10 +832,30 @@ h2.h3-interface-label {
     }
 }
 
+/* Activity Preloader */
+
+.main-preloader {
+    font-weight: 900;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    @include text-shadow(rgba($shadow-primary, 0.1) 0px 2px 0px);
+    i {
+        display: block;
+        font-size: 8em;
+        margin-bottom: 12px;
+    }
+    &.light {
+        color: #fff;
+    }
+    &.dark {
+        color: $brand-secondary;
+    }
+}
+
 /*  1.0 Dashboard
     ====================
 */
-
 body.dashboard {
     .top-container {
         padding-bottom: 1.5em;
@@ -849,20 +874,13 @@ body.dashboard {
     }
 }
 .dashboard-footer {
-    background-color: $brand-secondary;
-    color: #fff;
-    font-weight: 700;
-    padding: 20px;
+    color: $brand-secondary;
     text-align: right;
-    a {
-        color: #fff;
-        border-color: #fff;
-        &:hover, &:focus {
-            border-color: $brand-primary;
-        }
-    }
-    @media (max-width:$screen-md-min){
-        text-align: center;
+    width: 100%;
+    .footer-container {
+        border-top: 1px $brand-secondary solid;
+        margin: 40px 20px 0 20px;
+        padding: 10px 0 20px 0;
     }
 }
 
@@ -879,6 +897,24 @@ body.games.flashcards {
     .game-container {
         padding: 0 30px 0 50px;
         position: relative;
+    }
+
+    /* Activity Splash */
+    .activity-splash {
+        margin-top: 3em;
+        h1 {
+            color: $flash-cards-border-color-default;
+            font-size: 6em;
+            text-shadow: none;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .main-preloader {
+        &.dark {
+            color: $flash-cards-border-color-default;
+        }
     }
     /* Main Game Interface */
     .flash-cards-interface {
@@ -1006,8 +1042,9 @@ body.games.flashcards {
                     border-radius: 10px;
                     overflow: hidden;
                     height: auto;
-                    width: 80%;
+                    width: auto;
                     vertical-align: middle;
+                    max-height: 280px;
                 }
             }
             .main-card-lexeme {
@@ -1068,6 +1105,7 @@ body.games.flashcards {
                 position: relative;
                 text-align: center;
                 text-transform: uppercase;
+                text-shadow: none;
                 top: -14px;
                 span {
                     background-color: #EFFEFD;
@@ -1153,15 +1191,11 @@ body.games.flashcards {
                         display: table-cell;
                         vertical-align: middle;
                         img {
-                            width: 70%;
+                            width: auto;
                             height: auto;
+                            max-height: 80px;
                             vertical-align: middle;
                             margin: 0 auto;
-                        }
-                    }
-                    &:hover {
-                        .lexeme {
-                            color: $brand-primary;
                         }
                     }
                     &:focus,&:active {
@@ -1348,11 +1382,37 @@ body.matching {
         background-image: radial-gradient(ellipse at center,  #63a610 0%,#416e0d 70%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63a610', endColorstr='#416e0d',GradientType=1 );
         background-repeat: no-repeat;
+        height: 100%;
+
+    .activity-splash {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 0;
+        .splash-inner {
+            h1 {
+                margin-bottom: 0;
+            }
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            img {
+                width: 100%;
+                position: relative;
+            }
+            .container-play-btn {
+                position: relative;
+                top: -150px;
+            }
+        }
+    }
+
     div.matching-cards {
         margin: 0 auto;
         padding-top: 30px;
-        position:relative;
-        overflow-y: hidden;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
         .card-container {
             position: relative;
             margin: 0.5em;
@@ -1564,6 +1624,7 @@ body.matching {
                     display: inline-block;
                     &#o-play-again {
                         float: left;
+                        cursor: pointer;
                     }
                     &#o-back-home {
                         float:right;
@@ -1815,17 +1876,30 @@ body.matching {
     }
     .word-list-nav {
         margin: 0 auto;
+        padding-top: 2em;
         text-align: center;
-        button {
+        clear: both;
+        @media (min-width:$screen-md-min){
+            padding-top: 0;
+        }
+        div {
             background-color: #fff;
             border: none;
             border-radius: 9px;
+            @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
             position:relative;
+            display: inline-block;
             a {
                 display: table-cell;
                 height: 80px;
                 width: 80px;
                 vertical-align: middle;
+                border: none;
+                text-decoration: none;
+            }
+            &:focus, &:active {
+                box-shadow: none;
+                top: 2px;
             }
             span, i {
                 display: block;
@@ -1858,8 +1932,42 @@ body.matching {
     ====================
 */
 
-.login-container {
+.login-container, .logout-container {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    h1 {
+        line-height: 40px;
+        padding-bottom: 4px;
+    }
+    .l-inner {
+        background-color: #fff;
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+        border-radius: 9px;
+        padding: 20px 24px;
+        margin-bottom: 8px;
 
+    }
+    label {
+        display: block;
+        text-align: left;
+        color: $brand-secondary;
+        font-size: 1.2em;
+    }
+    input {
+        background-color: #FBF4D8;
+        border: none;
+        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
+        padding: 10px 12px;
+        font-size: 1.4em;
+        font-weight: 700;
+        border-radius: 9px;
+        width: 100%;
+    }
+    .app-status {
+        text-align: right;
+        font-style: italic;
+    }
 }
 
 
