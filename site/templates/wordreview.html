@@ -1,0 +1,148 @@
+
+<div class="wordlists app-container" role="main" id="app-container">
+  <div class="main-preloader dark" ng-show="waiting==true">
+    <i class="fa fa-refresh fa-spin"></i>
+    <p>Your activity is loading. Just a moment!</p>
+        <button onclick="audios=document.getElementsByTagName('audio');
+      console.log(audios);
+      for (var i=0; i <= audios.length; i++) {
+        if (typeof audios[i].play === 'function') {
+        console.log(audios[i])
+        audios[i].load()
+        }
+      }
+      " ng-click="preLoad()">Click me to start!</button>
+    <div class="hidden">
+    <div ng-repeat="word in list.words">
+      <img src="{{ word.base_word.symbol.image}} ">
+      <audio preload="auto" id="word-player-{{$index}}">
+        <source src="{{ audio_url(word.base_word.audio_file) }}" type="audio/mpeg" />
+      </audio>
+    </div>
+    </div>
+  </div>
+  <div ng-show="waiting==false">
+  <div ng-show="showAllWords">
+    <div class="row wordlist-header">
+    </div>
+    <div class="container">
+      <div class="wordlist-title col-md-8 col-sm-6 col-xs-12">
+        <h1>{{ list.title }}</h1>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="view-controls">
+          <li>
+            <button class="btn btn-primary icon-grid icon-left hvr-icon-grow" ng-click="display='grid'">Grid</button>
+          </li>
+          <li>
+            <button class="btn btn-primary icon-list icon-left hvr-icon-grow" ng-click="display='list'">List</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row grid" ng-show="display=='grid'">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4" ng-repeat="word in list.words">
+        <div class="card">
+          <a ng-click="startReview($index)">
+            <img src="{{ word.base_word.symbol.image }}">
+            <span>{{ word.base_word.root_word }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row list" ng-show="display=='list'">
+      <div class="card" ng-repeat="word in list.words">
+        <a href="/#/words/{{ id }}/{{ $index }}/">
+          <img src="{{ word.base_word.symbol.image }}">
+          <span>{{ word.base_word.root_word }}</span>
+        </a>
+      </div>
+    </div>
+    <div class="row bottom-row">
+      <button class="btn btn-primary btn-center icon-wordlists icon-left hvr-icon-grow">
+        <a ng-click="startReview()">Review All Words</a>
+      </button>
+    </div>
+  </div>
+<div class="word-detail" ng-show="!showAllWords">
+  <div class="container top">
+    <h1>{{ list.words[current].base_word.root_word }}</h1>
+    <div class="back-wordlist">
+      <a ng-click="backToList()" class="btn btn-back">
+        <i class="fa fa-arrow-left"></i> Back to {{ list.title }}
+      </a>
+    </div>
+    <div class="word-samples">
+      <div class="word-sample" ng-repeat="photo in list.words[current].base_word.photos" ng-class="sample_{{$index+1}}_container" ng-hide="!isCurrentSampleIndex($index)">
+        <img src="{{photo.image}}" alt="{{photo.title}}" class="sample" id="sample_0{{$index+1}}" />
+      </div>
+      <ul class="word-samples-nav">
+        <li ng-repeat="photo in list.words[current].base_word.photos" ng-click="setCurrentSampleIndex($index)" ng-class="{'active':isCurrentSampleIndex($index)}">
+          <i><img src="{{photo.image}}" alt="{{photo.title}}" class="hvr-grow" id="nav_sample_0{{$index+1}}" /></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="secondary-content word-definition">
+    <div class="container">
+      <div class="col-md-3 col-xs-3 first">
+        <div class="word-symbol">
+          <img src="{{list.words[current].base_word.symbol.image}} " alt="" />
+        </div>
+        <div class="word-audio" ng-if="list.words[current].base_word.audio_file">
+          <p class="button btn btn-primary">
+            <audio id="word-player-{{current}}">
+              <source src="{{ audio_url(list.words[current].base_word.audio_file) }}" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+            <span onclick="audio=document.getElementById('word-player-' + 
+              angular.element(document.getElementById('app-container')).scope().current);
+      console.log(audio)
+      audio.load()
+      audio.play()"><i class="fa fa-play"></i> Listen</span>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-9 col-xs-9">
+        <div class="word-specification">
+          <dl>
+            <dt class="word-base">{{ list.words[current].base_word.root_word }}</dt>
+            <dd class="word-meta-info">
+              <span ng-if="list.words[current].base_word.gender != 'NA'">({{ list.words[current].base_word.word_class.title }}, {{ list.words[current].base_word.gender }})</span>
+              <span ng-if="list.words[current].base_word.gender == 'NA'">({{ list.words[current].base_word.word_class.title }})</span>
+            </dd>
+            <dt class="word-trans">{{ list.words[current].trans_word.root_word }}</dt>
+          </dl>
+        </div>
+        <div class="word-phrase-examples" ng-if='sentence.text !== undefined'>
+          <p>In a sentence:</p>
+          <dl class="word-balloon">
+            <dt class="sentence-base" ng-repeat-start="sentence in list.words[current].base_word.example_sentences">
+                {{ sentence.text }}
+              </dt>
+            <dd class="sentence-trans" ng-repeat-end>{{ sentence.translations[0].text }}</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="word-list-nav">
+        <div class="prev-word" ng-if="current > 0">
+          <a ng-click="loadPrev()">
+            <span><img src="{{ list.words[getPrev(current)].base_word.photos[0].image }}"/></span>
+            <span>{{ list.words[getPrev(current)].base_word.root_word }}</span>
+            <i class="fa fa-arrow-left"></i>
+          </a>
+        </div>
+        <div class="next-word" ng-if="current < list.words.length - 1">
+          <a ng-click="loadNext()">
+            <span><img src="{{ list.words[getNext(current)].base_word.photos[0].image }}" /></span>
+            <span>{{ list.words[getNext(current)].base_word.root_word }}</span>
+            <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

@@ -1,9 +1,29 @@
 mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
-  '$rootScope', '$sce', 'jwtHelper',
+  '$rootScope', '$sce', 'jwtHelper', 'appConfig',
 
-  function ($scope, $http, $routeParams, $rootScope, $sce, jwtHelper) {
+  function ($scope, $http, $routeParams, $rootScope, $sce, jwtHelper, appConfig) {
 
     $rootScope.body_classes = "wordslist";
+    $scope.basePath = appConfig.basePath
+
+    $scope.username = localStorage.getItem('username');
+  if ($scope.username) {
+    req = {
+      url: 'http://127.0.0.1:8000/user/username/' + $scope.username + '/',
+      method: 'GET',
+      headers: {
+        Authorization: 'JWT ' + localStorage.getItem('authToken')
+      }
+    }
+    $http(req)
+      .success(function(data) {
+        $rootScope.user = data;
+        console.log(data)
+      })
+      .error(function (data) {
+        console.log(data);
+      })
+    }
 
     $scope.updateActivity = function (status) {
       user = localStorage.getItem('username');
@@ -106,7 +126,8 @@ mainApp.controller('WordListsController', ['$scope', '$http', '$routeParams',
 
 
     $scope.audio_url = function(path) {
-        return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
+        console.log(path)
+        return $sce.trustAsResourceUrl(path);
     }
 
     //* Creates Word Samples Navigation and Functionality

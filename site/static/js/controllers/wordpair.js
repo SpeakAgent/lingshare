@@ -14,7 +14,7 @@ mainApp.controller('WordPairController', ['$scope', '$http', '$routeParams',
         }
       );
     $scope.audio_url = function(path) {
-        return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
+        return $sce.trustAsResourceUrl(path);
     }
     //* Creates Word Samples Navigation and Functionality
     //  From http://onehungrymind.com/build-sweet-photo-slider-angularjs-animate/

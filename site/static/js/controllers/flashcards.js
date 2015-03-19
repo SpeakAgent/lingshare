@@ -1,14 +1,20 @@
-mainApp.controller('FlashCardController', ['$scope', '$route', '$timeout', '$http',
-  '$interval', '$rootScope', '$animate', '$sce',
+mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
+  '$interval', '$rootScope', '$animate', '$sce', '$routeParams', '$route',
+  'appConfig',
 
-  function ($scope, $route, $timeout, $http, $interval, $rootScope, $animate, $sce) {
+  function ($scope, $timeout, $http, $interval, $rootScope, $animate, 
+    $sce, $routeParams, $route, appConfig) {
 
+    $scope.basePath = appConfig.basePath
+    
   $scope.used_words = []
 
   $scope.seconds = 0
   $scope.current_round = 0
 
   $rootScope.body_classes = "games flashcards"
+
+  $scope.waiting = true
 
   $scope.sendScore = function () {
       // Need to get our current activity before getting
@@ -64,7 +70,14 @@ mainApp.controller('FlashCardController', ['$scope', '$route', '$timeout', '$htt
     }
   };
 
-  var url = "http://127.0.0.1:8000/wordlists/json/1/";
+  if ($routeParams.id)
+      { $scope.id = $routeParams.id}
+    else
+    {
+      $scope.id = 1
+    }
+    var url = "http://127.0.0.1:8000/wordlists/json/" + $scope.id + "/";
+
   $http.get(url)
     .success(function(data) {
       $scope.wordlist = data;
@@ -95,19 +108,25 @@ mainApp.controller('FlashCardController', ['$scope', '$route', '$timeout', '$htt
       };
       $scope.done = false;
       $scope.seconds = 0;
-      mixpanel.track("timer start", {
-        activity: "flashcard"
-      });
-
       $scope.stop = $interval(function () {
       if (!$scope.done) {
        $scope.seconds++;
       } else {
         $scope.stopTimer();
       }
+
+      $scope.preLoad();
     }, 1000);
       $scope.score = 0;
     });
+
+  $scope.preLoad = function () {
+    angular.element(document).ready(function () {
+        $scope.waiting = false
+    });
+    
+    
+  }
 
   $scope.alerts = [];
 
@@ -226,7 +245,7 @@ mainApp.controller('FlashCardController', ['$scope', '$route', '$timeout', '$htt
             clicked: item.base_word.root_word
           });
           $scope.newScreen();
-        }, 1000);
+        }, 4000);
       } else {
         $scope.alerts[item.base_word.root_word] = "Try Again!";
         $scope.isCorrect = 'false';
@@ -255,7 +274,7 @@ mainApp.controller('FlashCardController', ['$scope', '$route', '$timeout', '$htt
   };
 
   $scope.audio_url = function(path) {
-        return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
+        return $sce.trustAsResourceUrl(path);
     }
   $scope.reloadRoute = function() {
      $route.reload();

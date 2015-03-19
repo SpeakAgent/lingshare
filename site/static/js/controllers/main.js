@@ -1,4 +1,10 @@
-var mainApp = angular.module('mainApp', ['ngRoute', 'angular-jwt','ngAnimate']);
+
+var appConfig = angular.module('appConfig', []).constant('appConfig', {
+  'basePath': '/lingshare-dev',
+  'backendURL': 'http://127.0.0.1:8000'
+})
+
+var mainApp = angular.module('mainApp', ['ngRoute', 'angular-jwt','ngAnimate', 'appConfig']);
 
 mainApp.config(function($routeProvider, $sceDelegateProvider,
     $httpProvider, jwtInterceptorProvider) {
@@ -25,8 +31,8 @@ mainApp.config(function($routeProvider, $sceDelegateProvider,
 		controller: 'WordsController'
 	})
 	.when('/words/:id/', {
-		templateUrl: 'templates/wordlists.html',
-		controller: 'WordListsController'
+		templateUrl: 'templates/wordreview.html',
+		controller: 'WordReviewController'
 	})
 	.when('/words/:id/:wordID/', {
 		templateUrl: 'templates/wordlists.html',
@@ -40,11 +46,23 @@ mainApp.config(function($routeProvider, $sceDelegateProvider,
 		templateUrl: 'templates/flashcard_game.html',
 		controller: 'FlashCardController'
 	})
+	.when('/games/flashcards/:id/', {
+		templateUrl: 'templates/flashcard_game.html',
+		controller: 'FlashCardController'
+	})
+	.when('/games/wordreview/:id/', {
+		templateUrl: 'templates/wordreview.html',
+		controller: 'WordReviewController'
+	})
 	.when('/login/', {
 		templateUrl: 'templates/login.html',
 		controller: 'LoginController'
 	})
 	.when('/games/memory/', {
+		templateUrl: 'templates/memory.html',
+		controller: 'MemoryController'
+	})
+	.when('/games/memory/:id/', {
 		templateUrl: 'templates/memory.html',
 		controller: 'MemoryController'
 	})
@@ -82,6 +100,25 @@ mainApp.controller('mainController', function($scope, $rootScope) {
 
 
 
-mainApp.controller('GamesController', function($scope, $rootScope) {
-	$rootScope.body_classes = "games"
+mainApp.controller('GamesController', function($scope, $rootScope, $http, appConfig) {
+	$scope.basePath = appConfig.basePath
+	$rootScope.body_classes = "games";
+	$scope.username = localStorage.getItem('username');
+	if ($scope.username) {
+		req = {
+	      url: 'http://127.0.0.1:8000/user/username/' + $scope.username + '/',
+	      method: 'GET',
+	      headers: {
+	        Authorization: 'JWT ' + localStorage.getItem('authToken')
+      }
+    }
+    $http(req)
+      .success(function(data) {
+        $rootScope.user = data;
+        console.log(data)
+      })
+      .error(function (data) {
+        console.log(data);
+      })
+	}
 })

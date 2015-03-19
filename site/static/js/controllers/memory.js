@@ -1,10 +1,10 @@
-mainApp.controller('MemoryController', ['$scope', '$route', '$timeout', '$http',
-  '$interval','$rootScope','$animate', '$sce',
+mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
+  '$interval','$rootScope','$animate', '$sce', '$routeParams','$route',
 
-  function ($scope, $route, $timeout, $http, $interval,$rootScope,$animate, $sce) {
+  function ($scope, $timeout, $http, $interval, $rootScope, $animate, $sce, $routeParams, $route) {
 
   $rootScope.body_classes = "games matching"
-
+  $scope.waiting = true
 
     $scope.shuffle = function(array) {
     var m = array.length,
@@ -142,7 +142,7 @@ mainApp.controller('MemoryController', ['$scope', '$route', '$timeout', '$http',
       if ($scope.hideCards.length == $scope.cards.length - 2) {
         $timeout(function () {
           $scope.done = true;
-        }, 1000)
+        }, 3000)
         $scope.sendScore();
       }
   	 };
@@ -153,7 +153,7 @@ mainApp.controller('MemoryController', ['$scope', '$route', '$timeout', '$http',
         $scope.hideCards.push(card2);
         $scope.showCards = [];
         $scope.status = "";
-      }, 1000)
+      }, 1500)
 
   	 	// Do we have two word cards?
   	 };
@@ -187,8 +187,9 @@ mainApp.controller('MemoryController', ['$scope', '$route', '$timeout', '$http',
     	}, 1000);}
 
   	 $scope.endGame = function () {
-  	 	// Print out an end game screen and push the data to
-  	 	// the backend.
+  	 	$timeout(function () {
+        // body...
+      }, 1000)
      };
 
      $scope.activityCompleted = function () {
@@ -216,9 +217,18 @@ mainApp.controller('MemoryController', ['$scope', '$route', '$timeout', '$http',
        }
      };
 
-  	var url = "http://127.0.0.1:8000/wordlists/json/1/";
+    if ($routeParams.id)
+      { $scope.id = $routeParams.id}
+    else
+    {
+      $scope.id = 1
+    }
+  	var url = "http://127.0.0.1:8000/wordlists/json/" + $scope.id + "/";
   	$http.get(url)
   	 	.success(function (data) {
+          console.log('Scope ID: ' + $scope.id);
+
+          console.log(url);
 
           $scope.wordlist = data;
 
@@ -240,26 +250,37 @@ mainApp.controller('MemoryController', ['$scope', '$route', '$timeout', '$http',
             trans_language : $scope.trans_language
           });
 
-	  	   	$scope.gameWon = false;
-	  	   	$scope.cards = $scope.createCards();
-	  	   	$scope.setUpBoard();
-	  	   	$scope.playGame();
+          $scope.gameWon = false;
+          $scope.cards = $scope.createCards();
+          $scope.setUpBoard();
+          $scope.playGame();
           $scope.showCards = []
           $scope.hideCards = []
           $scope.correct = 0;
           $scope.wrong = 0;
-	  	   	$scope.createCards();
+          $scope.createCards();
           $scope.done = false;
           $scope.seconds = 0;
           $scope.startTimer();
           $scope.score = 0;
-  	 });
+          $scope.preLoad();
+    	 });
+      console.log('Route ID: ' + $routeParams.id);
+
 
   $scope.audio_url = function(path) {
-        return $sce.trustAsResourceUrl("http://127.0.0.1:8000" + path);
+        return $sce.trustAsResourceUrl(path);
     }
   $scope.reloadRoute = function() {
-     $route.reload();
+    $route.reload();
+  }
+
+  $scope.preLoad = function () {
+    angular.element(document).ready(function () {
+        $scope.waiting = false
+    });
+    
+    
   }
 
   }]);
