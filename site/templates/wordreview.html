@@ -3,7 +3,7 @@
   <div class="main-preloader dark" ng-show="waiting==true">
     <i class="fa fa-refresh fa-spin"></i>
     <p>Your activity is loading. Just a moment!</p>
-        <button onclick="audios=document.getElementsByTagName('audio');
+        <button class="btn btn-primary" onclick="audios=document.getElementsByTagName('audio');
       console.log(audios);
       for (var i=0; i <= audios.length; i++) {
         if (typeof audios[i].play === 'function') {
@@ -11,7 +11,7 @@
         audios[i].load()
         }
       }
-      " ng-click="preLoad()">Click me to start!</button>
+      " ng-click="preLoad()">Get your words!</button>
     <div class="hidden">
     <div ng-repeat="word in list.words">
       <img src="{{ word.base_word.symbol.image}} ">
@@ -23,9 +23,9 @@
   </div>
   <div ng-show="waiting==false">
   <div ng-show="showAllWords">
-    <div class="row wordlist-header">
-    </div>
     <div class="container">
+    <div class="row wordlist-header">
+
       <div class="wordlist-title col-md-8 col-sm-6 col-xs-12">
         <h1>{{ list.title }}</h1>
       </div>
@@ -64,6 +64,8 @@
         <a ng-click="startReview()">Review All Words</a>
       </button>
     </div>
+    </div>
+
   </div>
 <div class="word-detail" ng-show="!showAllWords">
   <div class="container top">
@@ -96,7 +98,7 @@
               <source src="{{ audio_url(list.words[current].base_word.audio_file) }}" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
-            <span onclick="audio=document.getElementById('word-player-' + 
+            <span onclick="audio=document.getElementById('word-player-' +
               angular.element(document.getElementById('app-container')).scope().current);
       console.log(audio)
       audio.load()

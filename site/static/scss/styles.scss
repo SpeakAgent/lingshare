@@ -1675,6 +1675,7 @@ body.matching {
             display: table-cell;
             height: 152px;
             vertical-align: middle;
+            cursor: pointer;
         }
     }
     .grid {
@@ -1896,6 +1897,7 @@ body.matching {
                 vertical-align: middle;
                 border: none;
                 text-decoration: none;
+                cursor: pointer;
             }
             &:focus, &:active {
                 box-shadow: none;
