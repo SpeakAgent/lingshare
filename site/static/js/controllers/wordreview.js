@@ -5,7 +5,7 @@ mainApp.controller('WordReviewController', ['$scope', '$http', '$routeParams',
 
     $scope.waiting = true
     $scope.loading = false
-    
+
     $scope.startGame = function () {
       $scope.preload()
     }
@@ -16,7 +16,6 @@ mainApp.controller('WordReviewController', ['$scope', '$http', '$routeParams',
       angular.element(document).ready(function () {
         $scope.$apply(function(){
             $scope.waiting = false;
-
         });
         $scope.loading = false
         console.log($scope.waiting)
