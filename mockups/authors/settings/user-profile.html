@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
-  <title>User Profile . Settings | Speak Agent</title>
+  <title>The Profile of Username123 | Speak Agent</title>
 </head>
-<body>
+<body class="user-profile">
 <div class="container-fluid parent-container-main">
     <nav class="navbar navbar-default navbar-inverse navbar-static-top">
         <div class="container-fluid">
@@ -37,17 +37,77 @@
                 <div class="col-sm-12 col-sm-12">
                     <ol class="breadcrumb">
                       <li><a href="/">Home</a></li>
-                      <li class="active">Hi, {{Firstname}}</li>
+                      <li class="active">{{Username}}</li>
                     </ol>
-                    <h1 class="page-header">{{Firstname}}</h1>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-8 col-md-8">
-                   User Profile
-                </div>
-                <div class="col-sm-4 col-md-4">
-                    Sidebar - will probably have a nav in it.
+                <div class="col-sm-12 col-md-10 col-md-offset-1">
+                    <div class="col-sm-8 col-md-8">
+                        <h1 class="page-header"><span>{{Username}}</span></h1>
+                        <p class="lead">{{Short Bio}} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper leo nec nibh luctus, at commodo mauris aliquam. Etiam sit amet aliquet nibh. Suspendisse tincidunt tortor eget metus posuere blandit. Etiam consequat neque ultrices massa dignissim aliquet. Duis tempor dolor ac diam mollis, non mattis diam mattis.</p>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                How {{username}} has helped
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <dl class="list-unstyled data-contributions data-points">
+                                          <dt>Wordlists Shared</dt>
+                                          <dd class="data-value">7</dd>
+                                          <dt>Lessons Made</dt>
+                                          <dd class="data-value">0</dd>
+                                          <dt>Words Added</dt>
+                                          <dd class="data-value">8</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="col-sm-12 col-md-8">
+                                        <div class="panel panel-primary no-margin no-shadow user-recent-activity">
+                                            <div class="panel-heading">
+                                                Recent Activity {{Note: Shows Up to 5}}
+                                            </div>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">Created <a href="#">{{Wordlist Title}}</a></li>
+                                                <li class="list-group-item">Created <a href="#">{{Lesson Title}}</a></li>
+                                                <li class="list-group-item">Update <a href="#">{{Wordlist Title}}</a></li>
+                                                <li class="list-group-item">Joined Speak Agent</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <div class="panel panel-default no-margin no-shadow no-bottom-border">
+                            <div class="panel-body">
+                                <ul class="list-unstyled extra-spacing user-details">
+                                    <li class="user-avatar"><img src="/static/images/fpo/symbol-happy.png" alt="{{username}}" class="img-thumbnail" /></li>
+                                    <li class="user-fullname">{{firstname}} {{lastname}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-default no-margin no-shadow no-bottom-border">
+                            <div class="panel-body">
+                                <ul class="list-unstyled extra-spacing user-details">
+                                    <li class="user-joindate"><i class="fa fa-calendar-o fa-fw"></i> Speak Agent since {{join-year}}</li>
+                                    <li class="user-url"><i class="fa fa-link fa-fw"></i> <a href="#">{{url}}</a></li>
+                                    <li class="user-institution"><i class="fa fa-university fa-fw"></i> {{institution - linked if institution url is filled out}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Social Media
+                            </div>
+                            <div class="panel-body">
+                                <ul class="list-unstyled">
+                                    <li><a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

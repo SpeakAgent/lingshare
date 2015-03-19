@@ -223,6 +223,40 @@ form {
     }
 }
 
+/* Lists */
+
+ul, ol {
+    &.extra-spacing {
+        li {
+            margin-bottom: 4px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+/* Data Points */
+
+.data-points {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    dt {
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+    .data-value {
+        color: $accent-primary;
+        text-shadow: rgba($shadow-primary, 0.15) 0px 1px 1px;
+        font-size: 4em;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+}
+
+
 /*
     A. Main Navigation */
 .navbar {
@@ -379,6 +413,38 @@ form {
     }
     .value-5 {
         color: $brand-success;
+    }
+}
+
+.user-profile {
+    .page-header {
+        margin-bottom: 12px;
+    }
+}
+
+.user-details {
+    .user-avatar {
+        width: 100%;
+        text-align: center;
+        display: block;
+        img {
+            width: 50%;
+        }
+    }
+    .user-fullname {
+        font-size: 1.2em;
+        font-weight: 900;
+        text-align: center;
+    }
+}
+
+.data-contributions {
+    text-align: center;
+}
+
+.user-recent-activity {
+    a {
+        font-weight: 900;
     }
 }
 
