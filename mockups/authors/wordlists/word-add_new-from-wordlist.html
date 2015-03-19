@@ -36,45 +36,37 @@
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
                     <div class="special-header clearfix">
-                        <h1 class="page-header pull-left">Create A New Wordlist</h1>
+                        <h1 class="page-header pull-left">Add A New Word to {{Wordlist Title}}</h1>
                         <div class="flag-process pull-right">
-                            Step <em>1</em> of 3
+                            Step <em>1</em> of 1
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row row-centered c-wordlist c-wordlist-add">
-                <div class="col-sm-12 col-md-4 col-md-offset-4">
-                    <h2 class="page-header">Let's get started!</h2>
+                <div class="col-sm-12 col-md-6 col-md-offset-3">
                     <fieldset>
                         <div class="form-group">
-                            <label for="wl-new-title">Add a Title</label>
-                            <input type="text" class="form-control" id="wl-new-title" placeholder="Enter the title of your wordlist">
-                        </div>
-                        <div class="form-group">
-                            <label for="wl-new-base_language">Select your Base Language</label>
-                            <select class="form-control" id="wl-new-base_language">
-                                <option>English</option>
-                                <option>Spanish</option>
-                                <option>French</option>
-                                <option>Chinese</option>
+                            <label for="wl-base_language">Are you entering a {{Base Language}} or {{Target Language}} word?</label>
+                            <select class="form-control" id="wl-base_language">
+                                <option>{{Base Language}}</option>
+                                <option>{{Target Language}}</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="wl-new-trans_language">Select your Target Language</label>
-                            <select class="form-control" id="wl-new-trans_language">
-                                <option>English</option>
-                                <option>Spanish</option>
-                                <option>French</option>
-                                <option>Chinese</option>
-                            </select>
+                            <h4 class="form-label">Enter your Words!</h4>
+                            <ul class="list-group form-inline wl-new-lexeme-entry">
+                                <li class="list-group-item">
+                                    <input type="text" class="form-control input-lexeme" id="base-lexeme-01" placeholder="Enter the base word">
+                                    <a href="#" class="pull-right btn btn-link btn-delete"><i class="fa fa-times"></i> Delete</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#" class="btn btn-default"><i class="fa fa-plus"></i> Add Another Word</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="form-group">
-                            <label for="wl-lexeme_numbers">How many words? <small class="flag-optional">Optional</small></label>
-                            <input type="number" class="form-control" placeholder="How many words are you going to enter?">
-                        </div>
-                        <div class="form-group f-lexeme f-lexeme-add-ons">
-                            <a href="wordlists-lexeme_entry_form.html" class="btn btn-primary btn-icon btn-i-next"><i class="fa fa-floppy-o"></i> Save and Proceed</a>
+                        <div class="form-group form-buttons clearfix">
+                            <a href="word-problem-words.html" class="btn btn-primary btn-icon btn-i-prev"><i class="fa fa-floppy-o"></i> Save and Continue</a>
                         </div>
                     </fieldset>
                 </div>
