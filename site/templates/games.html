@@ -4,7 +4,26 @@
         <div class="activity-container col-lg-4 col-xs-4"
                 ng-repeat="activity in user.activities">
             <div class="activity promo-card size-lg">
-                <a href="/#/games/flashcards/" title="Flashcards" class="activity-link">
+                <a ng-if="activity.activity.title=='Word Review'"
+                    href="/#/wordlist/{{ activity.wordlist.pk }}" title="Word Review" class="activity-link">
+                    <p class="activity-course">{{ activity.course.title }}</p>
+                    <img class="activity-image" src="/static/images/wordlists/promo-lg.png" alt="{{ activity.activity.title }}" />
+                    <div class="activity-info">
+                        <h3 class="activity-title">{{ activity.activity.title }}</h3>
+                        <p class="activity-wordlist">{{ activity.wordlist.title }}</p>
+                    </div>
+                </a>
+                <a ng-if="activity.activity.title=='Memory'"
+                    href="/#/games/memory/{{ activity.wordlist.pk }}" title="Flashcards" class="activity-link">
+                    <p class="activity-course">{{ activity.course.title }}</p>
+                    <img class="activity-image" src="/static/images/matching/promo-lg.jpg" alt="{{ activity.activity.title }}" />
+                    <div class="activity-info">
+                        <h3 class="activity-title">{{ activity.activity.title }}</h3>
+                        <p class="activity-wordlist">{{ activity.wordlist.title }}</p>
+                    </div>
+                </a>
+                <a ng-if="activity.activity.title=='Flashcards'"
+                    href="/#/games/flashcards/{{ activity.wordlist.pk }}" title="Flashcards" class="activity-link">
                     <p class="activity-course">{{ activity.course.title }}</p>
                     <img class="activity-image" src="/static/images/flashcards/promo-lg.jpg" alt="{{ activity.activity.title }}" />
                     <div class="activity-info">

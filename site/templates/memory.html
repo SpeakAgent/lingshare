@@ -8,7 +8,7 @@
 		 	ng-if="hideCards.indexOf(card.word.base_word.root_word+'-'+card.type)==-1">
 			<div ng-if = "showCards.indexOf(card.word.base_word.root_word+'-'+card.type)>-1"
 			      class="card front">
-				<span class="photo"><img src = "http://127.0.0.1:8000{{card.word.base_word.photos[0].image}}"
+				<span class="photo"><img src="{{card.word.base_word.symbol.image}}"
 			 	  ng-if = "card.type == 'symbol'"></span>
 				<span class="word" ng-if = "card.type == 'word'">
 				{{ card.word.base_word.root_word }}
@@ -56,10 +56,26 @@
       </div>
       <div class="user-options">
         <ul>
-          <li id="o-play-again"><a href="/#/games/memory/" ng-click="reloadRoute()"><i class="fa fa-reply"></i> Play Again</a></li>
+          <li id="o-play-again"><a ng-click="reloadRoute()"><i class="fa fa-reply"></i> Play Again</a></li>
           <li id="o-back-home"><a href="/#/"><i class="fa fa-home"></i> Back Home</a></li>
         </ul>
       </div>
+    </div>
+</div>
+
+
+<div class="main-preloader light"
+  ng-if="waiting">
+    <i class="fa fa-refresh fa-spin"></i>
+    <p>Your activity is loading. Just a moment!</p>
+    <div class="hidden">
+      <img ng-repeat="word in words"
+        src="{{ word.base_word.symbol.image}} ">
+      <audio
+          preload="auto">
+          <source src="{{ audio_url(word.base_word.audio_file) }}"
+            type="audio/mpeg" />
+        </audio>
     </div>
 </div>
 

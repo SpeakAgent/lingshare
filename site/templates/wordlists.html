@@ -3,7 +3,7 @@
 		<div class="container">
 			<h1>Your Wordlists</h1>
 			<div class="row">
-				<div class="course-group" ng-repeat="course in user.courses">
+				<div class="course-group clearfix" ng-repeat="course in user.courses">
 					<h3 class="col-lg-12">{{ course.title }}</h3>
 					<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4"
 						ng-repeat="list in course.wordlists">
@@ -126,20 +126,20 @@
 						</div>
 					</div>
 					<div class="word-list-nav">
-						<button class="prev-word" ng-if="wordID > 0">
+						<div class="prev-word" ng-if="wordID > 0">
 							<a href="/#/words/{{ id }}/{{ getPrev(wordID) }}">
 								<span><img src="{{ list.words[getPrev(wordID)].base_word.photos[0].image }}"/></span>
 								<span>{{ list.words[getPrev(wordID)].base_word.root_word }}</span>
 								<i class="fa fa-arrow-left"></i>
 							</a>
-						</button>
-						<button class="next-word" ng-if="wordID < list.words.length - 1">
+						</div>
+						<div class="next-word" ng-if="wordID < list.words.length - 1">
 							<a href="/#/words/{{ id }}/{{ getNext(wordID) }}">
 								<span><img src="{{ list.words[getNext(wordID)].base_word.photos[0].image }}" /></span>
 								<span>{{ list.words[getNext(wordID)].base_word.root_word }}</span>
 								<i class="fa fa-arrow-right"></i>
 							</a>
-						</button>
+						</div>
 					</div>
 				</div>
 			</div>
