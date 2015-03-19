@@ -132,6 +132,13 @@ img.img-thumbnail {
         }
     }
 }
+.panel {
+    .list-group {
+        .list-group-item:last-child {
+            box-shadow: none;
+        }
+    }
+}
 
 /* Animation */
 
