@@ -13,7 +13,7 @@
             </div>
             <div id="navbar">
                 <form class="navbar-form navbar-left">
-                    <input type="text" class="form-control" placeholder="Search...">
+                    <input type="text" class="form-control form-primary" placeholder="Search...">
                 </form>
                 <ul class="nav navbar-nav navbar-right nav-secondary">
                     <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
@@ -31,16 +31,15 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid c-fluid-main">
         <div class="col-sm-12 col-md-12 l-main">
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
                     <ol class="breadcrumb">
                       <li><a href="/">Home</a></li>
-                      <li><a href="/settings">Settings</a></li>
-                      <li class="active">User Profile</li>
+                      <li class="active">Hi, {{Firstname}}</li>
                     </ol>
-                    <h1 class="page-header">Settings</h1>
+                    <h1 class="page-header">{{Firstname}}</h1>
                 </div>
             </div>
             <div class="row">

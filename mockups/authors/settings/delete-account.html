@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
+  <title>Settings | Speak Agent</title>
+</head>
+<body>
+<div class="container-fluid parent-container-main">
+    <nav class="navbar navbar-default navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><img src="../static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+            </div>
+            <div id="navbar">
+                <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control form-primary" placeholder="Search...">
+                </form>
+                <ul class="nav navbar-nav navbar-right nav-secondary">
+                    <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
+                    <li class="n-settings"><a href="/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
+                    <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
+                    <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="n-home"><a href="/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
+                    <li class="n-wordlists"><a href="/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
+                    <li class="n-activities"><a href="/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
+                    <li class="n-learners"><a href="/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
+                    <li class="n-groups"><a href="/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid c-fluid-main">
+        <div class="col-sm-12 col-md-12 l-main">
+            <div class="row">
+                <div class="col-sm-12 col-sm-12">
+                    <ol class="breadcrumb">
+                      <li><a href="/">Home</a></li>
+                      <li><a href="index.html">Settings</a></li>
+                      <li class="active">Delete Account</li>
+                    </ol>
+                    <h1 class="page-header">Settings</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <ul class="nav navbar navbar-default navbar-stacked nav-secondary">
+                        <li><a href="index.html"><i class="fa fa-user"></i> Public Profile</a></li>
+                        <li><a href="account-settings.html"><i class="fa fa-gear"></i> Account Settings</a></li>
+                        <li><a href="invitations.html"><i class="fa fa-envelope"></i> Invitations</a></li>
+                        <li class="active nav-error"><a href="delete-account.html"><i class="fa fa-times"></i> Delete Account</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-8 col-md-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Delete Your Account</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>We're sorry to see you go! Before you do, we'd like to hear about your experience with Speak Agent.</p>
+                            <form>
+                                <div class="form-group happy-scale">
+                                    <label for="">How happy were you with Speak Agent? <small><span class="flag-optional">Optional</span></small></label>
+                                    <fieldset>
+                                    <label class="radio-inline value-1">
+                                      <input type="radio" name="happy-scale-options" id="happy01" value="1"> <i class="fa fa-frown-o"></i>
+                                    </label>
+                                    <label class="radio-inline value-2">
+                                      <input type="radio" name="happy-scale-options" id="happy02" value="2"> <i class="fa fa-frown-o"></i>
+                                    </label>
+                                    <label class="radio-inline value-3">
+                                      <input type="radio" name="happy-scale-options" id="happy03" value="3"> <i class="fa fa-meh-o"></i>
+                                    </label>
+                                    <label class="radio-inline value-4">
+                                      <input type="radio" name="happy-scale-options" id="happy04" value="4"> <i class="fa fa-smile-o"></i>
+                                    </label>
+                                    <label class="radio-inline value-5">
+                                      <input type="radio" name="happy-scale-options" id="happy05" value="5"> <i class="fa fa-smile-o"></i>
+                                    </label>
+                                    </fieldset>
+                                </div>
+                                <div class="form-group comments-form">
+                                    <label for="">Any thoughts on what we can do better next time?  <small><span class="flag-optional">Optional</span></small></label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </form>
+                            <p><a href="#" class="btn btn-danger btn-large"><i class="fa fa-times"></i> Delete Your Account</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid footer-main">
+    <nav class="nav-utility">
+        <ul class="list-inline">
+            <li><a href="#">About Speak Agent</a></li>
+            <li><a href="#">Site Policies</a></li>
+            <li><a href="#">Contact Support</a></li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

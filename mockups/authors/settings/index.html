@@ -13,7 +13,7 @@
             </div>
             <div id="navbar">
                 <form class="navbar-form navbar-left">
-                    <input type="text" class="form-control" placeholder="Search...">
+                    <input type="text" class="form-control form-primary" placeholder="Search...">
                 </form>
                 <ul class="nav navbar-nav navbar-right nav-secondary">
                     <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
@@ -31,7 +31,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid c-fluid-main">
         <div class="col-sm-12 col-md-12 l-main">
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
@@ -43,11 +43,78 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-8 col-md-8">
-                   Settings stuff begins
-                </div>
                 <div class="col-sm-4 col-md-4">
-                    Sidebar
+                    <ul class="nav navbar navbar-default navbar-stacked nav-secondary">
+                        <li class="active"><a href="index.html"><i class="fa fa-user"></i> Public Profile</a></li>
+                        <li><a href="account-settings.html"><i class="fa fa-gear"></i> Account Settings</a></li>
+                        <li><a href="invitations.html"><i class="fa fa-envelope"></i> Invitations</a></li>
+                        <li class="nav-error"><a href="delete-account.html"><i class="fa fa-times"></i> Delete Account</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-8 col-md-8">
+                    <div class="panel panel-default no-margin no-shadow no-bottom-border">
+                        <div class="panel-heading">
+                            <h3>Profile</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <div class="form-group profile-picture">
+                                    <label for="">Profile Picture</label>
+                                    <div class="add-new-photo file-upload">
+                                        <img src="http://placehold.it/180x180&amp;text=Add a photo" class="img-thumbnail">
+                                    </div>
+                                    <div class="add-new-photo file-upload">
+                                        <div class="form-group">
+                                            <label for="profile-add-new">Upload New Photo</label>
+                                            <input type="file" id="profile-add-new">
+                                        </div>
+                                    </div>
+                                    <div class="add-new-photo select-symbol">
+                                        <div class="form-group">
+                                            <label for="profile-select-new">Or Select a Symbol</label>
+                                            <button class="btn btn-default">Select Symbol</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Username</label>
+                                    <p>username123</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">First Name</label>
+                                    <input class="form-control" type="text" value="{{First Name}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Last Name</label>
+                                    <input class="form-control" type="text" value="{{Last Name}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Email Address</label>
+                                    <input class="form-control" type="email" value="{{email@email.com}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Short Biography <small><span class="flag-optional">optional</span></small></label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">URL <small><span class="flag-optional">optional</span></small></label>
+                                    <input class="form-control" type="url">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Social Media <small><span class="flag-optional">Optional</span></small></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for=""><i class="fa fa-linkedin-square"></i> LinkedIn</label>
+                                <input class="form-control" type="url">
+                            </div>
+                        </div>
+                    </div>
+                    <p><a href="" class="btn btn-primary">Save Profile Settings</a></p>
                 </div>
             </div>
         </div>

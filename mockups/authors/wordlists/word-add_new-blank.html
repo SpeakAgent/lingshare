@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="../static/css/styles.css" rel="stylesheet" type="text/css" />
+  <title>Add New Word | Speak Agent</title>
+</head>
+<body class="alt">
+<div class="container-fluid parent-container-main">
+    <nav class="navbar navbar-default navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+            </div>
+            <div id="navbar">
+                <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control form-primary" placeholder="Search...">
+                </form>
+                <ul class="nav navbar-nav navbar-right nav-secondary">
+                    <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
+                    <li class="n-settings"><a href="/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
+                    <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
+                    <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="n-home"><a href="/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
+                    <li class="n-wordlists"><a href="../wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
+                    <li class="n-activities"><a href="/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
+                    <li class="n-learners"><a href="/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
+                    <li class="n-groups"><a href="/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="col-sm-12 col-md-12 l-main">
+            <div class="row">
+                <div class="col-sm-12 col-sm-12">
+                    <div class="special-header clearfix">
+                        <h1 class="page-header pull-left">Add A New Word</h1>
+                        <div class="flag-process pull-right">
+                            Step <em>1</em> of 1
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-centered c-wordlist c-wordlist-add">
+                <div class="col-sm-12 col-md-4 col-md-offset-4">
+                    <h2 class="page-header">It's a new word!</h2>
+                    <p>Sorry, we couldn't find that word in our database. Please enter the information below so it can be used in activties.</p>
+                    <fieldset>
+                        <div class="form-group">
+                            <h4 class="form-label">Your Base Language</h4>
+                            <p>English</p>
+                        </div>
+                        <div class="form-group">
+                            <h4 class="form-label">Your Target Language</h4>
+                            <p>Spanish</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="wl-new-title">Enter Base Word</label>
+                            <input type="text" class="form-control" id="wl-word-base" placeholder="Enter the base word" value="{{Base Word if Entered}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="wl-new-title">Enter Target Word</label>
+                            <input type="text" class="form-control" id="wl-word-target" placeholder="Enter the target word" value="{{Base Word if Entered}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="wl-new-title">Select Symbol</label><br />
+                            <a href="#" class="btn btn-default"><i class="fa fa-plus"></i> Pick Symbol</a>
+                        </div>
+                        <div class="form-group">
+                            <label for="wl-new-title">Select Audio</label><br />
+                            <a href="#" class="btn btn-default"><i class="fa fa-plus"></i> Pick Audio</a>
+
+                        </div>
+                        <div class="form-group form-buttons clearfix">
+                            <a href="wordlist-lexeme-sample_montar.html" class="btn btn-primary btn-icon btn-i-prev"><i class="fa fa-floppy-o"></i> Save Word</a>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid footer-main">
+    <nav class="nav-utility">
+        <ul class="list-inline">
+            <li><a href="#">About Speak Agent</a></li>
+            <li><a href="#">Site Policies</a></li>
+            <li><a href="#">Contact Support</a></li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

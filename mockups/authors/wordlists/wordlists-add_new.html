@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <link href="../static/css/styles.css" rel="stylesheet" type="text/css" />
-  <title>Add New Wordlist | Speak Agent</title>
+  <title>Add New Word | Speak Agent</title>
 </head>
-<body>
+<body class="alt">
 <div class="container-fluid parent-container-main">
     <nav class="navbar navbar-default navbar-inverse navbar-static-top">
         <div class="container-fluid">
@@ -13,7 +13,7 @@
             </div>
             <div id="navbar">
                 <form class="navbar-form navbar-left">
-                    <input type="text" class="form-control" placeholder="Search...">
+                    <input type="text" class="form-control form-primary" placeholder="Search...">
                 </form>
                 <ul class="nav navbar-nav navbar-right nav-secondary">
                     <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
@@ -32,47 +32,51 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="col-sm-12 col-md-12 l-main no-breadcrumb">
+        <div class="col-sm-12 col-md-12 l-main">
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
-                    <h1 class="page-header">Create Wordlist</h1>
+                    <div class="special-header clearfix">
+                        <h1 class="page-header pull-left">Create A New Wordlist</h1>
+                        <div class="flag-process pull-right">
+                            Step <em>1</em> of 3
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row row-centered c-wordlist c-wordlist-add">
-                <div class="col-sm-12 col-md-12">
-                    <div class="row">
-                        <fieldset>
-                            <div class="form-group">
-                                <label for="wl-title">Wordlist Title</label>
-                                <input type="text" class="form-control" id="wl-title" placeholder="Enter the title of your wordlist">
-                            </div>
-                            <div class="form-group">
-                                <label for="wl-base_language">Base Language</label>
-                                <select class="form-control" id="wl-base_language">
-                                    <option>English</option>
-                                    <option>Spanish</option>
-                                    <option>French</option>
-                                    <option>Chinese</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="wl-trans_language">Target Language</label>
-                                <select class="form-control" id="wl-trans_language">
-                                    <option>English</option>
-                                    <option>Spanish</option>
-                                    <option>French</option>
-                                    <option>Chinese</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="wl-lexeme_numbers">Number of Lexemes <small>Optional</small></label>
-                                <input type="number" class="form-control">
-                            </div>
-                            <div class="form-group f-lexeme f-lexeme-add-ons">
-                                <a href="wordlists-lexeme_entry_form.html" class="btn btn-primary btn-icon btn-i-next">Save and Proceed</a>
-                            </div>
-                        </fieldset>
-                    </div>
+                <div class="col-sm-12 col-md-4 col-md-offset-4">
+                    <h2 class="page-header">Let's get started!</h2>
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="wl-new-title">Add a Title</label>
+                            <input type="text" class="form-control" id="wl-new-title" placeholder="Enter the title of your wordlist">
+                        </div>
+                        <div class="form-group">
+                            <label for="wl-new-base_language">Select your Base Language</label>
+                            <select class="form-control" id="wl-new-base_language">
+                                <option>English</option>
+                                <option>Spanish</option>
+                                <option>French</option>
+                                <option>Chinese</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="wl-new-trans_language">Select your Target Language</label>
+                            <select class="form-control" id="wl-new-trans_language">
+                                <option>English</option>
+                                <option>Spanish</option>
+                                <option>French</option>
+                                <option>Chinese</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="wl-lexeme_numbers">How many words? <small class="flag-optional">Optional</small></label>
+                            <input type="number" class="form-control" placeholder="How many words are you going to enter?">
+                        </div>
+                        <div class="form-group f-lexeme f-lexeme-add-ons">
+                            <a href="wordlists-lexeme_entry_form.html" class="btn btn-primary btn-icon btn-i-next"><i class="fa fa-floppy-o"></i> Save and Proceed</a>
+                        </div>
+                    </fieldset>
                 </div>
             </div>
         </div>
