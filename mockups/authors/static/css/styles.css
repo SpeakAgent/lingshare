@@ -11486,38 +11486,69 @@ form ul li {
   margin-bottom: 8px;
 }
 
+/* Lists */
+/* line 230, ../scss/styles.scss */
+ul.extra-spacing li, ol.extra-spacing li {
+  margin-bottom: 4px;
+}
+/* line 232, ../scss/styles.scss */
+ul.extra-spacing li:last-child, ol.extra-spacing li:last-child {
+  margin-bottom: 0;
+}
+
+/* Data Points */
+/* line 242, ../scss/styles.scss */
+.data-points {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* line 245, ../scss/styles.scss */
+.data-points dt {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+/* line 249, ../scss/styles.scss */
+.data-points .data-value {
+  color: #f8d338;
+  text-shadow: rgba(34, 9, 9, 0.15) 0px 1px 1px;
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
 /*
     A. Main Navigation */
-/* line 228, ../scss/styles.scss */
+/* line 262, ../scss/styles.scss */
 .navbar {
   border-radius: 0;
 }
-/* line 230, ../scss/styles.scss */
+/* line 264, ../scss/styles.scss */
 .navbar .navbar-brand {
   padding: 4px 0 0 15px;
 }
-/* line 232, ../scss/styles.scss */
+/* line 266, ../scss/styles.scss */
 .navbar .navbar-brand img {
   width: 72px;
 }
-/* line 239, ../scss/styles.scss */
+/* line 273, ../scss/styles.scss */
 .navbar.nav-secondary li a:hover, .navbar.nav-secondary li a:focus {
   background-color: #fff;
 }
-/* line 244, ../scss/styles.scss */
+/* line 278, ../scss/styles.scss */
 .navbar.nav-secondary li.active a {
   background-color: #fff;
 }
-/* line 251, ../scss/styles.scss */
+/* line 285, ../scss/styles.scss */
 .navbar .nav-error a {
   color: #d0021b;
 }
-/* line 253, ../scss/styles.scss */
+/* line 287, ../scss/styles.scss */
 .navbar .nav-error a:hover, .navbar .nav-error a:focus {
   color: #f80220;
 }
 
-/* line 261, ../scss/styles.scss */
+/* line 295, ../scss/styles.scss */
 .navbar-static-top {
   border: 0;
   margin-bottom: 0;
@@ -11525,28 +11556,28 @@ form ul li {
   box-shadow: rgba(34, 9, 9, 0.15) 0px 2px 1px;
   font-weight: 700;
 }
-/* line 266, ../scss/styles.scss */
+/* line 300, ../scss/styles.scss */
 .navbar-static-top li a {
   padding-right: 10px;
   padding-left: 10px;
 }
 
-/* line 273, ../scss/styles.scss */
+/* line 307, ../scss/styles.scss */
 .navbar-nav i {
   font-size: 1.5em;
 }
-/* line 276, ../scss/styles.scss */
+/* line 310, ../scss/styles.scss */
 .navbar-nav a {
   text-shadow: rgba(34, 9, 9, 0.15) 0px 1px 1px;
 }
 
 /*
     A.1.0 Secondary Navigation */
-/* line 285, ../scss/styles.scss */
+/* line 319, ../scss/styles.scss */
 .navbar-nav.nav-secondary {
   background-color: #6ecacb;
 }
-/* line 289, ../scss/styles.scss */
+/* line 323, ../scss/styles.scss */
 .navbar-nav.nav-secondary li a:hover {
   color: #dff3f3;
 }
@@ -11557,16 +11588,16 @@ form ul li {
 /*
     C. Content Panels
 */
-/* line 307, ../scss/styles.scss */
+/* line 341, ../scss/styles.scss */
 .panel {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
-/* line 312, ../scss/styles.scss */
+/* line 346, ../scss/styles.scss */
 .panel .panel-heading .nav-pills a:hover, .panel .panel-heading .nav-pills a:focus, .panel .panel-heading .nav-pills a:active {
   background-color: #fff;
 }
-/* line 321, ../scss/styles.scss */
+/* line 355, ../scss/styles.scss */
 .panel .panel-body p:last-child,
 .panel .panel-body .list-group:last-child,
 .panel .panel-body ul:last-child {
@@ -11577,7 +11608,7 @@ form ul li {
 /*
     D. Application Footer
 */
-/* line 336, ../scss/styles.scss */
+/* line 370, ../scss/styles.scss */
 .footer-main {
   font-size: 90%;
   text-align: right;
@@ -11586,18 +11617,18 @@ form ul li {
 /*
     B. Main Content Area
 */
-/* line 346, ../scss/styles.scss */
+/* line 380, ../scss/styles.scss */
 .l-main {
   padding: 0 20px 20px 20px;
 }
-/* line 348, ../scss/styles.scss */
+/* line 382, ../scss/styles.scss */
 .l-main .breadcrumb {
   border-radius: 0;
   font-size: 90%;
   margin: 0 -20px 20px -20px;
   padding: 24px 20px 8px 22px;
 }
-/* line 354, ../scss/styles.scss */
+/* line 388, ../scss/styles.scss */
 .l-main.no-breadcrumb {
   padding-top: 32px;
 }
@@ -11606,29 +11637,61 @@ form ul li {
     1.0 Settings and User Profile
     ====================
     */
-/* line 365, ../scss/styles.scss */
+/* line 399, ../scss/styles.scss */
 .happy-scale .radio-inline {
   font-size: 1.2em;
 }
-/* line 368, ../scss/styles.scss */
+/* line 402, ../scss/styles.scss */
 .happy-scale .value-1 {
   color: #d0021b;
 }
-/* line 371, ../scss/styles.scss */
+/* line 405, ../scss/styles.scss */
 .happy-scale .value-2 {
   color: #840111;
 }
-/* line 374, ../scss/styles.scss */
+/* line 408, ../scss/styles.scss */
 .happy-scale .value-1, .happy-scale .value-5 {
   font-weight: 700;
 }
-/* line 377, ../scss/styles.scss */
+/* line 411, ../scss/styles.scss */
 .happy-scale .value-4 {
   color: #569117;
 }
-/* line 380, ../scss/styles.scss */
+/* line 414, ../scss/styles.scss */
 .happy-scale .value-5 {
   color: #7ed321;
+}
+
+/* line 419, ../scss/styles.scss */
+.user-profile .page-header {
+  margin-bottom: 12px;
+}
+
+/* line 425, ../scss/styles.scss */
+.user-details .user-avatar {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+/* line 429, ../scss/styles.scss */
+.user-details .user-avatar img {
+  width: 50%;
+}
+/* line 433, ../scss/styles.scss */
+.user-details .user-fullname {
+  font-size: 1.2em;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* line 440, ../scss/styles.scss */
+.data-contributions {
+  text-align: center;
+}
+
+/* line 445, ../scss/styles.scss */
+.user-recent-activity a {
+  font-weight: 900;
 }
 
 /*
@@ -11638,22 +11701,22 @@ form ul li {
 /*
     C.1 Wordlists Landing Page
 */
-/* line 398, ../scss/styles.scss */
+/* line 463, ../scss/styles.scss */
 .wl-item td {
   vertical-align: middle !important;
 }
-/* line 401, ../scss/styles.scss */
+/* line 466, ../scss/styles.scss */
 .wl-item .wl-title,
 .wl-item .wl-lexeme-title {
   font-weight: 700;
 }
-/* line 405, ../scss/styles.scss */
+/* line 470, ../scss/styles.scss */
 .wl-item .wl-symbol,
 .wl-item .wl-lexeme-symbol {
   max-width: 80px;
   text-align: center;
 }
-/* line 409, ../scss/styles.scss */
+/* line 474, ../scss/styles.scss */
 .wl-item .wl-symbol img,
 .wl-item .wl-lexeme-symbol img {
   max-width: 50px;
@@ -11665,61 +11728,61 @@ form ul li {
 /*
     1. List of Items
 */
-/* line 423, ../scss/styles.scss */
+/* line 488, ../scss/styles.scss */
 .wl-dataitems .wl-dataitem {
   margin-bottom: 0;
   border-bottom-width: 0;
 }
-/* line 426, ../scss/styles.scss */
+/* line 491, ../scss/styles.scss */
 .wl-dataitems .wl-dataitem:last-child {
   border-bottom-width: 1px;
   margin-bottom: 20px;
 }
-/* line 431, ../scss/styles.scss */
+/* line 496, ../scss/styles.scss */
 .wl-dataitems .wl-dataitem .wl-item .wl-lexeme-title {
   font-weight: 700;
 }
-/* line 435, ../scss/styles.scss */
+/* line 500, ../scss/styles.scss */
 .wl-dataitems .wl-dataitem .wl-item .wl-lexeme-symbol img {
   max-width: 50px;
   width: 50px;
 }
 
-/* line 447, ../scss/styles.scss */
+/* line 512, ../scss/styles.scss */
 .wl-photos-videos ul li img.img-thumbnail {
   max-width: 160px;
 }
-/* line 451, ../scss/styles.scss */
+/* line 516, ../scss/styles.scss */
 .wl-photos-videos ul .media-controls {
   text-align: center;
 }
 
-/* line 457, ../scss/styles.scss */
+/* line 522, ../scss/styles.scss */
 .wl-symbol img {
   max-width: 100%;
 }
-/* line 460, ../scss/styles.scss */
+/* line 525, ../scss/styles.scss */
 .wl-symbol.wl-list-symbol, .wl-symbol.wl-lexeme-symbol {
   text-align: center;
   margin: 0 auto;
 }
-/* line 462, ../scss/styles.scss */
+/* line 527, ../scss/styles.scss */
 .wl-symbol.wl-list-symbol img, .wl-symbol.wl-lexeme-symbol img {
   max-width: 200px;
 }
 
-/* line 472, ../scss/styles.scss */
+/* line 537, ../scss/styles.scss */
 .wl-lexeme-dataitem {
   border-bottom-width: 0;
   margin-bottom: 0;
 }
-/* line 475, ../scss/styles.scss */
+/* line 540, ../scss/styles.scss */
 .wl-lexeme-dataitem:last-child {
   border-bottom-width: 1px;
   margin-bottom: 20px;
 }
 
-/* line 483, ../scss/styles.scss */
+/* line 548, ../scss/styles.scss */
 .wl-new-lexeme-entry input.input-lexeme {
   width: 80%;
 }
