@@ -1,24 +1,27 @@
 
 <div class="wordlists app-container" role="main" id="app-container">
-  <div class="main-preloader dark" ng-show="waiting==true">
-    <i class="fa fa-refresh fa-spin"></i>
-    <p>Your activity is loading. Just a moment!</p>
-        <button class="btn btn-primary" onclick="audios=document.getElementsByTagName('audio');
-      console.log(audios);
-      for (var i=0; i <= audios.length; i++) {
-        if (typeof audios[i].play === 'function') {
-        console.log(audios[i])
-        audios[i].load()
-        }
-      }
-      " ng-click="preLoad()">Get your words!</button>
+  <div class="main-preloader light" ng-show="waiting==true">
+      <h1>Let's review<br />{{ list.title }}!</h1>
+        <button class="btn btn-lg btn-primary"
+          onclick="audios=document.getElementsByTagName('audio');
+          console.log(audios);
+          for (var i=0; i <= audios.length; i++) {
+            if (typeof audios[i].play === 'function') {
+            console.log(audios[i])
+            audios[i].load()
+            }
+          }
+          " ng-click="preLoad()">
+        <span ng-show="loading==false">Ready!</span>
+        <span ng-show="loading==true">Get your words! <i class="fa fa-refresh fa-spin"></i></span>
+    </button>
     <div class="hidden">
-    <div ng-repeat="word in list.words">
-      <img src="{{ word.base_word.symbol.image}} ">
-      <audio preload="auto" id="word-player-{{$index}}">
-        <source src="{{ audio_url(word.base_word.audio_file) }}" type="audio/mpeg" />
-      </audio>
-    </div>
+      <div ng-repeat="word in list.words">
+        <img src="{{ word.base_word.symbol.image}} ">
+        <audio preload="auto" id="word-player-{{$index}}">
+          <source src="{{ audio_url(word.base_word.audio_file) }}" type="audio/mpeg" />
+        </audio>
+      </div>
     </div>
   </div>
   <div ng-show="waiting==false">
@@ -93,12 +96,12 @@
           <img src="{{list.words[current].base_word.symbol.image}} " alt="" />
         </div>
         <div class="word-audio" ng-if="list.words[current].base_word.audio_file">
-          <p class="button btn btn-primary">
+          <p>
             <audio id="word-player-{{current}}">
               <source src="{{ audio_url(list.words[current].base_word.audio_file) }}" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
-            <span onclick="audio=document.getElementById('word-player-' +
+            <span class="button btn btn-primary" onclick="audio=document.getElementById('word-player-' +
               angular.element(document.getElementById('app-container')).scope().current);
       console.log(audio)
       audio.load()
