@@ -46,12 +46,90 @@
             <div class="row row-centered c-wordlist c-wordlist-add">
                 <div class="col-sm-12 col-md-6 col-md-offset-3">
                     <h2 class="page-header">Words for Review</h2>
-                    <p>We found some words that need your review. Please select the correct form of the word.</p>
-                    <div class="list-group">
-                        Stub for Word Form Selection Interface
+                    <p>We found <strong>{{Number of Words}}</strong> words that have more than one word sense. Please select the option you want to use for these words.</p><div class="words-for-review">
+                        <div class="list-group word-for-review">
+                            <div class="list-group-title list-group-item clearfix">
+                                <h3 class="pull-left">Ride <i class="fa fa-arrows-h"></i> <strong>Mortar</strong></h3>
+                                <small class="pull-right">
+                                    <a href="#" class="btn btn-link btn-delete"><i class="fa fa-trash"></i> Delete Word</a>
+                                </small>
+                            </div>
+                            <a class="list-group-item clearfix">
+                                <div class="word-symbol pull-left">
+                                    <img src="/static/images/fpo/symbol-montar.png" alt="mortar" />
+                                </div>
+                                <div class="word-sense pull-left">
+                                    to ride
+                                </div>
+                            </a>
+                            <a class="list-group-item clearfix">
+                                <div class="word-symbol pull-left">
+                                    <img src="/static/images/fpo/symbol-montar.png" alt="mortar" />
+                                </div>
+                                <div class="word-sense pull-left">
+                                    to mount
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-danger">
+                                <i class="fa fa-times"></i> Option Not Found
+                            </a>
+                        </div>
+                        <div class="list-group word-for-review">
+                            <div class="list-group-title list-group-item clearfix">
+                                <h3 class="pull-left">{{Word Entered}} <i class="fa fa-arrows-h"></i> <strong>{{Target Word}}</strong></h3>
+                                <small class="pull-right">
+                                    <a href="#" class="btn btn-link btn-delete"><i class="fa fa-trash"></i> Delete Word</a>
+                                </small>
+                            </div>
+                            <a class="list-group-item clearfix">
+                                <div class="word-symbol pull-left">
+                                    <img src="/static/images/fpo/symbol-montar.png" alt="mortar" />
+                                </div>
+                                <div class="word-sense pull-left">
+                                    to mount
+                                </div>
+                            </a>
+                            <a class="list-group-item clearfix">
+                                <div class="word-symbol pull-left">
+                                    <img src="/static/images/fpo/symbol-montar.png" alt="mortar" />
+                                </div>
+                                <div class="word-sense pull-left">
+                                    to mount
+                                </div>
+                            </a>
+                            <a class="list-group-item clearfix">
+                                <div class="word-symbol pull-left">
+                                    <img src="/static/images/fpo/symbol-montar.png" alt="mortar" />
+                                </div>
+                                <div class="word-sense pull-left">
+                                    to mount
+                                </div>
+                            </a>
+                            <a class="list-group-item">
+                            <i class="fa fa-eye"></i> See All Options
+                            </a>
+                            <a class="list-group-item list-group-item-danger">
+                                <i class="fa fa-times"></i> Option Not Found
+                            </a>
+                        </div>
                     </div>
+                    <nav class="c-pagination">
+                      <ul class="pagination">
+                        <li class="disabled">
+                          <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li>
+                          <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
                     <div class="form-group form-buttons clearfix">
-                        <a href="wordlista-sample-newwords.html" class="btn btn-primary btn-icon btn-i-prev"><i class="fa fa-floppy-o"></i> Save and Continue</a>
                         <a href="#" class="btn btn-link btn-warning">I'll do this later.</a>
                     </div>
                 </div>

@@ -1,0 +1,1170 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"gra",
+				"gray-base"
+			],
+			[
+				"brand",
+				"brand-primary"
+			],
+			[
+				"mobil",
+				"mobile-width"
+			],
+			[
+				"smal",
+				"small-tablet-portrait-width"
+			],
+			[
+				"tabl",
+				"tablet-width"
+			],
+			[
+				"lapt",
+				"laptop-width"
+			],
+			[
+				"gen",
+				"genesis_do_nav"
+			],
+			[
+				"sub",
+				"sub-menu"
+			],
+			[
+				"brand-",
+				"brand-danger"
+			],
+			[
+				"cpa",
+				"capitalize"
+			],
+			[
+				"imp",
+				"important"
+			],
+			[
+				"accen",
+				"accent-primary"
+			],
+			[
+				"im",
+				"img-listitem-width"
+			],
+			[
+				"wl-lex",
+				"wl-lexeme-title"
+			],
+			[
+				"gary-",
+				"gray-light"
+			],
+			[
+				"gray",
+				"gray-lighter"
+			],
+			[
+				"font-colo",
+				"font-color-alt"
+			],
+			[
+				"bran",
+				"brand-primary"
+			],
+			[
+				"ac",
+				"activity-splash"
+			],
+			[
+				"border-bott",
+				"border-bottom-color"
+			],
+			[
+				"wpc",
+				"wp-content"
+			],
+			[
+				"nav",
+				"nav-primary"
+			],
+			[
+				"tit",
+				"title-area"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"small-",
+				"small-laptop"
+			],
+			[
+				"small",
+				"small-laptop"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"boun",
+				"bounceInDown"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"ip",
+				"important"
+			],
+			[
+				"slide",
+				"slideDownOut"
+			],
+			[
+				"no",
+				"none"
+			],
+			[
+				"tab",
+				"table-cell"
+			],
+			[
+				"slid",
+				"slideRightIn"
+			],
+			[
+				"screen",
+				"screen-sm-min"
+			],
+			[
+				"bubl",
+				"bulbFlicker"
+			],
+			[
+				"main-",
+				"main-card-lexeme"
+			],
+			[
+				"scree",
+				"screen-sm-min"
+			],
+			[
+				"text",
+				"text-align-last"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"a",
+				"activity-status"
+			],
+			[
+				"rea",
+				"relative"
+			],
+			[
+				"accent",
+				"accent-light"
+			],
+			[
+				"train",
+				"transition-speed"
+			],
+			[
+				"acti",
+				"accent-primary"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"wor",
+				"words"
+			],
+			[
+				"cu",
+				"cursor"
+			],
+			[
+				"tran",
+				"transparent"
+			],
+			[
+				"ng-hid",
+				"ng-hide-remove"
+			],
+			[
+				"curre",
+				"current_round"
+			],
+			[
+				"inde",
+				"indexOf"
+			],
+			[
+				"flash-car",
+				"flash-cards-border-color-default"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"flash",
+				"flash-cards-border-color-default"
+			],
+			[
+				"te",
+				"text-shadow"
+			],
+			[
+				"block",
+				"inline-block"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"bore",
+				"border-width-default"
+			],
+			[
+				"flas",
+				"flash-cards-border-color-default"
+			],
+			[
+				"bord",
+				"border-width-default"
+			],
+			[
+				"fo",
+				"font-family-emphasis"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"backgro",
+				"background-image"
+			],
+			[
+				"talbe",
+				"tablet"
+			],
+			[
+				"mob",
+				"mobile-landscape"
+			],
+			[
+				"sma",
+				"small-tablet-portrait"
+			],
+			[
+				"genesis_entr",
+				"genesis_entry_content"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"ba",
+				"background-repeat"
+			],
+			[
+				"one",
+				"one-half"
+			],
+			[
+				"single",
+				"single-excerpt"
+			],
+			[
+				"has",
+				"has_excerpt"
+			],
+			[
+				"border-",
+				"border-radius"
+			],
+			[
+				"work",
+				"work-description"
+			],
+			[
+				"br",
+				"breakpoint"
+			],
+			[
+				"bre",
+				"breakpoint"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"en",
+				"entry-title"
+			],
+			[
+				"lig",
+				"lighten"
+			],
+			[
+				"break",
+				"breakpoint"
+			],
+			[
+				"tablet",
+				"small-tablet-portrait"
+			],
+			[
+				"inl",
+				"inline"
+			],
+			[
+				"saml",
+				"small-laptop"
+			],
+			[
+				"display",
+				"display_ftp_dates"
+			],
+			[
+				"gene",
+				"genesis_entry_content"
+			],
+			[
+				"displ",
+				"display_ftp_dates"
+			],
+			[
+				"clear",
+				"clearfix"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"trg-",
+				"trg-career_preferred_skills"
+			],
+			[
+				"archive",
+				"archive-title"
+			],
+			[
+				"bo",
+				"border-color"
+			],
+			[
+				"entr",
+				"entry-title"
+			],
+			[
+				"act",
+				"action-color"
+			],
+			[
+				"brea",
+				"breakpoint"
+			],
+			[
+				"entry",
+				"entry-content"
+			],
+			[
+				"deco",
+				"decorative-hr"
+			],
+			[
+				"one-",
+				"one-third"
+			],
+			[
+				"genesis",
+				"genesis_loop"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"on",
+				"one-third"
+			],
+			[
+				"conten",
+				"content-max-width"
+			],
+			[
+				"conte",
+				"content-max-width"
+			],
+			[
+				"table",
+				"tablet"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"resp",
+				"responsive-search-icon"
+			],
+			[
+				"seon",
+				"secondary-color"
+			],
+			[
+				"second",
+				"secondary-color-dark"
+			],
+			[
+				"seo",
+				"secondary-color"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"backgrou",
+				"background-size"
+			],
+			[
+				"word",
+				"wordlists"
+			],
+			[
+				"w",
+				"wrap"
+			],
+			[
+				"n",
+				"normal"
+			],
+			[
+				"item",
+				"item-content"
+			],
+			[
+				"ite",
+				"item-content"
+			],
+			[
+				"widget",
+				"widget-text"
+			],
+			[
+				"lvp",
+				"lvp-widget"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"se",
+				"secondary-color"
+			],
+			[
+				"font-",
+				"font-stack"
+			],
+			[
+				"activ",
+				"activated"
+			],
+			[
+				"last",
+				"last-child"
+			],
+			[
+				"supporting",
+				"supporting-light-neutral"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "wordlists/wordlists-problem-words_no-data-form.html",
+			"settings":
+			{
+				"buffer_size": 6988,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wordlists/wordlists-no-data_all-done.html",
+			"settings":
+			{
+				"buffer_size": 3539,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 8266,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/scss/styles.scss",
+			"settings":
+			{
+				"buffer_size": 9974,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/scss/_bootstrap-variables.scss",
+			"settings":
+			{
+				"buffer_size": 28290,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 347.0,
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"lPac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/static",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/static/css",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/static/scss",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists"
+	],
+	"file_history":
+	[
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlists-problem-words.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/word-problem-words_no-data.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/word-add_new-nodata.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlists-problem-words_all-done.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/word-problem-words.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/static/scss/styles.scss",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/static/scss/_bootstrap-variables.scss",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/index.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlist-copy-new.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlist-lexeme-sample-editor.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlist-sample-editor.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlist-sample-newwords.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlist-sample-published.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlist-sample.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlist-copy.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/settings/user-profile.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/settings/user-profile-teacher.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/settings/account-settings.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/settings/index-teacher.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/index.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlist-sample.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlist-sample-published.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlist-copy.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlist-copy-new.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlist-lexeme-sample-editor.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlist-lexeme-sample.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlist-lexeme-sample_montar.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlist-problem-words.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlist-sample-editor.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlist-sample-newwords.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/word-add_new.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/settings/invitations.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/settings/user-profile.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/settings/account-settings.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/settings/delete-account.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/settings/index-teacher.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/settings/index.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/word-add_new.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/word-add_new-blank.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/word-add_new-from-wordlist.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/word-add_new-nodata.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/word-no-data.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/word-problem-words.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlist-lexeme-sample.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlist-lexeme-sample_montar.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlist-problem-words.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlists-add_new.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlists-lexeme_entry_form.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlists-problem-words.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlists-processing.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlists-settings_form.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/wordlists-sharing_form.html",
+		"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists/index.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/word-add_new-blank.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/word-no-data.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlists-lexeme_entry_form.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlists-processing.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlists-settings_form.html",
+		"/Users/malcolm/git/lingshare/lingshare/site/static/js/controllers/wordreview.js",
+		"/Users/malcolm/git/lingshare/lingshare/site/templates/wordreview.html",
+		"/Users/malcolm/git/lingshare/lingshare/site/templates/wordpair.html",
+		"/Users/malcolm/git/lingshare/lingshare/site/templates/wordlists.html",
+		"/Users/malcolm/git/lingshare/lingshare/site/static/scss/styles.scss",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/static/scss/styles.scss",
+		"/Users/malcolm/git/lingshare/lingshare/site/templates/flashcard_game.html",
+		"/Users/malcolm/git/lingshare/lingshare/site/templates/memory.html",
+		"/Users/malcolm/git/lingshare/lingshare/site/templates/word_detail.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/settings/index.html",
+		"/Applications/MAMP/htdocs/xonea/wp-content/themes/xonea/sass/_variables.scss",
+		"/Applications/MAMP/htdocs/xonea/wp-content/themes/xonea/functions.php",
+		"/Applications/MAMP/htdocs/xonea/wp-content/themes/xonea/sass/_breakpoints-rk.scss",
+		"/Applications/MAMP/htdocs/xonea/wp-content/themes/xonea/sass/style.scss",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/word-add_new-standalone.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/word-add_new-lexeme-entry.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordl-add_new.html",
+		"/Applications/MAMP/htdocs/xonea/wp-content/themes/xonea/header.php",
+		"/Applications/MAMP/htdocs/xonea/wp-content/themes/xonea/sass/nav.scss",
+		"/Applications/MAMP/htdocs/xonea/wp-content/themes/xonea/style.css",
+		"/Applications/MAMP/htdocs/wp-themes/minimum-pro-sass/sass/style.scss",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/static/scss/_bootstrap.scss",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/settings/invitations.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/elements-page.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/settings/delete-account.html",
+		"/Users/malcolm/git/lingshare/lingshare/site/static/scss/_bootstrap-variables.scss",
+		"/Users/malcolm/git/lingshare/lingshare/site/static/scss/font-awesome/_variables.scss",
+		"/Users/malcolm/git/lingshare/lingshare/site/static/scss/font-awesome/font-awesome.scss",
+		"/Users/malcolm/git/lingshare/lingshare/site/static/scss/font-awesome/_icons.scss",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/index.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlists-add_new.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/groups/index.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/classes/index.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/activities/index.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/wordlists/wordlists-sharing_form.html",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/static/scss/bootstrap/mixins/_buttons.scss",
+		"/Users/malcolm/git/lingshare/lingshare/mockups/authors/static/scss/bootstrap/_buttons.scss",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/static/scss/_bootstrap-variables.scss",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/wordlists/wordlist-sample.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/wordlists/wordlists-add_new.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/wordlists/index.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/static/scss/_bootstrap-variables.scss",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/static/scss/styles.scss",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/wordlists/wordlist-lexeme-sample.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/index.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/wordlists/wordlists-processing.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/wordlists/wordlists-settings_form.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/template-sidebar-left.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/elements-page.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/config.rb",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/static/scss/bootstrap/_forms.scss",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/static/scss/_bootstrap.scss",
+		"/Users/malcolm/Desktop/Dashboard Template for Bootstrap.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/config.rb",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/README.md",
+		"/Users/malcolm/git/lingshare/speakagent-io/authors/sass/styles.scss",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/templates/flashcard_game.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/templates/wordreview.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/templates/wordlists.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/static/js/controllers/memory.js",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/templates/memory.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/templates/wordpair.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/templates/word_detail.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/static/js/controllers/flashcards.js",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/index.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/templates/login.html",
+		"/Applications/MAMP/htdocs/speakagent/wp-content/themes/speak-agent/functions.php",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/templates/dashboard.html",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/static/css/temp.css",
+		"/Users/malcolm/git/lingshare/speakagent-io/speakagent.github.io/static/css/styles.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<open files>",
+			"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists,<open files>",
+			"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists",
+			"/Users/malcolm/git/lingshare/mockups-sample/authors/settings",
+			"/Users/malcolm/git/lingshare/mockups-sample/authors/wordlists",
+			"/Users/malcolm/git/lingshare/mockups-sample/authors/settings",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"lexeme-title",
+			"h3",
+			"border-radius",
+			"pagination",
+			"list-group",
+			"\"/static/",
+			"href=\"/",
+			" <li class=\"no-padding\"><a href=\"#\" class=\"btn btn-link\"><i class=\"fa fa-files-o\"></i> Copy</a></li>",
+			"<a href=\"wordlist-sample-editor.html\" class=\"btn btn-link\"><i class=\"fa fa-files-o\"></i> Copy</a>",
+			"Favorite",
+			"href=\"/",
+			"=\"/static",
+			"href=\"/",
+			"=\"/static/",
+			"splash",
+			"loading",
+			"next-word",
+			"Word",
+			"Word Review",
+			"Word REview",
+			"card",
+			"list-group",
+			"data-points",
+			"box-shadow",
+			"lists",
+			"#0ebfe9",
+			"current-menu-item",
+			"navigation",
+			"padding-bottom: 10px;",
+			"5%",
+			"padding",
+			".wrap",
+			"Responsive Nav",
+			"nav-primary",
+			"navigation",
+			"add_theme_support",
+			"Secondary Navigation",
+			"navigation",
+			"site-header",
+			"entry-content",
+			"START HERE",
+			"genesis-nav-menu",
+			"home-featured",
+			"<a href=\"/\">Home</a>",
+			"href=\"/settings",
+			"<a href=\"/groups\">",
+			"<a href=\"/classes\">",
+			"<a href=\"/activities\">",
+			"<a href=\"/wordlists\">",
+			"flag-optional",
+			"img-thumbnail",
+			"textarea",
+			"border",
+			"textarea",
+			"input",
+			"nav",
+			"pills",
+			"navbar",
+			"pills",
+			"base sentence",
+			"base",
+			"base sentence",
+			"Uploade",
+			"head",
+			"Change Audio",
+			"tags",
+			"symbol",
+			"copy",
+			"ojos",
+			"favorite",
+			"forms",
+			"label",
+			"btn",
+			"text-shadow",
+			"input",
+			"wl-lexeme-symbol",
+			"img-listitem-width",
+			"$img-listitem-width",
+			"wl-title",
+			"label",
+			"panel-heading",
+			"Edit Details",
+			"Add New WOrd",
+			"Add New Word",
+			"Save",
+			"button",
+			"border-radius-large",
+			"$border-radius-large",
+			"radius",
+			"buttons",
+			"Word Symbol",
+			"Fork",
+			"Supporting Media",
+			"panel",
+			"darken",
+			"btn-hover",
+			"button",
+			"page-header",
+			"Twitter",
+			"panel-heading",
+			"border-radius-base",
+			"panel",
+			"Forms",
+			"border-radius",
+			"jumbotron",
+			"panel",
+			"border-radius",
+			"border-radius-base",
+			"input",
+			"transition",
+			"box-shadow",
+			"navbar-inverse",
+			"navbar",
+			"font-weight",
+			"navbar",
+			"font",
+			"fonts",
+			"glyphicons",
+			"samples",
+			"view-controls",
+			"next-word",
+			"Word",
+			"activity",
+			"flash-cards-interface",
+			"activity-splash",
+			"Matching",
+			"activity",
+			"prev-word"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"\"http://dev.speakagent.com/mockups/authors/static/",
+			"href=\"http://dev.speakagent.com/mockups/authors/",
+			" <li class=\"no-padding\"><a href=\"wordlist-copy.html\" class=\"btn btn-link\"><i class=\"fa fa-files-o\"></i> Copy</a></li>",
+			"<a href=\"wordlist-copy.html\" class=\"btn btn-link\"><i class=\"fa fa-files-o\"></i> Copy</a>",
+			"href=\"http://dev.speakagent.com/mockups/authors/",
+			"=\"http://dev.speakagent.com/mockups/authors/static/",
+			"href=\"http://dev.speakagent.com/mockups/authors/",
+			"=\"http://dev.speakagent.com/mockups/authors/static/",
+			"$accent-color",
+			"<a href=\"http://dev.speakagent.com/mockups/authors\">Home</a>",
+			"href=\"http://dev.speakagent.com/mockups/authors/settings",
+			"<a href=\"http://dev.speakagent.com/mockups/authors/groups\">",
+			"<a href=\"http://dev.speakagent.com/mockups/authors/classes\">",
+			"<a href=\"http://dev.speakagent.com/mockups/authors/activities\">",
+			"<a href=\"http://dev.speakagent.com/mockups/authors/wordlists\">",
+			"",
+			"http://movingstories.rocketkoi.com",
+			"product",
+			"Source Sans Pro",
+			" sans-serif",
+			"'Source Sans Pro', sans-serif;",
+			"				<li><a href=\"#\"><i class=\"fa fa-link\"></i> Post Link</a></li>\n				<li><a href=\"#\"><i class=\"fa fa-retweet\"></i> Reblog</a></li>\n				<li><a href=\"#\"><i class=\"fa fa-heart\"></i> Like</a></li>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "wordlists/wordlists-problem-words_no-data-form.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6988,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3967,
+								3967
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 789.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wordlists/wordlists-no-data_all-done.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2741,
+								2741
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 567.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8266,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4915,
+								4915
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1291.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "static/scss/styles.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9606,
+								9606
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9509.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "static/scss/_bootstrap-variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 28290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "ls-authors.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/git/lingshare/speakagent-io/speakagent.github.io/config.rb"
+			],
+			[
+				"w",
+				"/Applications/MAMP/htdocs/trg/wp-content/themes/trg/functions.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 222.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

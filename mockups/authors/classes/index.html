@@ -13,7 +13,7 @@
             </div>
             <div id="navbar">
                 <form class="navbar-form navbar-left">
-                    <input type="text" class="form-control" placeholder="Search...">
+                    <input type="text" class="form-control form-primary" placeholder="Search...">
                 </form>
                 <ul class="nav navbar-nav navbar-right nav-secondary">
                     <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
@@ -31,7 +31,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid c-fluid-main">
         <div class="col-sm-12 col-md-12 l-main">
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
@@ -39,15 +39,67 @@
                       <li><a href="/">Home</a></li>
                       <li class="active">Classes</li>
                     </ol>
-                    <h1 class="page-header">Classes</h1>
+                    <div class="clearfix page-header">
+                        <h1 class="page-header pull-left">Classes</h1>
+                        <a href="add-class.html" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Add New Class</a>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-8 col-md-8">
-                   Classes stuff goes over here
-                </div>
-                <div class="col-sm-4 col-md-4">
-                    Sidebar
+                <div class="col-sm-12 col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <table class="o-items-list cl-items table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="o-favorite"><i class="fa fa-sort"></i></th>
+
+                                    <th class="o-status cl-status"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-title cl-title"><span class="pull-left">Class</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-amount cl-amount-learners"><span class="pull-left"># of Learners</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-language cl-language"><span class="pull-left">Language</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-institution cl-institution"><span class="pull-left">Institution</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="o-item cl-item item-status-public">
+                                    <td class="o-favorite favorite-y"><i class="fa fa-star-o"></i></td>
+
+                                    <td class="o-status cl-status with-label"><span class="label label-success">Public</span></td>
+                                    <td class="o-title cl-title"><a href="class-sample.html">Morning - Fall 2015</a></td>
+                                    <td class="o-date cl-date-created">22</td>
+                                    <td class="o-language cl-language">Spanish</td>
+                                    <td class="o-institution cl-institution">University of Maryland College Park</td>
+                                </tr>
+                                <tr class="o-tiem cl-item item-status-draft">
+                                    <td class="o-favorite favorite-y"><i class="fa fa-star"></i></td>
+                                    <td class="o-status cl-status with-label"><span class="label label-warning">Draft</span></td>
+                                    <td class="o-title cl-title"><a href="class-sample.html">Third Period - Spring 2015</a></td>
+                                    <td class="o-amount cl-amount-learners">20</td>
+                                    <td class="o-language cl-language">Mandarin Chinese</td>
+                                    <td class="o-instituion cl-institution">Snow Hill High School</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class="c-pagination">
+                      <ul class="pagination">
+                        <li class="disabled">
+                          <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                          <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
                 </div>
             </div>
         </div>

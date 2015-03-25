@@ -8841,7 +8841,7 @@ tbody.collapse.in {
 .pagination > li > span:hover,
 .pagination > li > span:focus {
   color: #00aeb1;
-  background-color: #bfbfbf;
+  background-color: #cceced;
   border-color: #dddddd;
 }
 /* line 51, ../scss/bootstrap/_pagination.scss */
@@ -8863,7 +8863,7 @@ tbody.collapse.in {
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
   color: #777777;
-  background-color: white;
+  background-color: #e6e6e6;
   border-color: #dddddd;
   cursor: not-allowed;
 }
@@ -8933,13 +8933,13 @@ tbody.collapse.in {
   padding: 5px 14px;
   background-color: white;
   border: 1px solid #dddddd;
-  border-radius: 15px;
+  border-radius: 0;
 }
 /* line 23, ../scss/bootstrap/_pager.scss */
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #bfbfbf;
+  background-color: #cceced;
 }
 /* line 31, ../scss/bootstrap/_pager.scss */
 .pager .next > a,
@@ -9489,7 +9489,7 @@ a.thumbnail.active {
 
 /* line 46, ../scss/bootstrap/_list-group.scss */
 a.list-group-item {
-  color: #555555;
+  color: #009597;
 }
 /* line 49, ../scss/bootstrap/_list-group.scss */
 a.list-group-item .list-group-item-heading {
@@ -9498,8 +9498,8 @@ a.list-group-item .list-group-item-heading {
 /* line 54, ../scss/bootstrap/_list-group.scss */
 a.list-group-item:hover, a.list-group-item:focus {
   text-decoration: none;
-  color: #555555;
-  background-color: whitesmoke;
+  color: #009597;
+  background-color: #cceced;
 }
 
 /* line 64, ../scss/bootstrap/_list-group.scss */
@@ -11261,43 +11261,45 @@ a {
   transition: color 0.2s, background-color 0.2s;
 }
 
-/* line 38, ../scss/styles.scss */
+/* Global Containers */
+/* line 40, ../scss/styles.scss */
 .c-img img {
   max-width: 100%;
 }
 
-/* line 42, ../scss/styles.scss */
+/* line 44, ../scss/styles.scss */
 .c-fluid-main {
   padding: 0;
 }
 
-/* line 45, ../scss/styles.scss */
-.no-shadow {
-  box-shadow: none !important;
-}
-
-/* line 48, ../scss/styles.scss */
-.no-margin {
-  margin: 0 !important;
-}
-
-/* line 51, ../scss/styles.scss */
-.no-padding {
-  padding: 0 !important;
-}
-
-/* line 54, ../scss/styles.scss */
-.no-bottom-border {
-  border-bottom-width: 0;
-}
-
-/* line 57, ../scss/styles.scss */
+/* line 47, ../scss/styles.scss */
 .c-buttons {
   margin-top: 20px;
 }
 
-/* Sticky Footer Code */
+/* Miscellaneous Attribute Controls */
+/* line 53, ../scss/styles.scss */
+.no-shadow {
+  box-shadow: none !important;
+}
+
+/* line 56, ../scss/styles.scss */
+.no-margin {
+  margin: 0 !important;
+}
+
+/* line 59, ../scss/styles.scss */
+.no-padding {
+  padding: 0 !important;
+}
+
 /* line 62, ../scss/styles.scss */
+.no-bottom-border {
+  border-bottom-width: 0;
+}
+
+/* Sticky Footer Code */
+/* line 69, ../scss/styles.scss */
 .parent-container-main {
   min-height: 100%;
   height: auto;
@@ -11305,60 +11307,55 @@ a {
   padding: 0 0 40px;
 }
 
-/* line 68, ../scss/styles.scss */
+/* line 75, ../scss/styles.scss */
 .footer-main {
   height: 40px;
 }
 
 /* Headers */
-/* line 74, ../scss/styles.scss */
+/* line 81, ../scss/styles.scss */
 .page-header {
   border-bottom: 0;
   margin: 0;
   padding: 0 0 8px 0;
 }
 
-/* line 79, ../scss/styles.scss */
+/* line 86, ../scss/styles.scss */
 h1, .h1 {
   font-size: 28px;
   font-weight: 900;
 }
-/* line 82, ../scss/styles.scss */
+/* line 89, ../scss/styles.scss */
 h1 small, .h1 small {
   text-shadow: none;
 }
 
-/* line 86, ../scss/styles.scss */
+/* line 93, ../scss/styles.scss */
 h5 {
   font-weight: 700;
 }
 
-/* line 89, ../scss/styles.scss */
-img.img-thumbnail {
-  border-radius: 0;
-}
-
 /* Used Primarily on Process areas like adding a new wordlist */
-/* line 94, ../scss/styles.scss */
+/* line 98, ../scss/styles.scss */
 .special-header {
   margin: 0 -35px 20px -35px;
   padding: 24px 20px 8px 22px;
 }
-/* line 97, ../scss/styles.scss */
+/* line 101, ../scss/styles.scss */
 .special-header h1 {
   font-size: 1.3em;
 }
 
 /* Panels */
-/* line 103, ../scss/styles.scss */
+/* line 107, ../scss/styles.scss */
 .panel {
   border-radius: 0;
 }
-/* line 105, ../scss/styles.scss */
+/* line 109, ../scss/styles.scss */
 .panel .panel-heading {
   font-weight: 900;
 }
-/* line 107, ../scss/styles.scss */
+/* line 111, ../scss/styles.scss */
 .panel .panel-heading h3 {
   font-size: 1.2em;
   font-weight: 900;
@@ -11368,16 +11365,16 @@ img.img-thumbnail {
 }
 
 /* List Groups */
-/* line 119, ../scss/styles.scss */
+/* line 123, ../scss/styles.scss */
 .list-group .list-group-item:last-child {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
-/* line 122, ../scss/styles.scss */
+/* line 126, ../scss/styles.scss */
 .list-group .list-inline {
   margin-bottom: 0;
 }
-/* line 126, ../scss/styles.scss */
+/* line 130, ../scss/styles.scss */
 .list-group .with-label small {
   color: #bfbfbf;
   font-size: 80%;
@@ -11385,16 +11382,22 @@ img.img-thumbnail {
   font-style: italic;
   display: block;
 }
+/* line 142, ../scss/styles.scss */
+.list-group .list-group-title h3 {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 6px 0 0 0;
+}
 
 /* Animation */
-/* line 138, ../scss/styles.scss */
+/* line 152, ../scss/styles.scss */
 .animation-center {
   text-align: center;
   margin: 0 auto;
 }
 
 /* Buttons */
-/* line 145, ../scss/styles.scss */
+/* line 159, ../scss/styles.scss */
 .btn {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 1px 0px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 1px 0px;
@@ -11402,40 +11405,41 @@ img.img-thumbnail {
   border-width: 2px;
   border-radius: 24px;
 }
-/* line 150, ../scss/styles.scss */
+/* line 164, ../scss/styles.scss */
 .btn:focus, .btn:active {
   box-shadow: none;
   top: 2px;
 }
-/* line 154, ../scss/styles.scss */
+/* line 168, ../scss/styles.scss */
 .btn.btn-with-icon {
   padding-bottom: 4px;
 }
-/* line 156, ../scss/styles.scss */
+/* line 170, ../scss/styles.scss */
 .btn.btn-with-icon i {
   font-size: 120%;
 }
-/* line 160, ../scss/styles.scss */
+/* line 174, ../scss/styles.scss */
 .btn.btn-link {
   text-decoration: none;
   border: none;
   box-shadow: none;
 }
-/* line 165, ../scss/styles.scss */
+/* line 179, ../scss/styles.scss */
 .btn.btn-delete {
   color: #d0021b;
 }
-/* line 167, ../scss/styles.scss */
+/* line 181, ../scss/styles.scss */
 .btn.btn-delete:hover, .btn.btn-delete:focus {
   color: #fd223c;
 }
 
 /* Forms */
-/* line 177, ../scss/styles.scss */
+/* line 191, ../scss/styles.scss */
 input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="url"] {
+  background-color: transparent;
   border: none;
   border-radius: 0;
   border-bottom: 1px solid #bfbfbf;
@@ -11443,7 +11447,7 @@ input[type="url"] {
   padding: 0;
 }
 
-/* line 187, ../scss/styles.scss */
+/* line 202, ../scss/styles.scss */
 textarea.form-control {
   border: 1px solid #bfbfbf;
   border-radius: 0;
@@ -11451,7 +11455,7 @@ textarea.form-control {
   min-height: 100px;
 }
 
-/* line 194, ../scss/styles.scss */
+/* line 209, ../scss/styles.scss */
 .form-control.form-primary {
   border: 0;
   border-radius: 24px;
@@ -11460,20 +11464,20 @@ textarea.form-control {
   box-shadow: rgba(34, 9, 9, 0.15) 0px 2px 1px;
   padding: 6px 12px;
 }
-/* line 201, ../scss/styles.scss */
+/* line 216, ../scss/styles.scss */
 .form-control:focus {
   box-shadow: none;
   outline: none;
 }
 
-/* line 206, ../scss/styles.scss */
+/* line 221, ../scss/styles.scss */
 .flag-optional {
   font-weight: 300;
   font-style: italic;
   text-transform: capitalize;
 }
 
-/* line 211, ../scss/styles.scss */
+/* line 226, ../scss/styles.scss */
 .form-label {
   max-width: 100%;
   margin-bottom: 5px;
@@ -11481,33 +11485,43 @@ textarea.form-control {
   font-size: 100%;
 }
 
-/* line 220, ../scss/styles.scss */
+/* line 235, ../scss/styles.scss */
 form ul li {
   margin-bottom: 8px;
 }
 
+/* line 243, ../scss/styles.scss */
+.form-group.inline-checkboxes label {
+  margin-right: 8px;
+}
+
 /* Lists */
-/* line 230, ../scss/styles.scss */
+/* line 253, ../scss/styles.scss */
 ul.extra-spacing li, ol.extra-spacing li {
   margin-bottom: 4px;
 }
-/* line 232, ../scss/styles.scss */
+/* line 255, ../scss/styles.scss */
 ul.extra-spacing li:last-child, ol.extra-spacing li:last-child {
   margin-bottom: 0;
 }
 
+/* line 262, ../scss/styles.scss */
+a.list-group-item {
+  cursor: pointer;
+}
+
 /* Data Points */
-/* line 242, ../scss/styles.scss */
+/* line 269, ../scss/styles.scss */
 .data-points {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 245, ../scss/styles.scss */
+/* line 272, ../scss/styles.scss */
 .data-points dt {
   font-weight: 400;
   margin-bottom: 0;
 }
-/* line 249, ../scss/styles.scss */
+/* line 276, ../scss/styles.scss */
 .data-points .data-value {
   color: #f8d338;
   text-shadow: rgba(34, 9, 9, 0.15) 0px 1px 1px;
@@ -11517,38 +11531,54 @@ ul.extra-spacing li:last-child, ol.extra-spacing li:last-child {
   margin-bottom: 8px;
 }
 
+/* Pagination */
+/* line 288, ../scss/styles.scss */
+ul.pagination {
+  border-radius: 0;
+}
+/* line 290, ../scss/styles.scss */
+ul.pagination a {
+  border-radius: 0 !important;
+}
+
+/* Images */
+/* line 297, ../scss/styles.scss */
+img.img-thumbnail {
+  border-radius: 0;
+}
+
 /*
     A. Main Navigation */
-/* line 262, ../scss/styles.scss */
+/* line 305, ../scss/styles.scss */
 .navbar {
   border-radius: 0;
 }
-/* line 264, ../scss/styles.scss */
+/* line 307, ../scss/styles.scss */
 .navbar .navbar-brand {
   padding: 4px 0 0 15px;
 }
-/* line 266, ../scss/styles.scss */
+/* line 309, ../scss/styles.scss */
 .navbar .navbar-brand img {
   width: 72px;
 }
-/* line 273, ../scss/styles.scss */
+/* line 316, ../scss/styles.scss */
 .navbar.nav-secondary li a:hover, .navbar.nav-secondary li a:focus {
   background-color: #fff;
 }
-/* line 278, ../scss/styles.scss */
+/* line 321, ../scss/styles.scss */
 .navbar.nav-secondary li.active a {
   background-color: #fff;
 }
-/* line 285, ../scss/styles.scss */
+/* line 328, ../scss/styles.scss */
 .navbar .nav-error a {
   color: #d0021b;
 }
-/* line 287, ../scss/styles.scss */
+/* line 330, ../scss/styles.scss */
 .navbar .nav-error a:hover, .navbar .nav-error a:focus {
   color: #f80220;
 }
 
-/* line 295, ../scss/styles.scss */
+/* line 338, ../scss/styles.scss */
 .navbar-static-top {
   border: 0;
   margin-bottom: 0;
@@ -11556,48 +11586,42 @@ ul.extra-spacing li:last-child, ol.extra-spacing li:last-child {
   box-shadow: rgba(34, 9, 9, 0.15) 0px 2px 1px;
   font-weight: 700;
 }
-/* line 300, ../scss/styles.scss */
+/* line 343, ../scss/styles.scss */
 .navbar-static-top li a {
   padding-right: 10px;
   padding-left: 10px;
 }
 
-/* line 307, ../scss/styles.scss */
+/* line 351, ../scss/styles.scss */
 .navbar-nav i {
   font-size: 1.5em;
 }
-/* line 310, ../scss/styles.scss */
+/* line 354, ../scss/styles.scss */
 .navbar-nav a {
   text-shadow: rgba(34, 9, 9, 0.15) 0px 1px 1px;
 }
-
-/*
-    A.1.0 Secondary Navigation */
-/* line 319, ../scss/styles.scss */
+/* line 357, ../scss/styles.scss */
 .navbar-nav.nav-secondary {
   background-color: #6ecacb;
 }
-/* line 323, ../scss/styles.scss */
+/* line 361, ../scss/styles.scss */
 .navbar-nav.nav-secondary li a:hover {
   color: #dff3f3;
 }
 
 /*
-    B. Forms
-*/
-/*
     C. Content Panels
 */
-/* line 341, ../scss/styles.scss */
+/* line 373, ../scss/styles.scss */
 .panel {
   -webkit-box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
   box-shadow: rgba(34, 9, 9, 0.1) 0px 2px 1px;
 }
-/* line 346, ../scss/styles.scss */
+/* line 378, ../scss/styles.scss */
 .panel .panel-heading .nav-pills a:hover, .panel .panel-heading .nav-pills a:focus, .panel .panel-heading .nav-pills a:active {
   background-color: #fff;
 }
-/* line 355, ../scss/styles.scss */
+/* line 387, ../scss/styles.scss */
 .panel .panel-body p:last-child,
 .panel .panel-body .list-group:last-child,
 .panel .panel-body ul:last-child {
@@ -11608,88 +11632,146 @@ ul.extra-spacing li:last-child, ol.extra-spacing li:last-child {
 /*
     D. Application Footer
 */
-/* line 370, ../scss/styles.scss */
+/* line 402, ../scss/styles.scss */
 .footer-main {
   font-size: 90%;
   text-align: right;
 }
 
 /*
-    B. Main Content Area
+   Main Content Area
 */
-/* line 380, ../scss/styles.scss */
+/*
+    0.0 General
+    ====================
+    */
+/* line 418, ../scss/styles.scss */
 .l-main {
   padding: 0 20px 20px 20px;
 }
-/* line 382, ../scss/styles.scss */
+/* line 420, ../scss/styles.scss */
 .l-main .breadcrumb {
   border-radius: 0;
   font-size: 90%;
   margin: 0 -20px 20px -20px;
   padding: 24px 20px 8px 22px;
 }
-/* line 388, ../scss/styles.scss */
+/* line 426, ../scss/styles.scss */
 .l-main.no-breadcrumb {
   padding-top: 32px;
+}
+
+/* line 431, ../scss/styles.scss */
+.item-emphasize {
+  font-weight: 700;
+}
+
+/*
+    Splash Screen
+*/
+/* line 439, ../scss/styles.scss */
+.splash {
+  text-align: center;
+}
+/* line 442, ../scss/styles.scss */
+.splash .splash-img img {
+  width: 75%;
+}
+
+/* Table of Items */
+/* line 453, ../scss/styles.scss */
+.o-items-list td {
+  vertical-align: middle !important;
+}
+/* line 456, ../scss/styles.scss */
+.o-items-list .o-status {
+  width: 80px;
+}
+/* line 459, ../scss/styles.scss */
+.o-items-list .o-title {
+  font-weight: 700;
+}
+/* line 462, ../scss/styles.scss */
+.o-items-list .o-symbol {
+  max-width: 80px;
+  width: 80px;
+  text-align: center;
+}
+/* line 466, ../scss/styles.scss */
+.o-items-list .o-symbol img {
+  max-width: 50px;
+  width: 100%;
+}
+
+/* Group of Data Panels */
+/* line 486, ../scss/styles.scss */
+.o-dataitems .o-dataitem {
+  margin-bottom: 0;
+  border-bottom-width: 0;
+}
+/* line 489, ../scss/styles.scss */
+.o-dataitems .o-dataitem:last-child {
+  border-bottom-width: 1px;
+  margin-bottom: 20px;
 }
 
 /*
     1.0 Settings and User Profile
     ====================
     */
-/* line 399, ../scss/styles.scss */
+/* line 504, ../scss/styles.scss */
 .happy-scale .radio-inline {
   font-size: 1.2em;
 }
-/* line 402, ../scss/styles.scss */
+/* line 507, ../scss/styles.scss */
 .happy-scale .value-1 {
   color: #d0021b;
 }
-/* line 405, ../scss/styles.scss */
+/* line 510, ../scss/styles.scss */
 .happy-scale .value-2 {
   color: #840111;
 }
-/* line 408, ../scss/styles.scss */
+/* line 513, ../scss/styles.scss */
 .happy-scale .value-1, .happy-scale .value-5 {
   font-weight: 700;
 }
-/* line 411, ../scss/styles.scss */
+/* line 516, ../scss/styles.scss */
 .happy-scale .value-4 {
   color: #569117;
 }
-/* line 414, ../scss/styles.scss */
+/* line 519, ../scss/styles.scss */
 .happy-scale .value-5 {
   color: #7ed321;
 }
 
-/* line 419, ../scss/styles.scss */
+/* line 525, ../scss/styles.scss */
 .user-profile .page-header {
   margin-bottom: 12px;
 }
 
-/* line 425, ../scss/styles.scss */
+/* line 531, ../scss/styles.scss */
 .user-details .user-avatar {
   width: 100%;
   text-align: center;
   display: block;
 }
-/* line 429, ../scss/styles.scss */
+/* line 535, ../scss/styles.scss */
 .user-details .user-avatar img {
   width: 50%;
 }
-/* line 433, ../scss/styles.scss */
+/* line 539, ../scss/styles.scss */
 .user-details .user-fullname {
   font-size: 1.2em;
   font-weight: 900;
   text-align: center;
 }
 
-/* line 440, ../scss/styles.scss */
+/* line 546, ../scss/styles.scss */
 .data-contributions {
   text-align: center;
 }
 
-/* line 445, ../scss/styles.scss */
+/* line 551, ../scss/styles.scss */
 .user-recent-activity a {
   font-weight: 900;
 }
@@ -11698,91 +11780,57 @@ ul.extra-spacing li:last-child, ol.extra-spacing li:last-child {
     2.0 Wordlists
     ====================
     */
-/*
-    C.1 Wordlists Landing Page
-*/
-/* line 463, ../scss/styles.scss */
-.wl-item td {
-  vertical-align: middle !important;
-}
-/* line 466, ../scss/styles.scss */
-.wl-item .wl-title,
-.wl-item .wl-lexeme-title {
-  font-weight: 700;
-}
-/* line 470, ../scss/styles.scss */
-.wl-item .wl-symbol,
-.wl-item .wl-lexeme-symbol {
-  max-width: 80px;
-  text-align: center;
-}
-/* line 474, ../scss/styles.scss */
-.wl-item .wl-symbol img,
-.wl-item .wl-lexeme-symbol img {
-  max-width: 50px;
+/* line 564, ../scss/styles.scss */
+h4.wl-lexeme-word-sense {
+  margin: 0 0 20px 0;
 }
 
-/*
-    C.2 Wordlist Page
-*/
-/*
-    1. List of Items
-*/
-/* line 488, ../scss/styles.scss */
-.wl-dataitems .wl-dataitem {
-  margin-bottom: 0;
-  border-bottom-width: 0;
-}
-/* line 491, ../scss/styles.scss */
-.wl-dataitems .wl-dataitem:last-child {
-  border-bottom-width: 1px;
-  margin-bottom: 20px;
-}
-/* line 496, ../scss/styles.scss */
-.wl-dataitems .wl-dataitem .wl-item .wl-lexeme-title {
-  font-weight: 700;
-}
-/* line 500, ../scss/styles.scss */
-.wl-dataitems .wl-dataitem .wl-item .wl-lexeme-symbol img {
-  max-width: 50px;
-  width: 50px;
-}
-
-/* line 512, ../scss/styles.scss */
+/* line 571, ../scss/styles.scss */
 .wl-photos-videos ul li img.img-thumbnail {
   max-width: 160px;
 }
-/* line 516, ../scss/styles.scss */
+/* line 575, ../scss/styles.scss */
 .wl-photos-videos ul .media-controls {
   text-align: center;
 }
 
-/* line 522, ../scss/styles.scss */
+/* line 581, ../scss/styles.scss */
 .wl-symbol img {
   max-width: 100%;
 }
-/* line 525, ../scss/styles.scss */
+/* line 584, ../scss/styles.scss */
 .wl-symbol.wl-list-symbol, .wl-symbol.wl-lexeme-symbol {
   text-align: center;
   margin: 0 auto;
 }
-/* line 527, ../scss/styles.scss */
+/* line 586, ../scss/styles.scss */
 .wl-symbol.wl-list-symbol img, .wl-symbol.wl-lexeme-symbol img {
   max-width: 200px;
 }
 
-/* line 537, ../scss/styles.scss */
-.wl-lexeme-dataitem {
-  border-bottom-width: 0;
-  margin-bottom: 0;
-}
-/* line 540, ../scss/styles.scss */
-.wl-lexeme-dataitem:last-child {
-  border-bottom-width: 1px;
-  margin-bottom: 20px;
-}
-
-/* line 548, ../scss/styles.scss */
+/* line 595, ../scss/styles.scss */
 .wl-new-lexeme-entry input.input-lexeme {
   width: 80%;
+}
+
+/* line 601, ../scss/styles.scss */
+.c-wordlist-add .lexeme-title {
+  margin-top: 4px;
+}
+
+/*
+    Problem Words
+*/
+/* line 609, ../scss/styles.scss */
+.words-for-review .word-symbol {
+  width: 30px;
+  margin-right: 10px;
+}
+/* line 612, ../scss/styles.scss */
+.words-for-review .word-symbol img {
+  max-width: 30px;
+}
+/* line 616, ../scss/styles.scss */
+.words-for-review .word-sense {
+  line-height: 2.1em;
 }

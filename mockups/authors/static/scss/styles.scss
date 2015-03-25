@@ -34,6 +34,8 @@ body {
 a {
     @include transition(color 0.2s, background-color 0.2s);
 }
+
+/* Global Containers */
 .c-img {
     img {
         max-width: 100%;
@@ -42,6 +44,12 @@ a {
 .c-fluid-main {
     padding: 0;
 }
+.c-buttons {
+    margin-top: 20px;
+}
+
+/* Miscellaneous Attribute Controls */
+
 .no-shadow {
     box-shadow: none !important;
 }
@@ -54,20 +62,19 @@ a {
 .no-bottom-border {
     border-bottom-width: 0;
 }
-.c-buttons {
-    margin-top: 20px;
-}
+
 
 /* Sticky Footer Code */
+
 .parent-container-main {
     min-height: 100%;
     height: auto;
     margin: 0 auto -40px;
     padding: 0 0 40px;
 }
-.footer-main {
-    height: 40px;
-}
+    .footer-main {
+        height: 40px;
+    }
 
 /* Headers */
 
@@ -85,9 +92,6 @@ h1, .h1 {
 }
 h5 {
     font-weight: 700;
-}
-img.img-thumbnail {
-    border-radius: 0;
 }
 
 /* Used Primarily on Process areas like adding a new wordlist */
@@ -129,6 +133,16 @@ img.img-thumbnail {
             font-weight: 300;
             font-style: italic;
             display: block;
+        }
+    }
+    .list-group-item {
+
+    }
+    .list-group-title {
+        h3 {
+            font-size: 1em;
+            font-weight: 400;
+            margin: 6px 0 0 0;
         }
     }
 }
@@ -178,6 +192,7 @@ input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="url"] {
+    background-color: transparent;
     border: none;
     border-radius: 0;
     border-bottom: 1px solid $gray-lighter;
@@ -223,6 +238,14 @@ form {
     }
 }
 
+.form-group {
+    &.inline-checkboxes {
+        label {
+            margin-right: 8px;
+        }
+    }
+}
+
 /* Lists */
 
 ul, ol {
@@ -234,6 +257,10 @@ ul, ol {
             }
         }
     }
+}
+
+a.list-group-item {
+    cursor: pointer;
 }
 
 
@@ -256,9 +283,25 @@ ul, ol {
     }
 }
 
+/* Pagination */
+
+ul.pagination {
+    border-radius: 0;
+    a {
+        border-radius: 0 !important;
+    }
+}
+
+/* Images */
+
+img.img-thumbnail {
+    border-radius: 0;
+}
+
 
 /*
     A. Main Navigation */
+
 .navbar {
     border-radius: 0;
     .navbar-brand {
@@ -303,6 +346,7 @@ ul, ol {
     }
 }
 
+
 .navbar-nav {
     i {
         font-size: 1.5em;
@@ -310,12 +354,6 @@ ul, ol {
     a {
         text-shadow: rgba($shadow-primary, 0.15) 0px 1px 1px;
     }
-}
-
-/*
-    A.1.0 Secondary Navigation */
-
-.navbar-nav {
     &.nav-secondary {
         background-color: $brand-primary;
         li {
@@ -327,12 +365,6 @@ ul, ol {
         }
     }
 }
-
-
-/*
-    B. Forms
-*/
-
 
 
 /*
@@ -374,8 +406,14 @@ ul, ol {
 
 
 /*
-    B. Main Content Area
+   Main Content Area
 */
+
+
+/*
+    0.0 General
+    ====================
+    */
 
 .l-main {
   padding: 0 20px 20px 20px;
@@ -389,6 +427,73 @@ ul, ol {
     padding-top: 32px;
   }
 }
+
+.item-emphasize {
+    font-weight: 700;
+}
+
+/*
+    Splash Screen
+*/
+
+.splash {
+    text-align: center;
+    .splash-img {
+        img {
+            width: 75%;
+        }
+    }
+}
+
+
+
+/* Table of Items */
+
+.o-items-list {
+    td {
+        vertical-align: middle !important;
+    }
+    .o-status {
+        width: 80px;
+    }
+    .o-title {
+        font-weight: 700;
+    }
+    .o-symbol {
+        max-width: 80px;
+        width: 80px;
+        text-align: center;
+        img {
+            max-width: $img-listitem-width;
+            width: 100%;
+        }
+    }
+    .o-amount {
+
+    }
+    .o-language {
+
+    }
+    .o-institution {
+
+    }
+}
+
+
+/* Group of Data Panels */
+
+.o-dataitems {
+    .o-dataitem {
+        margin-bottom: 0;
+        border-bottom-width: 0;
+        &:last-child {
+            border-bottom-width: 1px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
 
 /*
     1.0 Settings and User Profile
@@ -456,55 +561,8 @@ ul, ol {
     */
 
 
-/*
-    C.1 Wordlists Landing Page
-*/
-
-.wl-item {
-    td {
-        vertical-align: middle !important;
-    }
-    .wl-title,
-    .wl-lexeme-title {
-        font-weight: 700;
-    }
-    .wl-symbol,
-    .wl-lexeme-symbol {
-        max-width: 80px;
-        text-align: center;
-        img {
-            max-width: $img-listitem-width;
-        }
-    }
-}
-
-/*
-    C.2 Wordlist Page
-*/
-
-/*
-    1. List of Items
-*/
-.wl-dataitems {
-    .wl-dataitem {
-        margin-bottom: 0;
-        border-bottom-width: 0;
-        &:last-child {
-            border-bottom-width: 1px;
-            margin-bottom: 20px;
-        }
-        .wl-item {
-            .wl-lexeme-title {
-                font-weight: 700;
-            }
-            .wl-lexeme-symbol {
-                img {
-                    max-width: $img-listitem-width;
-                    width: $img-listitem-width;
-                }
-            }
-        }
-    }
+h4.wl-lexeme-word-sense {
+    margin: 0 0 20px 0;
 }
 
 .wl-photos-videos {
@@ -526,27 +584,37 @@ ul, ol {
     &.wl-list-symbol,
     &.wl-lexeme-symbol {
         img {
-        max-width: 200px;
+            max-width: 200px;
         }
         text-align: center;
         margin: 0 auto;
     }
 }
 
-
-
-.wl-lexeme-dataitem {
-    border-bottom-width: 0;
-    margin-bottom: 0;
-    &:last-child {
-        border-bottom-width: 1px;
-        margin-bottom: 20px;
-    }
-}
-
-
 .wl-new-lexeme-entry {
     input.input-lexeme {
         width: 80%;
     }
 }
+
+.c-wordlist-add {
+    .lexeme-title {
+        margin-top: 4px;
+    }
+}
+/*
+    Problem Words
+*/
+.words-for-review {
+    .word-symbol {
+        width: 30px;
+        margin-right: 10px;
+        img {
+            max-width: 30px;
+        }
+    }
+    .word-sense {
+        line-height: 2.1em;
+    }
+}
+
