@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="static/css/styles.css" rel="stylesheet" type="text/css" />
   <title>Your Dashboard | Speak Agent</title>
 </head>
 <body>
@@ -16,13 +16,13 @@
                     <input type="text" class="form-control form-primary" placeholder="Search...">
                 </form>
                 <ul class="nav navbar-nav navbar-right nav-secondary">
-                    <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
-                    <li class="n-settings"><a href="/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
+                    <li class="n-user"><a href="settings/user-profile.html">Username</a></li>
+                    <li class="n-settings"><a href="settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
                     <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
                     <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="n-home"><a href="/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
+                    <li class="n-home"><a href="/authors"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
                     <li class="n-wordlists"><a href="wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
                     <li class="n-activities"><a href="activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
                     <li class="n-learners"><a href="classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
                     <ol class="breadcrumb">
-                      <li class="active"><a href="/">Home</a></li>
+                      <li class="active"><a href="/authors">Home</a></li>
                     </ol>
                 </div>
             </div>
@@ -74,8 +74,23 @@
                             <li><a href="wordlists/wordlists-add_new.html">Add New</a></li>
                             <li><a href="wordlists/wordlists-lexeme_entry_form.html">Lexeme Entry Form</a></li>
                             <li><a href="wordlists/wordlists-processing.html">Processing Screen</a></li>
-                            <li><a href="wordlists/wordlists-problem-words.html">Problem Words (STUB)</a></li>
+                            <li><a href="wordlists/wordlists-problem-words.html">Problem Words</a></li>
+                            <li><a href="wordlists/wordlists-problem-words_all-done.html">Problem Words - All Done!</a></li>
+                            <li><a href="wordlists/wordlists-problem-words_no-data.html">Problem Words - No Data</a></li>
+                            <li><a href="wordlists/wordlists-problem-words_no-data-form.html">Problem Words - No Data with Form</a></li>
+                            <li><a href="http://127.0.0.1:9000/wordlists/wordlists-no-data_all-done.html">Problem Words - No Data - All Done!</a></li>
                         </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Copy Wordlist</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li><a href="wordlists/wordlist-copy.html">Copy Wordlist Form</a></li>
+                                <li><a href="wordlists/wordlist-copy-new.html">Wordlist Sample - Copy</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="panel panel-default">
@@ -87,12 +102,19 @@
                             <li><a href="wordlists/word-add_new-from-wordlist.html">Add New - From Wordlist</a></li>
                             <li><a href="wordlists/word-no-data.html">Add New Word - No Data List</a></li>
                             <li><a href="wordlists/word-add_new-blank.html">Add New Word - No Data Entry</a></li>
-                            <li><a href="wordlists/word-problem-words.html">Problem Words (STUB)</a></li>
+                            <li><a href="wordlists/word-problem-words.html">Problem Words</a></li>
                             <li><a href="wordlists/wordlist-sample-newwords.html">Sample Word List with New Words</a></li>
                         </ul>
                         </div>
                     </div>
                     <h2>User Specific Screens</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                        <ul>
+                            <li><a href="settings/user-profile.html">User Profile</a></li>
+                        </ul>
+                        </div>
+                    </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">Settings</h3>
@@ -104,6 +126,29 @@
                             <li><a href="settings/account-settings.html">Account Settings</a></li>
                             <li><a href="settings/delete-account.html">Delete Account</a></li>
                             <li><a href="settings/invitations.html">Invitations (STUB)</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <h2>Classes</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                        <ul>
+                            <li><a href="classes/index.html">Landing Page</a></li>
+                            <li><a href="classes/class-sample.html">Sample Class</a></li>
+                            <li><a href="classes/student-sample.html">Sample Student (STUB)</a></li>
+                            <li><a href="classes/class-sample.html">Send Class A Message (STUB)</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Add a New Class</h3>
+                        </div>
+                        <div class="panel-body">
+                        <ul>
+                            <li><a href="classes/add-class.html">Add Class Details (STUB)</a></li>
+                            <li><a href="classes/add-students.html">Add Students (STUB)</a></li>
+                            <li><a href="classes/copy-class.html">Copy a Class (STUB)</a></li>
                         </ul>
                         </div>
                     </div>

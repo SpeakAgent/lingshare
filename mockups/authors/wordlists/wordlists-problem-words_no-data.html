@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link href="/authors/static/css/styles.css" rel="stylesheet" type="text/css" />
-  <title>Add New Word | Speak Agent</title>
+  <title>Create a Wordlist | Speak Agent</title>
 </head>
 <body class="alt">
 <div class="container-fluid parent-container-main">
@@ -36,47 +36,50 @@
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
                     <div class="special-header clearfix">
-                        <h1 class="page-header pull-left">Create A New Wordlist</h1>
+                        <h1 class="page-header pull-left">Create a Wordlist</h1>
                         <div class="flag-process pull-right">
-                            Step <em>1</em> of 3
+                            Step <em>5</em> of 3
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row row-centered c-wordlist c-wordlist-add">
-                <div class="col-sm-12 col-md-4 col-md-offset-4">
-                    <h2 class="page-header">Let's get started!</h2>
-                    <fieldset>
-                        <div class="form-group">
-                            <label for="wl-new-title">Add a Title</label>
-                            <input type="text" class="form-control" id="wl-new-title" placeholder="Enter the title of your wordlist">
-                        </div>
-                        <div class="form-group">
-                            <label for="wl-new-base_language">Select your Base Language</label>
-                            <select class="form-control" id="wl-new-base_language">
-                                <option>English</option>
-                                <option>Spanish</option>
-                                <option>French</option>
-                                <option>Chinese</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="wl-new-trans_language">Select your Target Language</label>
-                            <select class="form-control" id="wl-new-trans_language">
-                                <option>English</option>
-                                <option>Spanish</option>
-                                <option>French</option>
-                                <option>Chinese</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="wl-lexeme_numbers">How many words? <small class="flag-optional">Optional</small></label>
-                            <input type="number" class="form-control" placeholder="How many words are you going to enter?">
-                        </div>
-                        <div class="form-group f-lexeme f-lexeme-add-ons">
-                            <a href="wordlists-lexeme_entry_form.html" class="btn btn-primary btn-icon btn-i-next"><i class="fa fa-floppy-o"></i> Save and Proceed</a>
-                        </div>
-                    </fieldset>
+                <div class="col-sm-12 col-md-6 col-md-offset-3">
+                    <h2 class="page-header">Uh oh! We don't have some information!</h2>
+                    <p>We couldn't find <strong>{{Number of Words}}</strong> words in our database. We need your help filling out the information we need so that you and others can use these words.</p>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <ul class="list-inline no-margin clearfix">
+                                <li class="no-padding pull-left lexeme-title">{{Word As Entered}}</li>
+                                <li class="no-padding pull-right"><a href="wordlists-problem-words_no-data-form.html" class="btn btn-link"><i class="fa fa-pencil-square-o"></i> Add Info</a></li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item">
+                            <ul class="list-inline no-margin clearfix">
+                                <li class="no-padding pull-left lexeme-title">{{Word As Entered}}</li>
+                                <li class="no-padding pull-right"><a href="word-add_new-nodata.html" class="btn btn-link"><i class="fa fa-pencil-square-o"></i> Add Info</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <nav class="c-pagination">
+                      <ul class="pagination">
+                        <li class="disabled">
+                          <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li>
+                          <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <div class="form-group form-buttons clearfix">
+                        <a href="#" class="btn btn-link btn-warning no-padding">I'll do this later.</a>
+                    </div>
                 </div>
             </div>
         </div>

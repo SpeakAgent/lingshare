@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="/authors/static/css/styles.css" rel="stylesheet" type="text/css" />
+  <title>Class Sample . Classes | Speak Agent</title>
+</head>
+<body>
+<div class="container-fluid parent-container-main">
+    <nav class="navbar navbar-default navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/authors/"><img src="/authors/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+            </div>
+            <div id="navbar">
+                <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control form-primary" placeholder="Search...">
+                </form>
+                <ul class="nav navbar-nav navbar-right nav-secondary">
+                    <li class="n-user"><a href="/authors/settings/user-profile.html">Username</a></li>
+                    <li class="n-settings"><a href="/authors/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
+                    <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
+                    <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="n-home"><a href="/authors/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
+                    <li class="n-wordlists"><a href="/authors/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
+                    <li class="n-activities"><a href="/authors/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
+                    <li class="n-learners"><a href="/authors/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
+                    <li class="n-groups"><a href="/authors/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid c-fluid-main">
+        <div class="col-sm-12 col-md-12 l-main">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <ol class="breadcrumb">
+                      <li><a href="/authors/">Home</a></li>
+                      <li><a href="/authors/classes">Classes</a></li>
+                      <li class="active">Morning - Fall 2015</li>
+                    </ol>
+                    <h1 class="page-header pull-left">Morning - Fall 2015 <small><span class="label label-success">Public</span></small></h1>
+                    <ol class="list-inline pull-right">
+                        <li class="no-padding"><a href="#" class="btn btn-link btn-favorite not-favorite"><i class="fa fa-star-o"></i> Favorite</a></li>
+                        <li class="no-padding"><a href="class-copy.html" class="btn btn-link"><i class="fa fa-files-o"></i> Copy</a></li>
+                        <li class="no-padding"><a href="#" class="btn btn-delete btn-link"><i class="fa fa-trash"></i> Delete</a></li>
+                    </ol>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                    <ul class="wl-dates list-inline clearfix">
+                        <li>Date Updated: March 17, 2015</li>
+                        <li>Date Created: March 12, 2015</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 col-md-8">
+                    <div class="o-dataitems cl-dataitems">
+                        <div class="panel panel-default o-dataitem">
+                            <div class="panel-heading clearfix">
+                                <h3 class="pull-left">Class Details</h3>
+                                                                <div class="pull-right dataitem-controls">
+                                    <a href="#" class="btn btn-default"><i class="fa fa-pencil-square-o"></i> Edit Details</a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="list-unstyled">
+                                    <li>Subject: <strong>Spanish</strong></li>
+                                    <li>Institution Name: <strong>University of Maryland College Park</strong></li>
+                                    <li>Status: <strong>Public</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-default o-dataitem">
+                            <div class="panel-heading clearfix">
+                                <h3 class="pull-left">Students</h3>
+                                <div class="pull-right dataitem-controls">
+                                    <a href="send-message.html" class="btn btn-default"><i class="fa fa-envelope-o"></i> Send Message</a>
+                                    <a href="add-students.html" class="btn btn-default"><i class="fa fa-plus"></i> Add New Students</a>
+                                </div>
+                            </div>
+                            <table class="o-items-list class-students table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="o-title learner-name"><span class="pull-left">Name</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                        <th class="o-status learner-status th-empty"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                        <th class="o-controls learner-controls th-empty"></th>
+                                        <th class="o-delete learner-delete th-empty"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="o-item class-student">
+                                        <td class="o-title student-name"><a href="student-sample.html">{{Learner Last Name}}, {{Learner First Name}}</a></td>
+                                        <td class="o-status student-status">
+                                            <div class="label label-success">Status Flag</div>
+                                        </td>
+                                        <td class="o-controls student-controls">
+                                            <ul class="list-inline no-margin">
+                                                <li class="no-padding"><a href="student-sample.html" class="btn btn-link"><i class="fa fa-tachometer"></i> See Dashboard</a></li>
+                                            </ul>
+                                        </td>
+                                        <td class="o-delete student-delete">
+                                            <a href="#" class="btn btn-link btn-delete"><i class="fa fa-minus"></i> Remove</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4">
+                    <div class="o-dataitems">
+                        <div class="panel panel-default">
+                            <div class="panel-heading clearfix">
+                                <h3 class="pull-left">Assigned Activities</h3>
+                                <div class="pull-right dataitem-controls">
+                                    <a href="add-activity.html" class="btn btn-default"><i class="fa fa-plus"></i> Add Activity</a>
+                                </div>
+                            </div>
+                            <div class="list-group">
+                                <div class="list-group-item clearfix">
+                                    <div class="pull-left">
+                                        <a href="activity-class-sample.html">Activity Title</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-link btn-delete no-padding"><i class="fa fa-minus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item clearfix">
+                                    <div class="pull-left">
+                                        <a href="activity-class-sample.html">Activity Title</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-link btn-delete no-padding"><i class="fa fa-minus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item clearfix">
+                                    <div class="pull-left">
+                                        <a href="activity-class-sample.html">Activity Title</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-link btn-delete no-padding"><i class="fa fa-minus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid footer-main">
+    <nav class="nav-utility">
+        <ul class="list-inline">
+            <li><a href="#">About Speak Agent</a></li>
+            <li><a href="#">Site Policies</a></li>
+            <li><a href="#">Contact Support</a></li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

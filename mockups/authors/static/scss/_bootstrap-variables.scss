@@ -453,16 +453,16 @@ $navbar-inverse-link-hover-color: $brand-primary;
 // $pagination-bg:                        #fff
 // $pagination-border:                    #ddd
 
-// $pagination-hover-color:               $link-hover-color
-// $pagination-hover-bg:                  $gray-lighter
+$pagination-hover-color:               $link-hover-color;
+$pagination-hover-bg:                  lighten($brand-primary, 25%);
 // $pagination-hover-border:              #ddd
 
 // $pagination-active-color:              #fff
 // $pagination-active-bg:                 $brand-primary
 // $pagination-active-border:             $brand-primary
 
-// $pagination-disabled-color:            $gray-light
-// $pagination-disabled-bg:               #fff
+$pagination-disabled-color:            $gray-light;
+$pagination-disabled-bg:               lighten($gray-base, 90%);
 // $pagination-disabled-border:           #ddd
 
 //== Pager
@@ -471,7 +471,7 @@ $navbar-inverse-link-hover-color: $brand-primary;
 
 // $pager-bg:                             $pagination-bg
 // $pager-border:                         $pagination-border
-// $pager-border-radius:                  15px
+$pager-border-radius:                  0;
 
 // $pager-hover-bg:                       $pagination-hover-bg
 
@@ -667,7 +667,7 @@ $navbar-inverse-link-hover-color: $brand-primary;
 $list-group-border-radius: 0;
 
 //* Background color of single list items on hover
-// $list-group-hover-bg:           #f5f5f5
+$list-group-hover-bg:           lighten($brand-primary, 25%);
 //* Text color of active list items
 // $list-group-active-color:       $component-active-color
 //* Background color of active list items
@@ -684,7 +684,7 @@ $list-group-border-radius: 0;
 //* Text color for content within disabled list items
 // $list-group-disabled-text-color: $list-group-disabled-color
 
-// $list-group-link-color:         #555
+$list-group-link-color:         $brand-secondary;
 // $list-group-link-hover-color:   $list-group-link-color
 // $list-group-link-heading-color: #333
 

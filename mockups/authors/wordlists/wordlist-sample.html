@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="/authors/static/css/styles.css" rel="stylesheet" type="text/css" />
   <title>Wordlist Sample . Wordlists | Speak Agent</title>
 </head>
 <body>
@@ -9,24 +9,24 @@
     <nav class="navbar navbar-default navbar-inverse navbar-static-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/"><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+                <a class="navbar-brand" href="/authors/"><img src="/authors/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
             </div>
             <div id="navbar">
                 <form class="navbar-form navbar-left">
                     <input type="text" class="form-control form-primary" placeholder="Search...">
                 </form>
                 <ul class="nav navbar-nav navbar-right nav-secondary">
-                    <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
-                    <li class="n-settings"><a href="/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
+                    <li class="n-user"><a href="/authors/settings/user-profile.html">Username</a></li>
+                    <li class="n-settings"><a href="/authors/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
                     <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
                     <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="n-home"><a href="/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
-                    <li class="n-wordlists"><a href="../wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
-                    <li class="n-activities"><a href="/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
-                    <li class="n-learners"><a href="/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
-                    <li class="n-groups"><a href="/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
+                    <li class="n-home"><a href="/authors/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
+                    <li class="n-wordlists"><a href="/authors/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
+                    <li class="n-activities"><a href="/authors/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
+                    <li class="n-learners"><a href="/authors/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
+                    <li class="n-groups"><a href="/authors/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
                 </ul>
             </div>
         </div>
@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                     <ol class="breadcrumb">
-                      <li><a href="/">Home</a></li>
+                      <li><a href="/authors/">Home</a></li>
                       <li><a href="/wordlists">Wordlists</a></li>
                       <li class="active">Physical Characteristics</li>
                     </ol>
@@ -44,7 +44,8 @@
                     <ol class="list-inline pull-right">
                         <li class="no-padding"><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
                         <li class="no-padding"><a href="#" class="btn btn-link btn-favorite not-favorite"><i class="fa fa-star-o"></i> Favorite</a></li>
-                        <li class="no-padding"><a href="wordlist-sample-editor.html" class="btn btn-link"><i class="fa fa-files-o"></i> Copy</a></li>
+<li class="no-padding"><a href="#" class="btn btn-link"><i class="fa fa-flag"></i> Flag For Review</a></li>
+                        <li class="no-padding"><a href="wordlist-copy.html" class="btn btn-link"><i class="fa fa-files-o"></i> Copy</a></li>
                     </ol>
                 </div>
                 <div class="col-sm-12 col-md-12">
@@ -55,8 +56,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-8 col-md-8 wl-dataitems">
-                    <div class="panel panel-default no-shadow wl-dataitem">
+                <div class="col-sm-8 col-md-8 o-dataitems wl-dataitems">
+                    <div class="panel panel-default no-shadow o-dataitem wl-dataitem">
                         <div class="panel-heading clearfix">
                             <h3 class="pull-left">List Details</h3>
                         </div>
@@ -73,67 +74,67 @@
                         <div class="panel-heading clearfix">
                             <h3 class="pull-left">Words</h2>
                         </div>
-                        <table class="wl-items table table-striped table-bordered">
+                        <table class="o-items-list wl-items table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th class="wl-lexeme-status"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
-                                    <th class="wl-lexeme-symbol"><span class="pull-left">Symbol</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
-                                    <th class="wl-lexeme-title"><span class="pull-left">Title</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
-                                    <th class="wl-lexeme-controls th-empty"></th>
+                                    <th class="o-status wl-lexeme-status"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-symbol wl-lexeme-symbol"><span class="pull-left">Symbol</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-title wl-lexeme-title"><span class="pull-left">Title</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-controls wl-lexeme-controls th-empty"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="wl-item lexeme-status-ready">
-                                    <td class="wl-lexeme-status"><span class="label label-warning">Draft</span></td>
-                                    <td class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-eye_color.png" alt="eye color" /></td>
-                                    <td class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">el color de ojos</a></td>
-                                    <td class="wl-lexeme-controls">
+                                <tr class="o-item wl-item lexeme-status-ready">
+                                    <td class="o-status wl-lexeme-status"><span class="label label-warning">Draft</span></td>
+                                    <td class="o-symbol wl-lexeme-symbol c-img"><img src="/authors/static/images/fpo/symbol-eye_color.png" alt="eye color" /></td>
+                                    <td class="o-title wl-lexeme-title"><a href="wordlist-lexeme-sample.html">el color de ojos</a></td>
+                                    <td class="o-control wl-lexeme-controls">
                                         <ul class="list-inline no-margin">
                                             <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
                                             <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-volume-up"></i> Listen</a></li>
                                         </ul>
                                     </td>
                                 </tr>
-                                <tr class="wl-item lexeme-status-ready">
+                                <tr class="o-item wl-item lexeme-status-ready">
 
-                                    <td class="wl-lexeme-status"><span class="label label-success">Ready</span></td>
-                                    <td class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-montar.png" alt="montar" /></td>
-                                    <td class="wl-lexeme-title"><a href="wordlist-lexeme-sample_montar.html">montar</a></td>
-                                    <td class="wl-lexeme-controls">
+                                    <td class="o-status wl-lexeme-status"><span class="label label-success">Ready</span></td>
+                                    <td class="o-symbol wl-lexeme-symbol c-img"><img src="/authors/static/images/fpo/symbol-montar.png" alt="montar" /></td>
+                                    <td class="o-title wl-lexeme-title"><a href="wordlist-lexeme-sample_montar.html">montar</a></td>
+                                    <td class="o-control wl-lexeme-controls">
                                         <ul class="list-inline no-margin">
                                             <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
                                             <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-volume-up"></i> Listen</a></li>
                                         </ul>
                                     </td>
                                 </tr>
-                                <tr class="wl-item lexeme-status-ready">
+                                <tr class="o-item wl-item lexeme-status-ready">
 
-                                    <td class="wl-lexeme-status"><span class="label label-success">Ready</span></td>
-                                    <td class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-favorite.png" alt="favorite" /></td>
-                                    <td class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">favorito</a></td>
-                                    <td class="wl-lexeme-controls">
+                                    <td class="o-status wl-lexeme-status"><span class="label label-success">Ready</span></td>
+                                    <td class="o-symbol wl-lexeme-symbol c-img"><img src="/authors/static/images/fpo/symbol-favorite.png" alt="favorite" /></td>
+                                    <td class="o-title wl-lexeme-title"><a href="wordlist-lexeme-sample.html">favorito</a></td>
+                                    <td class="o-control wl-lexeme-controls">
                                         <ul class="list-inline no-margin">
                                             <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
                                             <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-volume-up"></i> Listen</a></li>
                                         </ul>
                                     </td>
                                 </tr>
-                                <tr class="wl-item lexeme-status-ready">
-                                    <td class="wl-lexeme-status"><span class="label label-success">Ready</span></td>
-                                    <td class="wl-lexeme-symbol c-img"><img src="/static/images/fpo/symbol-grande.png" alt="grande" /></td>
-                                    <td class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">grande</a></td>
-                                    <td class="wl-lexeme-controls">
+                                <tr class="o-item wl-item lexeme-status-ready">
+                                    <td class="o-status wl-lexeme-status"><span class="label label-success">Ready</span></td>
+                                    <td class="o-symbol wl-lexeme-symbol c-img"><img src="/authors/static/images/fpo/symbol-grande.png" alt="grande" /></td>
+                                    <td class="o-title wl-lexeme-title"><a href="wordlist-lexeme-sample.html">grande</a></td>
+                                    <td class="o-control wl-lexeme-controls">
                                         <ul class="list-inline no-margin">
                                             <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
                                             <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-volume-up"></i> Listen</a></li>
                                         </ul>
                                     </td>
                                 </tr>
-                                <tr class="wl-item lexeme-status-draft">
-                                    <td class="wl-lexeme-status"><span class="label label-warning">Draft</span></td>
-                                    <td class="wl-lexeme-symbol no-symbol c-img">No Symbol</td>
-                                    <td class="wl-lexeme-title"><a href="wordlist-lexeme-sample.html">celestes</a></td>
-                                    <td class="wl-lexeme-controls">
+                                <tr class="o-item wl-item lexeme-status-draft">
+                                    <td class="o-status wl-lexeme-status"><span class="label label-warning">Draft</span></td>
+                                    <td class="o-symbol wl-lexeme-symbol no-symbol c-img">No Symbol</td>
+                                    <td class="o-title wl-lexeme-title"><a href="wordlist-lexeme-sample.html">celestes</a></td>
+                                    <td class="o-control wl-lexeme-controls">
                                         <ul class="list-inline no-margin">
                                             <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
                                             <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-volume-up"></i> Listen</a></li>
@@ -151,27 +152,29 @@
                 </div>
 
                 <div class="col-sm-4 col-md-4">
-                    <div class="wl-lexeme-dataitem panel panel-default no-shadow">
-                        <div class="panel-heading clearfix">
-                            <h3 class="pull-left">List Symbol</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="wl-symbol wl-list-symbol c-img">
-                                <figure>
-                                    <img src="/static/images/fpo/symbol-eye_color.png" alt="eye color">
-                                </figure>
+                    <div class="o-dataitems">
+                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default no-shadow">
+                            <div class="panel-heading clearfix">
+                                <h3 class="pull-left">List Symbol</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="wl-symbol wl-list-symbol c-img">
+                                    <figure>
+                                        <img src="/authors/static/images/fpo/symbol-eye_color.png" alt="eye color">
+                                    </figure>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="wl-lexeme-dataitem panel panel-default">
-                        <div class="panel-heading clearfix">
-                            <h3 class="pull-left">Tags</h3>
-                        </div>
-                        <div class="panel-body">
-                            <ul class="list-inline wl-tags">
-                                <li><a href="#" class="tag">Human face</a></li>
-                                <li><a href="#" class="tag">identification</a></li>
-                            </ul>
+                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default">
+                            <div class="panel-heading clearfix">
+                                <h3 class="pull-left">Tags</h3>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="list-inline wl-tags">
+                                    <li><a href="#" class="tag">Human face</a></li>
+                                    <li><a href="#" class="tag">identification</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

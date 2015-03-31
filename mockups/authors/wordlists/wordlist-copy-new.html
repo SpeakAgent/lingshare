@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link href="/authors/static/css/styles.css" rel="stylesheet" type="text/css" />
-  <title>Wordlist Sample . Wordlists | Speak Agent</title>
+  <title>Wordlist Sample Copy. Wordlists | Speak Agent</title>
 </head>
 <body>
 <div class="container-fluid parent-container-main">
@@ -38,14 +38,12 @@
                     <ol class="breadcrumb">
                       <li><a href="/authors/">Home</a></li>
                       <li><a href="/wordlists">Wordlists</a></li>
-                      <li class="active">Physical Characteristics</li>
+                      <li class="active">{{Copy Wordlist Title}}</li>
                     </ol>
-                    <h1 class="page-header pull-left">Physical Characteristics <small><span class="label label-success">Public</span> <span class="label label-warning">Not In Use</span></small></h1>
+                    <h1 class="page-header pull-left">{{Copy Wordlist Title}} <small><span class="label label-warning">Draft</span> <span class="label label-warning">Not In Use</span></small></h1>
                     <ol class="list-inline pull-right">
                         <li class="no-padding"><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
-                        <li class="no-padding"><a href="#" class="btn btn-link btn-favorite not-favorite"><i class="fa fa-star-o"></i> Favorite</a></li>
                         <li class="no-padding"><a href="wordlist-copy.html" class="btn btn-link"><i class="fa fa-files-o"></i> Copy</a></li>
-<li class="no-padding"><a href="#" class="btn btn-link"><i class="fa fa-flag"></i> Flag For Review</a></li>
                         <li class="no-padding"><a href="#" class="btn btn-delete btn-link"><i class="fa fa-trash"></i> Delete</a></li>
                     </ol>
                 </div>
@@ -58,8 +56,8 @@
             </div>
             <div class="row">
                 <div class="col-sm-8 col-md-8">
-                    <div class="o-dataitems wl-dataitems">
-                        <div class="panel panel-default o-dataitem wl-dataitem">
+                    <div class="wl-dataitems o-dataitems">
+                        <div class="panel panel-default o-dataitem no-shadow wl-dataitem">
                             <div class="panel-heading clearfix">
                                 <h3 class="pull-left">List Details</h3>
                                 <div class="pull-right dataitem-controls">
@@ -96,14 +94,14 @@
                                         <li><label>Set Status:</label>
                                         <select class="form-control"><option>Draft</option>
                                         <option selected="selected">Public</option></select></li>
-                                        <li><button class="btn btn-primary"><i class="fa fa-check"></i> Save Changes</button></li>
+                                        <li><button class="btn btn-primary">Save Changes</button></li>
                                     </ul>
                                 </form>
                             </div>
                         </div>
                         <div class="panel panel-default wl-items">
                             <div class="panel-heading clearfix">
-                                <h3 class="pull-left">Words</h2>
+                                <h3 class="pull-left">Words</h3>
                                 <div class="pull-right dataitem-controls">
                                     <a href="word-add_new-from-wordlist.html" class="btn btn-default"><i class="fa fa-plus"></i> Add New Words</a>
                                 </div>
@@ -115,8 +113,8 @@
                                         <th class="o-status wl-lexeme-status"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
                                         <th class="o-symbol wl-lexeme-symbol"><span class="pull-left">Symbol</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
                                         <th class="o-title wl-lexeme-title"><span class="pull-left">Title</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
-                                        <th class="o-controls th-empty"></th>
-                                        <th class="o-delete th-empty"></th>
+                                        <th class="o-controls wl-lexeme-controls th-empty"></th>
+                                        <th class="o-delete wl-lexeme-delete th-empty"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -146,7 +144,7 @@
                                                 <li class="no-padding"><a href="wordlist-lexeme-sample.html" class="btn btn-link"><i class="fa fa-volume-up"></i> Listen</a></li>
                                             </ul>
                                         </td>
-                                        <td class="o-delete wl-lexeme-delete">
+                                        <td class="wl-lexeme-delete">
                                             <a href="wordlist-lexeme-sample.html" class="btn btn-link btn-delete"><i class="fa fa-minus"></i> Remove</a>
                                         </td>
                                     </tr>
@@ -214,8 +212,8 @@
                 </div>
 
                 <div class="col-sm-4 col-md-4">
-                    <div class="o-dataitems wl-dataitems">
-                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default">
+                    <div class="o-dataitems">
+                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default no-shadow">
                             <div class="panel-heading clearfix">
                                 <h3 class="pull-left">List Symbol</h3>
                                 <div class="pull-right dataitem-controls">
@@ -230,7 +228,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="wl-lexeme-dataitem panel panel-default">
+                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default">
                             <div class="panel-heading clearfix">
                                 <h3 class="pull-left">Tags</h3>
                                 <div class="pull-right dataitem-controls">
@@ -246,7 +244,7 @@
                                 <form>
                                     <label>Add New Tag</label>
                                     <input type="text" />
-                                    <button class="btn btn-primary"><i class="fa fa-check"></i> Save</button>
+                                    <button class="btn btn-primary">Save</button>
                                 </form>
                             </div>
                         </div>

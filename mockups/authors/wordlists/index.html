@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="/authors/static/css/styles.css" rel="stylesheet" type="text/css" />
   <title>Your Wordlists | Speak Agent</title>
 </head>
 <body>
@@ -9,24 +9,24 @@
     <nav class="navbar navbar-default navbar-inverse navbar-static-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/"><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+                <a class="navbar-brand" href="/authors/"><img src="/authors/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
             </div>
             <div id="navbar">
                 <form class="navbar-form navbar-left">
                     <input type="text" class="form-control form-primary" placeholder="Search...">
                 </form>
                 <ul class="nav navbar-nav navbar-right nav-secondary">
-                    <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
-                    <li class="n-settings"><a href="/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
+                    <li class="n-user"><a href="/authors/settings/user-profile.html">Username</a></li>
+                    <li class="n-settings"><a href="/authors/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
                     <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
                     <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="n-home"><a href="/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
+                    <li class="n-home"><a href="/authors/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
                     <li class="n-wordlists"><a href="/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
-                    <li class="n-activities"><a href="/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
-                    <li class="n-learners"><a href="/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
-                    <li class="n-groups"><a href="/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
+                    <li class="n-activities"><a href="/authors/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
+                    <li class="n-learners"><a href="/authors/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
+                    <li class="n-groups"><a href="/authors/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
                 </ul>
             </div>
         </div>
@@ -36,26 +36,25 @@
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
                     <ol class="breadcrumb">
-                      <li><a href="/">Home</a></li>
+                      <li><a href="/authors/">Home</a></li>
                       <li class="active">Wordlists</li>
                     </ol>
-                    <h1 class="page-header">Wordlists</h1>
+                    <div class="page-header clearfix">
+                        <h1 class="page-header pull-left">Wordlists</h1>
+                        <a href="wordlists-add_new.html" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Add New Wordlist</a>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-8 col-md-8">
+                <div class="col-sm-12 col-md-8 col-md-offset-2">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <form class="form-search">
-                                <input type="text" class="form-control" placeholder="Search Wordlists">
+                                <input type="text" class="form-control" placeholder="Find a Wordlist">
                             </form>
                         </div>
                     </div>
                     <div class="panel panel-default">
-                        <div class="panel-heading clearfix">
-                            <h3 class="pull-left">Lists</h3>
-                             <div class="pull-right dataitem-controls"><a href="wordlists-add_new.html" class="btn btn-default"><i class="fa fa-plus"></i> Add New Wordlist</a></div>
-                        </div>
                         <div class="panel-heading sub-heading">
                             <ul class="nav nav-pills">
                               <li class="active">
@@ -72,33 +71,36 @@
                               </li>
                             </ul>
                         </div>
-                        <table class="wl-items table table-striped table-bordered">
+                        <table class="o-items-list wl-items table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th class="wl-status"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
-                                    <th class="wl-symbol"><span class="pull-left">Symbol</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
-                                    <th class="wl-title"><span class="pull-left">Title</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
-                                    <th class="wl-date-created"><span class="pull-left">Date Created</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
-                                    <th class="wl-date-updated"><span class="pull-left">Date Updated</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
-                                    <th class="wl-language"><span class="pull-left">Language</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-favorite"><i class="fa fa-sort"></i></th>
+                                    <th class="o-status wl-status"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-symbol wl-symbol"><span class="pull-left">Symbol</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-title wl-title"><span class="pull-left">Title</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-date-create wl-date-created"><span class="pull-left">Date Created</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-date-update wl-date-updated"><span class="pull-left">Date Updated</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-language wl-language"><span class="pull-left">Language</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="wl-item item-status-public">
-                                    <td class="wl-status with-label"><span class="label label-success">Public</span></td>
-                                    <td class="wl-symbol c-img"><a href="wordlist-sample.html"><img src="/static/images/fpo/symbol-eye_color.png" alt="eye color"></a></td>
-                                    <td class="wl-title"><a href="wordlist-sample.html">Physical Characteristics</a></td>
-                                    <td class="wl-date-created">March 12, 2015</td>
-                                    <td class="wl-date-updated">March 17, 2015</td>
-                                    <td class="wl-language">Spanish</td>
+                                <tr class="o-item wl-item item-status-public">
+                                    <td class="o-favorite favorite-y"><i class="fa fa-star"></i></td>
+                                    <td class="o-status wl-status with-label"><span class="label label-success">Public</span></td>
+                                    <td class="o-symbol wl-symbol c-img"><a href="wordlist-sample.html"><img src="/authors/static/images/fpo/symbol-eye_color.png" alt="eye color"></a></td>
+                                    <td class="o-title wl-title"><a href="wordlist-sample.html">Physical Characteristics</a></td>
+                                    <td class="o-date-created wl-date-created">March 12, 2015</td>
+                                    <td class="o-date-updated wl-date-updated">March 17, 2015</td>
+                                    <td class="o-language wl-language">Spanish</td>
                                 </tr>
-                                <tr class="wl-item item-status-draft">
-                                    <td class="wl-status-publishing with-label"><span class="label label-warning">Draft</span></td>
-                                    <td class="wl-symbol c-img"><a href="wordlist-sample.html"><img src="/static/images/fpo/symbol-happy.png" alt="happy"></a></td>
-                                    <td class="wl-title"><a href="wordlist-sample.html">Greetings and Emotions</a></td>
-                                    <td class="wl-date-created">March 12, 2015</td>
-                                    <td class="wl-date-updated">March 17, 2015</td>
-                                    <td class="wl-language">Mandarin Chinese</td>
+                                <tr class="o-item wl-item item-status-draft">
+                                    <td class="o-favorite favorite-n"><i class="fa fa-star-o"></i></td>
+                                    <td class="o-status wl-status-publishing with-label"><span class="label label-warning">Draft</span></td>
+                                    <td class="o-symbol wl-symbol c-img"><a href="wordlist-sample.html"><img src="/authors/static/images/fpo/symbol-happy.png" alt="happy"></a></td>
+                                    <td class="o-title wl-title"><a href="wordlist-sample.html">Greetings and Emotions</a></td>
+                                    <td class="o-date-created wl-date-created">March 12, 2015</td>
+                                    <td class="o-date-updated wl-date-updated">March 17, 2015</td>
+                                    <td class="o-language wl-language">Mandarin Chinese</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -122,9 +124,6 @@
                         </li>
                       </ul>
                     </nav>
-                </div>
-                <div class="col-sm-4 col-md-4">
-                    Possible Sidebar
                 </div>
             </div>
         </div>

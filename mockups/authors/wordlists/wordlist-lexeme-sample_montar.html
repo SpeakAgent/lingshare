@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="/authors/static/css/styles.css" rel="stylesheet" type="text/css" />
   <title>Sample Lexeme . Wordlist Sample . Wordlists | Speak Agent</title>
 </head>
 <body>
@@ -9,24 +9,24 @@
     <nav class="navbar navbar-default navbar-inverse navbar-static-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/"><img src="/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+                <a class="navbar-brand" href="/authors/"><img src="/authors/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
             </div>
             <div id="navbar">
                 <form class="navbar-form navbar-left">
                     <input type="text" class="form-control form-primary" placeholder="Search...">
                 </form>
                 <ul class="nav navbar-nav navbar-right nav-secondary">
-                    <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
-                    <li class="n-settings"><a href="/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
+                    <li class="n-user"><a href="/authors/settings/user-profile.html">Username</a></li>
+                    <li class="n-settings"><a href="/authors/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
                     <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
                     <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="n-home"><a href="/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
-                    <li class="n-wordlists"><a href="../wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
-                    <li class="n-activities"><a href="/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
-                    <li class="n-learners"><a href="/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
-                    <li class="n-groups"><a href="/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
+                    <li class="n-home"><a href="/authors/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
+                    <li class="n-wordlists"><a href="/authors/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
+                    <li class="n-activities"><a href="/authors/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
+                    <li class="n-learners"><a href="/authors/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
+                    <li class="n-groups"><a href="/authors/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
                 </ul>
             </div>
         </div>
@@ -36,22 +36,26 @@
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
                     <ol class="breadcrumb">
-                      <li><a href="/">Home</a></li>
+                      <li><a href="/authors/">Home</a></li>
                       <li><a href="/wordlists">Wordlists</a></li>
-                      <li><a href="/wordlists/wordlist-sample.html">Physical Characteristics</a></li>
+                      <li><a href="/authors/wordlists/wordlist-sample.html">Physical Characteristics</a></li>
                       <li class="active">montar</a></li>
                     </ol>
                     <h1 class="page-header pull-left">montar <small><span class="label label-success">Public</span> <span class="label label-success">In Use</span></small></h1>
                     <ol class="list-inline pull-right">
                         <li class="no-padding"><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
                         <li class="no-padding"><a href="wordlist-lexeme-sample-editor.html" class="btn btn-link"><i class="fa fa-files-o"></i> Copy</a></li>
+                        <li class="no-padding"><a href="#" class="btn btn-link"><i class="fa fa-flag"></i> Flag For Review</a></li>
                     </ol>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-8 col-md-8">
-                    <div class="wl-lexeme-dataitems">
-                        <div class="wl-lexeme-dataitem panel panel-default no-shadow">
+                    <h4 class="wl-lexeme-word-sense">
+                        to ride <em>(adjective)</em>
+                    </h4>
+                    <div class="o-dataitems wl-lexeme-dataitems">
+                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default no-shadow">
                             <div class="panel-heading clearfix">
                                 <h3 class="pull-left">Word Details</h3>
                             </div>
@@ -65,9 +69,9 @@
 
                             </div>
                         </div>
-                        <div class="wl-lexeme-dataitem panel panel-default no-shadow">
+                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default no-shadow">
                             <div class="panel-heading clearfix">
-                                <h3 class="pull-left">Word Sense</h3>
+                                <h3 class="pull-left">All Word Sense(s)</h3>
                             </div>
                             <div class="panel-body">
                                 <ul class="list-unstyled">
@@ -76,30 +80,30 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="wl-lexeme-dataitem panel panel-default no-shadow">
+                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default no-shadow">
                             <div class="panel-heading clearfix">
                                 <h3 class="pull-left">Audio</h3>
                             </div>
                             <div class="panel-body">
                                 <audio controls>
-                                <source src="/static/audio/fpo-montar_a_caballo.wav" type="audio/wav">
+                                <source src="/authors/static/audio/fpo-montar_a_caballo.wav" type="audio/wav">
                                 Sorry, your browser does not support the audio tag.
                                 </audio>
                             </div>
                         </div>
-                        <div class="wl-lexeme-dataitem panel panel-default no-shadow">
+                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default no-shadow">
                             <div class="panel-heading clearfix">
                                 <h3 class="pull-left">Photos<small> <span class="flag-optional">optional</span></small></h3>
                             </div>
                             <div class="panel-body wl-photos-videos">
                                 <ul class="list-inline">
                                     <li>
-                                        <img src="/static/images/fpo/fpo-horseback.jpg" class="img-thumbnail">
+                                        <img src="/authors/static/images/fpo/fpo-horseback.jpg" class="img-thumbnail">
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="wl-lexeme-dataitem panel panel-default">
+                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default">
                             <div class="panel-heading clearfix">
                                 <h3 class="pull-left">Sentences <small><span class="flag-optional">optional</span></small></h3>
                             </div>
@@ -122,29 +126,28 @@
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4">
-                    <div class="wl-lexeme-dataitem panel panel-default no-shadow">
-                        <div class="panel-heading clearfix">
-                            <h3 class="pull-left">Word Symbol</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="wl-symbol wl-lexeme-symbol c-img">
-                                <figure>
-                                    <img src="/static/images/fpo/symbol-montar.png" alt="montar" />
-                                </figure>
+                    <div class="o-dataitems">
+                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default">
+                            <div class="panel-heading clearfix">
+                                <h3 class="pull-left">Word Symbol</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="wl-symbol wl-lexeme-symbol c-img">
+                                    <figure>
+                                        <img src="/authors/static/images/fpo/symbol-montar.png" alt="montar" />
+                                    </figure>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="wl-lexeme-dataitem panel panel-default">
-                        <div class="panel-heading clearfix">
-                            <h3 class="pull-left">Tags <small><span class="flag-optional">optional</span></small></h3>
-                            <div class="pull-right dataitem-controls">
-                                <a href="#" class="btn btn-default"><i class="fa fa-pencil-square-o"></i> Edit Tags</a>
+                        <div class="o-dataitem wl-lexeme-dataitem panel panel-default">
+                            <div class="panel-heading clearfix">
+                                <h3 class="pull-left">Tags <small><span class="flag-optional">optional</span></small></h3>
                             </div>
-                        </div>
-                        <div class="panel-body">
-                            <ul class="list-inline wl-tags">
-                                <li><a href="#" class="tag">horse</a></li>
-                            </ul>
+                            <div class="panel-body">
+                                <ul class="list-inline wl-tags">
+                                    <li><a href="#" class="tag">horse</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
