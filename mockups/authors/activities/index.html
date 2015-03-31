@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="/authors/static/css/styles.css" rel="stylesheet" type="text/css" />
   <title>Activities | Speak Agent</title>
 </head>
 <body>
@@ -9,24 +9,24 @@
     <nav class="navbar navbar-default navbar-inverse navbar-static-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/"><img src="../static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+                <a class="navbar-brand" href="/authors/"><img src="/authors/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
             </div>
             <div id="navbar">
                 <form class="navbar-form navbar-left">
                     <input type="text" class="form-control form-primary" placeholder="Search...">
                 </form>
                 <ul class="nav navbar-nav navbar-right nav-secondary">
-                    <li class="n-user"><a href="/settings/user-profile.html">Username</a></li>
-                    <li class="n-settings"><a href="/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
+                    <li class="n-user"><a href="/authors/settings/user-profile.html">Username</a></li>
+                    <li class="n-settings"><a href="/authors/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
                     <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
                     <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="n-home"><a href="/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
-                    <li class="n-wordlists"><a href="/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
-                    <li class="n-activities"><a href="/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
-                    <li class="n-learners"><a href="/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
-                    <li class="n-groups"><a href="/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
+                    <li class="n-home"><a href="/authors/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
+                    <li class="n-wordlists"><a href="/authors/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
+                    <li class="n-activities"><a href="/authors/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
+                    <li class="n-learners"><a href="/authors/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
+                    <li class="n-groups"><a href="/authors/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
                 </ul>
             </div>
         </div>
@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
                     <ol class="breadcrumb">
-                      <li><a href="/">Home</a></li>
+                      <li><a href="/authors/">Home</a></li>
                       <li class="active">Activities</li>
                     </ol>
                     <div class="clearfix page-header">
@@ -47,7 +47,78 @@
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-8 col-md-offset-2">
-                   Activity Listings go over here
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form class="form-search">
+                                <input type="text" class="form-control" placeholder="Find an Activity">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading sub-heading">
+                            <ul class="nav nav-pills">
+                              <li class="active">
+                                <a href="#">All</a>
+                              </li>
+                              <li>
+                                <a href="#">Your Generated Activities</a>
+                              </li>
+                              <li>
+                                <a href="#">Favorites</a>
+                              </li>
+                            </ul>
+                        </div>
+                        <table class="o-items-list wl-items table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="o-favorite"><i class="fa fa-sort"></i></th>
+                                    <th class="o-status act-status"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-title act-title"><span class="pull-left">Title</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-wordlist act-wordlist"><span class="pull-left">Wordlist</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-language act-language"><span class="pull-left">Language</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+
+                                    <th class="o-date-created act-date-created"><span class="pull-left">Date Generated</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="o-item wl-item item-status-public">
+                                    <td class="o-favorite favorite-y"><i class="fa fa-star"></i></td>
+                                    <td class="o-status act-status with-label"><span class="label label-success">Public</span></td>
+                                    <td class="o-title act-title"><a href="wordlist-sample.html">Word Review</a></td>
+                                    <td class="o-wordlist act-wordlist">Physical Characteristics</td>
+                                    <td class="o-language act-language">Spanish</td>
+                                    <td class="o-date-created act-date-created">March 12, 2015</td>
+                                </tr>
+                                <tr class="o-item wl-item item-status-draft">
+                                    <td class="o-favorite favorite-n"><i class="fa fa-star-o"></i></td>
+                                    <td class="o-status act-status-publishing with-label"><span class="label label-warning">Draft</span></td>
+                                    <td class="o-title act-title"><a href="#">Flash Cards</a></td>
+                                    <td class="o-wordlist act-wordlist">Greetings and Emotions</td>
+                                    <td class="o-language act-language">Mandarin Chinese</td>
+                                    <td class="o-date-created act-date-created">March 12, 2015</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class="c-pagination">
+                      <ul class="pagination">
+                        <li class="disabled">
+                          <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                          <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
                 </div>
             </div>
         </div>
