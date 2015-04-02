@@ -37,9 +37,9 @@ mainApp.controller('MemoryController', ['$scope', '$timeout', '$http',
       for (var i = words.length - 1; i >= 0; i--) {
         card = words[i];
         cards.push({word: card, type: 'symbol',
-          slug: card.base_word.root_word + '-symbol'});
+          slug: card.base_root.root_word + '-symbol'});
         cards.push({word: card, type: 'word',
-          slug: card.base_word.root_word + '-word'});
+          slug: card.base_root.root_word + '-word'});
       };
       return $scope.shuffle(cards);
   	 };

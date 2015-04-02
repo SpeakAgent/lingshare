@@ -39,8 +39,8 @@
 						ng-repeat="word in list.words">
 						<div class="card">
 	           				<a href = "/#/words/{{id}}/{{ $index }}/">
-								<img src = "{{ word.base_word.symbol.image }}">
-								<span>{{ word.base_word.root_word }}</span>
+								<img src = "{{ word.base_root.master_lex.symbol.image }}">
+								<span>{{ word.base_root.root_word }}</span>
 	           				</a>
 						</div>
 					</div>
@@ -51,8 +51,8 @@
 					<div class="card"
 						ng-repeat="word in list.words">
 						<a href = "/#/words/{{ id }}/{{ $index }}/">
-						<img src="{{ word.base_word.symbol.image }}">
-						<span>{{ word.base_word.root_word }}</span>
+						<img src="{{ word.base_root.master_lex.symbol.image }}">
+						<span>{{ word.base_root.root_word }}</span>
 						</a>
 					</div>
 				</div>
@@ -66,11 +66,11 @@
 
 		<div ng-show="wordID" class="word-detail">
 			<div class="container top">
-				<h1>{{ list.words[wordID].base_word.root_word }}</h1>
+				<h1>{{ list.words[wordID].base_root.root_word }}</h1>
 				<div class="back-wordlist"><a href="/#/words/{{ id }}/" class="btn btn-back"><i class="fa fa-arrow-left"></i> Back to {{ list.title }}</a></div>
 	            <div class="word-samples">
 	                <div class="word-sample"
-	                    ng-repeat="photo in list.words[wordID].base_word.photos"
+	                    ng-repeat="photo in list.words[wordID].base_root.master_lex.photos"
 	                    ng-class="sample_{{$index+1}}_container"
 	                    ng-hide="!isCurrentSampleIndex($index)"
 	                    >
@@ -78,7 +78,7 @@
 	                </div>
 	                <ul class="word-samples-nav">
 	                    <li
-	                    ng-repeat="photo in list.words[wordID].base_word.photos"
+	                    ng-repeat="photo in list.words[wordID].base_root.master_lex.photos"
 	                    ng-click="setCurrentSampleIndex($index)"
 	                    ng-class="{'active':isCurrentSampleIndex($index)}"
 	                    >
@@ -91,12 +91,12 @@
 				<div class="container">
 					<div class="col-md-3 col-xs-3 first">
 						<div class="word-symbol">
-							<img src="{{list.words[wordID].base_word.symbol.image}} " alt="" />
+							<img src="{{list.words[wordID].base_root.master_lex.symbol.image}} " alt="" />
 						</div>
-						<div class="word-audio" ng-if="list.words[wordID].base_word.audio_file">
+						<div class="word-audio" ng-if="list.words[wordID].base_root.audio_file">
 							<p class="button btn btn-primary">
 								<audio id="word-player">
-										<source src="{{ audio_url(list.words[wordID].base_word.audio_file) }}"
+										<source src="{{ audio_url(list.words[wordID].base_root.audio_file) }}"
 											type="audio/mpeg">
 										Your browser does not support the audio tag.
 								</audio>
@@ -107,18 +107,18 @@
 					<div class="col-md-9 col-xs-9">
 						<div class="word-specification">
 							<dl>
-								<dt class="word-base">{{ list.words[wordID].base_word.root_word }}</dt>
+								<dt class="word-base">{{ list.words[wordID].base_root.root_word }}</dt>
 									<dd class="word-meta-info">
-									<span ng-if="list.words[wordID].base_word.gender != 'NA'">({{ list.words[wordID].base_word.word_class.title }}, {{ list.words[wordID].base_word.gender }})</span>
-									<span ng-if="list.words[wordID].base_word.gender == 'NA'">({{ list.words[wordID].base_word.word_class.title }})</span>
+									<span ng-if="list.words[wordID].base_root.gender != 'NA'">({{ list.words[wordID].base_root.word_class.title }}, {{ list.words[wordID].base_root.gender }})</span>
+									<span ng-if="list.words[wordID].base_root.gender == 'NA'">({{ list.words[wordID].base_root.word_class.title }})</span>
 									</dd>
-								<dt class="word-trans">{{ list.words[wordID].trans_word.root_word }}</dt>
+								<dt class="word-trans">{{ list.words[wordID].trans_root.root_word }}</dt>
 							</dl>
 						</div>
 						<div class="word-phrase-examples" ng-if='sentence.text !== undefined'>
 							<p>In a sentence:</p>
 							<dl class="word-balloon">
-								<dt class="sentence-base" ng-repeat-start="sentence in list.words[wordID].base_word.example_sentences">
+								<dt class="sentence-base" ng-repeat-start="sentence in list.words[wordID].base_root.example_sentences">
 									{{ sentence.text }}
 								</dt>
 								<dd class="sentence-trans" ng-repeat-end>{{ sentence.translations[0].text }}</dd>
@@ -128,15 +128,15 @@
 					<div class="word-list-nav">
 						<div class="prev-word" ng-if="wordID > 0">
 							<a href="/#/words/{{ id }}/{{ getPrev(wordID) }}">
-								<span><img src="{{ list.words[getPrev(wordID)].base_word.photos[0].image }}"/></span>
-								<span>{{ list.words[getPrev(wordID)].base_word.root_word }}</span>
+								<span><img src="{{ list.words[getPrev(wordID)].base_root.master_lex.photos[0].image }}"/></span>
+								<span>{{ list.words[getPrev(wordID)].base_root.root_word }}</span>
 								<i class="fa fa-arrow-left"></i>
 							</a>
 						</div>
 						<div class="next-word" ng-if="wordID < list.words.length - 1">
 							<a href="/#/words/{{ id }}/{{ getNext(wordID) }}">
-								<span><img src="{{ list.words[getNext(wordID)].base_word.photos[0].image }}" /></span>
-								<span>{{ list.words[getNext(wordID)].base_word.root_word }}</span>
+								<span><img src="{{ list.words[getNext(wordID)].base_root.master_lex.photos[0].image }}" /></span>
+								<span>{{ list.words[getNext(wordID)].base_root.root_word }}</span>
 								<i class="fa fa-arrow-right"></i>
 							</a>
 						</div>

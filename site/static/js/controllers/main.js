@@ -1,6 +1,6 @@
 
 var appConfig = angular.module('appConfig', []).constant('appConfig', {
-  'basePath': '/lingshare-dev',
+  'basePath': '/',
   'backendURL': 'http://127.0.0.1:8000'
 })
 

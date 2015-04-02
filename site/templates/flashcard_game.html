@@ -53,8 +53,8 @@
           >
             <div class="round-counter"><span>{{current_round}}/{{words.length}}</span></div>
             <div class="main-card-img">
-                  <img src="{{ card.base_word.symbol.image }}" class="large-card"></div>
-            <div class="main-card-lexeme"><span>{{card.trans_word.root_word}}</span></div>
+                  <img src="{{ card.base_root.master_lex.symbol.image }}" class="large-card"></div>
+            <div class="main-card-lexeme"><span>{{card.trans_root.root_word}}</span></div>
           </div>
         </div>
         <div class="col-md-3 options-container">
@@ -66,29 +66,29 @@
               <audio
                 preload="auto"
                 autoplay
-                ng-if="play==item.base_word.root_word">
-                <source src="{{ audio_url(item.base_word.audio_file) }}"
+                ng-if="play==item.base_root.root_word">
+                <source src="{{ audio_url(item.base_root.audio_file) }}"
                   type="audio/mpeg" />
               </audio>
               <audio
                 preload="auto">
-                <source src="{{ audio_url(item.base_word.audio_file) }}"
+                <source src="{{ audio_url(item.base_root.audio_file) }}"
                   type="audio/mpeg" />
               </audio>
               <div class="option">
                 <div class="lexeme"
-                       ng-show="show_symbol != item.base_word.root_word">
-                    {{ item.base_word.root_word }}
+                       ng-show="show_symbol != item.base_root.root_word">
+                    {{ item.base_root.root_word }}
                 </div>
-                <div class="symbol" ng-show="show_symbol == item.base_word.root_word">
-                    <img src="{{ item.base_word.symbol.image }}" />
+                <div class="symbol" ng-show="show_symbol == item.base_root.root_word">
+                    <img src="{{ item.base_root.master_lex.symbol.image }}" />
                 </div>
               </div>
               <div class="game-alerts"
-            ng-if="alerts[item.base_word.root_word] != null && item.base_word.root_word == card.base_word.root_word"
+            ng-if="alerts[item.base_root.root_word] != null && item.base_root.root_word == card.base_root.root_word"
             >
-                <div class="alert" ng-class="{true:item.base_word.root_word == card.base_word.root_word,false:item.base_word.root_word != card.base_word.root_word}">
-                  {{ alerts[item.base_word.root_word] }}
+                <div class="alert" ng-class="{true:item.base_root.root_word == card.base_root.root_word,false:item.base_root.root_word != card.base_root.root_word}">
+                  {{ alerts[item.base_root.root_word] }}
                 </div>
               </div>
           </div>
@@ -124,10 +124,10 @@
     <p>Your activity is loading. Just a moment!</p>
     <div class="hidden">
       <img ng-repeat="word in words"
-        src="{{ word.base_word.symbol.image}} ">
+        src="{{ word.base_root.master_lex.symbol.image}} ">
       <audio
           preload="auto">
-          <source src="{{ audio_url(word.base_word.audio_file) }}"
+          <source src="{{ audio_url(word.base_root.audio_file) }}"
             type="audio/mpeg" />
         </audio>
     </div>

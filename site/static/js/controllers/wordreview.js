@@ -30,6 +30,7 @@ mainApp.controller('WordReviewController', ['$scope', '$http', '$routeParams',
         $scope.list = data;
         $scope.currentSampleIndex = 0;
         $scope.viewWords()
+        console.log(data)
         }
       );
 

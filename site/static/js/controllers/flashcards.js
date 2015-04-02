@@ -170,7 +170,7 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
       var indexes = []
       do {
         n = Math.floor(Math.random() * $scope.words.length);
-        if (indexes.indexOf(n) < 0 && $scope.words[n].base_word.root_word != $scope.card.base_word.root_word) {
+        if (indexes.indexOf(n) < 0 && $scope.words[n].base_root.root_word != $scope.card.base_root.root_word) {
           indexes.push(n)
         }
       } while (indexes.length <= 2)
@@ -216,57 +216,57 @@ mainApp.controller('FlashCardController', ['$scope', '$timeout', '$http',
     // Flip it
     if ($scope.show_symbol == null) {
       // Only do something if we don't have a card flipped
-      $scope.show_symbol = item.base_word.root_word;
+      $scope.show_symbol = item.base_root.root_word;
       $scope.selectedCard = item;
       // Win or no?
-      if (item.base_word.root_word == $scope.card.base_word.root_word) {
-        $scope.alerts[item.base_word.root_word] = "+5";
+      if (item.base_root.root_word == $scope.card.base_root.root_word) {
+        $scope.alerts[item.base_root.root_word] = "+5";
         $scope.score += 5;
         $scope.isCorrect = 'true';
-        $scope.play = item.base_word.root_word;
+        $scope.play = item.base_root.root_word;
 
         mixpanel.track("lexeme event", {
           activity :  "flashcard",
           match : true,
-          lexeme_id: $scope.card.base_word.pk,
-          lexeme_root : $scope.card.base_word.root_word,
-          lexeme_trans_root: $scope.card.trans_word.root_word,
-          lexeme_pair_root: item.base_word.root_word,
+          lexeme_id: $scope.card.base_root.pk,
+          lexeme_root : $scope.card.base_root.root_word,
+          lexeme_trans_root: $scope.card.trans_root.root_word,
+          lexeme_pair_root: item.base_root.root_word,
           seconds : $scope.seconds,
           tries: $scope.tries,
         });
         $scope.tries = 0;
         $timeout(function() {
           $scope.isCorrect = '';
-          $scope.alerts[item.base_word.root_word] = null;
+          $scope.alerts[item.base_root.root_word] = null;
           $scope.show_symbol = null;
           $scope.actions.right.push({
-            word: $scope.card.base_word.root_word,
-            clicked: item.base_word.root_word
+            word: $scope.card.base_root.root_word,
+            clicked: item.base_root.root_word
           });
           $scope.newScreen();
         }, 4000);
       } else {
-        $scope.alerts[item.base_word.root_word] = "Try Again!";
+        $scope.alerts[item.base_root.root_word] = "Try Again!";
         $scope.isCorrect = 'false';
         mixpanel.track("lexeme event", {
           activity :  "flashcard",
           match : false,
-          lexeme_id: $scope.card.base_word.pk,
-          lexeme_root : $scope.card.base_word.root_word,
-          lexeme_trans_root: $scope.card.trans_word.root_word,
-          lexeme_pair_root: item.base_word.root_word,
+          lexeme_id: $scope.card.base_root.pk,
+          lexeme_root : $scope.card.base_root.root_word,
+          lexeme_trans_root: $scope.card.trans_root.root_word,
+          lexeme_pair_root: item.base_root.root_word,
           seconds : $scope.seconds,
           tries: $scope.tries
         });
 
         $timeout(function() {
           $scope.isCorrect = '';
-          $scope.alerts[item.base_word.root_word] = null;
+          $scope.alerts[item.base_root.root_word] = null;
           $scope.show_symbol = null;
           $scope.actions.wrong.push({
-            word: $scope.card.base_word.root_word,
-            clicked: item.base_word.root_word
+            word: $scope.card.base_root.root_word,
+            clicked: item.base_root.root_word
           })
         }, 1000)
       };
