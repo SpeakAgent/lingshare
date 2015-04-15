@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <link href="/authors/static/css/styles.css" rel="stylesheet" type="text/css" />
-  <title>Create a Wordlist | Speak Agent</title>
+  <title>Your New Activities | Speak Agent</title>
 </head>
-<body class="alt">
+<body>
 <div class="container-fluid parent-container-main">
     <nav class="navbar navbar-default navbar-inverse navbar-static-top">
         <div class="container-fluid">
@@ -31,36 +31,54 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid c-fluid-main">
         <div class="col-sm-12 col-md-12 l-main">
             <div class="row">
                 <div class="col-sm-12 col-sm-12">
                     <div class="special-header clearfix">
-                        <h1 class="page-header pull-left">Create a Wordlist</h1>
+                        <h1 class="page-header pull-left">Assign Assignments</h1>
                         <div class="flag-process pull-right">
-                            Step <em>5</em> of 3
+                            Step <em>X</em> of Y
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row row-centered c-wordlist c-wordlist-add">
-                <div class="col-sm-12 col-md-6 col-md-offset-3">
-                    <h2 class="page-header">Uh oh! We don't have some information!</h2>
-                    <p>We couldn't find <strong>{{Number of Words}}</strong> words in our database. We need your help filling out the information we need so that you and others can use these words.</p>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <ul class="list-inline no-margin clearfix">
-                                <li class="no-padding pull-left lexeme-title">{{Word As Entered}}</li>
-                                <li class="no-padding pull-right"><a href="wordlists-problem-words_no-data-form.html" class="btn btn-link"><i class="fa fa-pencil-square-o"></i> Add Info</a></li>
-                            </ul>
-                        </li>
-                        <li class="list-group-item">
-                            <ul class="list-inline no-margin clearfix">
-                                <li class="no-padding pull-left lexeme-title">{{Word As Entered}}</li>
-                                <li class="no-padding pull-right"><a href="word-add_new-nodata.html" class="btn btn-link"><i class="fa fa-pencil-square-o"></i> Add Info</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+            <div class="row">
+<div class="col-sm-12 col-md-8 col-md-offset-2">
+                    <h2 class="page-header">Select Class(es)</h2>
+                    <div class="panel panel-default">
+                        <table class="o-items-list cl-items table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="o-empty o-select"></th>
+                                    <th class="o-favorite"><i class="fa fa-sort"></i></th>
+                                    <th class="o-title cl-title"><span class="pull-left">Class</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-amount cl-amount-learners"><span class="pull-left"># of Learners</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-language cl-language"><span class="pull-left">Language</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-institution cl-institution"><span class="pull-left">Institution</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="o-item cl-item item-status-public">
+                                    <td class="o-select"><input type="checkbox"></td>
+                                    <td class="o-favorite favorite-y"><i class="fa fa-star-o"></i></td>
+
+                                    <td class="o-title cl-title"><a href="class-sample.html">Morning - Fall 2015</a></td>
+                                    <td class="o-date cl-date-created">22</td>
+                                    <td class="o-language cl-language">Spanish</td>
+                                    <td class="o-institution cl-institution">University of Maryland College Park</td>
+                                </tr>
+                                <tr class="o-tiem cl-item item-status-draft">
+                                    <td class="o-select"><input type="checkbox"></td>
+                                    <td class="o-favorite favorite-y"><i class="fa fa-star"></i></td>
+                                    <td class="o-title cl-title"><a href="class-sample.html">Third Period - Spring 2015</a></td>
+                                    <td class="o-amount cl-amount-learners">20</td>
+                                    <td class="o-language cl-language">Mandarin Chinese</td>
+                                    <td class="o-instituion cl-institution">Snow Hill High School</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <nav class="c-pagination">
                       <ul class="pagination">
                         <li class="disabled">
@@ -70,6 +88,9 @@
                         </li>
                         <li class="active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
                         <li>
                           <a href="#" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
@@ -77,8 +98,8 @@
                         </li>
                       </ul>
                     </nav>
-                    <div class="form-group form-buttons clearfix">
-                        <a href="#" class="btn btn-link btn-warning no-padding">I'll do this later.</a>
+                    <div class="clearfix">
+                        <a href="processing-activities.html" class="btn btn-primary">Done!</a>
                     </div>
                 </div>
             </div>

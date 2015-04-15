@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link href="/authors/static/css/styles.css" rel="stylesheet" type="text/css" />
-  <title>Activities | Speak Agent</title>
+  <title>Assignments | Speak Agent</title>
 </head>
 <body>
 <div class="container-fluid parent-container-main">
@@ -24,7 +24,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="n-home"><a href="/authors/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
                     <li class="n-wordlists"><a href="/authors/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
-                    <li class="n-activities"><a href="/authors/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
+                    <li class="n-activities"><a href="/authors/assignments"><i class="fa fa-gamepad fa-lg"></i> <span>Assignments</span></a></li>
                     <li class="n-learners"><a href="/authors/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
                     <li class="n-groups"><a href="/authors/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
                 </ul>
@@ -37,11 +37,11 @@
                 <div class="col-sm-12 col-sm-12">
                     <ol class="breadcrumb">
                       <li><a href="/authors/">Home</a></li>
-                      <li class="active">Activities</li>
+                      <li class="active">Assignments</li>
                     </ol>
                     <div class="clearfix page-header">
-                        <h1 class="page-header pull-left">Activities</h1>
-                        <a href="generate-activity.html" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Generate Activities</a>
+                        <h1 class="page-header pull-left">Assignments</h1>
+                        <a href="lesson-create.html" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Create New Lesson</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                                 <a href="#">All</a>
                               </li>
                               <li>
-                                <a href="#">Your Generated Activities</a>
+                                <a href="#">Your Assignments</a>
                               </li>
                               <li>
                                 <a href="#">Favorites</a>
@@ -72,7 +72,7 @@
                             <thead>
                                 <tr>
                                     <th class="o-favorite"><i class="fa fa-sort"></i></th>
-                                    <th class="o-status act-status"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                                    <th class="o-type"><i class="fa fa-sort"></i></th>
                                     <th class="o-title act-title"><span class="pull-left">Title</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
                                     <th class="o-wordlist act-wordlist"><span class="pull-left">Wordlist</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
                                     <th class="o-language act-language"><span class="pull-left">Language</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
@@ -83,16 +83,17 @@
                             <tbody>
                                 <tr class="o-item wl-item item-status-public">
                                     <td class="o-favorite favorite-y"><i class="fa fa-star"></i></td>
-                                    <td class="o-status act-status with-label"><span class="label label-success">Public</span></td>
-                                    <td class="o-title act-title"><a href="wordlist-sample.html">Word Review</a></td>
+                                    <td class="o-type type-act"><i class="fa fa-gamepad"></i></td>
+                                    <td class="o-title act-title"><a href="activity-sample.html">Word Review</a></td>
                                     <td class="o-wordlist act-wordlist">Physical Characteristics</td>
                                     <td class="o-language act-language">Spanish</td>
                                     <td class="o-date-created act-date-created">March 12, 2015</td>
                                 </tr>
                                 <tr class="o-item wl-item item-status-draft">
                                     <td class="o-favorite favorite-n"><i class="fa fa-star-o"></i></td>
-                                    <td class="o-status act-status-publishing with-label"><span class="label label-warning">Draft</span></td>
-                                    <td class="o-title act-title"><a href="#">Flash Cards</a></td>
+                                    <td class="o-type type-act"><i class="fa fa-gamepad"></i></td>
+
+                                    <td class="o-title act-title"><a href="activity-sample.html">Flash Cards</a></td>
                                     <td class="o-wordlist act-wordlist">Greetings and Emotions</td>
                                     <td class="o-language act-language">Mandarin Chinese</td>
                                     <td class="o-date-created act-date-created">March 12, 2015</td>
@@ -134,4 +135,4 @@
     </nav>
 </div>
 </body>
-</html>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script></html>

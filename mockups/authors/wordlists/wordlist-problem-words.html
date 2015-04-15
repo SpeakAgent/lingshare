@@ -2,61 +2,145 @@
 <html lang="en">
 <head>
   <link href="/authors/static/css/styles.css" rel="stylesheet" type="text/css" />
-  <title>Processing Your Wordlist | Speak Agent</title>
+  <title>Review Some Words | Speak Agent</title>
 </head>
 <body class="alt">
-<nav class="navbar navbar-default navbar-inverse navbar-static-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/authors/"><img src="/authors/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+<div class="container-fluid parent-container-main no-footer">
+    <nav class="navbar navbar-default navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/authors/"><img src="/authors/static/images/logo-sa-bubble.png" alt="Speak Agent" /></a>
+            </div>
+            <div id="navbar">
+                <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control form-primary" placeholder="Search...">
+                </form>
+                <ul class="nav navbar-nav navbar-right nav-secondary">
+                    <li class="n-user"><a href="/authors/settings/user-profile.html">Username</a></li>
+                    <li class="n-settings"><a href="/authors/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
+                    <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
+                    <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="n-home"><a href="/authors/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
+                    <li class="n-wordlists"><a href="/authors/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
+                    <li class="n-activities"><a href="/authors/assignments"><i class="fa fa-gamepad fa-lg"></i> <span>Assignments</span></a></li>
+                    <li class="n-learners"><a href="/authors/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
+                    <li class="n-groups"><a href="/authors/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
+                </ul>
+            </div>
         </div>
-        <div id="navbar">
-            <form class="navbar-form navbar-left">
-                <input type="text" class="form-control form-primary" placeholder="Search...">
-            </form>
-            <ul class="nav navbar-nav navbar-right nav-secondary">
-                <li class="n-user"><a href="/authors/settings/user-profile.html">Username</a></li>
-                <li class="n-settings"><a href="/authors/settings"><i class="fa fa-cog"></i> <span class="sr-only">Settings</span></a></li>
-                <li class="n-add"><a href="#"><i class="fa fa-plus"></i> <span class="sr-only">Add</span></a></li>
-                <li class="n-sign-out"><a href="#"><i class="fa fa-sign-out"></i> <span class="sr-only">Log Out</span></a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="n-home"><a href="/authors/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
-                <li class="n-wordlists"><a href="/authors/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
-                <li class="n-activities"><a href="/authors/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
-                <li class="n-learners"><a href="/authors/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
-                <li class="n-groups"><a href="/authors/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="container-fluid">
-    <div class="col-sm-12 col-md-12 l-main no-breadcrumb">
-        <div class="row">
-            <div class="col-sm-12 col-sm-12">
-                <div class="special-header clearfix">
-                    <h1 class="page-header pull-left">Create A New Wordlist</h1>
-                    <div class="flag-process pull-right">
-                        Step <em>4</em> of 3
+    </nav>
+    <div class="container-fluid c-fluid-main">
+        <div class="col-sm-12 col-md-12 l-main">
+            <div class="row">
+                <div class="col-sm-12 col-sm-12">
+                    <div class="special-header clearfix">
+                        <h1 class="page-header pull-left">Add New Wordlist</h1>
+                        <div class="flag-process call-houston pull-right">
+                            <em>We have a problem!</em>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-            <h2 class="page-header">Words for Review</h2>
-                <p>We found some words that need your review. Please select the correct form of the word.</p>
-                <div class="list-group">
-                    Stub for Word Form Selection Interface
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-md-offset-3">
+                    <h2 class="page-header">Words for Review</h2>
+                    <p>We found <strong>2</strong> words that have more than one word sense. Please select the option you want to use for these words.</p>
+                    <div class="words-for-review">
+                        <div class="list-group word-for-review">
+                            <div class="list-group-title list-group-item clearfix">
+                                <h3 class="pull-left">Ride <i class="fa fa-arrows-h"></i> <strong>Mortar</strong></h3>
+                                <small class="pull-right">
+                                    <a href="#" class="btn btn-link btn-delete"><i class="fa fa-trash fa-lg"></i></a>
+                                </small>
+                            </div>
+                            <a href="wordlist-problem-words_all-done.html" class="list-group-item clearfix">
+                                <div class="word-symbol pull-left">
+                                    <img src="/authors/static/images/fpo/symbol-montar.png" alt="mortar" />
+                                </div>
+                                <div class="word-sense pull-left">
+                                    to ride
+                                </div>
+                            </a>
+                            <a href="wordlist-problem-words_all-done.html" class="list-group-item clearfix">
+                                <div class="word-symbol pull-left">
+                                    <img src="/authors/static/images/fpo/symbol-montar.png" alt="mortar" />
+                                </div>
+                                <div class="word-sense pull-left">
+                                    to mount
+                                </div>
+                            </a>
+                            <a href="wordlist-problem-words_all-done.html" class="list-group-item list-group-item-primary">
+                                <i class="fa fa-plus"></i> Add New Translation
+                            </a>
+                        </div>
+                        <div class="list-group word-for-review">
+                            <div class="list-group-title list-group-item clearfix">
+                                <h3 class="pull-left">{{Word Entered}} <i class="fa fa-arrows-h"></i> <strong>{{Target Word}}</strong></h3>
+                                <small class="pull-right">
+                                   <a href="#" class="btn btn-link btn-delete"><i class="fa fa-trash fa-lg"></i></a>
+                                </small>
+                            </div>
+                            <a href="wordlist-problem-words_all-done.html" class="list-group-item clearfix">
+                                <div class="word-symbol pull-left">
+                                    <img src="/authors/static/images/fpo/symbol-montar.png" alt="mortar" />
+                                </div>
+                                <div class="word-sense pull-left">
+                                    to mount
+                                </div>
+                            </a>
+                            <a href="wordlist-problem-words_all-done.html" class="list-group-item clearfix">
+                                <div class="word-symbol pull-left">
+                                    <img src="/authors/static/images/fpo/symbol-montar.png" alt="mortar" />
+                                </div>
+                                <div class="word-sense pull-left">
+                                    to mount
+                                </div>
+                            </a>
+                            <a href="wordlist-problem-words_all-done.html" class="list-group-item clearfix">
+                                <div class="word-symbol pull-left">
+                                    <img src="/authors/static/images/fpo/symbol-montar.png" alt="mortar" />
+                                </div>
+                                <div class="word-sense pull-left">
+                                    to mount
+                                </div>
+                            </a>
+                            <a class="list-group-item">
+                            <i class="fa fa-eye"></i> See All Options
+                            </a>
+                            <a class="list-group-item list-group-item-primary">
+                                <i class="fa fa-plus"></i> Add New Translation
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <nav class="c-pagination">
+                              <ul class="pagination no-margin">
+                                <li class="disabled">
+                                  <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                  </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li>
+                                  <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
+                        </div>
+                        <p class="pull-right"><a href="/authors/wordlists" class="btn btn-link btn-warning last-item"><i class="fa fa-pause"></i> I'll do this later.</a></p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <a href="/authors/wordlists/wordlist-sample.html" class="btn btn-primary">All done!</a>
             </div>
         </div>
     </div>
 </div>
 </body>
-</html>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script></html>

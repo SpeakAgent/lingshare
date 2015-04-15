@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <link href="/authors/static/css/styles.css" rel="stylesheet" type="text/css" />
-  <title>Generate Activities . Classes | Speak Agent</title>
+  <title>Activity Sample . Assignments | Speak Agent</title>
 </head>
-<body class="alt">
+<body>
 <div class="container-fluid parent-container-main">
     <nav class="navbar navbar-default navbar-inverse navbar-static-top">
         <div class="container-fluid">
@@ -23,8 +23,8 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="n-home"><a href="/authors/"><i class="fa fa-home fa-lg"></i> <span>Home</span></a></li>
-                    <li class="n-wordlists"><a href="../wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
-                    <li class="n-activities"><a href="/authors/activities"><i class="fa fa-gamepad fa-lg"></i> <span>Activities</span></a></li>
+                    <li class="n-wordlists"><a href="/authors/wordlists"><i class="fa fa-comment fa-lg"></i> <span>Wordlists</span></a></li>
+                    <li class="n-activities"><a href="/authors/assignments"><i class="fa fa-gamepad fa-lg"></i> <span>Assignments</span></a></li>
                     <li class="n-learners"><a href="/authors/classes"><i class="fa fa-child fa-lg"></i> <span>Classes</span></a></li>
                     <li class="n-groups"><a href="/authors/groups"><i class="fa fa-users fa-lg"></i> <span>Groups</span></a></li>
                 </ul>
@@ -34,8 +34,18 @@
     <div class="container-fluid c-fluid-main">
         <div class="col-sm-12 col-md-12 l-main">
             <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <ol class="breadcrumb">
+                      <li><a href="/authors/">Home</a></li>
+                      <li><a href="/authors/assignments">Assignments</a></li>
+                      <li class="active">{{Activity Title}}</li>
+                    </ol>
+                    <h1 class="page-header">{{Activity Title}}</h1>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-sm-8 col-md-8">
-                    Stub for Generate Activities process.
+                    Stub for sample activity.
 
                 </div>
 
@@ -54,4 +64,4 @@
     </nav>
 </div>
 </body>
-</html>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script></html>

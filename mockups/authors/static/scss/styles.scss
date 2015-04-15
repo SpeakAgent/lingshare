@@ -30,7 +30,10 @@ html {
 body {
     height: 100%;
     font-weight: 400;
+    &.alt {
+    }
 }
+
 a {
     @include transition(color 0.2s, background-color 0.2s);
 }
@@ -62,7 +65,20 @@ a {
 .no-bottom-border {
     border-bottom-width: 0;
 }
-
+.yes-centered {
+    text-align: center;
+}
+.no-border {
+    border: 0 !important;
+}
+.first-item {
+    margin-left: 0;
+    padding-left: 0;
+}
+.last-item {
+    margin-right: 0;
+    padding-right: 0;
+}
 
 /* Sticky Footer Code */
 
@@ -71,6 +87,10 @@ a {
     height: auto;
     margin: 0 auto -40px;
     padding: 0 0 40px;
+    &.no-footer {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
 }
     .footer-main {
         height: 40px;
@@ -84,8 +104,8 @@ a {
     padding: 0 0 8px 0;
 }
 h1, .h1 {
-    font-size: 28px;
-    font-weight: 900;
+    font-size: 26px;
+    font-weight: 400;
     small {
         text-shadow: none;
     }
@@ -96,10 +116,29 @@ h5 {
 
 /* Used Primarily on Process areas like adding a new wordlist */
 .special-header {
-    margin: 0 -35px 20px -35px;
-    padding: 24px 20px 8px 22px;
+        background-color: $accent-light;
+    border-bottom: 1px solid $brand-secondary;
+    margin: 0 -20px 20px -20px;
+    padding: 24px 20px 8px 20px;
     h1 {
-        font-size: 1.3em;
+        font-size: 1.1em;
+        font-weight: 900;
+    }
+    .flag-process {
+        margin-top: -4px;
+        em {
+            background-color: $brand-primary;
+            display: inline-block;
+            font-weight: 900;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+        &.call-houston {
+            em {
+                color: #fff;
+                background-color: $brand-danger;
+            }
+        }
     }
 }
 
@@ -120,9 +159,6 @@ h5 {
 
 /* List Groups */
 .list-group {
-    .list-group-item:last-child {
-        @include box-shadow(rgba($shadow-primary, 0.1) 0px 2px 1px);
-    }
     .list-inline {
         margin-bottom: 0;
     }
@@ -287,6 +323,7 @@ a.list-group-item {
 
 ul.pagination {
     border-radius: 0;
+    margin: 0;
     a {
         border-radius: 0 !important;
     }
@@ -298,6 +335,12 @@ img.img-thumbnail {
     border-radius: 0;
 }
 
+/* Labels */
+
+.label-private {
+    background-color: rgb(148, 77, 148);
+}
+
 
 /*
     A. Main Navigation */
@@ -307,7 +350,7 @@ img.img-thumbnail {
     .navbar-brand {
         padding: 4px 0 0 15px;
         img {
-            width: 72px;
+            width: 64px;
         }
     }
     &.nav-secondary {
@@ -371,7 +414,7 @@ img.img-thumbnail {
     C. Content Panels
 */
 .panel {
-    @include box-shadow(rgba($shadow-primary, 0.10) 0px 2px 1px);
+    box-shadow: none;
     .panel-heading {
         .nav-pills {
             a {
@@ -453,6 +496,10 @@ img.img-thumbnail {
     td {
         vertical-align: middle !important;
     }
+    .o-select {
+        width: 40px;
+        text-align: center;
+    }
     .o-status {
         width: 80px;
     }
@@ -477,6 +524,15 @@ img.img-thumbnail {
     .o-institution {
 
     }
+    .item-status-inactive {
+        color: gray;
+        .o-title {
+            font-weight: normal !important;
+        }
+        a {
+            color: gray;
+        }
+    }
 }
 
 
@@ -492,7 +548,6 @@ img.img-thumbnail {
         }
     }
 }
-
 
 
 /*
@@ -618,3 +673,12 @@ h4.wl-lexeme-word-sense {
     }
 }
 
+
+
+/* Process Pages */
+
+.process {
+    h2.page-header {
+        margin-bottom: 20px;
+    }
+}
