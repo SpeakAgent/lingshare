@@ -55,8 +55,13 @@
               <tbody>
                 <tr class="o-item wl-item item-status-public"
                 ng-repeat="wordlist in wordlists">
-                  <td class="o-favorite favorite-y"><i class="fa fa-star"></i></td>
-                  <td class="o-status wl-status with-label"><span class="label label-success">Public</span></td>
+                  <td class="o-favorite favorite-y">
+                    <i class="fa fa-star" 
+                      ng-if="starred.indexOf(wordlist.pk)>-1"></i>
+                    <i class="fa fa-star-o" 
+                      ng-if="starred.indexOf(wordlist.pk)==-1"></i>
+                  </td>
+                  <td class="o-status wl-status with-label"><span class="label label-success">{{ wordlist.status }}</span></td>
                   <td class="o-symbol wl-symbol c-img"><a href="wordlist-sample.html"><img src="{{ wordlist.icon.image }}" alt="{{ wordlist.icon.alt_text }}" style="max-width: 40px"></a></td>
                   <td class="o-title wl-title"><a href="wordlist-sample.html">{{ wordlist.title }}</a></td>
                   <td class="o-date-created wl-date-created">{{ wordlist.created_on | date:'MMMM dd, yyyy' }}</td>

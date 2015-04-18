@@ -17,6 +17,7 @@ mainApp.controller('AuthorController', ['$scope', '$http',
 			$http(req)
 			    .success(function (data) {
 			    	$scope.wordlists = data['wordlist_set']
+			    	$scope.starred = data['starred_wl']
 			    	console.log(data);
 			    })
 			    .error(function (data) {
