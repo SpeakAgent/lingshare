@@ -76,6 +76,14 @@ mainApp.config(function($routeProvider, $sceDelegateProvider,
 	.when('/trophies/', {
 		templateUrl: 'templates/trophies.html',
 		controller: 'TrophiesController'
+	})
+	.when('/author/', {
+		templateUrl: 'templates/author.html',
+		controller: 'AuthorController'
+	})
+	.when('/author/wordlists/', {
+		templateUrl: 'templates/author_wordlists.html',
+		controller: 'AuthorController'
 	});
 
 	$sceDelegateProvider.resourceUrlWhitelist([

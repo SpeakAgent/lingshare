@@ -1,0 +1,101 @@
+
+<div class="container-fluid parent-container-main">
+  <div class="container-fluid c-fluid-main">
+    <div class="col-sm-12 col-md-12 l-main">
+      <div class="row">
+        <div class="col-sm-12 col-sm-12">
+          <ol class="breadcrumb">
+            <li><a href="/authors/">Home</a></li>
+            <li class="active">Wordlists</li>
+          </ol>
+          <div class="page-header clearfix">
+            <h1 class="page-header pull-left">Wordlists</h1>
+            <a href="wordlists-add_new.html" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Add New Wordlist</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <form class="form-search">
+                <input type="text" class="form-control" placeholder="Find a Wordlist">
+              </form>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading sub-heading">
+              <ul class="nav nav-pills">
+                <li class="active">
+                <a href="#">All</a>
+                </li>
+                <li>
+                <a href="#">Your Wordlists</a>
+                </li>
+                <li>
+                <a href="#">Favorites</a>
+                </li>
+                <li>
+                <a href="#">Shared with You</a>
+                </li>
+              </ul>
+            </div>
+            <table class="o-items-list wl-items table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th class="o-favorite"><i class="fa fa-sort"></i></th>
+                  <th class="o-status wl-status"><span class="pull-left">Status</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                  <th class="o-symbol wl-symbol"><span class="pull-left">Symbol</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                  <th class="o-title wl-title"><span class="pull-left">Title</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                  <th class="o-date-create wl-date-created"><span class="pull-left">Date Created</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                  <th class="o-date-update wl-date-updated"><span class="pull-left">Date Updated</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                  <th class="o-language wl-language"><span class="pull-left">Language</span> <span class="order pull-right"><i class="fa fa-sort"></i></span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="o-item wl-item item-status-public"
+                ng-repeat="wordlist in wordlists">
+                  <td class="o-favorite favorite-y"><i class="fa fa-star"></i></td>
+                  <td class="o-status wl-status with-label"><span class="label label-success">Public</span></td>
+                  <td class="o-symbol wl-symbol c-img"><a href="wordlist-sample.html"><img src="{{ wordlist.icon.image }}" alt="{{ wordlist.icon.alt_text }}" style="max-width: 40px"></a></td>
+                  <td class="o-title wl-title"><a href="wordlist-sample.html">{{ wordlist.title }}</a></td>
+                  <td class="o-date-created wl-date-created">{{ wordlist.created_on | date:'MMMM dd, yyyy' }}</td>
+                  <td class="o-date-updated wl-date-updated">{{ wordlist.updated_on | date:'MMMM dd, yyyy' }}</td>
+                  <td class="o-language wl-language">{{ wordlist.base_language.title }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <nav class="c-pagination">
+            <ul class="pagination">
+            <li class="disabled">
+              <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+              <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid footer-main">
+  <nav class="nav-utility">
+    <ul class="list-inline">
+      <li><a href="#">About Speak Agent</a></li>
+      <li><a href="#">Site Policies</a></li>
+      <li><a href="#">Contact Support</a></li>
+    </ul>
+  </nav>
+</div>
