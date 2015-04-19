@@ -84,6 +84,10 @@ mainApp.config(function($routeProvider, $sceDelegateProvider,
 	.when('/author/wordlists/', {
 		templateUrl: 'templates/author_wordlists.html',
 		controller: 'AuthorController'
+	})
+	.when('/author/wordlists/:id', {
+		templateUrl: 'templates/author_wordlist.html',
+		controller: 'AuthorController'
 	});
 
 	$sceDelegateProvider.resourceUrlWhitelist([
