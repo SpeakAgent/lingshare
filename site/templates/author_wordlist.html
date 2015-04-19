@@ -57,7 +57,7 @@
                 <tr 
                   class="o-item wl-item lexeme-status-ready"
                   ng-repeat="word in wordlist.words">
-                  <td class="o-status wl-lexeme-status"><span class="label label-warning">Draft</span></td>
+                  <td class="o-status wl-lexeme-status"><span class="label label-warning">{{ word.base_root.status }}</span></td>
                   <td class="o-symbol wl-lexeme-symbol c-img"><img 
                   src="{{ word.base_root.master_lex.symbol.image }}" 
                   alt="{{ word.base_root.master_lex.symbol.image }}"
@@ -105,8 +105,7 @@
               </div>
               <div class="panel-body">
                 <ul class="list-inline wl-tags">
-                  <li><a href="#" class="tag">Human face</a></li>
-                  <li><a href="#" class="tag">identification</a></li>
+                  <li ng-repeat="tag in wordlist.tags"><a href="#" class="tag">{{ tag.name }}</a></li>
                 </ul>
               </div>
             </div>
