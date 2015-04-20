@@ -1,12 +1,12 @@
 mainApp.controller('AuthorController', ['$scope', '$http', 
   '$rootScope', '$sce', 'jwtHelper', 'appConfig', '$routeParams',
 
-  	function ($scope, $http, $rootScope, $sce, jwtHelper, appConfig, $routeParams) {
+	function ($scope, $http, $rootScope, $sce, jwtHelper, appConfig, $routeParams) {
 
-	    $rootScope.body_classes = "author";
+		$rootScope.body_classes = "author";
 
 
-	    $scope.username = localStorage.getItem('username');
+		$scope.username = localStorage.getItem('username');
 		if ($scope.username) {
 			req = {
 				url: appConfig.backendURL + '/author/username/' + $scope.username + '/',
@@ -16,14 +16,14 @@ mainApp.controller('AuthorController', ['$scope', '$http',
 				}
 			}
 			$http(req)
-			    .success(function (data) {
-			    	$scope.wordlists = data['wordlist_set']
-			    	$scope.starred = data['starred_wl']
-			    	$scope.getWordList()
-			    })
-			    .error(function (data) {
-	    			console.log("GOT AN ERROR");
-	    	});
+				.success(function (data) {
+					$scope.wordlists = data['wordlist_set']
+					$scope.starred = data['starred_wl']
+					$scope.getWordList()
+				})
+				.error(function (data) {
+					console.log("GOT AN ERROR");
+			});
 		}
 
 		$scope.getWordList = function() {
@@ -37,9 +37,41 @@ mainApp.controller('AuthorController', ['$scope', '$http',
 				}
 			}}
 
-  		$scope.audio_url = function(path) {
-        	return $sce.trustAsResourceUrl(path);
-    	}
-  	}
+		$scope.audio_url = function(path) {
+			return $sce.trustAsResourceUrl(path);
+		}
+	}
+
+])
+
+mainApp.controller('WordPairController', ['$scope', '$http', 
+  '$rootScope', '$sce', 'jwtHelper', 'appConfig', '$routeParams',
+
+	function ($scope, $http, $rootScope, $sce, jwtHelper, appConfig, $routeParams) {
+
+		$rootScope.body_classes = "author";
+
+		$scope.username = localStorage.getItem('username');
+		if ($routeParams.id) {
+			req = {
+				url: appConfig.backendURL + '/wordpairs/detail/' + $routeParams.id + '/',
+				method: 'GET',
+				headers: {
+					Authorization: 'JWT ' + localStorage.getItem('authToken')
+				}
+			}
+			$http(req)
+				.success(function (data) {
+          $scope.wordpair = data
+				})
+				.error(function (data) {
+					console.log("GOT AN ERROR");
+			});
+		}
+
+		$scope.audio_url = function(path) {
+			return $sce.trustAsResourceUrl(path);
+		}
+	}
 
 ])

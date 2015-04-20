@@ -1,0 +1,101 @@
+<div class="container-fluid parent-container-main">
+  <div class="container-fluid c-fluid-main">
+    <div class="col-sm-12 col-md-12 l-main">
+      <div class="row">
+        <div class="col-sm-12 col-sm-12">
+          <ol class="breadcrumb">
+            <li><a href="/authors/">Home</a></li>
+            <li><a href="/authors/wordlists">Wordlists</a></li>
+            <li><a href="/authors/wordlists/wordlist-sample.html">Physical Characteristics</a></li>
+            <li class="active">{{ wordpair.base_root.root_word }}</a></li>
+          </ol>
+          <h1 class="page-header pull-left">{{ wordpair.base_root.root_word }}<small><span class="label label-warning">{{ wordpair.status }}</span> <span class="label label-warning">Not In Use</span></small></h1>
+          <ol class="list-inline pull-right">
+            <li class="no-padding"><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Preview</a></li>
+            <li class="no-padding"><a href="wordlist-lexeme-sample-editor.html" class="btn btn-link"><i class="fa fa-files-o"></i> Copy</a></li>
+            <li class="no-padding"><a href="#" class="btn btn-link"><i class="fa fa-flag"></i> Flag For Review</a></li>
+          </ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8 col-md-8">
+          <div class="o-dataitems wl-lexeme-dataitems">
+            <div class="o-dataitem wl-lexeme-dataitem panel panel-default no-shadow">
+              <div class="panel-heading clearfix">
+                <h3 class="pull-left">Word Details</h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-unstyled">
+                  <li>Base Word: {{ wordpair.trans_root.root_word }}<strong></strong></li>
+                  <li>Target Word: <strong>{{ wordpair.base_root.root_word }}</strong></li>
+                  <li>Part of Speech: <strong>{{ wordpair.base_root.word_class.title }}</strong></li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="o-dataitem wl-lexeme-dataitem panel panel-default no-shadow">
+              <div class="panel-heading clearfix">
+                <h3 class="pull-left">Audio</h3>
+              </div>
+              <div class="panel-body">
+                <audio controls>
+                <source src="{{ audio_url(wordpair.base_root.audio_file) }}" type="audio/mpeg">
+                Sorry, your browser does not support the audio tag.
+                </audio>
+              </div>
+            </div>
+            <div class="o-dataitem wl-lexeme-dataitem panel panel-default no-shadow">
+              <div class="panel-heading clearfix">
+                <h3 class="pull-left">Photos<small> <span class="flag-optional">optional</span></small></h3>
+              </div>
+              <div class="panel-body wl-photos-videos">
+                <ul class="list-inline">
+                  <li ng-repeat="photo in wordpair.base_root.master_lex.photos">
+                    <img src="{{photo.image}}" class="img-thumbnail">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+          <div class="o-dataitems">
+            <div class="o-dataitem wl-lexeme-dataitem panel panel-default">
+              <div class="panel-heading clearfix">
+                <h3 class="pull-left">Word Symbol</h3>
+              </div>
+              <div class="panel-body">
+                <div class="wl-symbol wl-lexeme-symbol c-img">
+                  <figure>
+                    <img src="{{ wordpair.base_root.master_lex.symbol.image }}" alt="{{ wordpair.base_root.symbol.alt_text }}" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="o-dataitem wl-lexeme-dataitem panel panel-default">
+              <div class="panel-heading clearfix">
+                <h3 class="pull-left">Tags <small><span class="flag-optional">optional</span></small></h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-inline wl-tags">
+                  <li ng-repeat="tag in wordpair.tags"><a href="#" class="tag">{{ tag.name }}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid footer-main">
+  <nav class="nav-utility">
+    <ul class="list-inline">
+      <li><a href="#">About Speak Agent</a></li>
+      <li><a href="#">Site Policies</a></li>
+      <li><a href="#">Contact Support</a></li>
+    </ul>
+  </nav>
+</div>
+</body>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script></html>
