@@ -89,10 +89,15 @@ mainApp.config(function($routeProvider, $sceDelegateProvider,
 		templateUrl: 'templates/author_wordlist.html',
 		controller: 'AuthorController'
 	})
+	.when('/author/wordlist/add/', {
+		templateUrl: 'templates/author_wordlist_add.html',
+		controller: 'WordListAddController'
+	})
 	.when('/author/wordpairs/:id', {
 		templateUrl: 'templates/author_wordpair.html',
 		controller: 'WordPairController'
-	});
+	})
+	;
 
 	$sceDelegateProvider.resourceUrlWhitelist([
    // Allow same origin resource loads.

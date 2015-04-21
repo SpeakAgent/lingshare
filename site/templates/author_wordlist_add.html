@@ -1,0 +1,108 @@
+<div class="container-fluid parent-container-main"
+  ng-show="step==1">
+  <div class="container-fluid c-fluid-main">
+    <div class="col-sm-12 col-md-12 l-main">
+      <div class="row">
+        <div class="col-sm-12 col-sm-12">
+          <div class="special-header clearfix">
+            <h1 class="page-header pull-left">Add New Wordlist</h1>
+            <div class="flag-process pull-right">
+              Step <em>1</em> of 3
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-centered c-wordlist c-wordlist-add">
+        <div class="col-sm-12 col-md-6 col-md-offset-3">
+          <fieldset>
+            <div class="form-group">
+              <label for="wl-new-title">Add a Title</label>
+              <input type="text" class="form-control" id="wl-new-title" placeholder="Enter the title of your wordlist"
+              ng-model="formData.title">
+            </div>
+            <div class="form-group">
+              <label for="wl-new-base_language">Select your Base Language</label>
+              <select class="form-control" id="wl-new-base_language"
+              ng-model="formData.base_lang">
+                <option>English</option>
+                <option>Spanish</option>
+                <option>French</option>
+                <option>Chinese</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="wl-new-trans_language">Select your Target Language</label>
+              <select class="form-control" id="wl-new-trans_language"
+              ng-model="formData.target">
+                <option>English</option>
+                <option>Spanish</option>
+                <option>French</option>
+                <option>Chinese</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="wl-lexeme_numbers">How many words? <small class="flag-optional">Optional</small></label>
+              <input type="number" class="form-control" placeholder="How many words are you going to enter?"
+              ng-model="formData.lex_num">
+            </div>
+            <div class="form-group f-lexeme f-lexeme-add-ons clearfix">
+              <div class="pull-left">
+                <a href="/authors/wordlists" class="btn btn-link first-item btn-cancel"><i class="fa fa-times"></i> Cancel</a>
+              </div>
+              <div class="pull-right">
+                <button ng-click="submitStepOne()" class="btn btn-primary btn-icon btn-i-next">Next <i class="fa fa-arrow-right"></i> </button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-sm-12 col-md-12 l-main"
+  ng-show="step==2">
+    <div class="row">
+        <div class="col-sm-12 col-sm-12">
+            <div class="special-header clearfix">
+                <h1 class="page-header pull-left">Add New Wordlist</h1>
+                <div class="flag-process pull-right">
+                    Step <em>2</em> of 3
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row c-lexeme c-lemexe-entries">
+        <div class="col-sm-12 col-md-6 col-md-offset-3">
+            <div class="form-group">
+                <label for="wl-base_language">Are you entering {{ formData.base_lang }} or {{ formData.target }} words?</label>
+                <select class="form-control" id="wl-base_language">
+                    <option>Base Language</option>
+                    <option>Target Language</option>
+                </select>
+            </div>
+            <div class="form-group">
+            <h4 class="form-label">Enter your words!</h4>
+            <ul class="list-group form-inline wl-new-lexeme-entry">
+                <li class="list-group-item"
+                  ng-repeat="i in range(formData.lex_num) track by $index">
+                    <input type="text" class="form-control input-lexeme no-border" id="base-lexeme-01" placeholder="Enter the word">
+                    <a href="#" class="pull-right btn btn-link btn-delete"><i class="fa fa-trash fa-lg"></i></a>
+                </li>
+            </ul>
+            </div>
+            <div class="form-group clearfix">
+                <div class="pull-left">
+                    <a href="/authors/wordlists/wordlists-add_new.html" class="btn btn-link first-item"><i class="fa fa-arrow-left"></i> Back</a>
+                </div>
+                <div class="pull-right">
+                    <a href="/authors/wordlists" class="btn btn-link"><i class="fa fa-pause"></i> Finish Later</a>
+                    <a href="/authors/wordlists/wordlists-processing.html" class="btn btn-primary"><i class="fa fa-check"></i> Save Words</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

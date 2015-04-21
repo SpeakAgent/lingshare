@@ -75,3 +75,32 @@ mainApp.controller('WordPairController', ['$scope', '$http',
 	}
 
 ])
+
+mainApp.controller('WordListAddController', ['$scope', '$http', 
+  '$rootScope', '$sce', 'jwtHelper', 'appConfig', '$routeParams',
+
+	function ($scope, $http, $rootScope, $sce, jwtHelper, appConfig, $routeParams) {
+
+		$rootScope.body_classes = "author";
+
+		$scope.step = 1;
+		$scope.formData = {};
+
+		$scope.username = localStorage.getItem('username');
+
+		$scope.post_data = function (data) {
+			console.log(data)
+		}
+
+		$scope.range = function (num) {
+			console.log("num = ", num)
+			return new Array(num);
+		}
+
+		$scope.submitStepOne = function () {
+			console.log("Trying to post...")
+			$scope.step = 2
+		}
+	}
+
+])
