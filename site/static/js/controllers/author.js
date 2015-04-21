@@ -100,6 +100,12 @@ mainApp.controller('WordListAddController', ['$scope', '$http',
 		$scope.submitStepOne = function () {
 			console.log("Trying to post...")
 			$scope.step = 2
+			$scope.formData.words = Array($scope.formData.lex_num)
+		}
+
+		$scope.submitStepTwo = function () {
+			$scope.step = 3
+
 		}
 	}
 
