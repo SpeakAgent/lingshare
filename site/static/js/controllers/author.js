@@ -86,6 +86,18 @@ mainApp.controller('WordListAddController', ['$scope', '$http',
 		$scope.step = 1;
 		$scope.formData = {};
 
+		req = {
+				url: appConfig.backendURL + '/languages/json/',
+				method: 'GET',
+				headers: {
+					Authorization: 'JWT ' + localStorage.getItem('authToken')
+				}
+			}
+		$http(req)
+			.success(function (data) {
+				$scope.langs = data
+			})
+
 		$scope.username = localStorage.getItem('username');
 
 		$scope.post_data = function (data) {
@@ -101,10 +113,38 @@ mainApp.controller('WordListAddController', ['$scope', '$http',
 			console.log("Trying to post...")
 			$scope.step = 2
 			$scope.formData.words = Array($scope.formData.lex_num)
-		}
+			$scope.base_lang = $scope.langs[$scope.formData['base_lang']]
+			$scope.trans_lang = $scope.langs[$scope.formData['target']]
 
 		$scope.submitStepTwo = function () {
-			$scope.step = 3
+			// req = {
+			// 	url: appConfig.backendURL + '/languages/json/',
+			// 	method: 'GET',
+			// 	headers: {
+			// 		Authorization: 'JWT ' + localStorage.getItem('authToken')
+			// 	}
+			// }
+			// $http(req)
+			// .success(function (data) {
+			// 	$scope.langs = data
+			// })
+			$scope.step = 3;
+			req = {
+
+				url: appConfig.backendURL + '/author/rwfilter/?words=["' + 
+					$scope.formData.words.join('","') + '"]&language_id=' + 
+					$scope.base_lang.pk,
+				method: 'GET',
+				headers: {
+					Authorization: 'JWT ' + localStorage.getItem('authToken')
+				}
+			}
+			$http(req)
+				.success(function (data) {
+					$scope.returned_words = data
+				})
+			}
+			
 
 		}
 	}

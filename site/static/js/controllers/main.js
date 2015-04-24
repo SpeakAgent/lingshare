@@ -85,13 +85,13 @@ mainApp.config(function($routeProvider, $sceDelegateProvider,
 		templateUrl: 'templates/author_wordlists.html',
 		controller: 'AuthorController'
 	})
-	.when('/author/wordlists/:id', {
-		templateUrl: 'templates/author_wordlist.html',
-		controller: 'AuthorController'
-	})
 	.when('/author/wordlist/add/', {
 		templateUrl: 'templates/author_wordlist_add.html',
 		controller: 'WordListAddController'
+	})
+	.when('/author/wordlists/:id', {
+		templateUrl: 'templates/author_wordlist.html',
+		controller: 'AuthorController'
 	})
 	.when('/author/wordpairs/:id', {
 		templateUrl: 'templates/author_wordpair.html',
