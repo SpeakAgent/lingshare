@@ -115,38 +115,40 @@ mainApp.controller('WordListAddController', ['$scope', '$http',
 			$scope.formData.words = Array($scope.formData.lex_num)
 			$scope.base_lang = $scope.langs[$scope.formData['base_lang']]
 			$scope.trans_lang = $scope.langs[$scope.formData['target']]
+		}
 
-		$scope.submitStepTwo = function () {
-			// req = {
-			// 	url: appConfig.backendURL + '/languages/json/',
-			// 	method: 'GET',
-			// 	headers: {
-			// 		Authorization: 'JWT ' + localStorage.getItem('authToken')
-			// 	}
-			// }
-			// $http(req)
-			// .success(function (data) {
-			// 	$scope.langs = data
-			// })
-			$scope.step = 3;
+		$scope.get_words = function (word) {
+			console.log("Trying", $scope.formData.words[word], word)
 			req = {
-
-				url: appConfig.backendURL + '/author/rwfilter/?words=["' + 
-					$scope.formData.words.join('","') + '"]&language_id=' + 
-					$scope.base_lang.pk,
-				method: 'GET',
-				headers: {
-					Authorization: 'JWT ' + localStorage.getItem('authToken')
-				}
+				url: appConfig.backendURL + '/author/rwfilter/?word=' + 
+				$scope.formData.words[word] + '&base_id=' + $scope.base_lang.pk,
+			method: 'GET',
+			headers: {
+				Authorization: 'JWT ' + localStorage.getItem('authToken')
+				},
+			cache: false
 			}
+			console.log(req.url)
 			$http(req)
 				.success(function (data) {
-					$scope.returned_words = data
+					$scope.returned_words[$scope.formData.words[word]] = data
+					console.log("Got", $scope.formData.words[word])
+					console.log($scope.returned_words)
 				})
-			}
-			
-
 		}
+
+		$scope.submitStepTwo = function () {
+			$scope.step = 3;
+			$scope.returned_words = {}
+			for (word in $scope.formData.words) {
+				$scope.get_words(word)
+			}
+		}
+
+		$scope.submitStepThree = function () {
+			$scope.step = 4;
+		}
+
 	}
 
 ])
