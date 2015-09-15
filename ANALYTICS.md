@@ -1,11 +1,12 @@
 LingShare Analytics
 ===================
 
-This document discusses the analytics for LingShare.
+This document discusses the analytics for Speak Agent as currently implemented for the STUDENT-facing app.
 
 
 The analytics engine uses [Mixpanel](http://www.mixpanel.com) capture analytics and provide a view into the data. The mixpanel key is "c179c65048c4da1c7c011ffa0cc5b1ac".
 
+The Mix Panel user ID is info@speakagent.com and Ben or Baron have the pwd.
 
 Lingshare Events
 ================
